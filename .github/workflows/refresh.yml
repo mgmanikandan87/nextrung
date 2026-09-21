@@ -1,0 +1,65 @@
+name: quarterly-data-refresh
+
+# The "DevOps agent": every quarter (and on demand) Claude runs the repo's skills to refresh statistics,
+# skills/learning links and fresher job ads, validates the data, and opens a pull request for review.
+# Merging the PR triggers ci.yml, which deploys.
+#
+# Requires repository secret ANTHROPIC_API_KEY (console.anthropic.com). Nothing runs without it.
+
+on:
+  schedule:
+    - cron: '0 3 1 1,4,7,10 *'   # 1 Jan / Apr / Jul / Oct, 03:00 UTC (08:30 IST)
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'What to refresh: all | stats | skills | jobs'
+        default: 'all'
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Run the refresh agent
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: '--max-turns 400'
+          prompt: |
+            You are the quarterly data-refresh agent for NextRung (this repository). Scope: ${{ github.event.inputs.scope || 'all' }}.
+            Today's date is the run date. Work only inside this repo; read README.md, data/PATH_SCHEMA.md, data/SKILLS_SCHEMA.md, data/JOBS_SCHEMA.md first.
+            Use the skills in .claude/skills in this order, each on its own branch of work:
+            1. india-grad-market-research: refresh data/market_stats.json (open the primary page for every figure; keep contradictions; emit gaps, never guesses). Set as_of to today and changed_since_last honestly.
+            2. career-path-mapper: update door_size, pay_band, employers (each with a page seen in the last six months) and fit_rules only where a stat changed; do not rewrite text that is still true.
+            3. skills-taxonomy-maintainer: re-open every learning URL, replace dead ones, propose level/weight changes with posting counts.
+            4. fresher-jobs-ingest: rebuild data/jobs/<path>.json for all nine paths from career pages and official notifications (no Indeed connector here), seen_on = today.
+            Then run `python3 scripts/validate.py` and `python3 scripts/build.py`; both must pass. Fix validation errors before finishing.
+            Do NOT edit site/template.html, deploy/, or .github/. Do not commit dist/.
+            Finish by writing review/refresh-<YYYY-MM-DD>.md: what changed (counts per file), contradictions found, dead links replaced, gaps, and anything a human must decide.
+      - name: Validate and build
+        run: |
+          python3 scripts/validate.py
+          python3 scripts/build.py
+          git checkout -- dist || true
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: refresh/${{ github.run_id }}
+          title: 'Quarterly data refresh (${{ github.event.inputs.scope || 'all' }})'
+          commit-message: 'data: quarterly refresh by the agent'
+          body: |
+            Automated refresh by the data agent. Review `review/refresh-*.md` for what changed and any decisions needed, spot-check a few sources, then merge. Merging deploys via `ci`.
+          labels: data-refresh
+          add-paths: |
+            data/**
+            review/**
+            skills/**
+            .claude/skills/**

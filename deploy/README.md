@@ -1,12 +1,21 @@
 # Deploying NextRung
 
-1. `python3 scripts/build.py` at the repo root.
-2. Bundle: `deploy/deploy.sh`, `deploy/lambda/handler.py`, and `dist/index.html` copied to `deploy/site/index.html`.
-3. Upload the bundle to AWS CloudShell (Actions → Upload file), `unzip`, `bash deploy.sh`.
-4. The script prints the site URL, the responses endpoint, and the export URLs; it also writes `outputs.json` and `.export_key` next to itself. Keep the key private.
+## Pipeline (recommended)
 
-Costs: Amplify Hosting, API Gateway, Lambda and DynamoDB are all pay-per-use and sit inside the free tier at test scale.
+`.github/workflows/ci.yml` runs on every push and pull request: validate data (`scripts/validate.py`), build (`scripts/build.py`), browser smoke test (`scripts/smoke.js`, mocked backend), Lambda import check. On `main` it then deploys with `deploy/deploy.sh` (Lambda code, API routes, Cognito, Amplify) using an OIDC role, and runs post-deploy checks (site 200, `/health` ok, site points at the API, `/me` without a token is 401). Pull requests never deploy.
 
-CloudShell note: the bundled AWS CLI can lag; the script prefers `~/bin/aws` if present (install with the official v2 installer into `~/awscli`, binary in `~/bin`).
+One-time setup:
+1. Create the GitHub repo and push this code.
+2. In AWS CloudShell: `REPO=owner/name bash deploy/aws-github-oidc.sh` (creates the OIDC provider and the `nextrung-github-deploy` role trusted by that repo's `main` only; prints the role ARN).
+3. GitHub → Settings → Secrets and variables → Actions: `AWS_DEPLOY_ROLE_ARN` (from step 2) and `NEXTRUNG_EXPORT_KEY` (the export key from your last deploy; keeps the export URL stable).
+4. Optional, for the quarterly refresh agent (`.github/workflows/refresh.yml`): `ANTHROPIC_API_KEY`. It runs 1 Jan/Apr/Jul/Oct and on demand (Actions → quarterly-data-refresh → Run workflow), opens a PR with refreshed data and a `review/refresh-<date>.md`; merging deploys.
 
-Cleanup: `aws amplify delete-app --app-id <id>`, `aws apigatewayv2 delete-api --api-id <id>`, `aws lambda delete-function --function-name nextrung-api`, `aws dynamodb delete-table --table-name nextrung-api`, `aws iam delete-role-policy --role-name nextrung-api-lambda --policy-name ddb && aws iam detach-role-policy --role-name nextrung-api-lambda --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole && aws iam delete-role --role-name nextrung-api-lambda`.
+Rotate the export key: change the secret and redeploy; the old URL stops working.
+
+## Manual (CloudShell)
+
+Bundle `deploy/deploy.sh`, `deploy/lambda/handler.py`, and `dist/index.html` as `deploy/site/index.html`; upload to CloudShell; `bash deploy.sh`. The script is idempotent. CloudShell's bundled CLI can lag; the script prefers `~/bin/aws` if present (official v2 installer into `~/awscli`, binary in `~/bin`).
+
+Costs: Amplify Hosting, API Gateway, Lambda, DynamoDB and Cognito (Essentials, 10k MAU free) are pay-per-use and sit inside the free tier at test scale. GitHub Actions: free for public repos; 2,000 minutes/month on private.
+
+Cleanup: `aws amplify delete-app --app-id <id>`, `aws apigatewayv2 delete-api --api-id <id>`, `aws lambda delete-function --function-name nextrung-api`, `aws dynamodb delete-table --table-name nextrung` (and `nextrung-responses`), `aws cognito-idp delete-user-pool --user-pool-id <id>`, then the two IAM roles `nextrung-lambda` and `nextrung-github-deploy`.

@@ -71,7 +71,7 @@ ROLE_ARN=$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)
 # ---------- 4. Lambda ----------
 FN="$NAME-api"
 EXPORT_KEY_FILE="$HERE/.export_key"
-if [ -f "$EXPORT_KEY_FILE" ]; then EXPORT_KEY=$(cat "$EXPORT_KEY_FILE"); else EXPORT_KEY=$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9' | head -c 32); echo -n "$EXPORT_KEY" > "$EXPORT_KEY_FILE"; fi
+if [ -n "${EXPORT_KEY:-}" ]; then :; elif [ -f "$EXPORT_KEY_FILE" ]; then EXPORT_KEY=$(cat "$EXPORT_KEY_FILE"); else EXPORT_KEY=$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9' | head -c 32); echo -n "$EXPORT_KEY" > "$EXPORT_KEY_FILE"; fi
 ENV="Variables={TABLE=$NAME,RESP_TABLE=$NAME-responses,EXPORT_KEY=$EXPORT_KEY,POOL_ID=$POOL_ID,CLIENT_ID=$CLIENT_ID}"
 ( cd "$HERE/lambda" && rm -f ../fn.zip && zip -q ../fn.zip handler.py )
 if aws lambda get-function --function-name "$FN" >/dev/null 2>&1; then
@@ -137,7 +137,7 @@ done
 SITE_URL="https://$BRANCH.$APP_ID.amplifyapp.com"
 
 # ---------- 7. Optional: remove the v0.1 'disha' stack (empty) ----------
-if [ "${CLEANUP_DISHA:-1}" = "1" ]; then
+if [ "${CLEANUP_DISHA:-0}" = "1" ]; then
   OLD_API=$(aws apigatewayv2 get-apis --query "Items[?Name=='disha-responses'].ApiId | [0]" --output text)
   [ -n "$OLD_API" ] && [ "$OLD_API" != "None" ] && aws apigatewayv2 delete-api --api-id "$OLD_API" && echo "removed old api"
   aws lambda delete-function --function-name disha-responses >/dev/null 2>&1 && echo "removed old lambda" || true
@@ -156,5 +156,5 @@ echo "Site:          $SITE_URL"
 echo "API:           $ENDPOINT"
 echo "Health:        ${ENDPOINT}health"
 echo "Cognito pool:  $POOL_ID   (users: aws cognito-idp list-users --user-pool-id $POOL_ID)"
-echo "Export (CSV):  ${ENDPOINT}export?key=$EXPORT_KEY&format=csv"
+[ -z "${CI:-}" ] && echo "Export (CSV):  ${ENDPOINT}export?key=$EXPORT_KEY&format=csv"
 echo "Note: Cognito's default email sender allows about 50 OTP emails a day per pool; move to Amazon SES for more."

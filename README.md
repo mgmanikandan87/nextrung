@@ -24,23 +24,27 @@ scripts/build.py        builds site/index.html (for claude.ai artifact) and dist
 skills/                 the three agent skills that maintain the content
 ```
 
-## The three agent skills
+## The five agent skills
 
 Each is a `SKILL.md` any Claude agent (or another agent runner) can load.
 
 - `india-grad-market-research` refreshes `market_stats.json`: opens the primary page for every figure, records confidence, keeps both sides of a contradiction, emits a gap instead of a guess. Run quarterly.
 - `career-path-mapper` maintains the nine path records from the stats: door size, pay band, two-year plan, evidenced project, employers with a page seen in the last six months, and the matcher's fit rules.
 - `grad-guide-writer` writes graduate-facing pages in plain English for a tier-2/3 reader, every number linked to its stat id.
+- `skills-taxonomy-maintainer` keeps `data/skills/` and each path's skills array current; every learning link opened before it is listed.
+- `fresher-jobs-ingest` rebuilds `data/jobs/` each quarter from career pages, notifications and a job connector when one is available, mapping requirements to skill ids.
 
-Intended loop: a scheduled run of the research skill opens a pull request with changed numbers; maintainers review; the mapper updates paths; the site rebuilds.
+The loop is automated: `.github/workflows/refresh.yml` runs the skills quarterly and opens a pull request; `.github/workflows/ci.yml` validates, builds, smoke-tests and deploys on merge. See `deploy/README.md`.
 
-## Build
+## Build and test
 
 ```
-python3 scripts/build.py
+python3 scripts/validate.py   # data checks; must pass
+python3 scripts/build.py      # dist/index.html
+node scripts/smoke.js         # browser smoke test (needs `npm i playwright`)
 ```
 
-No dependencies. `dist/index.html` runs from any static host or a local file.
+`dist/index.html` runs from any static host or a local file.
 
 ## Matcher
 

@@ -1,0 +1,76 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-build-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Validate data
+        run: python3 scripts/validate.py
+      - name: Build site
+        run: python3 scripts/build.py
+      - name: Install Playwright
+        run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - name: Smoke test (mocked backend)
+        run: node scripts/smoke.js dist/index.html
+      - name: Lambda handler imports
+        run: |
+          pip install -q boto3
+          AWS_DEFAULT_REGION=ap-south-1 TABLE=x POOL_ID=p CLIENT_ID=c RESP_TABLE=r python3 -c "import sys; sys.path.insert(0,'deploy/lambda'); import handler; print('handler ok')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist/index.html
+          retention-days: 14
+
+  deploy:
+    needs: validate-build-smoke
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: site, path: dist }
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ap-south-1
+      - name: Deploy (Lambda, API, Cognito, Amplify)
+        env:
+          EXPORT_KEY: ${{ secrets.NEXTRUNG_EXPORT_KEY }}
+          CI: 'true'
+        run: |
+          mkdir -p deploy/site && cp dist/index.html deploy/site/index.html
+          bash deploy/deploy.sh
+      - name: Post-deploy checks
+        run: |
+          set -e
+          SITE=$(jq -r .site_url deploy/outputs.json); API=$(jq -r .api deploy/outputs.json)
+          for i in 1 2 3 4 5 6; do code=$(curl -s -o /dev/null -w '%{http_code}' "$SITE/"); [ "$code" = "200" ] && break; sleep 10; done
+          [ "$code" = "200" ] || { echo "site returned $code"; exit 1; }
+          curl -sf "${API}health" | tee /tmp/h.json; grep -q '"ok": true' /tmp/h.json
+          curl -s "$SITE/" | grep -q "$API" || { echo "site does not point at the API"; exit 1; }
+          code=$(curl -s -o /dev/null -w '%{http_code}' "${API}me"); [ "$code" = "401" ] || { echo "/me without token returned $code, expected 401"; exit 1; }
+          echo "### NextRung deployed" >> $GITHUB_STEP_SUMMARY
+          echo "- Site: $SITE" >> $GITHUB_STEP_SUMMARY
+          echo "- API: $API" >> $GITHUB_STEP_SUMMARY
+          echo "- Health: $(cat /tmp/h.json)" >> $GITHUB_STEP_SUMMARY

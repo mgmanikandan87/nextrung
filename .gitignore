@@ -1,2 +1,10 @@
 __pycache__/
 .DS_Store
+dist/
+deploy/build/
+deploy/site/
+deploy/fn.zip
+deploy/site.zip
+deploy/outputs.json
+deploy/.export_key
+node_modules/
