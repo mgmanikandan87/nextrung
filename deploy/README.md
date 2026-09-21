@@ -7,10 +7,10 @@
 One-time setup:
 1. Create the GitHub repo and push this code.
 2. In AWS CloudShell: `REPO=owner/name bash deploy/aws-github-oidc.sh` (creates the OIDC provider and the `nextrung-github-deploy` role trusted by that repo's `main` only; prints the role ARN).
-3. GitHub → Settings → Secrets and variables → Actions: `AWS_DEPLOY_ROLE_ARN` (from step 2) and `NEXTRUNG_EXPORT_KEY` (the export key from your last deploy; keeps the export URL stable).
+3. GitHub → Settings → Secrets and variables → Actions: `AWS_DEPLOY_ROLE_ARN` (from step 2). The export key is kept in SSM Parameter Store (`/nextrung/export_key`), so CI deploys keep the same export URL.
 4. Optional, for the quarterly refresh agent (`.github/workflows/refresh.yml`): `ANTHROPIC_API_KEY`. It runs 1 Jan/Apr/Jul/Oct and on demand (Actions → quarterly-data-refresh → Run workflow), opens a PR with refreshed data and a `review/refresh-<date>.md`; merging deploys.
 
-Rotate the export key: change the secret and redeploy; the old URL stops working.
+Rotate the export key: `aws ssm put-parameter --name /nextrung/export_key --type SecureString --overwrite --value <new>` then redeploy; the old URL stops working.
 
 ## Manual (CloudShell)
 

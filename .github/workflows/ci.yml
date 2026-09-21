@@ -56,7 +56,6 @@ jobs:
           aws-region: ap-south-1
       - name: Deploy (Lambda, API, Cognito, Amplify)
         env:
-          EXPORT_KEY: ${{ secrets.NEXTRUNG_EXPORT_KEY }}
           CI: 'true'
         run: |
           mkdir -p deploy/site && cp dist/index.html deploy/site/index.html

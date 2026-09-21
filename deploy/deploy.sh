@@ -70,8 +70,14 @@ ROLE_ARN=$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)
 
 # ---------- 4. Lambda ----------
 FN="$NAME-api"
-EXPORT_KEY_FILE="$HERE/.export_key"
-if [ -n "${EXPORT_KEY:-}" ]; then :; elif [ -f "$EXPORT_KEY_FILE" ]; then EXPORT_KEY=$(cat "$EXPORT_KEY_FILE"); else EXPORT_KEY=$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9' | head -c 32); echo -n "$EXPORT_KEY" > "$EXPORT_KEY_FILE"; fi
+# Export key: env EXPORT_KEY > SSM parameter /nextrung/export_key > local .export_key > generate. Stored in SSM so CI runs keep the same key.
+EXPORT_KEY_FILE="$HERE/.export_key"; PARAM="/$NAME/export_key"
+if [ -z "${EXPORT_KEY:-}" ]; then EXPORT_KEY=$(aws ssm get-parameter --name "$PARAM" --with-decryption --query Parameter.Value --output text 2>/dev/null || true); fi
+if [ -z "${EXPORT_KEY:-}" ] || [ "$EXPORT_KEY" = "None" ]; then
+  if [ -f "$EXPORT_KEY_FILE" ]; then EXPORT_KEY=$(cat "$EXPORT_KEY_FILE"); else EXPORT_KEY=$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9' | head -c 32); fi
+fi
+aws ssm put-parameter --name "$PARAM" --type SecureString --value "$EXPORT_KEY" --overwrite >/dev/null 2>&1 || echo "note: could not store export key in SSM (no permission?); using local/env key"
+[ -z "${CI:-}" ] && echo -n "$EXPORT_KEY" > "$EXPORT_KEY_FILE"
 ENV="Variables={TABLE=$NAME,RESP_TABLE=$NAME-responses,EXPORT_KEY=$EXPORT_KEY,POOL_ID=$POOL_ID,CLIENT_ID=$CLIENT_ID}"
 ( cd "$HERE/lambda" && rm -f ../fn.zip && zip -q ../fn.zip handler.py )
 if aws lambda get-function --function-name "$FN" >/dev/null 2>&1; then

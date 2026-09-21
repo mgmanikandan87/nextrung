@@ -39,6 +39,7 @@ aws iam put-role-policy --role-name "$ROLE" --policy-name nextrung-deploy --poli
  {"Sid":"LambdaRole","Effect":"Allow","Action":["iam:CreateRole","iam:AttachRolePolicy","iam:PutRolePolicy","iam:PassRole","iam:GetRolePolicy"],"Resource":"arn:aws:iam::$ACCOUNT:role/$NAME-lambda"},
  {"Sid":"Lambda","Effect":"Allow","Action":["lambda:CreateFunction","lambda:UpdateFunctionCode","lambda:UpdateFunctionConfiguration","lambda:AddPermission","lambda:RemovePermission","lambda:GetFunction","lambda:TagResource"],"Resource":"arn:aws:lambda:$REGION:$ACCOUNT:function:$NAME-api"},
  {"Sid":"ApiGw","Effect":"Allow","Action":["apigateway:POST","apigateway:PUT","apigateway:PATCH","apigateway:GET","apigateway:DELETE"],"Resource":"arn:aws:apigateway:$REGION::/apis*"},
+ {"Sid":"Ssm","Effect":"Allow","Action":["ssm:GetParameter","ssm:PutParameter"],"Resource":"arn:aws:ssm:$REGION:$ACCOUNT:parameter/$NAME/*"},
  {"Sid":"Amplify","Effect":"Allow","Action":["amplify:CreateApp","amplify:UpdateApp","amplify:GetApp","amplify:GetBranch","amplify:CreateBranch","amplify:CreateDeployment","amplify:StartDeployment","amplify:GetJob","amplify:ListJobs"],"Resource":"*"}
 ]}
 EOF
@@ -46,5 +47,5 @@ EOF
 ARN=$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)
 echo; echo "================ DONE ================"
 echo "GitHub secret AWS_DEPLOY_ROLE_ARN = $ARN"
-echo "GitHub secret NEXTRUNG_EXPORT_KEY = $(cat "$(dirname "$0")/.export_key" 2>/dev/null || echo '<the key from your last deploy outputs.json>')"
+echo "Export key lives in SSM parameter /$NAME/export_key (no GitHub secret needed)."
 echo "Trusted: repo:$REPO, branch main only."
