@@ -312,13 +312,13 @@ function signin() {
   if (!API) { app.innerHTML = '<h2 style="margin-top:0">Accounts are not enabled on this copy</h2><p>Use the hosted site to save your standing.</p>'; return; }
   app.innerHTML = `<div class="q">
     <div class="eyebrow">Sign in</div><h1 style="font-size:clamp(26px,5vw,36px)">Your standing, saved</h1>
-    <p class="lead">No password. We email you a 6-digit code each time. Your answers, evidence and plan stay with your account so you can come back every week.</p>
+    <p class="lead">No password. We email you a one-time code each time. Your answers, evidence and plan stay with your account so you can come back every week.</p>
     <div class="card"><div id="step1">
       <label class="f">Email<input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@college.edu" style="width:100%"></label>
       <div class="row" style="margin-top:12px"><button class="btn" id="send">Email me a code</button><span class="cap" id="msg1"></span></div></div>
       <div id="step2" hidden>
       <p class="small">Code sent to <b id="sent-to"></b>. Check spam if it does not arrive in a minute.</p>
-      <label class="f">6-digit code<input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="123456" style="width:180px;font-family:var(--mono);font-size:20px;letter-spacing:.2em"></label>
+      <label class="f">Code from the email<input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="12345678" style="width:180px;font-family:var(--mono);font-size:20px;letter-spacing:.2em"></label>
       <div class="row" style="margin-top:12px"><button class="btn" id="verify">Sign in</button><a href="#" id="again" class="cap">Send a new code</a><span class="cap" id="msg2"></span></div></div>
     </div>
     <p class="cap">By signing in you agree that your answers and evidence links are stored to compute your standing. Nothing is sold or shared with recruiters unless you make your page public.</p></div>`;

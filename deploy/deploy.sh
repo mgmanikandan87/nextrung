@@ -12,6 +12,7 @@ AMPLIFY_APP_NAME="${AMPLIFY_APP_NAME:-disha-for-engineers}"   # existing Amplify
 BRANCH="main"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 export AWS_DEFAULT_REGION="$REGION" AWS_PAGER=""
+[ -x "$HOME/bin/aws" ] && export PATH="$HOME/bin:$PATH"   # CloudShell's bundled CLI can lag; a newer one installed in ~/bin wins
 need() { command -v "$1" >/dev/null || { echo "missing: $1"; exit 1; }; }
 need aws; need jq; need zip; need curl
 ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
@@ -37,7 +38,7 @@ echo "tables ready"
 POOL_ID=$(aws cognito-idp list-user-pools --max-results 60 --query "UserPools[?Name=='$NAME'].Id | [0]" --output text)
 if [ -z "$POOL_ID" ] || [ "$POOL_ID" = "None" ]; then
   POOL_ID=$(aws cognito-idp create-user-pool --pool-name "$NAME" --user-pool-tier ESSENTIALS \
-    --sign-in-policy '{"AllowedFirstAuthFactors":["PASSWORD","EMAIL_OTP"]}' \
+    --policies '{"SignInPolicy":{"AllowedFirstAuthFactors":["PASSWORD","EMAIL_OTP"]}}' \
     --username-attributes email --auto-verified-attributes email \
     --username-configuration CaseSensitive=false \
     --admin-create-user-config AllowAdminCreateUserOnly=false \
