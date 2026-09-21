@@ -1,168 +1,462 @@
 {
-  "id": "ev_automotive",
-  "name": "EV and automotive",
-  "tagline": "Growing door, but the first job is often a contract or apprenticeship on the plant floor",
-  "door_state": "growing",
-  "door_size": {
-    "people_per_year": null,
-    "stat_ids": ["paths.ev.jobs_projection_adecco.2030", "paths.ev.hiring_growth_yoy"],
-    "caveat": "No stat counts fresher engineering hires per year. Adecco projects 30 to 40 million EV jobs by 2030 but only 10 to 15% are direct, most direct jobs are plant-floor, hiring grows 15 to 20% a year, and 40 to 50% of roles start as contracts."
+ "id": "ev_automotive",
+ "name": "EV and automotive",
+ "tagline": "Growing door, but the first job is often a contract or apprenticeship on the plant floor",
+ "door_state": "growing",
+ "door_size": {
+  "people_per_year": null,
+  "stat_ids": [
+   "paths.ev.jobs_projection_adecco.2030",
+   "paths.ev.hiring_growth_yoy"
+  ],
+  "caveat": "No stat counts fresher engineering hires per year. Adecco projects 30 to 40 million EV jobs by 2030 but only 10 to 15% are direct, most direct jobs are plant-floor, hiring grows 15 to 20% a year, and 40 to 50% of roles start as contracts."
+ },
+ "pay_band": {
+  "low_lpa": 3,
+  "high_lpa": 8,
+  "stat_ids": [
+   "paths.ev.fresher_ctc_bands.2026"
+  ],
+  "note": "Design roles start as low as 2, battery and BMS roles reach 9, embedded sits at 3 to 7; graduate apprentice stipends at OEM plants are below the band and convert to full roles only for some."
+ },
+ "branches": {
+  "CS": 1,
+  "IT": 0,
+  "ECE": 2,
+  "EE": 3,
+  "MECH": 3,
+  "CIVIL": 0,
+  "CHEM": 2,
+  "OTHER": 1
+ },
+ "tiers_realistic": {
+  "tier1": "Yes. OEM design centres and Bosch-type suppliers run campus GET programmes at NITs, top state universities and a few private colleges; battery R&D and vehicle software roles go mostly here.",
+  "tier2": "Yes for plant and supplier GET or graduate apprentice roles; design-centre roles need a portfolio (CAD models, a BMS or motor-controller build, a Simulink model) and often a pool-campus test such as HireMee.",
+  "tier3": "Yes, but the first door is usually a Graduate Apprentice Trainee post under NATS at an OEM plant or a tier-1 supplier, at a stipend not a salary, with conversion to a permanent role for some. What substitutes for the brand is a hardware build you can demonstrate on video, a CAN-bus or BMS project with logged data, and willingness to relocate to Pune, Sanand, Hosur, Chennai or Bengaluru."
+ },
+ "entry_requirements": [
+  "B.E./B.Tech in Mechanical, Automobile, Electrical, EEE, ECE, Mechatronics or Instrumentation with no active backlogs; most OEM notices ask for 60% throughout",
+  "Working CAD skill in CATIA, SolidWorks, Creo or NX with GD&T basics, shown as files not certificates",
+  "For battery and BMS roles: cell chemistry basics, SOC and SOH estimation, thermal behaviour, and hands-on cell or pack testing",
+  "For embedded roles: embedded C on an STM32 or similar microcontroller, CAN and LIN protocols, and reading a datasheet",
+  "MATLAB/Simulink model of a vehicle subsystem (drive cycle, motor control or battery) that you can walk through",
+  "One completed internship or NATS apprenticeship on a shop floor, or a documented build from a college EV or Baja/Supra team",
+  "Willingness to relocate to plant clusters and to accept a contract or trainee role for the first one to two years"
+ ],
+ "two_year_plan": [
+  {
+   "block": "H1",
+   "title": "Fundamentals and a CAD portfolio",
+   "learn": [
+    "NPTEL: Electric Vehicles (IIT Madras or IIT Delhi offering), Fundamentals of Automotive Systems, and Engineering Drawing refresher; all free, take the certificate exam if you can afford it",
+    "One CAD tool properly: SolidWorks or Fusion 360 (free for students) or CATIA if your college has it; GD&T basics from the free ASME primers",
+    "Battery basics: lithium-ion cell chemistry, C-rate, SOC and SOH, thermal runaway, pack topology (series and parallel); use the free Battery University site",
+    "Embedded C basics on an Arduino, then move to an STM32 Nucleo board; learn UART, I2C, SPI and how to read a datasheet"
+   ],
+   "build": [
+    "A full CAD assembly of a two-wheeler EV battery pack or a motor mount with drawings, tolerances and a BOM",
+    "A microcontroller project that reads cell voltage and temperature from a small pack and prints it over serial"
+   ],
+   "evidence": [
+    "A public GitHub or GrabCAD folder with CAD files, drawings and a one-page write-up of design choices",
+    "A short video of the microcontroller reading a real cell"
+   ],
+   "target": [
+    "Register on the NATS portal (nats.education.gov.in) so you are eligible for graduate apprentice notices",
+    "Join college EV, Baja or Supra team if one exists"
+   ]
   },
-  "pay_band": {
-    "low_lpa": 3,
-    "high_lpa": 8,
-    "stat_ids": ["paths.ev.fresher_ctc_bands.2026"],
-    "note": "Design roles start as low as 2, battery and BMS roles reach 9, embedded sits at 3 to 7; graduate apprentice stipends at OEM plants are below the band and convert to full roles only for some."
+  {
+   "block": "H2",
+   "title": "Simulation, CAN bus and a plant internship",
+   "learn": [
+    "MATLAB/Simulink: build a drive-cycle model of a two-wheeler EV (motor, battery, vehicle dynamics); MathWorks Onramp courses are free",
+    "CAN and LIN: use an MCP2515 module or an STM32 with built-in CAN; learn frame structure, arbitration and how to log with a cheap USB-CAN adapter and SavvyCAN",
+    "Thermal simulation basics: steady-state heat flow in a pack using free tools (FreeCAD FEM or Ansys Student) and hand calculations",
+    "Manufacturing basics: line balancing, poka-yoke, 5S and SPC, because most fresher roles are on or near the line"
+   ],
+   "build": [
+    "A two-node CAN network: one board reports pack voltage and temperature, the other displays it and raises a fault flag",
+    "A Simulink model that predicts range for a given drive cycle and battery, validated against a published spec"
+   ],
+   "evidence": [
+    "Logged CAN traces and a document explaining each message ID",
+    "A short report comparing your Simulink range prediction with the OEM claim"
+   ],
+   "target": [
+    "Summer internship or NATS graduate apprenticeship at a plant (Tata Motors Pune or Sanand, TVS Hosur, Ola Krishnagiri, Bosch, Tata AutoComp) at the NATS graduate stipend of Rs 12,300 a month or the higher OEM stipend where offered",
+    "Apply to Bosch and Bosch Chassis Graduate Apprentice pool-campus tests"
+   ]
   },
-  "branches": {"CS": 1, "IT": 0, "ECE": 2, "EE": 3, "MECH": 3, "CIVIL": 0, "CHEM": 2, "OTHER": 1},
-  "tiers_realistic": {
-    "tier1": "Yes. OEM design centres and Bosch-type suppliers run campus GET programmes at NITs, top state universities and a few private colleges; battery R&D and vehicle software roles go mostly here.",
-    "tier2": "Yes for plant and supplier GET or graduate apprentice roles; design-centre roles need a portfolio (CAD models, a BMS or motor-controller build, a Simulink model) and often a pool-campus test such as HireMee.",
-    "tier3": "Yes, but the first door is usually a Graduate Apprentice Trainee post under NATS at an OEM plant or a tier-1 supplier, at a stipend not a salary, with conversion to a permanent role for some. What substitutes for the brand is a hardware build you can demonstrate on video, a CAN-bus or BMS project with logged data, and willingness to relocate to Pune, Sanand, Hosur, Chennai or Bengaluru."
+  {
+   "block": "H3",
+   "title": "BMS build and cell testing",
+   "learn": [
+    "BMS design: passive balancing, cell monitoring ICs (BQ76920 family or similar), SOC estimation by coulomb counting and simple Kalman filter",
+    "Cell testing: charge and discharge cycling, capacity fade, internal resistance, using a low-cost programmable load and logging every run",
+    "Motor control basics: BLDC six-step commutation, then FOC concepts; run a small BLDC with an off-the-shelf controller and read its signals",
+    "Functional safety vocabulary (ISO 26262 levels) and AIS-156 battery safety basics so you can talk to a test engineer"
+   ],
+   "build": [
+    "A working BMS for a small pack (for example, a 4-series lithium pack) with balancing, over-voltage and over-temperature cut-off, and a CAN output",
+    "A cell test log of at least twenty cycles with a capacity-fade plot"
+   ],
+   "evidence": [
+    "Video demonstration of the BMS cutting off on a fault, plus the schematic and firmware on GitHub",
+    "A report on the cell test with plots, assumptions and what you would change"
+   ],
+   "target": [
+    "Battery and BMS openings at Ather, Ola Electric, Exide Energy Solutions, Amara Raja, Tata AutoComp Gotion",
+    "Embedded openings at Bosch, Mahindra, Tata Motors"
+   ]
   },
-  "entry_requirements": [
-    "B.E./B.Tech in Mechanical, Automobile, Electrical, EEE, ECE, Mechatronics or Instrumentation with no active backlogs; most OEM notices ask for 60% throughout",
-    "Working CAD skill in CATIA, SolidWorks, Creo or NX with GD&T basics, shown as files not certificates",
-    "For battery and BMS roles: cell chemistry basics, SOC and SOH estimation, thermal behaviour, and hands-on cell or pack testing",
-    "For embedded roles: embedded C on an STM32 or similar microcontroller, CAN and LIN protocols, and reading a datasheet",
-    "MATLAB/Simulink model of a vehicle subsystem (drive cycle, motor control or battery) that you can walk through",
-    "One completed internship or NATS apprenticeship on a shop floor, or a documented build from a college EV or Baja/Supra team",
-    "Willingness to relocate to plant clusters and to accept a contract or trainee role for the first one to two years"
-  ],
-  "two_year_plan": [
-    {
-      "block": "H1",
-      "title": "Fundamentals and a CAD portfolio",
-      "learn": [
-        "NPTEL: Electric Vehicles (IIT Madras or IIT Delhi offering), Fundamentals of Automotive Systems, and Engineering Drawing refresher; all free, take the certificate exam if you can afford it",
-        "One CAD tool properly: SolidWorks or Fusion 360 (free for students) or CATIA if your college has it; GD&T basics from the free ASME primers",
-        "Battery basics: lithium-ion cell chemistry, C-rate, SOC and SOH, thermal runaway, pack topology (series and parallel); use the free Battery University site",
-        "Embedded C basics on an Arduino, then move to an STM32 Nucleo board; learn UART, I2C, SPI and how to read a datasheet"
-      ],
-      "build": [
-        "A full CAD assembly of a two-wheeler EV battery pack or a motor mount with drawings, tolerances and a BOM",
-        "A microcontroller project that reads cell voltage and temperature from a small pack and prints it over serial"
-      ],
-      "evidence": [
-        "A public GitHub or GrabCAD folder with CAD files, drawings and a one-page write-up of design choices",
-        "A short video of the microcontroller reading a real cell"
-      ],
-      "target": ["Register on the NATS portal (nats.education.gov.in) so you are eligible for graduate apprentice notices", "Join college EV, Baja or Supra team if one exists"]
-    },
-    {
-      "block": "H2",
-      "title": "Simulation, CAN bus and a plant internship",
-      "learn": [
-        "MATLAB/Simulink: build a drive-cycle model of a two-wheeler EV (motor, battery, vehicle dynamics); MathWorks Onramp courses are free",
-        "CAN and LIN: use an MCP2515 module or an STM32 with built-in CAN; learn frame structure, arbitration and how to log with a cheap USB-CAN adapter and SavvyCAN",
-        "Thermal simulation basics: steady-state heat flow in a pack using free tools (FreeCAD FEM or Ansys Student) and hand calculations",
-        "Manufacturing basics: line balancing, poka-yoke, 5S and SPC, because most fresher roles are on or near the line"
-      ],
-      "build": [
-        "A two-node CAN network: one board reports pack voltage and temperature, the other displays it and raises a fault flag",
-        "A Simulink model that predicts range for a given drive cycle and battery, validated against a published spec"
-      ],
-      "evidence": [
-        "Logged CAN traces and a document explaining each message ID",
-        "A short report comparing your Simulink range prediction with the OEM claim"
-      ],
-      "target": ["Summer internship or NATS graduate apprenticeship at a plant (Tata Motors Pune or Sanand, TVS Hosur, Ola Krishnagiri, Bosch, Tata AutoComp) at the NATS graduate stipend of Rs 12,300 a month or the higher OEM stipend where offered", "Apply to Bosch and Bosch Chassis Graduate Apprentice pool-campus tests"]
-    },
-    {
-      "block": "H3",
-      "title": "BMS build and cell testing",
-      "learn": [
-        "BMS design: passive balancing, cell monitoring ICs (BQ76920 family or similar), SOC estimation by coulomb counting and simple Kalman filter",
-        "Cell testing: charge and discharge cycling, capacity fade, internal resistance, using a low-cost programmable load and logging every run",
-        "Motor control basics: BLDC six-step commutation, then FOC concepts; run a small BLDC with an off-the-shelf controller and read its signals",
-        "Functional safety vocabulary (ISO 26262 levels) and AIS-156 battery safety basics so you can talk to a test engineer"
-      ],
-      "build": [
-        "A working BMS for a small pack (for example, a 4-series lithium pack) with balancing, over-voltage and over-temperature cut-off, and a CAN output",
-        "A cell test log of at least twenty cycles with a capacity-fade plot"
-      ],
-      "evidence": [
-        "Video demonstration of the BMS cutting off on a fault, plus the schematic and firmware on GitHub",
-        "A report on the cell test with plots, assumptions and what you would change"
-      ],
-      "target": ["Battery and BMS openings at Ather, Ola Electric, Exide Energy Solutions, Amara Raja, Tata AutoComp Gotion", "Embedded openings at Bosch, Mahindra, Tata Motors"]
-    },
-    {
-      "block": "H4",
-      "title": "Job hunt with a demonstrable project",
-      "learn": [
-        "Interview preparation for GET and GAT tests: aptitude, core branch basics, and how OEMs run HireMee or TurboHire rounds",
-        "Basic Python for test-data analysis (pandas, matplotlib) so you can turn your cell and CAN logs into charts",
-        "How to use a coding assistant to write firmware boilerplate and a research assistant to summarise standards, while checking every line against the datasheet"
-      ],
-      "build": [
-        "Finish the evidenced project below and rehearse a thirty-minute walkthrough",
-        "One-page portfolio site linking CAD, BMS, CAN and Simulink work"
-      ],
-      "evidence": [
-        "Portfolio link on your CV; a GAT or internship completion letter",
-        "Mock interview recordings where you explain your project to someone outside the field"
-      ],
-      "target": ["Mahindra GET and PGET (2026 batch drives run around April)", "Tata Motors GAT (Pune and Sanand notices run around June)", "Bosch Graduate Apprentice (registrations around March)", "TVS Hosur apprentice notices", "Tata AutoComp Chennai and Pune walk-ins"]
-    }
-  ],
-  "evidenced_project_spec": {
-    "title": "Two-wheeler battery pack with a home-built BMS, CAN telemetry and a validated range model",
-    "scope": "Design a small lithium-ion pack for an electric scooter (CAD assembly, BOM, thermal hand calculation), build a working BMS on a low-cost cell-monitor IC with balancing and safety cut-offs, put pack data on a CAN bus, and build a Simulink model that predicts range for a standard drive cycle and compare it with measured discharge on the bench.",
-    "domain": "Electric two-wheelers, the largest EV segment by volume in India and the one where Ather, Ola, TVS and Bajaj hire.",
-    "agent_use": "Use a coding agent to scaffold the STM32 firmware (peripheral setup, CAN driver, ring buffer for logging) and the Python scripts that parse CAN logs into plots. Use a research agent to summarise AIS-156 safety requirements and the cell-monitor IC datasheet into a checklist, then verify each item against the original document. Keep every agent output in a folder with the prompt and what you changed, so you can show an interviewer where the agent was wrong (for example, a register bit it guessed).",
-    "done_looks_like": "The BMS balances the pack, cuts off on over-voltage and over-temperature, publishes voltage, current and temperature on CAN at a fixed rate; a dashboard shows live data; the Simulink range prediction is within a stated error of the measured bench discharge; the CAD, BOM, schematic, firmware, logs and a ten-page report are public.",
-    "verification": "Fault injection on the bench (heat a cell with a hot-air gun, raise the charger voltage) with logs showing the cut-off; twenty or more charge-discharge cycles with a capacity plot; a second person reproduces the CAN decode from your documentation alone; range model error reported honestly with the reasons."
+  {
+   "block": "H4",
+   "title": "Job hunt with a demonstrable project",
+   "learn": [
+    "Interview preparation for GET and GAT tests: aptitude, core branch basics, and how OEMs run HireMee or TurboHire rounds",
+    "Basic Python for test-data analysis (pandas, matplotlib) so you can turn your cell and CAN logs into charts",
+    "How to use a coding assistant to write firmware boilerplate and a research assistant to summarise standards, while checking every line against the datasheet"
+   ],
+   "build": [
+    "Finish the evidenced project below and rehearse a thirty-minute walkthrough",
+    "One-page portfolio site linking CAD, BMS, CAN and Simulink work"
+   ],
+   "evidence": [
+    "Portfolio link on your CV; a GAT or internship completion letter",
+    "Mock interview recordings where you explain your project to someone outside the field"
+   ],
+   "target": [
+    "Mahindra GET and PGET (2026 batch drives run around April)",
+    "Tata Motors GAT (Pune and Sanand notices run around June)",
+    "Bosch Graduate Apprentice (registrations around March)",
+    "TVS Hosur apprentice notices",
+    "Tata AutoComp Chennai and Pune walk-ins"
+   ]
+  }
+ ],
+ "evidenced_project_spec": {
+  "title": "Two-wheeler battery pack with a home-built BMS, CAN telemetry and a validated range model",
+  "scope": "Design a small lithium-ion pack for an electric scooter (CAD assembly, BOM, thermal hand calculation), build a working BMS on a low-cost cell-monitor IC with balancing and safety cut-offs, put pack data on a CAN bus, and build a Simulink model that predicts range for a standard drive cycle and compare it with measured discharge on the bench.",
+  "domain": "Electric two-wheelers, the largest EV segment by volume in India and the one where Ather, Ola, TVS and Bajaj hire.",
+  "agent_use": "Use a coding agent to scaffold the STM32 firmware (peripheral setup, CAN driver, ring buffer for logging) and the Python scripts that parse CAN logs into plots. Use a research agent to summarise AIS-156 safety requirements and the cell-monitor IC datasheet into a checklist, then verify each item against the original document. Keep every agent output in a folder with the prompt and what you changed, so you can show an interviewer where the agent was wrong (for example, a register bit it guessed).",
+  "done_looks_like": "The BMS balances the pack, cuts off on over-voltage and over-temperature, publishes voltage, current and temperature on CAN at a fixed rate; a dashboard shows live data; the Simulink range prediction is within a stated error of the measured bench discharge; the CAD, BOM, schematic, firmware, logs and a ten-page report are public.",
+  "verification": "Fault injection on the bench (heat a cell with a hot-air gun, raise the charger voltage) with logs showing the cut-off; twenty or more charge-discharge cycles with a capacity plot; a second person reproduces the CAN decode from your documentation alone; range model error reported honestly with the reasons."
+ },
+ "ai_task_shift": [
+  {
+   "task_2019": "Drafting 2D drawings and detailing standard brackets and mounts",
+   "now": "CAD assistants generate drawings from the 3D model and propose standard parts; agents produce first-pass BOMs from the assembly tree",
+   "human_owns": "Tolerance stack-up decisions, manufacturability with the actual supplier, and signing the drawing"
   },
-  "ai_task_shift": [
-    {"task_2019": "Drafting 2D drawings and detailing standard brackets and mounts", "now": "CAD assistants generate drawings from the 3D model and propose standard parts; agents produce first-pass BOMs from the assembly tree", "human_owns": "Tolerance stack-up decisions, manufacturability with the actual supplier, and signing the drawing"},
-    {"task_2019": "Setting up thermal and structural simulation cases by hand", "now": "Agents write the simulation script, mesh settings and post-processing from a description of the load case", "human_owns": "Choosing boundary conditions that match the real vehicle, judging whether results are physically plausible, and correlating with a physical test"},
-    {"task_2019": "Writing embedded boilerplate: peripheral init, CAN drivers, logging code", "now": "Coding agents produce the boilerplate and unit tests; the engineer reviews and integrates", "human_owns": "Timing and safety behaviour on the real hardware, datasheet errata, and the debugging session with an oscilloscope"},
-    {"task_2019": "Compiling test reports and homologation documents from spreadsheets", "now": "Agents draft the report and the AIS-156 evidence matrix from logs", "human_owns": "Running the physical tests, deciding a result is a fail, and sign-off with the certifying body"},
-    {"task_2019": "Searching supplier catalogues and standards for part selection", "now": "Research agents shortlist cells, ICs and connectors with datasheet summaries", "human_owns": "Verifying the summary against the datasheet, the supplier visit, and cost negotiation"},
-    {"task_2019": "Line-side problem solving from shift data", "now": "Agents summarise shift logs and flag anomalies", "human_owns": "Standing at the line, the root-cause conversation with operators, and the change decision"}
-  ],
-  "fallback_path_id": "infrastructure_energy",
-  "employers": [
-    {"name": "Tata Motors", "type": "company", "location": "Pune, Sanand, Jamshedpur, Lucknow, Pantnagar, Dharwad", "roles": "Graduate Apprentice Trainee under NATS in production, maintenance, quality and manufacturing planning; Rs 25,000 monthly stipend; Lakshya earn-and-learn for diploma holders", "fresher": true, "source_url": "https://www.enggwave.com/tata-motors-off-campus-drive-2026/106189", "seen_on": "2026-07"},
-    {"name": "Mahindra & Mahindra (auto and farm, including Mahindra Electric Automobile)", "type": "company", "location": "Pune, Mumbai, Chennai; PAN India postings", "roles": "GET, PGET and SGET campus programmes for the 2026 batch in Mechanical, Automobile, Electrical, Electronics, Mechatronics and Production", "fresher": true, "source_url": "https://www.enggwave.com/mahindra-hiring-freshers-2026/107234", "seen_on": "2026-04"},
-    {"name": "Ola Electric", "type": "company", "location": "Krishnagiri (Futurefactory), Bengaluru", "roles": "Walk-in drives for plant roles open to any degree; R&D and engineering openings mostly experienced, applied through the careers portal", "fresher": true, "source_url": "https://www.itijobsindia.in/2026/03/ola-electric-walk-in-drive-2026-12th.html", "seen_on": "2026-03"},
-    {"name": "Ather Energy", "type": "company", "location": "Bengaluru, Hosur", "roles": "Internships and campus hiring through placement cells; Graduate Engineering Trainee openings appear intermittently on the careers portal", "fresher": true, "source_url": "https://careers.atherenergy.com/students", "seen_on": "2026-09"},
-    {"name": "TVS Motor Company", "type": "company", "location": "Hosur, Uddanapalli, Mysuru", "roles": "Apprentice and trainee roles in assembly, inspection and quality; open to diploma and degree holders", "fresher": true, "source_url": "https://www.tnjobzone.com/tvs-motor-company-apprentice-recruitment-2026/", "seen_on": "2026-05"},
-    {"name": "Bosch (Bosch Limited and Bosch Chassis Systems India)", "type": "company", "location": "Bengaluru, Pune, Nashik, Jaipur", "roles": "Graduate Apprentice programme of twelve months for first-class B.E./B.Tech in Mechanical, EEE and ECE via pool campus and online test; Technical Management Trainee for top performers", "fresher": true, "source_url": "https://www.bosch.in/careers/students-and-graduates/graduate-apprentice/", "seen_on": "2026-09"},
-    {"name": "Exide Industries and Exide Energy Solutions", "type": "company", "location": "Bengaluru (lithium cell plant), Pune, Haldia, Hosur", "roles": "Campus cadre programmes for engineers (historically IIT and IISc focused) plus plant production associate and GET openings at Bengaluru and Pune", "fresher": true, "source_url": "https://careers.exideindustries.com/opportunities-exide/campus-recruits.aspx", "seen_on": "2026-09"},
-    {"name": "Amara Raja Group (Energy & Mobility, Advanced Cell Technologies)", "type": "company", "location": "Tirupati, Chittoor, Hyderabad giga corridor", "roles": "Nava Pratibha fresher induction: ARGTP graduate technical trainee, ARGMP graduate management trainee, internships and apprenticeships", "fresher": true, "source_url": "https://amararaja.com/careers/", "seen_on": "2026-09"},
-    {"name": "Tata AutoComp Systems (and Tata AutoComp Gotion)", "type": "company", "location": "Chennai, Pune, Sanand", "roles": "Walk-in for design release, CAE, CFD and durability engineers with freshers offered 4 to 7 LPA; Sanand battery plant hires operators and quality staff from ITI to graduate", "fresher": true, "source_url": "https://careerforfreshers.com/walk-in-jobs/tata-autocomp-systems-tata-group-walk-in-interview/", "seen_on": "2026-07"}
-  ],
-  "fit_rules": [
-    {"field": "branch", "value": "MECH", "score": 3, "reason": "Mechanical and automobile graduates are the main intake for OEM and supplier trainee roles."},
-    {"field": "branch", "value": "EE", "score": 3, "reason": "Battery, BMS, motor and charger work is electrical; EE is asked for by name in most notices."},
-    {"field": "branch", "value": "ECE", "score": 2, "reason": "Embedded, CAN and BMS firmware roles take ECE; you compete with EE for them."},
-    {"field": "branch", "value": "CHEM", "score": 1, "reason": "Cell chemistry and electrode process roles at new cell plants take chemical and metallurgy graduates, but the numbers are small."},
-    {"field": "branch", "value": "CS", "score": 0, "reason": "Vehicle software roles exist but are few and go to people with embedded experience; a CS graduate is usually better served by the software path."},
-    {"field": "branch", "value": "CIVIL", "score": -3, "reason": "Almost no EV fresher notice lists civil."},
-    {"field": "interests", "value": "physical_systems", "score": 2, "reason": "The work is machines, packs and plants; liking physical systems is the strongest signal."},
-    {"field": "interests", "value": "hardware_electronics", "score": 2, "reason": "BMS, controllers and CAN networks are electronics builds."},
-    {"field": "interests", "value": "building_software", "score": -1, "reason": "Software here is embedded firmware in service of hardware, not app or web work."},
-    {"field": "enjoyed", "value": "labs_hardware", "score": 2, "reason": "People who liked tinkering in labs finish the BMS and CAN builds this path needs."},
-    {"field": "enjoyed", "value": "workshops_site", "score": 2, "reason": "Most first roles are on or next to a production line."},
-    {"field": "preparation", "value": "core_tools", "score": 2, "reason": "CAD, MATLAB or Simulink already in hand shortens the plan by a block."},
-    {"field": "preparation", "value": "projects_portfolio", "score": 1, "reason": "A hardware build you can show substitutes for college brand at tier-2 and tier-3."},
-    {"field": "preparation", "value": "internship_done", "score": 1, "reason": "A plant internship or apprenticeship is what OEM recruiters ask about first."},
-    {"field": "relocation", "value": "hometown_only", "score": -3, "reason": "EV jobs sit in a few clusters (Pune, Sanand, Hosur, Chennai, Bengaluru, Krishnagiri); staying home rules most out."},
-    {"field": "relocation", "value": "within_state", "score": -1, "reason": "Works only if your state has a cluster (Tamil Nadu, Karnataka, Maharashtra, Gujarat, Telangana, Andhra)."},
-    {"field": "region", "value": "south", "score": 1, "reason": "Hosur, Krishnagiri, Chennai, Bengaluru and the Telangana and Andhra cell plants are in the south."},
-    {"field": "region", "value": "west", "score": 1, "reason": "Pune, Sanand and Chakan hold most OEM and supplier plants."},
-    {"field": "runway_months", "value": "0_3", "score": -1, "reason": "The first offer is often an apprentice stipend or contract, so income arrives but is low for a year or more."},
-    {"field": "priority", "value": "stability", "score": -1, "reason": "A large share of EV roles start as contracts; stability comes later, after conversion."}
-  ],
-  "base_score": 5,
-  "stat_ids_used": [
-    "paths.ev.jobs_projection_adecco.2030",
-    "paths.ev.hiring_growth_yoy",
-    "paths.ev.fresher_ctc_bands.2026",
-    "paths.skilling.nats_graduate_stipend.2026"
-  ],
-  "last_reviewed": "2026-09-21",
-  "changed_fields": ["all"]
+  {
+   "task_2019": "Setting up thermal and structural simulation cases by hand",
+   "now": "Agents write the simulation script, mesh settings and post-processing from a description of the load case",
+   "human_owns": "Choosing boundary conditions that match the real vehicle, judging whether results are physically plausible, and correlating with a physical test"
+  },
+  {
+   "task_2019": "Writing embedded boilerplate: peripheral init, CAN drivers, logging code",
+   "now": "Coding agents produce the boilerplate and unit tests; the engineer reviews and integrates",
+   "human_owns": "Timing and safety behaviour on the real hardware, datasheet errata, and the debugging session with an oscilloscope"
+  },
+  {
+   "task_2019": "Compiling test reports and homologation documents from spreadsheets",
+   "now": "Agents draft the report and the AIS-156 evidence matrix from logs",
+   "human_owns": "Running the physical tests, deciding a result is a fail, and sign-off with the certifying body"
+  },
+  {
+   "task_2019": "Searching supplier catalogues and standards for part selection",
+   "now": "Research agents shortlist cells, ICs and connectors with datasheet summaries",
+   "human_owns": "Verifying the summary against the datasheet, the supplier visit, and cost negotiation"
+  },
+  {
+   "task_2019": "Line-side problem solving from shift data",
+   "now": "Agents summarise shift logs and flag anomalies",
+   "human_owns": "Standing at the line, the root-cause conversation with operators, and the change decision"
+  }
+ ],
+ "fallback_path_id": "infrastructure_energy",
+ "employers": [
+  {
+   "name": "Tata Motors",
+   "type": "company",
+   "location": "Pune, Sanand, Jamshedpur, Lucknow, Pantnagar, Dharwad",
+   "roles": "Graduate Apprentice Trainee under NATS in production, maintenance, quality and manufacturing planning; Rs 25,000 monthly stipend; Lakshya earn-and-learn for diploma holders",
+   "fresher": true,
+   "source_url": "https://www.enggwave.com/tata-motors-off-campus-drive-2026/106189",
+   "seen_on": "2026-07"
+  },
+  {
+   "name": "Mahindra & Mahindra (auto and farm, including Mahindra Electric Automobile)",
+   "type": "company",
+   "location": "Pune, Mumbai, Chennai; PAN India postings",
+   "roles": "GET, PGET and SGET campus programmes for the 2026 batch in Mechanical, Automobile, Electrical, Electronics, Mechatronics and Production",
+   "fresher": true,
+   "source_url": "https://www.enggwave.com/mahindra-hiring-freshers-2026/107234",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "Ola Electric",
+   "type": "company",
+   "location": "Krishnagiri (Futurefactory), Bengaluru",
+   "roles": "Walk-in drives for plant roles open to any degree; R&D and engineering openings mostly experienced, applied through the careers portal",
+   "fresher": true,
+   "source_url": "https://www.itijobsindia.in/2026/03/ola-electric-walk-in-drive-2026-12th.html",
+   "seen_on": "2026-03"
+  },
+  {
+   "name": "Ather Energy",
+   "type": "company",
+   "location": "Bengaluru, Hosur",
+   "roles": "Internships and campus hiring through placement cells; Graduate Engineering Trainee openings appear intermittently on the careers portal",
+   "fresher": true,
+   "source_url": "https://careers.atherenergy.com/students",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "TVS Motor Company",
+   "type": "company",
+   "location": "Hosur, Uddanapalli, Mysuru",
+   "roles": "Apprentice and trainee roles in assembly, inspection and quality; open to diploma and degree holders",
+   "fresher": true,
+   "source_url": "https://www.tnjobzone.com/tvs-motor-company-apprentice-recruitment-2026/",
+   "seen_on": "2026-05"
+  },
+  {
+   "name": "Bosch (Bosch Limited and Bosch Chassis Systems India)",
+   "type": "company",
+   "location": "Bengaluru, Pune, Nashik, Jaipur",
+   "roles": "Graduate Apprentice programme of twelve months for first-class B.E./B.Tech in Mechanical, EEE and ECE via pool campus and online test; Technical Management Trainee for top performers",
+   "fresher": true,
+   "source_url": "https://www.bosch.in/careers/students-and-graduates/graduate-apprentice/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Exide Industries and Exide Energy Solutions",
+   "type": "company",
+   "location": "Bengaluru (lithium cell plant), Pune, Haldia, Hosur",
+   "roles": "Campus cadre programmes for engineers (historically IIT and IISc focused) plus plant production associate and GET openings at Bengaluru and Pune",
+   "fresher": true,
+   "source_url": "https://careers.exideindustries.com/opportunities-exide/campus-recruits.aspx",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Amara Raja Group (Energy & Mobility, Advanced Cell Technologies)",
+   "type": "company",
+   "location": "Tirupati, Chittoor, Hyderabad giga corridor",
+   "roles": "Nava Pratibha fresher induction: ARGTP graduate technical trainee, ARGMP graduate management trainee, internships and apprenticeships",
+   "fresher": true,
+   "source_url": "https://amararaja.com/careers/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Tata AutoComp Systems (and Tata AutoComp Gotion)",
+   "type": "company",
+   "location": "Chennai, Pune, Sanand",
+   "roles": "Walk-in for design release, CAE, CFD and durability engineers with freshers offered 4 to 7 LPA; Sanand battery plant hires operators and quality staff from ITI to graduate",
+   "fresher": true,
+   "source_url": "https://careerforfreshers.com/walk-in-jobs/tata-autocomp-systems-tata-group-walk-in-interview/",
+   "seen_on": "2026-07"
+  }
+ ],
+ "fit_rules": [
+  {
+   "field": "branch",
+   "value": "MECH",
+   "score": 3,
+   "reason": "Mechanical and automobile graduates are the main intake for OEM and supplier trainee roles."
+  },
+  {
+   "field": "branch",
+   "value": "EE",
+   "score": 3,
+   "reason": "Battery, BMS, motor and charger work is electrical; EE is asked for by name in most notices."
+  },
+  {
+   "field": "branch",
+   "value": "ECE",
+   "score": 2,
+   "reason": "Embedded, CAN and BMS firmware roles take ECE; you compete with EE for them."
+  },
+  {
+   "field": "branch",
+   "value": "CHEM",
+   "score": 1,
+   "reason": "Cell chemistry and electrode process roles at new cell plants take chemical and metallurgy graduates, but the numbers are small."
+  },
+  {
+   "field": "branch",
+   "value": "CS",
+   "score": 0,
+   "reason": "Vehicle software roles exist but are few and go to people with embedded experience; a CS graduate is usually better served by the software path."
+  },
+  {
+   "field": "branch",
+   "value": "CIVIL",
+   "score": -3,
+   "reason": "Almost no EV fresher notice lists civil."
+  },
+  {
+   "field": "interests",
+   "value": "physical_systems",
+   "score": 2,
+   "reason": "The work is machines, packs and plants; liking physical systems is the strongest signal."
+  },
+  {
+   "field": "interests",
+   "value": "hardware_electronics",
+   "score": 2,
+   "reason": "BMS, controllers and CAN networks are electronics builds."
+  },
+  {
+   "field": "interests",
+   "value": "building_software",
+   "score": -1,
+   "reason": "Software here is embedded firmware in service of hardware, not app or web work."
+  },
+  {
+   "field": "enjoyed",
+   "value": "labs_hardware",
+   "score": 2,
+   "reason": "People who liked tinkering in labs finish the BMS and CAN builds this path needs."
+  },
+  {
+   "field": "enjoyed",
+   "value": "workshops_site",
+   "score": 2,
+   "reason": "Most first roles are on or next to a production line."
+  },
+  {
+   "field": "preparation",
+   "value": "core_tools",
+   "score": 2,
+   "reason": "CAD, MATLAB or Simulink already in hand shortens the plan by a block."
+  },
+  {
+   "field": "preparation",
+   "value": "projects_portfolio",
+   "score": 1,
+   "reason": "A hardware build you can show substitutes for college brand at tier-2 and tier-3."
+  },
+  {
+   "field": "preparation",
+   "value": "internship_done",
+   "score": 1,
+   "reason": "A plant internship or apprenticeship is what OEM recruiters ask about first."
+  },
+  {
+   "field": "relocation",
+   "value": "hometown_only",
+   "score": -3,
+   "reason": "EV jobs sit in a few clusters (Pune, Sanand, Hosur, Chennai, Bengaluru, Krishnagiri); staying home rules most out."
+  },
+  {
+   "field": "relocation",
+   "value": "within_state",
+   "score": -1,
+   "reason": "Works only if your state has a cluster (Tamil Nadu, Karnataka, Maharashtra, Gujarat, Telangana, Andhra)."
+  },
+  {
+   "field": "region",
+   "value": "south",
+   "score": 1,
+   "reason": "Hosur, Krishnagiri, Chennai, Bengaluru and the Telangana and Andhra cell plants are in the south."
+  },
+  {
+   "field": "region",
+   "value": "west",
+   "score": 1,
+   "reason": "Pune, Sanand and Chakan hold most OEM and supplier plants."
+  },
+  {
+   "field": "runway_months",
+   "value": "0_3",
+   "score": -1,
+   "reason": "The first offer is often an apprentice stipend or contract, so income arrives but is low for a year or more."
+  },
+  {
+   "field": "priority",
+   "value": "stability",
+   "score": -1,
+   "reason": "A large share of EV roles start as contracts; stability comes later, after conversion."
+  }
+ ],
+ "base_score": 5,
+ "stat_ids_used": [
+  "paths.ev.jobs_projection_adecco.2030",
+  "paths.ev.hiring_growth_yoy",
+  "paths.ev.fresher_ctc_bands.2026",
+  "paths.skilling.nats_graduate_stipend.2026"
+ ],
+ "last_reviewed": "2026-09-21",
+ "changed_fields": [
+  "all"
+ ],
+ "skills": [
+  {
+   "id": "cad_solidworks_or_catia",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "embedded_c",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "can_lin_automotive_protocols",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "matlab_simulink",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "battery_management_systems",
+   "level": "preferred",
+   "weight": 3
+  },
+  {
+   "id": "ev_powertrain_and_motor_control",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "microcontrollers_and_rtos",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "quality_and_manufacturing_basics",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "thermal_and_fea_simulation",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "power_electronics_basics",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "pcb_design",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "python",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "interview_aptitude_and_hr",
+   "level": "required",
+   "weight": 2
+  }
+ ]
 }

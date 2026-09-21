@@ -1,0 +1,742 @@
+[
+ {
+  "id": "career_page:ingram_micro_graduate_engineer_trainee",
+  "path_id": "it_services",
+  "title": "Graduate Engineer Trainee",
+  "company": "Ingram Micro",
+  "location": "Chennai, Tamil Nadu / Mumbai, Maharashtra",
+  "posted_on": "2026-09-21",
+  "url": "https://careers.ingrammicro.com/en/jobs/r-115589/graduate-engineer-trainee/",
+  "fresher": true,
+  "experience_text": "2026 graduates only; locally based",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E / B.Tech degree, 2026 graduate",
+    "skill_id": null
+   },
+   {
+    "text": "Basic understanding of programming concepts (OOP, data structures)",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Exposure to Java, C#, Python or JavaScript",
+    "skill_id": "python"
+   },
+   {
+    "text": "Basic knowledge of databases and SQL concepts",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Web technologies or application development knowledge (preferred)",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Cloud, data, AI, ERP or legacy systems awareness (advantageous)",
+    "skill_id": "cloud_fundamentals_azure"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:adp_associate_software_engineer_chennai",
+  "path_id": "it_services",
+  "title": "Associate Software Engineer",
+  "company": "ADP",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-06-18",
+  "url": "https://jobs.adp.com/en/jobs/6012895006042026/associate-software-engineer/",
+  "fresher": true,
+  "experience_text": "Entry level; Bachelor's degree or pursuing final year with no outstanding arrears",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree (or pursuing final year with no outstanding arrears) preferably in Computer Science or IT",
+    "skill_id": null
+   },
+   {
+    "text": "Basic programming skills in any language",
+    "skill_id": "python"
+   },
+   {
+    "text": "Strong core knowledge on OOPs, data structures and algorithms",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Strong logical reasoning and problem-solving capabilities",
+    "skill_id": "interview_aptitude_and_hr"
+   },
+   {
+    "text": "Clear understanding of databases, preferably relational database systems",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Active contribution to final year projects with comprehensive project understanding",
+    "skill_id": "deployed_portfolio_project"
+   },
+   {
+    "text": "Participation in hackathons, coding competitions, debugging events or similar activities",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Bonus: AI/ML knowledge",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Bonus: GitHub account for source code management",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "Bonus: internship at a registered, reputed software company",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:marmon_technologies_graduate_engineer_trainee_bengaluru",
+  "path_id": "it_services",
+  "title": "Graduate Engineer Trainee",
+  "company": "Marmon Technologies India Private Limited",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-08-10",
+  "url": "https://marmon.wd501.myworkdayjobs.com/Marmon_Careers/job/Karnataka-IN/Graduate-Engineer-Trainee_JR0000045029",
+  "fresher": true,
+  "experience_text": "No prior professional experience required; internship or academic project exposure is an advantage",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree in Computer Science, Information Technology or related engineering discipline",
+    "skill_id": null
+   },
+   {
+    "text": "Demonstrated understanding of data structures, algorithms and object-oriented design principles",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Solid grasp of software development lifecycle (SDLC) concepts and practices",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Working knowledge of database fundamentals and API/system interaction concepts",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Strong problem-solving and logical thinking ability with structured analytical approach",
+    "skill_id": null
+   },
+   {
+    "text": "Effective verbal and written communication skills with collaborative team ability",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Desired: familiarity with version control systems (e.g. Git) and collaborative development practices",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "Desired: exposure to Agile methodologies and iterative development workflows",
+    "skill_id": null
+   },
+   {
+    "text": "Desired: basic understanding of networking and web concepts",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Desired: awareness of software quality and testing fundamentals (unit testing, code reviews)",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Desired: working knowledge of AI infrastructure and prompt engineering",
+    "skill_id": "llm_apis_and_agents"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:wipro_graduate_engineer_trainee_gurugram",
+  "path_id": "it_services",
+  "title": "Graduate Engineer Trainee",
+  "company": "Wipro Limited",
+  "location": "Gurugram, Haryana",
+  "posted_on": "2026-09-18",
+  "url": "https://careers.wipro.com/job/Gurugram-Graduate-Engineer-Trainee-IND-122016/201955-en_US/",
+  "fresher": true,
+  "experience_text": "Freshers",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Mandatory skill: Health and Welfare (HW) Tech",
+    "skill_id": null
+   },
+   {
+    "text": "Prepare initial test data and perform basic database checks as instructed",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Assist in unit testing of assigned tasks",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Verify expected results and document outcomes in prescribed formats",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Support testing activities by documenting results per defined guidelines",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:ibm_associate_site_reliability_engineer_pune",
+  "path_id": "it_services",
+  "title": "Associate Site Reliability Engineer",
+  "company": "IBM",
+  "location": "Pune, Maharashtra",
+  "posted_on": "2026-09-19",
+  "url": "https://careers.ibm.com/en_US/careers/JobDetail?jobId=132747&source=SN_LinkedIn",
+  "fresher": true,
+  "experience_text": "0 – 1 Year",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree",
+    "skill_id": null
+   },
+   {
+    "text": "Software and systems engineering; system design and architecture",
+    "skill_id": "system_design_basics"
+   },
+   {
+    "text": "Problem analysis and troubleshooting",
+    "skill_id": null
+   },
+   {
+    "text": "Testing and deployment methodologies",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Reliability and resiliency principles; monitoring and incident response",
+    "skill_id": "mlops_basics"
+   },
+   {
+    "text": "Cloud computing (AWS, Azure or GCP)",
+    "skill_id": "cloud_fundamentals_aws"
+   },
+   {
+    "text": "Scripting languages (Python or Bash)",
+    "skill_id": "linux_shell"
+   },
+   {
+    "text": "Automation tools",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "IT service management",
+    "skill_id": "operations_and_process_basics"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:ibm_associate_system_engineer_india",
+  "path_id": "it_services",
+  "title": "Associate System Engineer",
+  "company": "IBM",
+  "location": "Bengaluru / Pune / Hyderabad / Gurugram / Chennai / Noida / Kolkata",
+  "posted_on": "2026-06-02",
+  "url": "https://careers.ibm.com/en_US/careers/JobDetail?jobId=52240&src=LinkedIn",
+  "fresher": true,
+  "experience_text": "Entry-level freshers from 2024 and 2025 batches",
+  "salary_text": "₹4.5 LPA to ₹6 LPA (estimated range)",
+  "requirements": [
+   {
+    "text": "B.E / B.Tech in Computer Science or Information Technology related branches; minimum 60% or 6.0 CGPA; no active backlogs",
+    "skill_id": null
+   },
+   {
+    "text": "Programming proficiency in Java, C++, Python or Node.js",
+    "skill_id": "python"
+   },
+   {
+    "text": "Solid understanding of Software Development Life Cycle (SDLC) concepts",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Fluent communication (written and spoken) and good interpersonal skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Java/JEE, DevOps, transaction management, dependency injection, test-driven development (TDD)",
+    "skill_id": "fastapi_or_spring"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:ntt_data_associate_engineer_chennai",
+  "path_id": "it_services",
+  "title": "Associate Engineer",
+  "company": "NTT DATA",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-09-18",
+  "url": "https://careers.nttdata.com/global/en/job/R-148609/Associate-Engineer-AI-services",
+  "fresher": true,
+  "experience_text": "Freshers / Experienced",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree in Computer Science, Engineering or related field (B.E/B.Tech/B.Sc)",
+    "skill_id": null
+   },
+   {
+    "text": "Programming languages including C/C++, C#, Java, JavaScript, Python and Node.js",
+    "skill_id": "python"
+   },
+   {
+    "text": "Data structures, algorithms and software design concepts",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Microservices architecture and REST APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "SQL and NoSQL databases (Elasticsearch, MongoDB, Cassandra)",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Cloud platforms: AWS, GCP, Microsoft Azure",
+    "skill_id": "cloud_fundamentals_aws"
+   },
+   {
+    "text": "Containerization: Docker, Kubernetes and container runtimes such as LXC/LXD",
+    "skill_id": "docker"
+   },
+   {
+    "text": "CI/CD and DevOps practices",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Automated testing and test-driven development",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Machine learning/AI algorithm familiarity",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Agile and Lean methodologies",
+    "skill_id": null
+   },
+   {
+    "text": "Preferred: Microsoft Certified Azure Fundamentals",
+    "skill_id": "cloud_fundamentals_azure"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:iris_software_graduate_engineer_technology_noida",
+  "path_id": "it_services",
+  "title": "Graduate Engineer - Technology",
+  "company": "Iris Software",
+  "location": "Noida, Uttar Pradesh",
+  "posted_on": "2026-09-01",
+  "url": "https://careers.irissoftware.com/job/Noida-Graduate-Engineer-Technology-UP/59377644/",
+  "fresher": true,
+  "experience_text": "Freshers only",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E or B.Tech degree in Computer Science, Information Technology or related circuit branches",
+    "skill_id": null
+   },
+   {
+    "text": "Strong foundation in programming basics (e.g. C, C++, Java or Python)",
+    "skill_id": "python"
+   },
+   {
+    "text": "Clear understanding of Object-Oriented Programming (OOP) concepts and data structures",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Basic knowledge of databases (SQL)",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Strong analytical and problem-solving abilities",
+    "skill_id": null
+   },
+   {
+    "text": "Excellent communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Assist in writing, testing and maintaining clean code; identify and fix basic bugs",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Participate in Agile ceremonies and assist in creating technical documentation",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:hpe_graduate_software_engineer_bangalore",
+  "path_id": "it_services",
+  "title": "Graduate Software Engineer",
+  "company": "Hewlett Packard Enterprise (HPE)",
+  "location": "Bengaluru, Karnataka (Remote/Teleworker)",
+  "posted_on": "2026-09-19",
+  "url": "https://careers.hpe.com/us/en/job/1210218/Graduate-Software-Engineer?utm_source=linkedin",
+  "fresher": true,
+  "experience_text": "0–2 years (freshers eligible)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E/B.Tech/B.Sc/M.E/M.Tech/M.Sc in Computer Science, IT or related field",
+    "skill_id": null
+   },
+   {
+    "text": "Programming proficiency in Python, Java, Golang or JavaScript",
+    "skill_id": "python"
+   },
+   {
+    "text": "Understanding of basic testing, coding and debugging procedures",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Familiarity with DevOps practices like CI/CD",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Knowledge of cloud architectures and microservices",
+    "skill_id": "system_design_basics"
+   },
+   {
+    "text": "Full stack development and design thinking",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "Security-first mindset and release management",
+    "skill_id": "cybersecurity_fundamentals"
+   },
+   {
+    "text": "Strong written and verbal communication skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:thermo_fisher_software_test_engineer_i_hyderabad",
+  "path_id": "it_services",
+  "title": "Software Test Engineer I",
+  "company": "Thermo Fisher Scientific",
+  "location": "Hyderabad, Telangana",
+  "posted_on": "2026-09-18",
+  "url": "https://jobs.thermofisher.com/global/en/job/R-01356608/Software-Test-Engineer-I",
+  "fresher": true,
+  "experience_text": "0–2 Years",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree required (Computer Science, Software Engineering, Electronics/Electrical Engineering preferred)",
+    "skill_id": null
+   },
+   {
+    "text": "Programming: Python, Java, JavaScript",
+    "skill_id": "python"
+   },
+   {
+    "text": "Test automation: Selenium, TestComplete, JUnit",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "API testing and performance testing",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Defect management: JIRA, TestRail, ALM",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Version control: Git",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "CI/CD pipelines",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Software testing methodologies and quality control processes; test plan and case creation",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Agile/Scrum methodologies",
+    "skill_id": null
+   },
+   {
+    "text": "ISTQB certification (preferred, not mandatory)",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Excellent written and verbal communication",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:united_techno_trainee_software_qa_engineer_chennai",
+  "path_id": "it_services",
+  "title": "Trainee Software QA Engineer",
+  "company": "United Techno Info Systems Pvt Limited",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-06-03",
+  "url": "https://careers.unitedtechno.com/unitedtechno/jobview/software-qa-engineer-chennai-tamil-nadu-india-2026060216110322?source=linkedin",
+  "fresher": true,
+  "experience_text": "Fresher (0 Years); 2024, 2025, 2026 pass-outs",
+  "salary_text": "Competitive (as per industry metrics)",
+  "requirements": [
+   {
+    "text": "B.E (CS/IT/ECE/EEE preferred)",
+    "skill_id": null
+   },
+   {
+    "text": "Solid baseline comprehension of core software development logic and coding structures (in any mainstream language)",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Good understanding of relational databases and fundamental SQL manipulation statements",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Prior exposure to manual testing principles, test case design or automation testing tools (advantageous)",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Strong foundational analytical traits, high-level aptitude skills and clear logical problem-solving methods",
+    "skill_id": "interview_aptitude_and_hr"
+   },
+   {
+    "text": "High curiosity to explore new automation systems, with a particular interest in evolving AI-driven testing paradigms",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Effective verbal and written communication to align tasks smoothly within engineering squads",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:movate_trainee_service_desk_chennai",
+  "path_id": "it_services",
+  "title": "Trainee (Service Desk / Digital CX)",
+  "company": "Movate Technologies",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-09-18",
+  "url": "https://movatecareers.movate.com/JobDetails?gHnhwlsHGMNvadSBfhy/jg==",
+  "fresher": true,
+  "experience_text": "Freshers from 2025/2026 batch (0-1 years)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E / B.Tech (any stream); no standing arrears/backlogs",
+    "skill_id": null
+   },
+   {
+    "text": "Excellent English communication skills (verbal and written) are mandatory",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Basic knowledge of hardware, networking and OS (Windows/Linux/Mac)",
+    "skill_id": "linux_shell"
+   },
+   {
+    "text": "Willing to provide L1 support for hardware, networking and operating system issues",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Ability to handle international client queries via voice/chat/email",
+    "skill_id": "sales_and_customer_conversation"
+   },
+   {
+    "text": "Strong interpersonal skills and positive attitude",
+    "skill_id": null
+   },
+   {
+    "text": "Open to rotational shifts in a 24/7 environment; willingness to relocate to Chennai",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:exl_junior_programmer_analyst_chennai",
+  "path_id": "it_services",
+  "title": "Junior Programmer Analyst",
+  "company": "EXL",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-06-17",
+  "url": "https://fa-ewjt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/15723",
+  "fresher": true,
+  "experience_text": "Freshers",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's or Master's degree in Engineering (B.E/B.Tech/M.E/M.Tech) or related discipline",
+    "skill_id": null
+   },
+   {
+    "text": "SSRS (tabular, matrix, drill-through reports)",
+    "skill_id": "dashboards_and_bi_tools"
+   },
+   {
+    "text": "SSIS packages (data extraction, cleansing, loading)",
+    "skill_id": "data_engineering_pipelines"
+   },
+   {
+    "text": "Power BI (Desktop and Service) with DAX functions; Power Query",
+    "skill_id": "dashboards_and_bi_tools"
+   },
+   {
+    "text": "SQL (stored procedures, joins)",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Strong understanding of data modeling, data warehousing concepts, programming and data structures",
+    "skill_id": "data_engineering_pipelines"
+   },
+   {
+    "text": "Analytical and problem-solving abilities; stakeholder communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Preferred: Azure cloud services or Databricks exposure",
+    "skill_id": "cloud_fundamentals_azure"
+   },
+   {
+    "text": "Preferred: Agile methodologies knowledge; Power Automate automation experience",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:decentro_junior_qa_engineer_bengaluru",
+  "path_id": "it_services",
+  "title": "Junior QA Engineer",
+  "company": "Decentro",
+  "location": "Bengaluru, Karnataka (Remote with WFH flexibility)",
+  "posted_on": "2026-08-21",
+  "url": "https://wellfound.com/jobs/1407311-junior-qa-engineer",
+  "fresher": true,
+  "experience_text": "Minimum experience required 0-3 years",
+  "salary_text": "₹5L – ₹8L",
+  "requirements": [
+   {
+    "text": "Minimum experience required 0-3 years and good to have basic programming knowledge",
+    "skill_id": "python"
+   },
+   {
+    "text": "Develop, implement and maintain manual testing procedures; design, execute and document functional, regression, integration and system tests",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Experience with API testing, preferably REST APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Create and maintain test cases, test plans and test scripts",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Strong understanding of software testing methodologies",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Strong written and verbal communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Knowledge of SQL, Jira and other relevant tools is a plus",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Good to have some previous work experience in Payments/Fintech/Banking domain",
+    "skill_id": "domain_bfsi_basics"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:cube_ms_qa_engineer_i_gurgaon",
+  "path_id": "it_services",
+  "title": "QA Engineer -I",
+  "company": "cube.ms",
+  "location": "Gurugram, Haryana",
+  "posted_on": "2026-07-21",
+  "url": "https://wellfound.com/jobs/3420599-qa-engineer-i",
+  "fresher": true,
+  "experience_text": "0-2 years of hands-on experience in software testing",
+  "salary_text": "₹10L – ₹12L • No equity",
+  "requirements": [
+   {
+    "text": "0-2 years of hands-on experience in software testing",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Strong knowledge of testing types: functional, regression, API, UI/UX",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Solid bug-reporting and test case writing skills using tools like Jira, AIO or Zephyr",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Familiarity with REST API testing using Postman or similar tools",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Ability to understand web app architecture and test accordingly",
+    "skill_id": "system_design_basics"
+   },
+   {
+    "text": "Clear communication, ownership mindset and attention to detail",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Good to have: experience working in Agile environments or CI/CD pipelines",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Good to have: exposure to test automation (e.g. Selenium, Cypress or Playwright)",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Good to have: basic scripting knowledge (JavaScript, Python or similar)",
+    "skill_id": "python"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ }
+]

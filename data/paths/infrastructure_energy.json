@@ -391,5 +391,77 @@
  "last_reviewed": "2026-09-21",
  "changed_fields": [
   "all"
+ ],
+ "skills": [
+  {
+   "id": "autocad",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "staad_pro_structural_analysis",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "etap_or_power_systems_analysis",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "primavera_or_ms_project",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "site_engineering_and_safety",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "quantity_surveying_and_estimation",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "solar_pv_design_pvsyst",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "revit_bim",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "gate_preparation_civil",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "gate_preparation_electrical",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "geotechnical_and_surveying_basics",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "renewable_energy_fundamentals",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "power_grid_and_transmission_basics",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "excel_and_business_analysis",
+   "level": "preferred",
+   "weight": 1
+  }
  ]
 }

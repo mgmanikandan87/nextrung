@@ -396,6 +396,78 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "python",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "sql",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "dsa",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "llm_apis_and_agents",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "rag_and_vector_search",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "deployed_portfolio_project",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "git_github",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "docker",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "fastapi_or_spring",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "databases_postgresql",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "llm_evals_and_observability",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "cloud_fundamentals_aws",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "testing_and_automation",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "system_design_basics",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -791,6 +863,78 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "gate_preparation_ece_ee_me",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "matlab_simulink",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "control_systems",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "rf_and_antenna_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "avionics_and_propulsion_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "cad_solidworks_or_catia",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "thermal_and_fea_simulation",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "embedded_c",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "labview_and_daq_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "signal_processing_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "quality_and_manufacturing_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "pcb_design",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "python",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "interview_aptitude_and_hr",
+    "level": "required",
+    "weight": 1
+   }
   ]
  },
  {
@@ -1186,6 +1330,73 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "cad_solidworks_or_catia",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "embedded_c",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "can_lin_automotive_protocols",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "matlab_simulink",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "battery_management_systems",
+    "level": "preferred",
+    "weight": 3
+   },
+   {
+    "id": "ev_powertrain_and_motor_control",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "microcontrollers_and_rtos",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "quality_and_manufacturing_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "thermal_and_fea_simulation",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "power_electronics_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "pcb_design",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "python",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "interview_aptitude_and_hr",
+    "level": "required",
+    "weight": 2
+   }
   ]
  },
  {
@@ -1604,6 +1815,58 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "gate_preparation_civil",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "gate_preparation_electrical",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "gate_preparation_general_aptitude",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "ese_upsc_preparation",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "ssc_je_rrb_je_preparation",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "psu_interview_preparation",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "interview_aptitude_and_hr",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "excel_and_business_analysis",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "python",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "project_management_basics",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -2015,6 +2278,68 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "gate_preparation_civil",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "gate_preparation_electrical",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "gate_preparation_general_aptitude",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "research_methods_and_paper_reading",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "mtech_admissions_coap_ccmt",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "study_abroad_applications_daad_uni_assist",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "german_language_a1_b1",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "cat_preparation",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "mba_case_and_group_discussion",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "python",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "communication_written_english",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "deployed_portfolio_project",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -2410,6 +2735,78 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "autocad",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "staad_pro_structural_analysis",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "etap_or_power_systems_analysis",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "primavera_or_ms_project",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "site_engineering_and_safety",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "quantity_surveying_and_estimation",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "solar_pv_design_pvsyst",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "revit_bim",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "gate_preparation_civil",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "gate_preparation_electrical",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "geotechnical_and_surveying_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "renewable_energy_fundamentals",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "power_grid_and_transmission_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "excel_and_business_analysis",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -2817,6 +3214,73 @@
   "changed_fields": [
    "fit_rules",
    "all"
+  ],
+  "skills": [
+   {
+    "id": "interview_aptitude_and_hr",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "sql",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "communication_written_english",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "python",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "git_github",
+    "level": "required",
+    "weight": 1
+   },
+   {
+    "id": "dsa",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "fastapi_or_spring",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "rest_apis",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "cloud_fundamentals_aws",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "cloud_fundamentals_azure",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "deployed_portfolio_project",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "llm_apis_and_agents",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "domain_bfsi_basics",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -3201,6 +3665,78 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "digital_design_fundamentals",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "verilog_systemverilog",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "rtl_design",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "functional_verification_uvm",
+    "level": "preferred",
+    "weight": 3
+   },
+   {
+    "id": "static_timing_analysis",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "dft_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "physical_design_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "semiconductor_fabrication_process",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "analog_circuit_basics",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "fpga_prototyping",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "gate_preparation_ece_ee_me",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "python",
+    "level": "required",
+    "weight": 1
+   },
+   {
+    "id": "linux_shell",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "git_github",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  },
  {
@@ -3606,6 +4142,63 @@
   "last_reviewed": "2026-09-21",
   "changed_fields": [
    "all"
+  ],
+  "skills": [
+   {
+    "id": "excel_and_business_analysis",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "communication_written_english",
+    "level": "required",
+    "weight": 3
+   },
+   {
+    "id": "sales_and_customer_conversation",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "operations_and_process_basics",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "interview_aptitude_and_hr",
+    "level": "required",
+    "weight": 2
+   },
+   {
+    "id": "sql",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "dashboards_and_bi_tools",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "domain_bfsi_basics",
+    "level": "preferred",
+    "weight": 2
+   },
+   {
+    "id": "pandas_and_data_analysis",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "llm_apis_and_agents",
+    "level": "preferred",
+    "weight": 1
+   },
+   {
+    "id": "deployed_portfolio_project",
+    "level": "preferred",
+    "weight": 1
+   }
   ]
  }
 ]

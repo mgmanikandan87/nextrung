@@ -10,10 +10,20 @@ import json, pathlib, glob
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 paths = [json.load(open(f)) for f in sorted(glob.glob(str(ROOT / 'data/paths/*.json')))]
 json.dump(paths, open(ROOT / 'data/paths.json', 'w'), indent=1, ensure_ascii=False)
+skills = []
+for f in sorted(glob.glob(str(ROOT / 'data/skills/*.json'))):
+    skills += json.load(open(f))
+json.dump({'version': '0.2.0', 'skills': skills}, open(ROOT / 'data/skills.json', 'w'), indent=1, ensure_ascii=False)
+jobs = []
+for f in sorted(glob.glob(str(ROOT / 'data/jobs/*.json'))):
+    jobs += json.load(open(f))
+json.dump({'version': '0.2.0', 'seen_on': '2026-09-21', 'postings': jobs}, open(ROOT / 'data/jobs.json', 'w'), indent=1, ensure_ascii=False)
 data = {
     'paths': paths,
     'questions': json.load(open(ROOT / 'data/questions.json')),
     'stats': json.load(open(ROOT / 'data/market_stats.json')),
+    'skills': {'version': '0.2.0', 'skills': skills},
+    'jobs': {'version': '0.2.0', 'seen_on': '2026-09-21', 'postings': jobs},
 }
 blob = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 tpl = (ROOT / 'site/template.html').read_text()
@@ -25,4 +35,4 @@ dist = ROOT / 'dist'; dist.mkdir(exist_ok=True)
     '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
     '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head>'
     '<body style="margin:0">\n' + body + '\n</body></html>')
-print(f'built: {len(paths)} paths, {len(data["stats"])} stats, {len(body)//1024} KB')
+print(f'built: {len(paths)} paths, {len(data["stats"])} stats, {len(skills)} skills, {len(jobs)} jobs, {len(body)//1024} KB')

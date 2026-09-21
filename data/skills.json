@@ -1,0 +1,3107 @@
+{
+ "version": "0.2.0",
+ "skills": [
+  {
+   "id": "autocad",
+   "name": "AutoCAD",
+   "category": "core_eng",
+   "description": "Produce and edit 2D drawings (plans, sections, single-line diagrams) to a drafting standard with layers, blocks, dimensions and title blocks.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "Autodesk Education",
+     "title": "Autodesk Education plan: free one-year student access to AutoCAD and Revit",
+     "url": "https://www.autodesk.com/education/edu-software/overview",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "Autodesk student licence activated and a screenshot of AutoCAD running under your student account"
+    },
+    {
+     "platform": "Autodesk Help",
+     "title": "AutoCAD 2025 Help: tutorials and getting-started guides",
+     "url": "https://help.autodesk.com/view/ACD/2025/ENU/",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A DWG plan and section of a small building or a solar plant single-line diagram with layers, dimensions and a title block, exported to PDF"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "staad_pro_structural_analysis",
+   "name": "STAAD.Pro",
+   "category": "core_eng",
+   "description": "Model, load and design-check an RC or steel structure in STAAD.Pro against IS 456 and IS 800 and produce a calculation note.",
+   "evidence_types": [
+    "document",
+    "repo"
+   ],
+   "learning": [
+    {
+     "platform": "Bentley Education",
+     "title": "Bentley Education: free student licences for STAAD.Pro and other Bentley software",
+     "url": "https://education.bentley.com/",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "Bentley student licence activated and STAAD.Pro installed (screenshot of the licensed start screen)"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Design of Reinforced Concrete Structures (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/105105105",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A STAAD model of a small RC building with a beam and column design check against IS 456 and a bar-bending schedule"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Design of Steel Structures (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/105105162",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A STAAD model of a steel pipe rack or shed with member checks against IS 800 and a two-page design note"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "revit_bim",
+   "name": "Revit / BIM",
+   "category": "core_eng",
+   "description": "Build a coordinated 3D building model in Revit, extract drawings and quantities from it, and explain what BIM means on a metro or building job.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "Autodesk Education",
+     "title": "Autodesk Education plan: free one-year student access to Revit",
+     "url": "https://www.autodesk.com/education/edu-software/overview",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "Revit installed under a student licence (screenshot of the licensed start screen)"
+    },
+    {
+     "platform": "Autodesk Help",
+     "title": "Revit 2025 Help: Welcome to Revit Learning tutorials",
+     "url": "https://help.autodesk.com/view/RVT/2025/ENU/",
+     "free": true,
+     "hours": 35,
+     "proof_of_done": "An RVT model of a two-storey building with plans, sections and a schedule of quantities exported to PDF"
+    },
+    {
+     "platform": "Coursera (audit)",
+     "title": "BIM Fundamentals for Engineers (National Taiwan University)",
+     "url": "https://www.coursera.org/learn/bim-fundamentals",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A one-page note on BIM levels and clash detection plus a clash report from your own Revit model"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "primavera_or_ms_project",
+   "name": "Primavera P6 / MS Project",
+   "category": "core_eng",
+   "description": "Build a WBS-based construction schedule with a critical path, resource histogram and baseline, and report planned versus actual progress.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Construction Planning and Management (IIT Guwahati)",
+     "url": "https://nptel.ac.in/courses/105103093",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A CPM network for a small building or road package drawn by hand, with float and critical path marked"
+    },
+    {
+     "platform": "Oracle Help Center",
+     "title": "Primavera P6 EPPM documentation library",
+     "url": "https://docs.oracle.com/en/industries/construction-engineering/primavera-p6-project/index.html",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A P6 (or MS Project) schedule file with WBS, baseline, critical path and resource histogram for the same package"
+    },
+    {
+     "platform": "Coursera (audit)",
+     "title": "Construction Scheduling (Columbia University)",
+     "url": "https://www.coursera.org/learn/construction-scheduling",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A one-page earned-value and delay-analysis report on your schedule after a simulated two-week slip"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "etap_or_power_systems_analysis",
+   "name": "ETAP / power systems analysis",
+   "category": "core_eng",
+   "description": "Set up load flow, short-circuit and protection studies for a small substation or feeder in ETAP or an equivalent tool and interpret the results.",
+   "evidence_types": [
+    "document",
+    "repo"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Power System Analysis (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/108105067",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A hand-worked load-flow and three-phase fault calculation for a 5-bus system, checked against a software run"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.061 Introduction to Electric Power Systems",
+     "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Solved problem sets on per-unit systems, transformers and fault analysis kept in a notes folder"
+    },
+    {
+     "platform": "ETAP",
+     "title": "ETAP Academia: student and university licensing",
+     "url": "https://etap.com/industries/Academia",
+     "free": false,
+     "hours": 25,
+     "proof_of_done": "An ETAP model of a small industrial substation with load-flow and short-circuit reports exported to PDF"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "solar_pv_design_pvsyst",
+   "name": "PVsyst solar PV design",
+   "category": "core_eng",
+   "description": "Size a grid-connected PV plant: irradiation data, tilt, string sizing, inverter selection and losses, producing a PVsyst yield report.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Solar Energy Engineering and Technology (IIT Guwahati)",
+     "url": "https://nptel.ac.in/courses/115103123",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A hand calculation of string voltage window, array sizing and annual yield for a 1 MW plant at a named Indian site"
+    },
+    {
+     "platform": "PVsyst",
+     "title": "PVsyst 8 help and documentation",
+     "url": "https://www.pvsyst.com/help/",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A PVsyst report (PDF) for a few-MW ground-mounted plant with a loss diagram and assumptions listed"
+    },
+    {
+     "platform": "MNRE",
+     "title": "Short-term trainings and skill development in renewable energy (Suryamitra and related programmes)",
+     "url": "https://mnre.gov.in/en/short-term-trainings-and-skill-development-in-renewable-energy/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "Application id or certificate from a Suryamitra or NISE short course, or a written note on why it does not fit your timeline"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "site_engineering_and_safety",
+   "name": "Site engineering and safety",
+   "category": "domain",
+   "description": "Run a day on site: read GFC drawings, supervise a pour or cable pull, keep a daily log, run a toolbox talk and apply permit-to-work rules.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Safety in Construction (IIT Delhi)",
+     "url": "https://nptel.ac.in/courses/105102206",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A safety plan and permit-to-work checklist for one activity (excavation, work at height or a cable pull) in your own words"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Construction Methods and Equipment Management (IIT Guwahati)",
+     "url": "https://nptel.ac.in/courses/105103206",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A method statement for one concrete pour or one erection activity with equipment, sequence and hold points"
+    },
+    {
+     "platform": "NATS (Government of India)",
+     "title": "National Apprenticeship Training Scheme portal",
+     "url": "https://nats.education.gov.in/",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "NATS enrolment number and one apprenticeship or internship application id at a contractor, PSU or utility"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "quantity_surveying_and_estimation",
+   "name": "Quantity surveying and estimation",
+   "category": "domain",
+   "description": "Take off quantities from drawings, price a BOQ from a public schedule of rates and maintain a measurement book and RA bill.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Principles of Construction Management (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/105104161",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A quantity take-off sheet for a small building or road package from a set of GFC drawings"
+    },
+    {
+     "platform": "Coursera (audit)",
+     "title": "Construction Cost Estimating and Cost Control (Columbia University)",
+     "url": "https://www.coursera.org/learn/construction-cost-estimating",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A priced BOQ for the same package using a public schedule of rates, with assumptions listed"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "geotechnical_and_surveying_basics",
+   "name": "Geotechnical and surveying basics",
+   "category": "domain",
+   "description": "Interpret a soil report and bearing capacity, and set out levels and alignments from a total station or auto level.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Geotechnical Engineering - 1 (IIT Bombay)",
+     "url": "https://nptel.ac.in/courses/105101201",
+     "free": true,
+     "hours": 35,
+     "proof_of_done": "A one-page foundation recommendation from a real or sample soil investigation report with bearing-capacity calculation"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Surveying (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/105104101",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A levelling field book and a plotted longitudinal section for a 200 m stretch, with closing error computed"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "gate_preparation_civil",
+   "name": "GATE (Civil)",
+   "category": "exam",
+   "description": "Score in the GATE Civil paper at a rank that clears PSU and IIT/NIT M.Tech cut-offs: full syllabus coverage and timed mock discipline.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GATE official (IIT Madras)",
+     "title": "GATE 2027 official website: syllabus, registration, previous papers",
+     "url": "https://gate2027.iitm.ac.in/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "GATE registration id and a printed syllabus map with a first-pass date per topic"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Design of Concrete Structures (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/105105104",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Ten years of PYQs in structures solved on paper under time with an accuracy log"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Mathematics - I (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/111105121",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A mock-test score curve of at least twenty full-length GATE CE mocks"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy",
+    "government_psu",
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "gate_preparation_electrical",
+   "name": "GATE (Electrical)",
+   "category": "exam",
+   "description": "Score in the GATE Electrical paper at a rank that clears Power Grid, NTPC and IIT/NIT M.Tech cut-offs.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GATE official (IIT Madras)",
+     "title": "GATE 2027 official website: syllabus, registration, previous papers",
+     "url": "https://gate2027.iitm.ac.in/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "GATE registration id and a printed syllabus map with a first-pass date per topic"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Power System Engineering (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/108105104",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "Ten years of PYQs in power systems and machines solved on paper under time with an accuracy log"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Mathematics II (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/111105134",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A mock-test score curve of at least twenty full-length GATE EE mocks"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy",
+    "government_psu",
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "gate_preparation_general_aptitude",
+   "name": "GATE engineering mathematics and general aptitude",
+   "category": "exam",
+   "description": "Take the 25 to 30 percent of every GATE paper that is engineering mathematics and general aptitude at above 80 percent accuracy.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GATE official (IIT Madras)",
+     "title": "GATE 2027 official website: general aptitude syllabus and sample questions",
+     "url": "https://gate2027.iitm.ac.in/",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "The general aptitude and mathematics sections of the last ten GATE papers solved with a per-topic accuracy sheet"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Mathematics - I (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/111105121",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A formula and error notebook for calculus, linear algebra and probability, updated weekly"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Mathematics II (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/111105134",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Mock section scores showing 80 percent or better in engineering mathematics and aptitude across five mocks"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy",
+    "government_psu",
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "ese_upsc_preparation",
+   "name": "UPSC ESE (Engineering Services)",
+   "category": "exam",
+   "description": "Clear ESE prelims (objective, including the General Studies and Engineering Aptitude paper) and write ESE mains conventional answers under time.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "UPSC official",
+     "title": "Union Public Service Commission: notifications, syllabus and previous papers",
+     "url": "https://upsc.gov.in/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "ESE application id and a syllabus map for Paper 1 (GS and Engineering Aptitude) and your branch paper"
+    },
+    {
+     "platform": "UPSC online",
+     "title": "UPSC online application portal",
+     "url": "https://upsconline.nic.in/",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "Submitted ESE application with registration id and admit card saved"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Project Management (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/110104073",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Paper 1 topic notes (project management, standards, energy and environment, ICT, ethics) and one timed prelims mock score"
+    }
+   ],
+   "paths": [
+    "government_psu"
+   ]
+  },
+  {
+   "id": "ssc_je_rrb_je_preparation",
+   "name": "SSC JE / RRB JE",
+   "category": "exam",
+   "description": "Score above the category cut-off in SSC JE Paper 1 and RRB JE CBT 1: objective numericals at under 90 seconds each, then Paper 2 or CBT 2.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "SSC official",
+     "title": "Staff Selection Commission: notices, application and results",
+     "url": "https://ssc.gov.in/",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "SSC JE application id and admit card, and a syllabus map for Paper 1 and Paper 2"
+    },
+    {
+     "platform": "RRB official",
+     "title": "Railway Recruitment Board (Chandigarh) notice board: CEN notices and links to all RRBs",
+     "url": "https://rrbcdg.gov.in/",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "RRB JE application id and a note of your zone's CEN number and dates"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Mathematics - I (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/111105121",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A timed drill log of 500 objective numericals with average time per question under 90 seconds"
+    }
+   ],
+   "paths": [
+    "government_psu"
+   ]
+  },
+  {
+   "id": "psu_interview_preparation",
+   "name": "PSU technical interview",
+   "category": "exam",
+   "description": "Explain final-year project and core subjects at whiteboard depth, know the company's plants and projects, and handle a five-member panel.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NTPC official",
+     "title": "NTPC careers and recruitment notices",
+     "url": "https://careers.ntpc.co.in/",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "A one-page profile of NTPC (plants, capacity, current projects, the GATE year it accepts) and its interview weightage"
+    },
+    {
+     "platform": "POWERGRID official",
+     "title": "POWERGRID job opportunities and Engineer Trainee notices",
+     "url": "https://www.powergrid.in/en/job-opportunities",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "A one-page profile of POWERGRID with the last two cycles' GATE cut-offs by branch and category"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/109104107",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "A recorded 30-minute mock interview on your project and core subjects, with a written self-review"
+    }
+   ],
+   "paths": [
+    "government_psu",
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "research_methods_and_paper_reading",
+   "name": "Research methods and paper reading",
+   "category": "professional",
+   "description": "Frame a research question, read papers in three passes, choose baselines and write a reproducible workshop-style report with a limitations section.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Research Methodology (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/121106007",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A two-page research proposal: question, method, baselines, dataset and what would break the result"
+    },
+    {
+     "platform": "Stanford (S. Keshav)",
+     "title": "How to Read a Paper (three-pass method)",
+     "url": "https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "An annotated bibliography of ten papers in your topic with a three-pass summary for each"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "german_language_a1_b1",
+   "name": "German (A1 to B1)",
+   "category": "professional",
+   "description": "Reach Goethe A1 before applying and B1 by the end of the first year in Germany; enough for Werkstudent roles and daily life.",
+   "evidence_types": [
+    "cert",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "vhs-Lernportal",
+     "title": "vhs-Lernportal: free online German courses from A1",
+     "url": "https://www.vhs-lernportal.de/deutsch",
+     "free": true,
+     "hours": 90,
+     "proof_of_done": "Completed A1 course record on the portal and a self-recorded two-minute self-introduction in German"
+    },
+    {
+     "platform": "Goethe-Institut",
+     "title": "Goethe-Institut free German practice materials",
+     "url": "https://www.goethe.de/en/spr/ueb.html",
+     "free": true,
+     "hours": 60,
+     "proof_of_done": "A completed Goethe A1 model test paper with score"
+    },
+    {
+     "platform": "Goethe-Institut India",
+     "title": "Goethe-Institut German exams in India (A1 to C2)",
+     "url": "https://www.goethe.de/ins/in/en/spr/prf.html",
+     "free": false,
+     "hours": 6,
+     "proof_of_done": "Goethe-Zertifikat A1 certificate (and later B1) with certificate number"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "study_abroad_applications_daad_uni_assist",
+   "name": "German university applications (DAAD, uni-assist, APS)",
+   "category": "professional",
+   "description": "Shortlist English-taught programmes on DAAD, get APS verification, submit uni-assist or direct applications before deadlines with IELTS, SOP and Lebenslauf.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "DAAD",
+     "title": "DAAD international programmes database (all degree programmes)",
+     "url": "https://www.daad.de/en/studying-in-germany/universities/all-degree-programmes/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A shortlist sheet of eight to twelve programmes with deadline, uni-assist or direct, language test and fees"
+    },
+    {
+     "platform": "uni-assist",
+     "title": "uni-assist: application service for 180 German universities",
+     "url": "https://www.uni-assist.de/en/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A submitted uni-assist application number (or VPD request id) for at least one programme"
+    },
+    {
+     "platform": "APS India",
+     "title": "Academic Evaluation Centre (APS) India",
+     "url": "https://aps-india.de/",
+     "free": false,
+     "hours": 6,
+     "proof_of_done": "APS application id and, later, the APS certificate number"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "cat_preparation",
+   "name": "CAT (Common Admission Test)",
+   "category": "exam",
+   "description": "Score a high-90s percentile in CAT quantitative ability, verbal ability and data interpretation through timed sectional practice.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Khan Academy",
+     "title": "Arithmetic (ratios, percentages, number sense) for CAT quant basics",
+     "url": "https://www.khanacademy.org/math/arithmetic",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Twenty timed quant sectional tests with a per-topic accuracy sheet"
+    },
+    {
+     "platform": "Coursera (audit)",
+     "title": "Introduction to Mathematical Thinking (Stanford Online)",
+     "url": "https://www.coursera.org/learn/mathematical-thinking",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A logical-reasoning and data-interpretation practice log of 300 questions with time per question"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "mba_case_and_group_discussion",
+   "name": "Case interview and group discussion",
+   "category": "professional",
+   "description": "Hold a structured argument in a group discussion, break down a business case and answer 'why MBA' from your engineering project.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/109104107",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "Three recorded group discussions with peers and a written self-review of each"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "International Business Communication (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/110105052",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "A one-page written case analysis (problem, options, recommendation) for a published business case"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "15.390 New Enterprises",
+     "url": "https://ocw.mit.edu/courses/15-390-new-enterprises-spring-2013/",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A ten-slide pitch of a business idea drawn from your branch, delivered in a mock interview"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "renewable_energy_fundamentals",
+   "name": "Renewable energy fundamentals",
+   "category": "domain",
+   "description": "Explain solar, wind and storage technologies, India's MNRE schemes and tariffs, and size a simple rooftop or hybrid system.",
+   "evidence_types": [
+    "cert",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Renewable Energy Engineering: Solar, Wind and Biomass Energy Systems (IIT Guwahati)",
+     "url": "https://nptel.ac.in/courses/103103206",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A sizing note for a 10 kW rooftop system with payback under a named state net-metering policy"
+    },
+    {
+     "platform": "MNRE",
+     "title": "Ministry of New and Renewable Energy: schemes, guidelines and institutes",
+     "url": "https://mnre.gov.in/en/",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "A one-page summary of PM Surya Ghar and utility-scale bidding guidelines with clause references"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "power_grid_and_transmission_basics",
+   "name": "Power grid and transmission basics",
+   "category": "domain",
+   "description": "Describe how the Indian grid is operated (Grid-India, CEA, CERC), transmission line and substation basics, and grid-connection requirements for a plant.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Power System Generation, Transmission and Distribution (IIT Delhi)",
+     "url": "https://nptel.ac.in/courses/108102047",
+     "free": true,
+     "hours": 35,
+     "proof_of_done": "A single-line diagram of a 33/11 kV substation with equipment ratings and earthing scheme, drawn in AutoCAD"
+    },
+    {
+     "platform": "Grid-India",
+     "title": "Grid Controller of India: procedures, consultations and grid reports",
+     "url": "https://grid-india.in/",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "A one-page checklist of grid-connection requirements for a solar plant with clause references to CEA and Grid-India documents"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.061 Introduction to Electric Power Systems",
+     "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Solved problem sets on transmission line parameters and power flow kept in a notes folder"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy"
+   ]
+  },
+  {
+   "id": "project_management_basics",
+   "name": "Project management basics",
+   "category": "professional",
+   "description": "Plan a scope, schedule and budget, track earned value, and write a weekly progress and risk report that a project manager would accept.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Project Management (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/110104073",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A project charter, WBS and risk register for your evidenced project"
+    },
+    {
+     "platform": "Coursera (audit)",
+     "title": "Google Project Management Professional Certificate",
+     "url": "https://www.coursera.org/professional-certificates/google-project-management",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Four weekly progress reports with planned versus actual and earned-value figures for a real or simulated project"
+    }
+   ],
+   "paths": [
+    "infrastructure_energy",
+    "government_psu",
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "mtech_admissions_coap_ccmt",
+   "name": "M.Tech admissions (COAP, CCMT, IISc)",
+   "category": "exam",
+   "description": "Convert a GATE score into an admission: apply to IISc and IITs, understand COAP accept-and-wait rules and CCMT rounds, and prepare for lab interviews.",
+   "evidence_types": [
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "CCMT official",
+     "title": "CCMT 2026: centralised counselling for M.Tech at NITs, IIITs and CFTIs",
+     "url": "https://ccmt.admissions.nic.in/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "CCMT registration id and a choice list with last-round closing ranks for your paper"
+    },
+    {
+     "platform": "IISc official",
+     "title": "IISc M.Tech and M.Des admissions: eligibility and selection procedure",
+     "url": "https://www.iisc.ac.in/admissions/m-tech-m-des/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "IISc or IIT application number and a one-page note on which departments use interview or written test"
+    }
+   ],
+   "paths": [
+    "higher_studies"
+   ]
+  },
+  {
+   "id": "digital_design_fundamentals",
+   "name": "Digital Design",
+   "category": "hardware",
+   "description": "Design combinational and sequential logic, FSMs and counters by hand, reason about setup/hold and clocking, and explain CMOS gate behaviour in a screening test.",
+   "evidence_types": [
+    "repo",
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Digital Electronic Circuits (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/108105132",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "A GitHub repo with hand-drawn or Logisim schematics plus Verilog for a 4-bit ALU, a Moore and a Mealy FSM, and a truth-table/timing note for each"
+    },
+    {
+     "platform": "HDLBits",
+     "title": "HDLBits Verilog exercises (Circuits section)",
+     "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Screenshot of HDLBits progress page showing all Combinational Logic and Sequential Logic problems solved"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.111 Introductory Digital Systems Laboratory",
+     "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved problem sets 1 to 3 pushed to a repo with your worked timing calculations"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "verilog_systemverilog",
+   "name": "Verilog / SystemVerilog",
+   "category": "hardware",
+   "description": "Write synthesisable Verilog or SystemVerilog for a module such as a FIFO, UART or AXI-lite slave, and simulate it with a self-checking testbench on open-source tools.",
+   "evidence_types": [
+    "repo",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Hardware Modeling using Verilog (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105165",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "GitHub repo with a parameterised FIFO and a UART TX/RX in Verilog, testbenches, and GTKWave waveform screenshots in the README"
+    },
+    {
+     "platform": "HDLBits",
+     "title": "HDLBits Verilog exercises",
+     "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "HDLBits progress screenshot showing at least 150 problems solved, linked from your portfolio"
+    },
+    {
+     "platform": "ChipVerify",
+     "title": "SystemVerilog tutorial",
+     "url": "https://www.chipverify.com/systemverilog/systemverilog-tutorial",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Repo with your UART testbench rewritten in SystemVerilog using classes, interfaces and constrained-random stimulus, run on Icarus or Verilator"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "rtl_design",
+   "name": "RTL Design",
+   "category": "hardware",
+   "description": "Turn a spec into a micro-architecture and clean, lint-free, synthesisable RTL with clock-domain crossings, reset strategy and a register map handled correctly.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "VLSI Design Flow: RTL to GDS (IIIT Delhi)",
+     "url": "https://nptel.ac.in/courses/108106191",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "Repo with an AXI-lite peripheral (register map documented) whose RTL passes Verilator lint and synthesises in Yosys with the area report committed"
+    },
+    {
+     "platform": "ASIC World",
+     "title": "Verilog tutorial, examples and testbench writing",
+     "url": "https://www.asic-world.com/verilog/veritut.html",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Repo with a two-clock async FIFO (Gray-code pointers) and a CDC note explaining every synchroniser"
+    },
+    {
+     "platform": "Icarus Verilog",
+     "title": "Icarus Verilog user guide",
+     "url": "https://steveicarus.github.io/iverilog/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A Makefile in your repo that compiles, simulates and dumps VCD for every module with one command"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "functional_verification_uvm",
+   "name": "Functional Verification (SystemVerilog, UVM)",
+   "category": "hardware",
+   "description": "Build a UVM testbench with agents, sequences, a scoreboard, functional coverage and assertions, and close coverage against a written verification plan.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Verification Academy (Siemens)",
+     "title": "UVM Basics course",
+     "url": "https://verificationacademy.com/courses/uvm-basics",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Repo with a UVM testbench for your UART or AXI-lite block: verification plan, coverage report and bug list in the README"
+    },
+    {
+     "platform": "ChipVerify",
+     "title": "UVM tutorial",
+     "url": "https://www.chipverify.com/uvm/uvm-tutorial",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "The same repo extended with a scoreboard, at least 10 SystemVerilog assertions and a regression script that runs 100+ random seeds"
+    },
+    {
+     "platform": "Doulos",
+     "title": "Easier UVM coding guidelines and code generator",
+     "url": "https://www.doulos.com/knowhow/systemverilog/uvm/easier-uvm/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A generated UVM skeleton committed with a diff showing what you changed by hand and why"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "static_timing_analysis",
+   "name": "Static Timing Analysis (STA)",
+   "category": "hardware",
+   "description": "Write SDC constraints, read setup/hold reports, compute slack by hand, and explain CDC, multicycle and false paths for a synthesised design.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "VLSI Expert",
+     "title": "Static Timing Analysis and Signal Integrity chapters",
+     "url": "https://www.vlsi-expert.com/p/static-timing-analysis.html",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A one-page worked sheet (PDF in your repo) of setup and hold arithmetic for five paths in your own design, with the numbers matching the tool report"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "VLSI Physical Design (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105161",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "An SDC file for your design plus an OpenSTA timing report committed with the worst 10 paths annotated"
+    },
+    {
+     "platform": "OpenROAD",
+     "title": "OpenROAD documentation (includes OpenSTA)",
+     "url": "https://openroad.readthedocs.io/en/latest/",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "OpenSTA run script and report for your FIFO/UART showing timing closed at a stated clock on SKY130"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "dft_basics",
+   "name": "DFT (Scan, ATPG, BIST)",
+   "category": "hardware",
+   "description": "Insert scan chains, generate ATPG patterns, read fault-coverage reports and explain BIST and boundary scan at the level asked in DFT and test interviews.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Digital VLSI Testing (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/117105137",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A write-up in your repo with hand-derived stuck-at test vectors for a small circuit and the fault-coverage table"
+    },
+    {
+     "platform": "Fault (AUCOHL, open source)",
+     "title": "Fault: open-source DFT flow (scan insertion, ATPG)",
+     "url": "https://github.com/AUCOHL/Fault",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Scan-inserted netlist and ATPG pattern set for your UART or CAN controller with the fault-coverage report committed"
+    },
+    {
+     "platform": "Chips to Startup",
+     "title": "C2S EDA Tool Support (Cadence/Synopsys licences at supported colleges)",
+     "url": "https://c2s.gov.in/EDA_Tool_Support.jsp",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Screenshot and log of a scan-insertion and ATPG run on Synopsys or Cadence DFT tools via your college C2S licence"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "physical_design_basics",
+   "name": "Physical Design (Synthesis, Place and Route)",
+   "category": "hardware",
+   "description": "Run an RTL-to-GDS flow: synthesis, floorplan, placement, CTS, routing, DRC/LVS, and explain the reports and the trade-offs made at each step.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "VLSI Physical Design (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105161",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A design document (PDF in repo) explaining floorplan, placement and CTS choices for your block with area and timing numbers"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "VLSI Design Flow: RTL to GDS (IIIT Delhi)",
+     "url": "https://nptel.ac.in/courses/108106191",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "Completed RTL-to-GDS run of a small RISC-V core or your own block: GDS screenshot, timing and area reports in the README"
+    },
+    {
+     "platform": "OpenLane (open source)",
+     "title": "OpenLane automated RTL-to-GDSII flow",
+     "url": "https://github.com/The-OpenROAD-Project/OpenLane",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "OpenLane config and run logs for your design on SKY130 with DRC/LVS clean, committed with the final GDS"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "analog_circuit_basics",
+   "name": "Analog Circuits",
+   "category": "hardware",
+   "description": "Analyse and simulate op-amp, transistor and filter circuits, read a datasheet, and build a working amplifier or regulator on a breadboard.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Analog Circuits (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/108106084",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "LTspice files and a scope screenshot of a two-stage op-amp amplifier you built, with measured versus simulated gain and bandwidth"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.002 Circuits and Electronics",
+     "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved problem sets 1 to 5 and a repo of LTspice models for each circuit"
+    },
+    {
+     "platform": "Analog Devices",
+     "title": "LTspice simulator (free download and tutorials)",
+     "url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "An LTspice project of a linear regulator or active filter with a Monte Carlo tolerance run and the plots committed"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "semiconductor_fabrication_process",
+   "name": "Semiconductor Fabrication Process",
+   "category": "core_eng",
+   "description": "Explain the CMOS process flow (oxidation, lithography, etch, implant, deposition, CMP), yield and SPC basics, and cleanroom discipline for fab, ATMP and OSAT roles.",
+   "evidence_types": [
+    "document",
+    "cert",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Basic Overview of Semiconductor Device Processing and IC Fabrication (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/108104865",
+     "free": true,
+     "hours": 35,
+     "proof_of_done": "A 6-page process-flow document for an NMOS transistor with a cross-section sketch per step and one defect mechanism per step"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Fabrication of Silicon VLSI Circuits using the MOS technology (IIT Bombay)",
+     "url": "https://nptel.ac.in/courses/108101089",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A written SPC exercise: an X-bar/R chart built from a public or synthetic wafer dataset in Python with your out-of-control rules explained"
+    },
+    {
+     "platform": "SkyWater / Google (open source)",
+     "title": "SkyWater SKY130 PDK documentation",
+     "url": "https://skywater-pdk.readthedocs.io/en/main/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A note in your repo mapping five SKY130 design rules to the process steps that cause them"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "pcb_design",
+   "name": "PCB Design (KiCad / Altium)",
+   "category": "hardware",
+   "description": "Take a schematic to a manufacturable two- or four-layer PCB with correct footprints, DRC-clean layout, Gerbers and a BOM, and bring the board up.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "KiCad",
+     "title": "Getting Started in KiCad 8",
+     "url": "https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Gerber files, BOM and a photo of an assembled STM32 or sensor breakout board you designed, in a public repo"
+    },
+    {
+     "platform": "Altium",
+     "title": "Altium Education (free student licences and courses)",
+     "url": "https://www.altium.com/education",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A four-layer PCB project (CAN node or BMS front-end) with DRC report and 3D render committed alongside the Gerbers"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "embedded_c",
+   "name": "Embedded C",
+   "category": "hardware",
+   "description": "Write bare-metal C on an STM32 or similar MCU: GPIO, timers, UART, I2C, SPI, interrupts, and read the reference manual and datasheet to configure a peripheral.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Embedded Systems Design (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105159",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "Repo with firmware that reads cell voltage and temperature over I2C/ADC and prints over UART, plus a short demo video"
+    },
+    {
+     "platform": "STMicroelectronics",
+     "title": "STM32 MOOCs (free online courses)",
+     "url": "https://www.st.com/content/st_com/en/support/learning/stm32-education/stm32-moocs.html",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "STM32 Nucleo project using timers, DMA and interrupts committed with a README that cites the reference-manual sections used"
+    },
+    {
+     "platform": "edX (UT Austin)",
+     "title": "Embedded Systems - Shape the World: Microcontroller I/O (audit)",
+     "url": "https://www.edx.org/learn/embedded-systems/the-university-of-texas-at-austin-embedded-systems-shape-the-world-microcontroller-input-output",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Lab code for all modules in a repo plus a video of the final lab running on hardware"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "microcontrollers_and_rtos",
+   "name": "Microcontrollers and RTOS (FreeRTOS)",
+   "category": "hardware",
+   "description": "Structure firmware as FreeRTOS tasks with queues, semaphores and timers on an ARM Cortex-M board, and debug priority and timing problems with a logic analyser or trace.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "FreeRTOS",
+     "title": "FreeRTOS RTOS fundamentals and beginner's guide",
+     "url": "https://www.freertos.org/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A FreeRTOS project on STM32 with three tasks (sensor read, CAN transmit, fault monitor) and a README explaining priorities and stack sizes"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Embedded System Design with ARM (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105193",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Repo of ARM Cortex-M labs with a video showing an interrupt-driven peripheral working on the board"
+    },
+    {
+     "platform": "STMicroelectronics",
+     "title": "STM32 online training",
+     "url": "https://www.st.com/content/st_com/en/support/learning/stm32-education/stm32-online-training.html",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "STM32CubeIDE project using CMSIS-RTOS/FreeRTOS with a trace screenshot of task switching"
+    }
+   ],
+   "paths": [
+    "ev_automotive"
+   ]
+  },
+  {
+   "id": "can_lin_automotive_protocols",
+   "name": "CAN / LIN",
+   "category": "hardware",
+   "description": "Explain CAN frame structure, arbitration, bit timing and error handling; build a two-node CAN network on MCUs and decode logged traffic with a DBC or your own message map.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Texas Instruments",
+     "title": "Introduction to the Controller Area Network (SLOA101)",
+     "url": "https://www.ti.com/lit/an/sloa101b/sloa101b.pdf",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A one-page CAN bit-timing calculation for 500 kbit/s on your MCU clock, checked against the working bus"
+    },
+    {
+     "platform": "CSS Electronics",
+     "title": "CAN Bus Explained - A Simple Intro",
+     "url": "https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Logged CAN traces from your two-node network (SavvyCAN or candump) with a document explaining every message ID and signal"
+    },
+    {
+     "platform": "Vector",
+     "title": "E-Learning: Introduction to CAN",
+     "url": "https://elearning.vector.com/mod/page/view.php?id=333",
+     "free": true,
+     "hours": 12,
+     "proof_of_done": "A two-node STM32/MCP2515 CAN network video: one node reports pack voltage and temperature, the other displays it and raises a fault flag"
+    }
+   ],
+   "paths": [
+    "ev_automotive"
+   ]
+  },
+  {
+   "id": "matlab_simulink",
+   "name": "MATLAB / Simulink",
+   "category": "core_eng",
+   "description": "Build and run a Simulink model of a physical subsystem (drive cycle, motor, battery, attitude loop), tune it, and present results against a published spec.",
+   "evidence_types": [
+    "repo",
+    "cert",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "MathWorks",
+     "title": "MATLAB Onramp (free)",
+     "url": "https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "MATLAB Onramp certificate plus a script that plots your own logged sensor or CAN data"
+    },
+    {
+     "platform": "MathWorks",
+     "title": "Simulink Onramp (free)",
+     "url": "https://matlabacademy.mathworks.com/details/simulink-onramp/simulink",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A .slx model of a two-wheeler EV drive cycle (motor, battery, vehicle dynamics) with a report comparing predicted range to an OEM claim"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "battery_management_systems",
+   "name": "Battery Management Systems (BMS)",
+   "category": "hardware",
+   "description": "Explain lithium-ion cell behaviour, estimate SOC and SOH, design passive balancing and safety cut-offs on a cell-monitor IC, and run and log a cell-cycling test.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Battery University",
+     "title": "Battery University articles (cell chemistry, charging, testing)",
+     "url": "https://batteryuniversity.com/articles",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "A cell test log of at least 20 charge/discharge cycles with a capacity-fade plot and internal-resistance trend"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Electrochemical Energy Storage (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/113105102",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A 5-page note on your pack design: cell choice, series/parallel topology, C-rate limits and thermal runaway margin"
+    },
+    {
+     "platform": "Coursera (University of Colorado)",
+     "title": "Algorithms for Battery Management Systems specialization (audit)",
+     "url": "https://www.coursera.org/specializations/algorithms-for-battery-management-systems",
+     "free": true,
+     "hours": 60,
+     "proof_of_done": "A working 4-series BMS (BQ76920-class IC) with balancing, OV/OT cut-off and CAN output: schematic, firmware and fault-injection video on GitHub"
+    }
+   ],
+   "paths": [
+    "ev_automotive"
+   ]
+  },
+  {
+   "id": "ev_powertrain_and_motor_control",
+   "name": "EV Powertrain and Motor Control",
+   "category": "core_eng",
+   "description": "Size an EV powertrain from vehicle dynamics, explain BLDC six-step and FOC, and run a small motor from your own controller or a Simulink model with logged signals.",
+   "evidence_types": [
+    "repo",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "EV - Vehicle Dynamics and Electric Motor Drives (IIT Delhi)",
+     "url": "https://nptel.ac.in/courses/108102121",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A MATLAB/Simulink range and motor-sizing model for a two-wheeler with tractive-effort calculations in the README"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Fundamentals of Electric Vehicles: Technology and Economics (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/108106170",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A 4-page trade study comparing two motor and battery configurations for a scooter, with cost and range numbers"
+    },
+    {
+     "platform": "MathWorks",
+     "title": "Field-Oriented Control of PMSMs with Simulink (video series)",
+     "url": "https://www.mathworks.com/videos/series/field-oriented-control-of-pmsms-with-simulink.html",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A Simulink FOC model file plus a video of a small BLDC running six-step commutation from your own MCU code with scope traces"
+    }
+   ],
+   "paths": [
+    "ev_automotive"
+   ]
+  },
+  {
+   "id": "power_electronics_basics",
+   "name": "Power Electronics",
+   "category": "core_eng",
+   "description": "Analyse and simulate DC-DC converters, inverters and chargers, choose switches and magnetics, and build a low-voltage buck or half-bridge with measured waveforms.",
+   "evidence_types": [
+    "repo",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Power Electronics (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/108105066",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "LTspice or Simulink model of a buck converter and a three-phase inverter with a note on switching losses and ripple"
+    },
+    {
+     "platform": "MathWorks",
+     "title": "Power Electronics Simulation Onramp (free)",
+     "url": "https://matlabacademy.mathworks.com/details/power-electronics-simulation-onramp/powerelectronics",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Onramp certificate plus a Simscape buck-converter model with a closed-loop voltage controller"
+    },
+    {
+     "platform": "Texas Instruments",
+     "title": "TI Precision Labs (power, amplifiers, data converters)",
+     "url": "https://www.ti.com/video/series/precision-labs.html",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "A built 12 V to 5 V buck board photo with scope captures of switch node and output ripple, committed with the schematic"
+    }
+   ],
+   "paths": [
+    "ev_automotive"
+   ]
+  },
+  {
+   "id": "cad_solidworks_or_catia",
+   "name": "CAD (SolidWorks / CATIA / Onshape)",
+   "category": "core_eng",
+   "description": "Model parts and assemblies, produce dimensioned drawings with GD&T and a BOM, and share native files that a reviewer can open and check.",
+   "evidence_types": [
+    "repo",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Engineering Drawing and Computer Graphics (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/112105294",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A set of five orthographic drawings with tolerances, exported as PDF and native files, in a GrabCAD or GitHub folder"
+    },
+    {
+     "platform": "Onshape",
+     "title": "Onshape Learning Center (free)",
+     "url": "https://learn.onshape.com/",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A full CAD assembly of a two-wheeler battery pack or motor mount with drawings, tolerances and BOM, shared as a public Onshape document"
+    },
+    {
+     "platform": "Dassault Systemes",
+     "title": "SOLIDWORKS for Students",
+     "url": "https://www.solidworks.com/product/students",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A SolidWorks assembly (or CATIA if your college has it) with an exploded view, drawing pack and a one-page design-choice write-up"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "thermal_and_fea_simulation",
+   "name": "FEA and Thermal Simulation (ANSYS)",
+   "category": "core_eng",
+   "description": "Set up a static structural or steady-state thermal case with sensible boundary conditions, mesh it, check convergence, and validate the result against a hand calculation.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Ansys",
+     "title": "Ansys Student (free simulation software)",
+     "url": "https://ansys.synopsys.com/academic/students",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "An Ansys Student thermal case of a battery pack or bracket with a report comparing FEA result to a hand calculation within a stated error"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Finite Element Method (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/112104116",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A Python or MATLAB script solving a 1D bar and 2D truss by FEM, with results matching the analytical solution, in a repo"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "2.092 Finite Element Analysis of Solids and Fluids I",
+     "url": "https://ocw.mit.edu/courses/2-092-finite-element-analysis-of-solids-and-fluids-i-fall-2009/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved problem sets 1 to 4 plus a mesh-convergence study on your own part committed as a PDF"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "control_systems",
+   "name": "Control Systems",
+   "category": "core_eng",
+   "description": "Model a plant, design and tune a PID or state-feedback controller, read Bode and root-locus plots, and implement the loop on hardware or in Simulink.",
+   "evidence_types": [
+    "repo",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Control Engineering (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/108106098",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A repo with MATLAB scripts for a DC-motor speed loop: model, Bode plot, PID tuning and step-response comparison against a measured motor"
+    },
+    {
+     "platform": "MathWorks",
+     "title": "Control Design Onramp with Simulink (free)",
+     "url": "https://matlabacademy.mathworks.com/details/control-design-onramp-with-simulink/controls",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A Simulink quadcopter attitude controller model file with a video of it running on a flight board or a documented simulation"
+    }
+   ],
+   "paths": [
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "rf_and_antenna_basics",
+   "name": "RF and Antenna Design",
+   "category": "hardware",
+   "description": "Design and measure a simple antenna and receive chain, compute a link budget, and use an SDR to capture and analyse a real signal.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Antennas (IIT Bombay)",
+     "url": "https://nptel.ac.in/courses/108101092",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A two-element antenna built and measured (VSWR or received-signal plot) with a design note and photos in a repo"
+    },
+    {
+     "platform": "GNU Radio",
+     "title": "GNU Radio tutorials",
+     "url": "https://wiki.gnuradio.org/index.php/Tutorials",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A GNU Radio flowgraph file that demodulates FM or decodes a satellite beacon from your RTL-SDR, with a captured spectrum screenshot"
+    },
+    {
+     "platform": "RTL-SDR.com",
+     "title": "About RTL-SDR (what it is and how to use it)",
+     "url": "https://www.rtl-sdr.com/about-rtl-sdr/",
+     "free": true,
+     "hours": 5,
+     "proof_of_done": "An S-band or VHF link-budget spreadsheet for a CubeSat downlink checked against a measured receive test"
+    }
+   ],
+   "paths": [
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "avionics_and_propulsion_basics",
+   "name": "Avionics and Propulsion",
+   "category": "domain",
+   "description": "Explain rocket and jet propulsion fundamentals, flight-controller architecture and sensor fusion, and run an instrumented test (thrust stand or flight board) with calibrated data.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Rocket Propulsion (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/101106082",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A thrust-stand test report (load cell, pressure, thermocouple) comparing measured thrust curve to a simple internal-ballistics model, with raw data"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "16.50 Introduction to Propulsion Systems",
+     "url": "https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved problem sets 1 to 4 plus a Python nozzle-flow calculator committed to a repo"
+    },
+    {
+     "platform": "ArduPilot",
+     "title": "ArduPilot developer documentation",
+     "url": "https://ardupilot.org/dev/",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A flight-board build or SITL run with logs, a parameter file and a video of the attitude controller holding level"
+    }
+   ],
+   "paths": [
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "gate_preparation_ece_ee_me",
+   "name": "GATE (ECE / EE / ME)",
+   "category": "exam",
+   "description": "Prepare for and sit GATE in your branch paper to a score that opens M.Tech, DRDO, ISRO and PSU routes, tracked with weekly timed mocks.",
+   "evidence_types": [
+    "score",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GATE official (IIT Madras)",
+     "title": "GATE 2027 test papers and syllabus",
+     "url": "https://gate2027.iitm.ac.in/exam_papers_and_syllabus",
+     "free": true,
+     "hours": 300,
+     "proof_of_done": "A mock-score log (spreadsheet) of at least 12 full-length timed mocks with topic-wise error analysis, then the GATE score card"
+    },
+    {
+     "platform": "ISRO official",
+     "title": "ISRO Careers: current opportunities (ICRB Scientist/Engineer notices)",
+     "url": "https://www.isro.gov.in/Careers.html",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved previous ISRO ICRB papers with a score sheet, and your admit card or score for the current cycle"
+    },
+    {
+     "platform": "DRDO official",
+     "title": "DRDO Recruitment and Assessment Centre (RAC)",
+     "url": "https://rac.gov.in/",
+     "free": true,
+     "hours": 5,
+     "proof_of_done": "A one-page eligibility and timeline sheet for DRDO Scientist B in your discipline, with the GATE paper code and cut-off history"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "quality_and_manufacturing_basics",
+   "name": "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+   "category": "core_eng",
+   "description": "Apply SPC charts, 5S, poka-yoke and basic DMAIC on line data, and read GD&T on a drawing well enough to talk to a quality or production engineer.",
+   "evidence_types": [
+    "document",
+    "cert",
+    "repo"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Six Sigma (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/110105123",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A DMAIC case study (PDF) on a real or public dataset with X-bar/R charts, capability index and a recommended change"
+    },
+    {
+     "platform": "GD&T Basics",
+     "title": "GD&T symbols reference",
+     "url": "https://www.gdandtbasics.com/gdt-symbols/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A drawing of your own part annotated with datums, position and flatness tolerances, plus a one-page inspection plan"
+    }
+   ],
+   "paths": [
+    "ev_automotive",
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "signal_processing_basics",
+   "name": "Signal Processing (DSP)",
+   "category": "core_eng",
+   "description": "Sample, filter and analyse real signals: FFT, FIR/IIR design, aliasing and windowing, applied to sensor, radar or telemetry data in Python or MATLAB.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Digital Signal Processing (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/108106151",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "A repo of Python/MATLAB notebooks: FFT of a logged sensor signal, a designed FIR and IIR filter, and before/after plots"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.003 Signals and Systems",
+     "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Solved problem sets 1 to 6 committed as PDF with MATLAB or Python checks"
+    },
+    {
+     "platform": "dspguide.com",
+     "title": "The Scientist and Engineer's Guide to Digital Signal Processing (free book)",
+     "url": "https://www.dspguide.com/pdfbook.htm",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A working RTL-SDR or microphone capture pipeline that filters and demodulates a signal, with code and spectrogram plots"
+    }
+   ],
+   "paths": [
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "fpga_prototyping",
+   "name": "FPGA (Vivado / Quartus)",
+   "category": "hardware",
+   "description": "Synthesise, constrain, implement and debug an RTL design on a real FPGA board, using ILA or a logic analyser to prove it works.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Digital System Design with PLDs and FPGAs (IISc Bangalore)",
+     "url": "https://nptel.ac.in/courses/117108040",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A video of your UART or FIFO running on an FPGA board (Basys, Nexys, DE10 or a low-cost Lattice board) with the bitstream project in a repo"
+    },
+    {
+     "platform": "AMD (Xilinx)",
+     "title": "AMD University Program",
+     "url": "https://www.amd.com/en/corporate/university-program.html",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A Vivado project with XDC constraints, timing summary screenshot and an ILA capture of your design on hardware"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.111 Introductory Digital Systems Laboratory",
+     "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "An FPGA lab-style project (VGA, audio or serial) with a demo video and a lab report in the repo"
+    }
+   ],
+   "paths": [
+    "semiconductor_electronics"
+   ]
+  },
+  {
+   "id": "labview_and_daq_basics",
+   "name": "LabVIEW and DAQ",
+   "category": "core_eng",
+   "description": "Build a LabVIEW or Python data-acquisition program that samples sensors, calibrates them, logs to file, plots live and flags out-of-range readings for a test campaign.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NI",
+     "title": "LabVIEW Community Edition (free for non-commercial use)",
+     "url": "https://www.ni.com/en/shop/labview/select-edition/labview-community-edition.html",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A LabVIEW VI that logs load-cell and thermocouple readings from an Arduino or DAQ, with calibration records and a sample CSV in a repo"
+    },
+    {
+     "platform": "NI Learning Center",
+     "title": "Getting Started with Arduino and LabVIEW Community Edition",
+     "url": "https://learn.ni.com/courses/getting-started-with-arduino-and-labview-community-edition",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A screen recording of your VI streaming live sensor data with an out-of-range alarm, plus the VI files"
+    }
+   ],
+   "paths": [
+    "defence_aerospace_space"
+   ]
+  },
+  {
+   "id": "python",
+   "name": "Python",
+   "category": "foundation",
+   "description": "Write a 100-line program from a problem statement, using functions, files, lists and dicts, without copying from an assistant.",
+   "evidence_types": [
+    "repo",
+    "cert",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Programming, Data Structures and Algorithms using Python",
+     "url": "https://nptel.ac.in/courses/106106145",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "NPTEL exam certificate id, or a repo with all weekly programming assignments solved and passing the given tests"
+    },
+    {
+     "platform": "CS50",
+     "title": "CS50's Introduction to Programming with Python (CS50P)",
+     "url": "https://cs50.harvard.edu/python/",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "Public repo with the nine problem sets and the final project, plus the CS50P certificate URL"
+    },
+    {
+     "platform": "Kaggle Learn",
+     "title": "Python",
+     "url": "https://www.kaggle.com/learn/python",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Kaggle Learn completion certificate URL for Python plus a notebook of your own solving five exercises"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services"
+   ]
+  },
+  {
+   "id": "sql",
+   "name": "SQL",
+   "category": "foundation",
+   "description": "Write joins, group by, window functions and subqueries against a real dataset and explain the query plan of one slow query.",
+   "evidence_types": [
+    "repo",
+    "cert",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "Kaggle Learn",
+     "title": "Intro to SQL",
+     "url": "https://www.kaggle.com/learn/intro-to-sql",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Kaggle Learn completion certificate URL for Intro to SQL"
+    },
+    {
+     "platform": "Kaggle Learn",
+     "title": "Advanced SQL",
+     "url": "https://www.kaggle.com/learn/advanced-sql",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Kaggle Learn completion certificate URL for Advanced SQL plus a notebook with three window-function queries on a public BigQuery dataset"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Data Base Management System (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105175",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "NPTEL certificate id, or a repo with a normalised schema (ERD plus DDL) and 20 answered queries on it"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "dsa",
+   "name": "Data Structures and Algorithms",
+   "category": "foundation",
+   "description": "Solve LeetCode easy-to-medium problems on arrays, strings, hashing, trees, graphs and basic DP in 30 minutes each, and state time and space complexity.",
+   "evidence_types": [
+    "score",
+    "repo",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Data Structures and Algorithms (IIT Delhi, Naveen Garg)",
+     "url": "https://nptel.ac.in/courses/106102064",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "NPTEL certificate id, or a repo implementing stack, queue, BST, heap, hash table, BFS, DFS and Dijkstra with tests"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "6.006 Introduction to Algorithms (Spring 2020)",
+     "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+     "free": true,
+     "hours": 60,
+     "proof_of_done": "Repo with solutions to problem sets 1 to 6 and a LeetCode profile screenshot showing 150 solved"
+    },
+    {
+     "platform": "roadmap.sh",
+     "title": "Data Structures and Algorithms Roadmap",
+     "url": "https://roadmap.sh/datastructures-and-algorithms",
+     "free": true,
+     "hours": 80,
+     "proof_of_done": "LeetCode or Codeforces profile link with 150 solved (at least 60 medium) and the roadmap marked complete"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services"
+   ]
+  },
+  {
+   "id": "git_github",
+   "name": "Git and GitHub",
+   "category": "foundation",
+   "description": "Branch, commit, rebase, resolve a merge conflict, open a pull request and review one, with a public GitHub profile that shows weekly activity.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "The Odin Project",
+     "title": "Introduction to Git",
+     "url": "https://www.theodinproject.com/lessons/foundations-introduction-to-git",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "A public repo with at least 20 commits on two branches merged through pull requests"
+    },
+    {
+     "platform": "GitHub Docs",
+     "title": "Hello World (pull request workflow tutorial)",
+     "url": "https://docs.github.com/en/get-started/start-your-journey/hello-world",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "URL of the merged pull request created in the tutorial repo"
+    },
+    {
+     "platform": "Git official docs",
+     "title": "Pro Git book, 2nd edition (chapters 1 to 3 and 5)",
+     "url": "https://git-scm.com/book/en/v2",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A GitHub profile with 12 consecutive weeks of commits and one repo showing a resolved merge conflict in its history"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services"
+   ]
+  },
+  {
+   "id": "linux_shell",
+   "name": "Linux and shell scripting",
+   "category": "foundation",
+   "description": "Navigate a Linux server over SSH, manage files, permissions and processes, read logs with grep and tail, and write a 30-line bash script.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "The Odin Project",
+     "title": "Command Line Basics",
+     "url": "https://www.theodinproject.com/lessons/foundations-command-line-basics",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "Screenshot of a terminal session completing the lesson's exercises, committed to a notes repo"
+    },
+    {
+     "platform": "Ubuntu official docs",
+     "title": "The Linux command line for beginners",
+     "url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "A repo containing a bash script that backs up a folder, rotates logs and prints disk usage, with a README showing it run"
+    },
+    {
+     "platform": "MIT",
+     "title": "The Missing Semester of Your CS Education",
+     "url": "https://missing.csail.mit.edu/",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Repo with the exercises from the shell, shell tools, editors and command-line environment lectures solved"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "rest_apis",
+   "name": "REST APIs",
+   "category": "software",
+   "description": "Design and document a resource-oriented HTTP API with correct status codes, pagination, versioning and auth, and consume a third-party API from code.",
+   "evidence_types": [
+    "repo",
+    "deployed_url",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "roadmap.sh",
+     "title": "API Design Roadmap",
+     "url": "https://roadmap.sh/api-design",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "An OpenAPI (Swagger) spec for your own service committed to its repo, with the roadmap marked complete"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Web API design best practices (Azure Architecture Center)",
+     "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "A one-page API design document for your project that applies the guide's rules on URIs, methods, pagination and versioning"
+    },
+    {
+     "platform": "roadmap.sh",
+     "title": "Backend Developer Roadmap",
+     "url": "https://roadmap.sh/backend",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A deployed API URL with /docs enabled and a Postman or curl collection in the repo exercising every endpoint"
+    }
+   ],
+   "paths": [
+    "it_services"
+   ]
+  },
+  {
+   "id": "fastapi_or_spring",
+   "name": "FastAPI or Spring Boot",
+   "category": "software",
+   "description": "Build a backend service with routing, validation, a database layer, authentication and tests in FastAPI (Python) or Spring Boot (Java).",
+   "evidence_types": [
+    "repo",
+    "deployed_url",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "FastAPI official docs",
+     "title": "FastAPI Tutorial - User Guide",
+     "url": "https://fastapi.tiangolo.com/tutorial/",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Repo of a FastAPI service with SQL database, OAuth2 login, pytest suite and a deployed URL"
+    },
+    {
+     "platform": "Spring official guides",
+     "title": "Building a RESTful Web Service (Spring)",
+     "url": "https://spring.io/guides/gs/rest-service",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Repo of a Spring Boot REST service extended with a JPA entity, a repository and three tests, with the build passing in CI"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Programming in Java (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105191",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "NPTEL certificate id, or a repo with the weekly Java assignments and a console application using JDBC"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services"
+   ]
+  },
+  {
+   "id": "javascript_typescript",
+   "name": "JavaScript and TypeScript",
+   "category": "software",
+   "description": "Write modern JavaScript (ES modules, async/await, fetch, DOM events) and add TypeScript types to a small codebase.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "MDN Web Docs",
+     "title": "Dynamic scripting with JavaScript (Learn web development)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Repo with the module's challenges (number-guessing game, image gallery, house data UI) working and deployed on GitHub Pages"
+    },
+    {
+     "platform": "The Odin Project",
+     "title": "Foundations course (JavaScript sections)",
+     "url": "https://www.theodinproject.com/paths/foundations/courses/foundations",
+     "free": true,
+     "hours": 60,
+     "proof_of_done": "Deployed URLs and repos for the Rock Paper Scissors, Etch-a-Sketch and Calculator projects"
+    },
+    {
+     "platform": "TypeScript official docs",
+     "title": "The TypeScript Handbook",
+     "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A repo where a JavaScript project is converted to TypeScript with strict mode on and zero type errors in CI"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "react_or_frontend",
+   "name": "React (front-end)",
+   "category": "software",
+   "description": "Build a multi-page React front end with components, state, routing and API calls, and deploy it.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "React official docs",
+     "title": "Learn React (Quick Start and Tutorial)",
+     "url": "https://react.dev/learn",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "Deployed URL and repo of the tic-tac-toe tutorial extended with time travel and a scoreboard fetched from an API"
+    },
+    {
+     "platform": "The Odin Project",
+     "title": "React course (Full Stack JavaScript path)",
+     "url": "https://www.theodinproject.com/paths/full-stack-javascript/courses/react",
+     "free": true,
+     "hours": 60,
+     "proof_of_done": "Deployed URLs and repos of the CV Application, Memory Card and Shopping Cart projects"
+    },
+    {
+     "platform": "roadmap.sh",
+     "title": "Frontend Developer Roadmap",
+     "url": "https://roadmap.sh/frontend",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A deployed front end for your own API with Lighthouse performance and accessibility scores above 90, screenshot in the README"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "databases_postgresql",
+   "name": "PostgreSQL",
+   "category": "software",
+   "description": "Model a schema, write migrations, add indexes, use transactions and explain a query plan on PostgreSQL.",
+   "evidence_types": [
+    "repo",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "PostgreSQL official docs",
+     "title": "PostgreSQL Tutorial (Part I of the manual)",
+     "url": "https://www.postgresql.org/docs/current/tutorial.html",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "Repo with schema.sql, seed data, ten queries including a window function and a view, and an EXPLAIN ANALYZE output before and after adding an index"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Data Base Management System (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/106105175",
+     "free": true,
+     "hours": 45,
+     "proof_of_done": "NPTEL certificate id, or an ERD plus normalised DDL for your project committed to the repo"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "docker",
+   "name": "Docker",
+   "category": "software",
+   "description": "Write a Dockerfile and docker-compose for an app plus database, build a small image, and run it locally and on a cloud host.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "Docker official docs",
+     "title": "Get started with Docker",
+     "url": "https://docs.docker.com/get-started/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Repo with a Dockerfile and compose.yaml that starts your app and PostgreSQL with one command, image pushed to Docker Hub or GHCR"
+    },
+    {
+     "platform": "roadmap.sh",
+     "title": "Docker Roadmap",
+     "url": "https://roadmap.sh/docker",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "A multi-stage Dockerfile under 200 MB for your service, with an image size screenshot in the README"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Build a containerized web application with Docker",
+     "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-containers/",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "Microsoft Learn profile URL showing the module badge, and the container running at a public URL"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "cloud_fundamentals_aws",
+   "name": "AWS (cloud fundamentals)",
+   "category": "software",
+   "description": "Deploy a container or VM on the AWS free tier, set up a queue and a bucket, read CloudWatch logs and explain the monthly bill.",
+   "evidence_types": [
+    "cert",
+    "deployed_url",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "AWS Skill Builder",
+     "title": "AWS Cloud Practitioner Essentials (free digital course)",
+     "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "Skill Builder completion badge URL, plus a one-page write-up of your own free-tier bill with each line explained"
+    },
+    {
+     "platform": "AWS",
+     "title": "AWS Educate (free labs and badges for students)",
+     "url": "https://aws.amazon.com/education/awseducate/",
+     "free": true,
+     "hours": 12,
+     "proof_of_done": "Two AWS Educate digital badge URLs (for example Cloud Computing 101 and Compute)"
+    },
+    {
+     "platform": "AWS",
+     "title": "AWS Certified Cloud Practitioner (CLF-C02) exam",
+     "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+     "free": false,
+     "hours": 30,
+     "proof_of_done": "Certification validation number from Credly or the AWS certification portal"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services"
+   ]
+  },
+  {
+   "id": "cloud_fundamentals_azure",
+   "name": "Azure (cloud fundamentals)",
+   "category": "software",
+   "description": "Explain cloud service and deployment models, deploy a web app or container on Azure free credits, and read its cost and monitoring pages.",
+   "evidence_types": [
+    "cert",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "Microsoft Learn",
+     "title": "AZ-900: Describe cloud concepts (learning path 1 of 4)",
+     "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+     "free": true,
+     "hours": 12,
+     "proof_of_done": "Microsoft Learn profile URL showing all four AZ-900 learning paths complete, plus a public URL of an app deployed on Azure"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+     "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+     "free": false,
+     "hours": 30,
+     "proof_of_done": "AZ-900 certificate number and Credly badge URL (exam fee is waived at many college Cloud Skills Challenge events)"
+    }
+   ],
+   "paths": [
+    "it_services"
+   ]
+  },
+  {
+   "id": "llm_apis_and_agents",
+   "name": "LLM APIs and agents",
+   "category": "ai_data",
+   "description": "Call an LLM API with prompts, structured outputs, tool calling and streaming, track tokens and cost, and build a simple agent loop with and without a framework.",
+   "evidence_types": [
+    "repo",
+    "deployed_url",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "Hugging Face",
+     "title": "AI Agents Course",
+     "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Hugging Face Agents Course certificate URL and the final-project Space link with its leaderboard score"
+    },
+    {
+     "platform": "Anthropic",
+     "title": "Anthropic courses: API fundamentals, prompt engineering, tool use (GitHub notebooks)",
+     "url": "https://github.com/anthropics/courses",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "Repo with the notebooks run on your own key and a tool-using script that answers questions from a live API (weather, exchange rate), with a cost log per call"
+    },
+    {
+     "platform": "DeepLearning.AI",
+     "title": "AI Agents in LangGraph (short course)",
+     "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Repo of an agent with persistence and human-in-the-loop, plus a 2-minute demo video link"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "rag_and_vector_search",
+   "name": "RAG and vector search",
+   "category": "ai_data",
+   "description": "Chunk and embed documents, store vectors in pgvector or Chroma, retrieve with hybrid search and re-ranking, and answer with citations.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "DeepLearning.AI",
+     "title": "Building and Evaluating Advanced RAG (short course)",
+     "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Repo with a RAG pipeline over 100+ of your own documents and a table comparing baseline vs sentence-window retrieval on the RAG triad"
+    },
+    {
+     "platform": "Hugging Face",
+     "title": "LLM Course (chapters 1 to 3 and 5: transformers, embeddings, datasets)",
+     "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "Repo with an embedding-based search over a dataset you built, with recall@5 reported on 50 hand-written queries"
+    },
+    {
+     "platform": "pgvector official docs",
+     "title": "pgvector: vector similarity search for Postgres (README)",
+     "url": "https://github.com/pgvector/pgvector",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Repo with a PostgreSQL schema using vector columns and an HNSW index, and a script that returns top-k results with citations"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "llm_evals_and_observability",
+   "name": "LLM evals and observability",
+   "category": "ai_data",
+   "description": "Build a 50-question eval set, score it automatically in CI, and log every prompt, latency and cost with a tracing tool.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "DeepLearning.AI",
+     "title": "Evaluating AI Agents (short course)",
+     "url": "https://www.deeplearning.ai/short-courses/evaluating-ai-agents/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Repo with traced agent runs and an experiment table showing two versions scored on the same eval set"
+    },
+    {
+     "platform": "Anthropic official docs",
+     "title": "Define success criteria and build evaluations (Claude Platform docs)",
+     "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "An eval set of 50+ questions with expected answers, a grading script (code or LLM graded) and results committed to the repo on every CI run"
+    },
+    {
+     "platform": "Langfuse official docs",
+     "title": "Langfuse documentation (open-source LLM observability)",
+     "url": "https://langfuse.com/docs",
+     "free": true,
+     "hours": 5,
+     "proof_of_done": "Screenshot of a Langfuse dashboard (self-hosted or free cloud) showing traces, cost and latency for your app over one week, in the README"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "data_engineering_pipelines",
+   "name": "Data engineering (pipelines)",
+   "category": "ai_data",
+   "description": "Schedule a pipeline that loads a public dataset into a warehouse daily, with idempotent loads, tests and alerting on failure.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Apache Airflow official docs",
+     "title": "Airflow Tutorials (Airflow 101, TaskFlow API, simple data pipeline)",
+     "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "Repo with a DAG that fetches a public dataset, loads it into DuckDB or PostgreSQL and passes data quality checks, with a screenshot of 7 successful daily runs"
+    },
+    {
+     "platform": "Google Cloud official docs",
+     "title": "Try BigQuery using the sandbox (free, no credit card)",
+     "url": "https://docs.cloud.google.com/bigquery/docs/sandbox",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "A BigQuery sandbox dataset you loaded and three saved queries, screenshots plus SQL in the repo"
+    },
+    {
+     "platform": "DataTalksClub",
+     "title": "Data Engineering Zoomcamp (free, open-source course)",
+     "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+     "free": true,
+     "hours": 80,
+     "proof_of_done": "Repo with the homework for modules 1 to 4 and the end-to-end capstone pipeline with a dashboard screenshot"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "pandas_and_data_analysis",
+   "name": "Pandas and data analysis",
+   "category": "ai_data",
+   "description": "Clean, join, group and plot a messy real dataset with pandas and present three findings that survive a sanity check against the source.",
+   "evidence_types": [
+    "repo",
+    "cert",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Kaggle Learn",
+     "title": "Pandas",
+     "url": "https://www.kaggle.com/learn/pandas",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Kaggle Learn completion certificate URL for Pandas"
+    },
+    {
+     "platform": "Kaggle Learn",
+     "title": "Data Cleaning",
+     "url": "https://www.kaggle.com/learn/data-cleaning",
+     "free": true,
+     "hours": 5,
+     "proof_of_done": "Kaggle Learn completion certificate URL for Data Cleaning plus a public notebook cleaning a dataset of your choice"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Python for Data Science (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/106106212",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or a notebook analysing an Indian public dataset (data.gov.in) with three charted findings"
+    }
+   ],
+   "paths": [
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "machine_learning_basics",
+   "name": "Machine learning basics",
+   "category": "ai_data",
+   "description": "Train, validate and explain a regression and a classification model with scikit-learn, and know when not to use ML.",
+   "evidence_types": [
+    "repo",
+    "cert",
+    "score"
+   ],
+   "learning": [
+    {
+     "platform": "Kaggle Learn",
+     "title": "Intro to Machine Learning",
+     "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "Kaggle Learn completion certificate URL and a Kaggle competition submission with a public leaderboard score"
+    },
+    {
+     "platform": "Google",
+     "title": "Machine Learning Crash Course",
+     "url": "https://developers.google.com/machine-learning/crash-course",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Repo of the course's exercises completed plus a notebook training a model on your own dataset with a validation report"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Introduction to Machine Learning (IIT Madras, Balaraman Ravindran)",
+     "url": "https://nptel.ac.in/courses/106106139",
+     "free": true,
+     "hours": 50,
+     "proof_of_done": "NPTEL certificate id, or a repo implementing linear regression, logistic regression and a decision tree from scratch with tests against scikit-learn"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "mlops_basics",
+   "name": "MLOps basics",
+   "category": "ai_data",
+   "description": "Track experiments, version a model, serve it behind an API and retrain it on a schedule with CI.",
+   "evidence_types": [
+    "repo",
+    "deployed_url"
+   ],
+   "learning": [
+    {
+     "platform": "MLflow official docs",
+     "title": "Getting started with MLflow",
+     "url": "https://mlflow.org/docs/latest/ml/getting-started/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Repo with MLflow tracking of at least 10 runs, a registered model and a served endpoint returning predictions"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Introduction to machine learning operations (MLOps) learning path",
+     "url": "https://learn.microsoft.com/en-us/training/paths/introduction-machine-learn-operations/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "Microsoft Learn profile URL showing the four modules complete and a GitHub Actions workflow that retrains and tests your model"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "testing_and_automation",
+   "name": "Testing and CI/CD",
+   "category": "software",
+   "description": "Write unit, integration and contract tests, run them in GitHub Actions on every push, and publish a coverage number.",
+   "evidence_types": [
+    "repo"
+   ],
+   "learning": [
+    {
+     "platform": "pytest official docs",
+     "title": "pytest: Get started",
+     "url": "https://docs.pytest.org/en/stable/getting-started.html",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "Repo with a pytest suite of 30+ tests using fixtures and parametrize, coverage above 80% reported in the README"
+    },
+    {
+     "platform": "GitHub Docs",
+     "title": "Quickstart for GitHub Actions",
+     "url": "https://docs.github.com/en/actions/get-started/quickstart",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "A green CI badge on the repo README linking to a workflow that runs lint, tests and a Docker build on every push"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Software Testing (IIT Kharagpur, Rajib Mall)",
+     "url": "https://nptel.ac.in/courses/106105150",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or a test plan document with equivalence classes and boundary cases for your project's API"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "system_design_basics",
+   "name": "System design basics",
+   "category": "software",
+   "description": "Design a service end to end on paper with queues, caching, idempotency, retries and rate limits, and defend the trade-offs for 30 minutes.",
+   "evidence_types": [
+    "document",
+    "repo"
+   ],
+   "learning": [
+    {
+     "platform": "roadmap.sh",
+     "title": "System Design Roadmap",
+     "url": "https://roadmap.sh/system-design",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "A design document with architecture diagram, capacity estimates and failure modes for your own project, committed to its repo"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Cloud Design Patterns (Azure Architecture Center)",
+     "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A README section naming the three patterns (for example retry, circuit breaker, queue-based load leveling) implemented in your service, with code links"
+    },
+    {
+     "platform": "GitHub (donnemartin)",
+     "title": "The System Design Primer",
+     "url": "https://github.com/donnemartin/system-design-primer",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "Repo with your written solutions to three of the primer's design questions and a recorded 20-minute walkthrough of one"
+    }
+   ],
+   "paths": [
+    "ai_native_software"
+   ]
+  },
+  {
+   "id": "cybersecurity_fundamentals",
+   "name": "Application security fundamentals",
+   "category": "software",
+   "description": "Find and fix OWASP Top 10 issues in your own app, manage secrets properly, and add prompt-injection defences to an LLM feature.",
+   "evidence_types": [
+    "repo",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "OWASP",
+     "title": "OWASP Top 10",
+     "url": "https://owasp.org/www-project-top-ten/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A security review checklist in your repo mapping each Top 10 item to what you did (or why it does not apply), with the fixes as linked commits"
+    },
+    {
+     "platform": "OWASP",
+     "title": "OWASP Top 10 for LLM Applications",
+     "url": "https://genai.owasp.org/llm-top-10/",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "A documented prompt-injection test set (20 attacks) with pass/fail results for your LLM app, committed to the repo"
+    },
+    {
+     "platform": "PortSwigger",
+     "title": "Web Security Academy (free labs)",
+     "url": "https://portswigger.net/web-security",
+     "free": true,
+     "hours": 20,
+     "proof_of_done": "Web Security Academy profile screenshot showing 20+ labs solved, including SQL injection, XSS and authentication"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "excel_and_business_analysis",
+   "name": "Excel and business analysis",
+   "category": "professional",
+   "description": "Build lookups, pivots, conditional logic and a simple cash-flow or unit-economics model that a manager can change assumptions in.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "Coursera (audit)",
+     "title": "Excel Skills for Business: Essentials (Macquarie University)",
+     "url": "https://www.coursera.org/learn/excel-essentials",
+     "free": true,
+     "hours": 15,
+     "proof_of_done": "A workbook (shared link) with a cleaned dataset, a pivot summary and a lookup-driven report built during the course"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Business Analytics for Management Decision (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/110105089",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or a workbook and two-page memo analysing a real small business's three months of sales"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Design effective reports in Power BI (learning path)",
+     "url": "https://learn.microsoft.com/en-us/training/paths/create-use-analytics-reports-power-bi/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "A published Power BI report link (or PDF export) built on your own dataset, with the Learn profile showing the path complete"
+    }
+   ],
+   "paths": [
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "dashboards_and_bi_tools",
+   "name": "Dashboards (Power BI, Looker Studio, Metabase)",
+   "category": "professional",
+   "description": "Turn a SQL or spreadsheet dataset into a refreshable dashboard with three charts a non-technical owner uses to make one decision.",
+   "evidence_types": [
+    "deployed_url",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "Metabase official docs",
+     "title": "Learn Metabase (dashboards, SQL, data visualisation)",
+     "url": "https://www.metabase.com/learn/",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A public Metabase dashboard link (or screenshots plus the SQL) built on a real or public dataset, refreshed at least weekly"
+    },
+    {
+     "platform": "Microsoft Learn",
+     "title": "Design effective reports in Power BI (learning path)",
+     "url": "https://learn.microsoft.com/en-us/training/paths/create-use-analytics-reports-power-bi/",
+     "free": true,
+     "hours": 10,
+     "proof_of_done": "Published Power BI report link and the decision it informed, written in one paragraph"
+    }
+   ],
+   "paths": [
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "communication_written_english",
+   "name": "Written and spoken English (workplace)",
+   "category": "professional",
+   "description": "Write a clear one-page problem statement or README and give a two-minute spoken answer that passes a phone screen or client call.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Technical English for Engineers (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/109106094",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "NPTEL certificate id, or three written artefacts reviewed by a working professional: a README, a status email and a one-page problem statement"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Technical English (IIT Madras)",
+     "url": "https://nptel.ac.in/courses/109106066",
+     "free": true,
+     "hours": 25,
+     "proof_of_done": "NPTEL certificate id, or a recorded two-minute self-introduction plus a domain answer that a working professional signs off as passable"
+    }
+   ],
+   "paths": [
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "interview_aptitude_and_hr",
+   "name": "Aptitude tests and interviews",
+   "category": "professional",
+   "description": "Score in the top band on a timed aptitude and coding test (TCS NQT pattern) and answer behavioural questions with structured project stories.",
+   "evidence_types": [
+    "score",
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "TCS iON",
+     "title": "TCS National Qualifier Test (NQT) official page: pattern and registration",
+     "url": "https://learning.tcsionhub.in/hub/national-qualifier-test/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "TCS NQT scorecard (or a weekly log of timed mock scores for 8 weeks showing the trend)"
+    },
+    {
+     "platform": "Google",
+     "title": "How to prepare for an interview (Grow with Google)",
+     "url": "https://grow.google/certificates/interview-warmup/",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "A document with five project stories in STAR format and a recorded mock interview reviewed by a peer or mentor"
+    },
+    {
+     "platform": "NPTEL",
+     "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+     "url": "https://nptel.ac.in/courses/109104107",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or an interview log listing every round attempted, what failed and what was fixed"
+    }
+   ],
+   "paths": [
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "domain_bfsi_basics",
+   "name": "Banking, insurance and fintech basics",
+   "category": "domain",
+   "description": "Explain KYC, CASA, NPA, settlement, chargebacks and a claim lifecycle, and find the regulator's rule that applies to a process.",
+   "evidence_types": [
+    "cert",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Financial Institutions and Markets (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/110105121",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or a five-page glossary and process map of one BFSI process (loan origination, motor claim, UPI settlement) with regulator citations"
+    },
+    {
+     "platform": "RBI official",
+     "title": "Reserve Bank of India FAQs (banking, payments, KYC, fintech)",
+     "url": "https://www.rbi.org.in/commonperson/English/Scripts/FAQs.aspx",
+     "free": true,
+     "hours": 8,
+     "proof_of_done": "A written one-page summary of the KYC and digital payments FAQs, with the source links, used as the domain section of your project README"
+    },
+    {
+     "platform": "NISM (SEBI)",
+     "title": "NISM certification examinations (Series V-A mutual funds, VI, VII, VIII)",
+     "url": "https://www.nism.ac.in/certifications/",
+     "free": false,
+     "hours": 25,
+     "proof_of_done": "NISM certificate number for the series your target role names"
+    }
+   ],
+   "paths": [
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "open_source_contribution",
+   "name": "Open-source contribution",
+   "category": "professional",
+   "description": "Get one pull request (bug fix, test or docs) merged into a project you did not create and explain the review discussion.",
+   "evidence_types": [
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GitHub",
+     "title": "Open Source Guides: How to Contribute to Open Source",
+     "url": "https://opensource.guide/how-to-contribute/",
+     "free": true,
+     "hours": 6,
+     "proof_of_done": "URL of one merged pull request to a project with 100+ stars that you do not own"
+    },
+    {
+     "platform": "GitHub (firstcontributions)",
+     "title": "First Contributions: a hands-on first pull request tutorial",
+     "url": "https://github.com/firstcontributions/first-contributions",
+     "free": true,
+     "hours": 1,
+     "proof_of_done": "URL of your merged pull request to the first-contributions repo"
+    },
+    {
+     "platform": "Google",
+     "title": "Google Summer of Code",
+     "url": "https://summerofcode.withgoogle.com/",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "A submitted GSoC proposal (PDF in your repo) plus at least one merged PR to the chosen organisation, whether or not selected"
+    }
+   ],
+   "paths": []
+  },
+  {
+   "id": "deployed_portfolio_project",
+   "name": "Deployed portfolio project",
+   "category": "professional",
+   "description": "Ship one working application to a public URL with a README a recruiter can run, a demo video and a one-page portfolio site linking to it.",
+   "evidence_types": [
+    "deployed_url",
+    "repo",
+    "document"
+   ],
+   "learning": [
+    {
+     "platform": "GitHub Docs",
+     "title": "Quickstart for GitHub Pages",
+     "url": "https://docs.github.com/en/pages/quickstart",
+     "free": true,
+     "hours": 2,
+     "proof_of_done": "A live username.github.io portfolio page listing your projects with links, eval numbers and a demo video"
+    },
+    {
+     "platform": "Render official docs",
+     "title": "Deploy a FastAPI app on Render (free tier)",
+     "url": "https://render.com/docs/deploy-fastapi",
+     "free": true,
+     "hours": 3,
+     "proof_of_done": "A public onrender.com (or Railway or AWS) URL of your own API, linked from the repo README with a 3-minute demo video"
+    },
+    {
+     "platform": "roadmap.sh",
+     "title": "Project ideas (112+ graded projects)",
+     "url": "https://roadmap.sh/projects",
+     "free": true,
+     "hours": 40,
+     "proof_of_done": "Three roadmap.sh project submissions with deployed URLs and repos, marked complete on your roadmap.sh profile"
+    }
+   ],
+   "paths": [
+    "ai_native_software",
+    "it_services",
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "sales_and_customer_conversation",
+   "name": "Sales and customer conversation",
+   "category": "professional",
+   "description": "Run a discovery call, handle three objections, demo a product to a non-technical buyer and log it in a CRM.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "NPTEL",
+     "title": "Sales and Distribution Management (IIT Kharagpur)",
+     "url": "https://nptel.ac.in/courses/110105122",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "NPTEL certificate id, or a written objection-handling document for one real product with ten objections and answers"
+    },
+    {
+     "platform": "HubSpot Academy",
+     "title": "Inbound Sales course (free)",
+     "url": "https://academy.hubspot.com/courses/inbound-sales",
+     "free": true,
+     "hours": 4,
+     "proof_of_done": "HubSpot Academy Inbound Sales certificate URL and a CRM export (or sheet) of ten logged calls with next steps"
+    }
+   ],
+   "paths": [
+    "startups_and_non_engineering"
+   ]
+  },
+  {
+   "id": "operations_and_process_basics",
+   "name": "Operations and process basics",
+   "category": "professional",
+   "description": "Map a process, define an SLA and a fill-rate or TAT metric, write a one-page problem statement with data, and automate one repetitive step.",
+   "evidence_types": [
+    "document",
+    "cert"
+   ],
+   "learning": [
+    {
+     "platform": "Startup India (Government of India)",
+     "title": "Startup India Learning and Development programme (free 4-week course)",
+     "url": "https://www.startupindia.gov.in/content/sih/en/learning-and-development_v2.html",
+     "free": true,
+     "hours": 12,
+     "proof_of_done": "Startup India course certificate id and a one-page unit-economics sheet for a real or planned small business"
+    },
+    {
+     "platform": "MIT OCW",
+     "title": "15.760A Operations Management (Sloan)",
+     "url": "https://ocw.mit.edu/courses/15-760a-operations-management-spring-2002/",
+     "free": true,
+     "hours": 30,
+     "proof_of_done": "A process map plus a written case analysis of one real small business or team process, with a before-and-after metric after one change"
+    }
+   ],
+   "paths": [
+    "startups_and_non_engineering"
+   ]
+  }
+ ]
+}

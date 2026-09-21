@@ -1,0 +1,875 @@
+[
+ {
+  "id": "autocad",
+  "name": "AutoCAD",
+  "category": "core_eng",
+  "description": "Produce and edit 2D drawings (plans, sections, single-line diagrams) to a drafting standard with layers, blocks, dimensions and title blocks.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "Autodesk Education",
+    "title": "Autodesk Education plan: free one-year student access to AutoCAD and Revit",
+    "url": "https://www.autodesk.com/education/edu-software/overview",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "Autodesk student licence activated and a screenshot of AutoCAD running under your student account"
+   },
+   {
+    "platform": "Autodesk Help",
+    "title": "AutoCAD 2025 Help: tutorials and getting-started guides",
+    "url": "https://help.autodesk.com/view/ACD/2025/ENU/",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A DWG plan and section of a small building or a solar plant single-line diagram with layers, dimensions and a title block, exported to PDF"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "staad_pro_structural_analysis",
+  "name": "STAAD.Pro",
+  "category": "core_eng",
+  "description": "Model, load and design-check an RC or steel structure in STAAD.Pro against IS 456 and IS 800 and produce a calculation note.",
+  "evidence_types": [
+   "document",
+   "repo"
+  ],
+  "learning": [
+   {
+    "platform": "Bentley Education",
+    "title": "Bentley Education: free student licences for STAAD.Pro and other Bentley software",
+    "url": "https://education.bentley.com/",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "Bentley student licence activated and STAAD.Pro installed (screenshot of the licensed start screen)"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Design of Reinforced Concrete Structures (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/105105105",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A STAAD model of a small RC building with a beam and column design check against IS 456 and a bar-bending schedule"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Design of Steel Structures (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/105105162",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A STAAD model of a steel pipe rack or shed with member checks against IS 800 and a two-page design note"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "revit_bim",
+  "name": "Revit / BIM",
+  "category": "core_eng",
+  "description": "Build a coordinated 3D building model in Revit, extract drawings and quantities from it, and explain what BIM means on a metro or building job.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "Autodesk Education",
+    "title": "Autodesk Education plan: free one-year student access to Revit",
+    "url": "https://www.autodesk.com/education/edu-software/overview",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "Revit installed under a student licence (screenshot of the licensed start screen)"
+   },
+   {
+    "platform": "Autodesk Help",
+    "title": "Revit 2025 Help: Welcome to Revit Learning tutorials",
+    "url": "https://help.autodesk.com/view/RVT/2025/ENU/",
+    "free": true,
+    "hours": 35,
+    "proof_of_done": "An RVT model of a two-storey building with plans, sections and a schedule of quantities exported to PDF"
+   },
+   {
+    "platform": "Coursera (audit)",
+    "title": "BIM Fundamentals for Engineers (National Taiwan University)",
+    "url": "https://www.coursera.org/learn/bim-fundamentals",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A one-page note on BIM levels and clash detection plus a clash report from your own Revit model"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "primavera_or_ms_project",
+  "name": "Primavera P6 / MS Project",
+  "category": "core_eng",
+  "description": "Build a WBS-based construction schedule with a critical path, resource histogram and baseline, and report planned versus actual progress.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Construction Planning and Management (IIT Guwahati)",
+    "url": "https://nptel.ac.in/courses/105103093",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A CPM network for a small building or road package drawn by hand, with float and critical path marked"
+   },
+   {
+    "platform": "Oracle Help Center",
+    "title": "Primavera P6 EPPM documentation library",
+    "url": "https://docs.oracle.com/en/industries/construction-engineering/primavera-p6-project/index.html",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A P6 (or MS Project) schedule file with WBS, baseline, critical path and resource histogram for the same package"
+   },
+   {
+    "platform": "Coursera (audit)",
+    "title": "Construction Scheduling (Columbia University)",
+    "url": "https://www.coursera.org/learn/construction-scheduling",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A one-page earned-value and delay-analysis report on your schedule after a simulated two-week slip"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "etap_or_power_systems_analysis",
+  "name": "ETAP / power systems analysis",
+  "category": "core_eng",
+  "description": "Set up load flow, short-circuit and protection studies for a small substation or feeder in ETAP or an equivalent tool and interpret the results.",
+  "evidence_types": [
+   "document",
+   "repo"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Power System Analysis (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/108105067",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A hand-worked load-flow and three-phase fault calculation for a 5-bus system, checked against a software run"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.061 Introduction to Electric Power Systems",
+    "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Solved problem sets on per-unit systems, transformers and fault analysis kept in a notes folder"
+   },
+   {
+    "platform": "ETAP",
+    "title": "ETAP Academia: student and university licensing",
+    "url": "https://etap.com/industries/Academia",
+    "free": false,
+    "hours": 25,
+    "proof_of_done": "An ETAP model of a small industrial substation with load-flow and short-circuit reports exported to PDF"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "solar_pv_design_pvsyst",
+  "name": "PVsyst solar PV design",
+  "category": "core_eng",
+  "description": "Size a grid-connected PV plant: irradiation data, tilt, string sizing, inverter selection and losses, producing a PVsyst yield report.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Solar Energy Engineering and Technology (IIT Guwahati)",
+    "url": "https://nptel.ac.in/courses/115103123",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A hand calculation of string voltage window, array sizing and annual yield for a 1 MW plant at a named Indian site"
+   },
+   {
+    "platform": "PVsyst",
+    "title": "PVsyst 8 help and documentation",
+    "url": "https://www.pvsyst.com/help/",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A PVsyst report (PDF) for a few-MW ground-mounted plant with a loss diagram and assumptions listed"
+   },
+   {
+    "platform": "MNRE",
+    "title": "Short-term trainings and skill development in renewable energy (Suryamitra and related programmes)",
+    "url": "https://mnre.gov.in/en/short-term-trainings-and-skill-development-in-renewable-energy/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "Application id or certificate from a Suryamitra or NISE short course, or a written note on why it does not fit your timeline"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "site_engineering_and_safety",
+  "name": "Site engineering and safety",
+  "category": "domain",
+  "description": "Run a day on site: read GFC drawings, supervise a pour or cable pull, keep a daily log, run a toolbox talk and apply permit-to-work rules.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Safety in Construction (IIT Delhi)",
+    "url": "https://nptel.ac.in/courses/105102206",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A safety plan and permit-to-work checklist for one activity (excavation, work at height or a cable pull) in your own words"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Construction Methods and Equipment Management (IIT Guwahati)",
+    "url": "https://nptel.ac.in/courses/105103206",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A method statement for one concrete pour or one erection activity with equipment, sequence and hold points"
+   },
+   {
+    "platform": "NATS (Government of India)",
+    "title": "National Apprenticeship Training Scheme portal",
+    "url": "https://nats.education.gov.in/",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "NATS enrolment number and one apprenticeship or internship application id at a contractor, PSU or utility"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "quantity_surveying_and_estimation",
+  "name": "Quantity surveying and estimation",
+  "category": "domain",
+  "description": "Take off quantities from drawings, price a BOQ from a public schedule of rates and maintain a measurement book and RA bill.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Principles of Construction Management (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/105104161",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A quantity take-off sheet for a small building or road package from a set of GFC drawings"
+   },
+   {
+    "platform": "Coursera (audit)",
+    "title": "Construction Cost Estimating and Cost Control (Columbia University)",
+    "url": "https://www.coursera.org/learn/construction-cost-estimating",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A priced BOQ for the same package using a public schedule of rates, with assumptions listed"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "geotechnical_and_surveying_basics",
+  "name": "Geotechnical and surveying basics",
+  "category": "domain",
+  "description": "Interpret a soil report and bearing capacity, and set out levels and alignments from a total station or auto level.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Geotechnical Engineering - 1 (IIT Bombay)",
+    "url": "https://nptel.ac.in/courses/105101201",
+    "free": true,
+    "hours": 35,
+    "proof_of_done": "A one-page foundation recommendation from a real or sample soil investigation report with bearing-capacity calculation"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Surveying (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/105104101",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A levelling field book and a plotted longitudinal section for a 200 m stretch, with closing error computed"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "gate_preparation_civil",
+  "name": "GATE (Civil)",
+  "category": "exam",
+  "description": "Score in the GATE Civil paper at a rank that clears PSU and IIT/NIT M.Tech cut-offs: full syllabus coverage and timed mock discipline.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GATE official (IIT Madras)",
+    "title": "GATE 2027 official website: syllabus, registration, previous papers",
+    "url": "https://gate2027.iitm.ac.in/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "GATE registration id and a printed syllabus map with a first-pass date per topic"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Design of Concrete Structures (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/105105104",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Ten years of PYQs in structures solved on paper under time with an accuracy log"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Mathematics - I (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/111105121",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A mock-test score curve of at least twenty full-length GATE CE mocks"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy",
+   "government_psu",
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "gate_preparation_electrical",
+  "name": "GATE (Electrical)",
+  "category": "exam",
+  "description": "Score in the GATE Electrical paper at a rank that clears Power Grid, NTPC and IIT/NIT M.Tech cut-offs.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GATE official (IIT Madras)",
+    "title": "GATE 2027 official website: syllabus, registration, previous papers",
+    "url": "https://gate2027.iitm.ac.in/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "GATE registration id and a printed syllabus map with a first-pass date per topic"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Power System Engineering (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/108105104",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "Ten years of PYQs in power systems and machines solved on paper under time with an accuracy log"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Mathematics II (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/111105134",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A mock-test score curve of at least twenty full-length GATE EE mocks"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy",
+   "government_psu",
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "gate_preparation_general_aptitude",
+  "name": "GATE engineering mathematics and general aptitude",
+  "category": "exam",
+  "description": "Take the 25 to 30 percent of every GATE paper that is engineering mathematics and general aptitude at above 80 percent accuracy.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GATE official (IIT Madras)",
+    "title": "GATE 2027 official website: general aptitude syllabus and sample questions",
+    "url": "https://gate2027.iitm.ac.in/",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "The general aptitude and mathematics sections of the last ten GATE papers solved with a per-topic accuracy sheet"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Mathematics - I (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/111105121",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A formula and error notebook for calculus, linear algebra and probability, updated weekly"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Mathematics II (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/111105134",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Mock section scores showing 80 percent or better in engineering mathematics and aptitude across five mocks"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy",
+   "government_psu",
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "ese_upsc_preparation",
+  "name": "UPSC ESE (Engineering Services)",
+  "category": "exam",
+  "description": "Clear ESE prelims (objective, including the General Studies and Engineering Aptitude paper) and write ESE mains conventional answers under time.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "UPSC official",
+    "title": "Union Public Service Commission: notifications, syllabus and previous papers",
+    "url": "https://upsc.gov.in/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "ESE application id and a syllabus map for Paper 1 (GS and Engineering Aptitude) and your branch paper"
+   },
+   {
+    "platform": "UPSC online",
+    "title": "UPSC online application portal",
+    "url": "https://upsconline.nic.in/",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "Submitted ESE application with registration id and admit card saved"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Project Management (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/110104073",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Paper 1 topic notes (project management, standards, energy and environment, ICT, ethics) and one timed prelims mock score"
+   }
+  ],
+  "paths": [
+   "government_psu"
+  ]
+ },
+ {
+  "id": "ssc_je_rrb_je_preparation",
+  "name": "SSC JE / RRB JE",
+  "category": "exam",
+  "description": "Score above the category cut-off in SSC JE Paper 1 and RRB JE CBT 1: objective numericals at under 90 seconds each, then Paper 2 or CBT 2.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "SSC official",
+    "title": "Staff Selection Commission: notices, application and results",
+    "url": "https://ssc.gov.in/",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "SSC JE application id and admit card, and a syllabus map for Paper 1 and Paper 2"
+   },
+   {
+    "platform": "RRB official",
+    "title": "Railway Recruitment Board (Chandigarh) notice board: CEN notices and links to all RRBs",
+    "url": "https://rrbcdg.gov.in/",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "RRB JE application id and a note of your zone's CEN number and dates"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Mathematics - I (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/111105121",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A timed drill log of 500 objective numericals with average time per question under 90 seconds"
+   }
+  ],
+  "paths": [
+   "government_psu"
+  ]
+ },
+ {
+  "id": "psu_interview_preparation",
+  "name": "PSU technical interview",
+  "category": "exam",
+  "description": "Explain final-year project and core subjects at whiteboard depth, know the company's plants and projects, and handle a five-member panel.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NTPC official",
+    "title": "NTPC careers and recruitment notices",
+    "url": "https://careers.ntpc.co.in/",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "A one-page profile of NTPC (plants, capacity, current projects, the GATE year it accepts) and its interview weightage"
+   },
+   {
+    "platform": "POWERGRID official",
+    "title": "POWERGRID job opportunities and Engineer Trainee notices",
+    "url": "https://www.powergrid.in/en/job-opportunities",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "A one-page profile of POWERGRID with the last two cycles' GATE cut-offs by branch and category"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/109104107",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "A recorded 30-minute mock interview on your project and core subjects, with a written self-review"
+   }
+  ],
+  "paths": [
+   "government_psu",
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "research_methods_and_paper_reading",
+  "name": "Research methods and paper reading",
+  "category": "professional",
+  "description": "Frame a research question, read papers in three passes, choose baselines and write a reproducible workshop-style report with a limitations section.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Research Methodology (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/121106007",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A two-page research proposal: question, method, baselines, dataset and what would break the result"
+   },
+   {
+    "platform": "Stanford (S. Keshav)",
+    "title": "How to Read a Paper (three-pass method)",
+    "url": "https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "An annotated bibliography of ten papers in your topic with a three-pass summary for each"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "german_language_a1_b1",
+  "name": "German (A1 to B1)",
+  "category": "professional",
+  "description": "Reach Goethe A1 before applying and B1 by the end of the first year in Germany; enough for Werkstudent roles and daily life.",
+  "evidence_types": [
+   "cert",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "vhs-Lernportal",
+    "title": "vhs-Lernportal: free online German courses from A1",
+    "url": "https://www.vhs-lernportal.de/deutsch",
+    "free": true,
+    "hours": 90,
+    "proof_of_done": "Completed A1 course record on the portal and a self-recorded two-minute self-introduction in German"
+   },
+   {
+    "platform": "Goethe-Institut",
+    "title": "Goethe-Institut free German practice materials",
+    "url": "https://www.goethe.de/en/spr/ueb.html",
+    "free": true,
+    "hours": 60,
+    "proof_of_done": "A completed Goethe A1 model test paper with score"
+   },
+   {
+    "platform": "Goethe-Institut India",
+    "title": "Goethe-Institut German exams in India (A1 to C2)",
+    "url": "https://www.goethe.de/ins/in/en/spr/prf.html",
+    "free": false,
+    "hours": 6,
+    "proof_of_done": "Goethe-Zertifikat A1 certificate (and later B1) with certificate number"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "study_abroad_applications_daad_uni_assist",
+  "name": "German university applications (DAAD, uni-assist, APS)",
+  "category": "professional",
+  "description": "Shortlist English-taught programmes on DAAD, get APS verification, submit uni-assist or direct applications before deadlines with IELTS, SOP and Lebenslauf.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "DAAD",
+    "title": "DAAD international programmes database (all degree programmes)",
+    "url": "https://www.daad.de/en/studying-in-germany/universities/all-degree-programmes/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A shortlist sheet of eight to twelve programmes with deadline, uni-assist or direct, language test and fees"
+   },
+   {
+    "platform": "uni-assist",
+    "title": "uni-assist: application service for 180 German universities",
+    "url": "https://www.uni-assist.de/en/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A submitted uni-assist application number (or VPD request id) for at least one programme"
+   },
+   {
+    "platform": "APS India",
+    "title": "Academic Evaluation Centre (APS) India",
+    "url": "https://aps-india.de/",
+    "free": false,
+    "hours": 6,
+    "proof_of_done": "APS application id and, later, the APS certificate number"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "cat_preparation",
+  "name": "CAT (Common Admission Test)",
+  "category": "exam",
+  "description": "Score a high-90s percentile in CAT quantitative ability, verbal ability and data interpretation through timed sectional practice.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Khan Academy",
+    "title": "Arithmetic (ratios, percentages, number sense) for CAT quant basics",
+    "url": "https://www.khanacademy.org/math/arithmetic",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Twenty timed quant sectional tests with a per-topic accuracy sheet"
+   },
+   {
+    "platform": "Coursera (audit)",
+    "title": "Introduction to Mathematical Thinking (Stanford Online)",
+    "url": "https://www.coursera.org/learn/mathematical-thinking",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A logical-reasoning and data-interpretation practice log of 300 questions with time per question"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "mba_case_and_group_discussion",
+  "name": "Case interview and group discussion",
+  "category": "professional",
+  "description": "Hold a structured argument in a group discussion, break down a business case and answer 'why MBA' from your engineering project.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/109104107",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "Three recorded group discussions with peers and a written self-review of each"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "International Business Communication (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/110105052",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "A one-page written case analysis (problem, options, recommendation) for a published business case"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "15.390 New Enterprises",
+    "url": "https://ocw.mit.edu/courses/15-390-new-enterprises-spring-2013/",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A ten-slide pitch of a business idea drawn from your branch, delivered in a mock interview"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "renewable_energy_fundamentals",
+  "name": "Renewable energy fundamentals",
+  "category": "domain",
+  "description": "Explain solar, wind and storage technologies, India's MNRE schemes and tariffs, and size a simple rooftop or hybrid system.",
+  "evidence_types": [
+   "cert",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Renewable Energy Engineering: Solar, Wind and Biomass Energy Systems (IIT Guwahati)",
+    "url": "https://nptel.ac.in/courses/103103206",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A sizing note for a 10 kW rooftop system with payback under a named state net-metering policy"
+   },
+   {
+    "platform": "MNRE",
+    "title": "Ministry of New and Renewable Energy: schemes, guidelines and institutes",
+    "url": "https://mnre.gov.in/en/",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "A one-page summary of PM Surya Ghar and utility-scale bidding guidelines with clause references"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "power_grid_and_transmission_basics",
+  "name": "Power grid and transmission basics",
+  "category": "domain",
+  "description": "Describe how the Indian grid is operated (Grid-India, CEA, CERC), transmission line and substation basics, and grid-connection requirements for a plant.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Power System Generation, Transmission and Distribution (IIT Delhi)",
+    "url": "https://nptel.ac.in/courses/108102047",
+    "free": true,
+    "hours": 35,
+    "proof_of_done": "A single-line diagram of a 33/11 kV substation with equipment ratings and earthing scheme, drawn in AutoCAD"
+   },
+   {
+    "platform": "Grid-India",
+    "title": "Grid Controller of India: procedures, consultations and grid reports",
+    "url": "https://grid-india.in/",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "A one-page checklist of grid-connection requirements for a solar plant with clause references to CEA and Grid-India documents"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.061 Introduction to Electric Power Systems",
+    "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Solved problem sets on transmission line parameters and power flow kept in a notes folder"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy"
+  ]
+ },
+ {
+  "id": "project_management_basics",
+  "name": "Project management basics",
+  "category": "professional",
+  "description": "Plan a scope, schedule and budget, track earned value, and write a weekly progress and risk report that a project manager would accept.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Project Management (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/110104073",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A project charter, WBS and risk register for your evidenced project"
+   },
+   {
+    "platform": "Coursera (audit)",
+    "title": "Google Project Management Professional Certificate",
+    "url": "https://www.coursera.org/professional-certificates/google-project-management",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Four weekly progress reports with planned versus actual and earned-value figures for a real or simulated project"
+   }
+  ],
+  "paths": [
+   "infrastructure_energy",
+   "government_psu",
+   "higher_studies"
+  ]
+ },
+ {
+  "id": "mtech_admissions_coap_ccmt",
+  "name": "M.Tech admissions (COAP, CCMT, IISc)",
+  "category": "exam",
+  "description": "Convert a GATE score into an admission: apply to IISc and IITs, understand COAP accept-and-wait rules and CCMT rounds, and prepare for lab interviews.",
+  "evidence_types": [
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "CCMT official",
+    "title": "CCMT 2026: centralised counselling for M.Tech at NITs, IIITs and CFTIs",
+    "url": "https://ccmt.admissions.nic.in/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "CCMT registration id and a choice list with last-round closing ranks for your paper"
+   },
+   {
+    "platform": "IISc official",
+    "title": "IISc M.Tech and M.Des admissions: eligibility and selection procedure",
+    "url": "https://www.iisc.ac.in/admissions/m-tech-m-des/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "IISc or IIT application number and a one-page note on which departments use interview or written test"
+   }
+  ],
+  "paths": [
+   "higher_studies"
+  ]
+ }
+]

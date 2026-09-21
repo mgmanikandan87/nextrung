@@ -1,0 +1,306 @@
+[
+ {
+  "id": "notification:gate_2027",
+  "path_id": "higher_studies",
+  "title": "GATE 2027 - Graduate Aptitude Test in Engineering",
+  "company": "IIT Madras (Organising Institute)",
+  "location": null,
+  "posted_on": "2026-09-02",
+  "url": "https://gate2027.iitm.ac.in/",
+  "fresher": true,
+  "experience_text": "Final-year or graduated (no age limit)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Undergraduate-level subjects in Engineering/Technology across 30 test papers including new Robotics and Automation (RA)",
+    "skill_id": null
+   },
+   {
+    "text": "Civil Engineering (CE) paper",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Electrical Engineering (EE) paper",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Mechanical / Electronics papers",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "General Aptitude section common to every paper",
+    "skill_id": "gate_preparation_general_aptitude"
+   },
+   {
+    "text": "Registration through DigiLocker mandatory for all Indian nationals; registration 2 September to 5 October 2026",
+    "skill_id": null
+   },
+   {
+    "text": "Exams 6-7, 13-14, 20-21 February 2027; results 19 March 2027; score valid 3 years for M.Tech admission and PSU recruitment",
+    "skill_id": "mtech_admissions_coap_ccmt"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:coap_mtech_iit_iisc",
+  "path_id": "higher_studies",
+  "title": "M.Tech admission to IISc and IITs via Common Offer Acceptance Portal (COAP)",
+  "company": "IIT Roorkee (COAP 2026 coordinating institute) with IISc and 23 IITs",
+  "location": null,
+  "posted_on": "2026-03-21",
+  "url": "https://coap2026.iitr.ac.in/coap2026/",
+  "fresher": true,
+  "experience_text": "Fresher / final-year eligible with valid GATE score",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "A candidate should have a valid GATE score (qualified in GATE 2026, 2025 or 2024)",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Valid GATE score in Electrical Engineering for EE programmes",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Valid GATE score in Mechanical/Electronics for ME/ECE programmes",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Candidates must be Indian Nationals",
+    "skill_id": null
+   },
+   {
+    "text": "Register on COAP (free) and apply separately to each participating institute (IISc + 23 IITs, plus NPCIL)",
+    "skill_id": "mtech_admissions_coap_ccmt"
+   },
+   {
+    "text": "Round 1 offers 11 May 2026 (10 am) to 13 May 2026 (9 am); choose the most preferred M.Tech offer across rounds",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ccmt_2026_nit",
+  "path_id": "higher_studies",
+  "title": "Centralized Counselling for M.Tech./M.Arch./M.Plan. Admissions (CCMT 2026) - NITs, IIEST, IIITs, CFTIs",
+  "company": "CCMT 2026 (NIT coordinating institute)",
+  "location": null,
+  "posted_on": "2026-04-27",
+  "url": "https://ccmt.admissions.nic.in/",
+  "fresher": true,
+  "experience_text": "Fresher / final-year eligible with valid GATE score",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "GATE score of years 2024, 2025 and 2026 accepted",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Valid GATE Civil Engineering score for Civil M.Tech specialisations",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Valid GATE Electrical Engineering score for Electrical M.Tech specialisations",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Bachelor's degree with CGPA/percentage as per brochure (CGPA considered when both are on the mark sheet)",
+    "skill_id": null
+   },
+   {
+    "text": "Online registration, choice filling and seat allotment rounds on ccmt.admissions.nic.in (registration from 15 May)",
+    "skill_id": "mtech_admissions_coap_ccmt"
+   },
+   {
+    "text": "Participating institutes: NITs, IIEST Shibpur and some IIITs and CFTIs",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:daad_master_scholarship_2027",
+  "path_id": "higher_studies",
+  "title": "DAAD Study Scholarships - Master Studies for All Academic Disciplines (2027/28)",
+  "company": "Deutscher Akademischer Austauschdienst (DAAD)",
+  "location": null,
+  "posted_on": "2026-09-21",
+  "url": "https://www.daad.de/en/studying-in-germany/scholarships/daad-scholarships/",
+  "fresher": true,
+  "experience_text": "Graduates (scholarships aimed primarily at graduates)",
+  "salary_text": "Monthly payment EUR 992 for students plus travel allowance; no repayment",
+  "requirements": [
+   {
+    "text": "Read the call for applications for the chosen scholarship programme in the DAAD scholarship database and observe the deadline",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Selection on professional qualifications and quality of the study project",
+    "skill_id": null
+   },
+   {
+    "text": "Potential of the applicant assessed by selection committee (motivation, study plan)",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Apply through the DAAD application portal for a Master's course in Germany",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Language requirements per programme (German-taught courses require German proficiency)",
+    "skill_id": "german_language_a1_b1"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:uni_assist_winter_2027",
+  "path_id": "higher_studies",
+  "title": "German university applications for Winter Semester 2027/28 via uni-assist",
+  "company": "uni-assist e.V.",
+  "location": null,
+  "posted_on": "2026-09-21",
+  "url": "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/",
+  "fresher": true,
+  "experience_text": "Bachelor's graduates / final-year",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "The application deadline is often July 15th if the course starts in the winter semester",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Apply at least 8 weeks before the deadline expires; evaluation takes 4 to 6 weeks",
+    "skill_id": null
+   },
+   {
+    "text": "Find out the specific deadlines for your chosen course from your chosen university (requirements differ)",
+    "skill_id": null
+   },
+   {
+    "text": "Upload certificates and transcripts for evaluation (VPD) through the uni-assist portal",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Language certificate as required by the course (German or English)",
+    "skill_id": "german_language_a1_b1"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ireland_sept_2027_tcd",
+  "path_id": "higher_studies",
+  "title": "Postgraduate taught (M.Sc./M.Eng.) September 2027 intake - Trinity College Dublin",
+  "company": "Trinity College Dublin",
+  "location": null,
+  "posted_on": "2026-09-21",
+  "url": "https://www.tcd.ie/study/postgraduate/apply/",
+  "fresher": true,
+  "experience_text": "Bachelor's graduates",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "At least a 2.1 honors degree from an Irish university or equivalent result from a university in another country",
+    "skill_id": null
+   },
+   {
+    "text": "Official evidence of English language competency (IELTS or equivalent accepted qualifications)",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Some programmes require additional assessments or interviews; check the course page",
+    "skill_id": null
+   },
+   {
+    "text": "Apply through the my.tcd.ie online application portal; course-specific closing dates on each course page",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Postgraduate work is very academically challenging; strong academic record expected",
+    "skill_id": "research_methods_and_paper_reading"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ireland_sept_2027_ucd",
+  "path_id": "higher_studies",
+  "title": "Graduate taught programmes September 2027 intake - University College Dublin",
+  "company": "University College Dublin (UCD)",
+  "location": null,
+  "posted_on": "2026-09-21",
+  "url": "https://www.ucd.ie/graduateadmissions/admissions/entryrequirements/",
+  "fresher": true,
+  "experience_text": "Bachelor's graduates",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "A recognised bachelor's degree at second class honours, grade one (2:1), or equivalent",
+    "skill_id": null
+   },
+   {
+    "text": "IELTS Academic minimum score of 6.5 with not less than 6.0 in any strand",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Some programmes require higher standards; verify programme-specific requirements on the UCD School website",
+    "skill_id": null
+   },
+   {
+    "text": "Apply online through the UCD application portal (Apply Now / Course Search)",
+    "skill_id": "study_abroad_applications_daad_uni_assist"
+   },
+   {
+    "text": "Recognition of Prior Learning may award credit for prior learning",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:cat_2026_iim",
+  "path_id": "higher_studies",
+  "title": "Common Admission Test (CAT) 2026 - admission to IIM PGP/MBA 2027-29",
+  "company": "IIM Indore (conducting institute)",
+  "location": null,
+  "posted_on": "2026-07-25",
+  "url": "https://iimcat.ac.in/",
+  "fresher": true,
+  "experience_text": "Final-year students and graduates eligible",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree with minimum 50% marks (45% for SC/ST/PwD); final-year students eligible",
+    "skill_id": null
+   },
+   {
+    "text": "Verbal Ability & Reading Comprehension, Data Interpretation & Logical Reasoning, Quantitative Ability sections",
+    "skill_id": "cat_preparation"
+   },
+   {
+    "text": "Registration 3 August to 15 September 2026 at iimcat.ac.in; fee Rs 2,700 (Rs 1,350 SC/ST/PwD)",
+    "skill_id": null
+   },
+   {
+    "text": "Exam on 29 November 2026 in three sessions at about 170 test centres",
+    "skill_id": "cat_preparation"
+   },
+   {
+    "text": "IIM shortlisting followed by Written Ability Test / Personal Interview rounds",
+    "skill_id": "mba_case_and_group_discussion"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ }
+]

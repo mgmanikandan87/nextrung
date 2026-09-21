@@ -403,5 +403,72 @@
  "changed_fields": [
   "fit_rules",
   "all"
+ ],
+ "skills": [
+  {
+   "id": "interview_aptitude_and_hr",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "sql",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "python",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "git_github",
+   "level": "required",
+   "weight": 1
+  },
+  {
+   "id": "dsa",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "fastapi_or_spring",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "rest_apis",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "cloud_fundamentals_aws",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "cloud_fundamentals_azure",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "deployed_portfolio_project",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "llm_apis_and_agents",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "domain_bfsi_basics",
+   "level": "preferred",
+   "weight": 1
+  }
  ]
 }

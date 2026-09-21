@@ -1,0 +1,514 @@
+[
+ {
+  "id": "indeed:JOBSEARCH_168",
+  "path_id": "defence_aerospace_space",
+  "title": "Associate Design Support Engineer",
+  "company": "Trident Infosol",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-09-04",
+  "url": "https://to.indeed.com/aamvpdp466g2",
+  "fresher": true,
+  "experience_text": "0 to 2 Years – Freshers can apply",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Qualification: Diploma (ECE/EEE/Instrumentation)",
+    "skill_id": null
+   },
+   {
+    "text": "Basic understanding of Analog & Digital Electronics",
+    "skill_id": "digital_design_fundamentals"
+   },
+   {
+    "text": "Basic knowledge of electronic components such as resistors, capacitors, diodes, transistors, MOSFETs, ICs, connectors, relays, inductors, crystals, and power modules",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Ability to read and interpret basic electronic schematics and circuit diagrams",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Basic understanding of BOM (Bill of Materials) and component part numbers",
+    "skill_id": null
+   },
+   {
+    "text": "Basic knowledge of electronic component manufacturers and datasheets",
+    "skill_id": null
+   },
+   {
+    "text": "Good knowledge of MS Excel and MS Word",
+    "skill_id": "excel_and_business_analysis"
+   },
+   {
+    "text": "Basic understanding of electrical wiring diagrams, cable assemblies, connectors, and pinouts is an added advantage",
+    "skill_id": null
+   },
+   {
+    "text": "Willingness to learn component lifecycle and obsolescence management",
+    "skill_id": null
+   },
+   {
+    "text": "Good communication and coordination skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:9ca95d0d4aa7ff84",
+  "path_id": "defence_aerospace_space",
+  "title": "Test Engineer",
+  "company": "Trident Infosol",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=9ca95d0d4aa7ff84",
+  "fresher": true,
+  "experience_text": "Fresher (0-2 years)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "BE/ B-Tech - Electronics or equivalent",
+    "skill_id": null
+   },
+   {
+    "text": "Basic knowledge of analog and digital electronics, electronic components, PCBs and circuit diagrams",
+    "skill_id": "digital_design_fundamentals"
+   },
+   {
+    "text": "Familiarity with electronic test instruments; use multimeters, oscilloscopes, and power supplies",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "0 -2 years of experience in hardware testing, electronics testing or production testing",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Perform functional, electrical, and reliability testing of electronic hardware; execute test cases and document test results",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Support testing and validation for shock, vibration, drop, ingress protection, and thermal cycling",
+    "skill_id": null
+   },
+   {
+    "text": "Follow quality standards and safety procedures during testing",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Basic troubleshooting and problem-solving abilities",
+    "skill_id": null
+   },
+   {
+    "text": "Good communication and documentation skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Willingness to learn and work in a production/integration environments",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:6142a7f69cd32133",
+  "path_id": "defence_aerospace_space",
+  "title": "Engineer - Aero Thermal",
+  "company": "Airbus India Private Limited",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=6142a7f69cd32133",
+  "fresher": true,
+  "experience_text": "0-1 year of relevant experience",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Completed Masters degree in Aerospace, Mechanical, Thermal or other related streams",
+    "skill_id": null
+   },
+   {
+    "text": "Strong experience of Thermal simulation",
+    "skill_id": "thermal_and_fea_simulation"
+   },
+   {
+    "text": "Understanding of aero-thermal environments and systems affecting the temperature of aircraft components",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Profound Thermodynamics, Fluid Dynamics, Heat Transfer, Aerodynamics, and Cooling Systems understanding",
+    "skill_id": null
+   },
+   {
+    "text": "Knowledge in numerical modelling, 1D analysis (Amesim) and CFD (Star CCM+, FLUENT) methods and tools",
+    "skill_id": "thermal_and_fea_simulation"
+   },
+   {
+    "text": "Knowledge in coding of numerical methods to solve heat transfer and fluid flow problems",
+    "skill_id": null
+   },
+   {
+    "text": "Knowledge of Python and JAVA would also be beneficial",
+    "skill_id": "python"
+   },
+   {
+    "text": "Broad understanding/knowledge of System Design processes",
+    "skill_id": null
+   },
+   {
+    "text": "Teamwork and excellent communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Willingness to learn new skills, Self-motivation and Self-initiative",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:a8002d1666900ca4",
+  "path_id": "defence_aerospace_space",
+  "title": "Associate Engg. Loads and Aeroelasticity",
+  "company": "Airbus India Private Limited",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=a8002d1666900ca4",
+  "fresher": true,
+  "experience_text": "Entry Level",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelors or Masters degree in Aeronautical, Mechanical engineering or related disciplines",
+    "skill_id": null
+   },
+   {
+    "text": "Flight mechanics",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Basic Aerodynamics",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Structural dynamics",
+    "skill_id": "thermal_and_fea_simulation"
+   },
+   {
+    "text": "Control theory",
+    "skill_id": "control_systems"
+   },
+   {
+    "text": "Programming skills in MATLAB, Python are a plus",
+    "skill_id": "matlab_simulink"
+   },
+   {
+    "text": "Teamwork (high priority!)",
+    "skill_id": null
+   },
+   {
+    "text": "Good communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Willingness to learn new skills, self-development",
+    "skill_id": null
+   },
+   {
+    "text": "Problem-solving orientation",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:b0e719634cc25fa5",
+  "path_id": "defence_aerospace_space",
+  "title": "Propulsion Control System Engineer",
+  "company": "Airbus India Private Limited",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=b0e719634cc25fa5",
+  "fresher": true,
+  "experience_text": null,
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.Tech./M.Tech. in Aerospace, Propulsion, Mechanical, Electrical, Systems and Control",
+    "skill_id": null
+   },
+   {
+    "text": "Basic aerospace domain knowledge",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Knowledge of Propulsion systems, Engine interfaces and Control systems",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Modeling & Simulation towards design maturity and V&V",
+    "skill_id": "matlab_simulink"
+   },
+   {
+    "text": "Development of tools to support analysis and V&V",
+    "skill_id": null
+   },
+   {
+    "text": "Strong problem solving and logical thinking ability",
+    "skill_id": null
+   },
+   {
+    "text": "Strong interpersonal and communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Flexibility and adaptability; ability to work well in a team environment",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:8f370c714c724729",
+  "path_id": "defence_aerospace_space",
+  "title": "Engineer--Flight dynamics",
+  "company": "Airbus India Private Limited",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=8f370c714c724729",
+  "fresher": true,
+  "experience_text": null,
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelors/Masters degree in Aeronautical engineering or related disciplines",
+    "skill_id": null
+   },
+   {
+    "text": "Flight mechanics",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Aerodynamics",
+    "skill_id": "avionics_and_propulsion_basics"
+   },
+   {
+    "text": "Knowledge on Modeling and Simulation (nice to have)",
+    "skill_id": "matlab_simulink"
+   },
+   {
+    "text": "Programming skills in C, MATLAB, Python, UNIX",
+    "skill_id": "python"
+   },
+   {
+    "text": "Teamwork (high priority!)",
+    "skill_id": null
+   },
+   {
+    "text": "Good communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Willingness to learn new skills, self-development",
+    "skill_id": null
+   },
+   {
+    "text": "Problem-solving orientation",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:9c7fc96426a18e69",
+  "path_id": "defence_aerospace_space",
+  "title": "Aerospace Manufacturing - Work Preparation Engineer",
+  "company": "Expleo",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=9c7fc96426a18e69",
+  "fresher": true,
+  "experience_text": "Manufacturing Engineer: 0–2 years",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Any Graduation / Diploma in Engineering / Aircraft Maintenance Engineering (AME)",
+    "skill_id": null
+   },
+   {
+    "text": "Review and validate engineering drawings, Bills of Materials (BOM), and technical manufacturing documentation",
+    "skill_id": null
+   },
+   {
+    "text": "Create and modify manufacturing and assembly routings, including associated task management",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Demonstrate a good understanding of assembly processes, manufacturing methods, and process planning",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Create and modify repair routings based on non-conformities, design queries, concessions",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Analyze 2D engineering drawings and 3D Digital Mock-Ups (DMU)",
+    "skill_id": "cad_solidworks_or_catia"
+   },
+   {
+    "text": "Possess good knowledge of engineering drawing interpretation, GD&T (Geometric Dimensioning & Tolerancing)",
+    "skill_id": null
+   },
+   {
+    "text": "Familiar with aerospace manufacturing standards, configuration management, engineering change management",
+    "skill_id": null
+   },
+   {
+    "text": "Desired: SAP, ERP systems, CATIA V5, 3DX, Aircraft Progress ACPNG",
+    "skill_id": "cad_solidworks_or_catia"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:31a203128b45a59a",
+  "path_id": "defence_aerospace_space",
+  "title": "Quality Engineer Trainee",
+  "company": "GTN ENGINEERING INDIA LTD",
+  "location": "Coimbatore, Tamil Nadu",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=31a203128b45a59a",
+  "fresher": true,
+  "experience_text": "0-2 years",
+  "salary_text": "₹20,000 - ₹25,000 a month",
+  "requirements": [
+   {
+    "text": "B.E (Mechanical)",
+    "skill_id": null
+   },
+   {
+    "text": "Operate and program CMM machines for dimensional inspection",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Read and interpret engineering drawings, blueprints, and CAD models",
+    "skill_id": "cad_solidworks_or_catia"
+   },
+   {
+    "text": "Perform first article, in-process, and final inspections",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Use precision measuring tools such as micrometers, calipers, height gauges, and bore gauges",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Interpret and apply GD&T (Geometric Dimensioning & Tolerancing) standards",
+    "skill_id": null
+   },
+   {
+    "text": "Generate inspection reports and maintain quality documentation",
+    "skill_id": null
+   },
+   {
+    "text": "Identify non-conforming products and report quality issues",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Maintain calibration records and ensure measuring equipment is in good condition",
+    "skill_id": null
+   },
+   {
+    "text": "Follow ISO, AS9100, or company quality procedures and safety standards",
+    "skill_id": "quality_and_manufacturing_basics"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:hal_design_trainee_2026",
+  "path_id": "defence_aerospace_space",
+  "title": "Design Trainee (DT) 2026",
+  "company": "Hindustan Aeronautics Limited (HAL)",
+  "location": "Any HAL division / R&D centre, India",
+  "posted_on": "2026-07-29",
+  "url": "https://cbexams.com/halreg2026/Default",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "Basic Pay of Rs. 50000/-, Variable Dearness Allowance & Canteen Allowance",
+  "requirements": [
+   {
+    "text": "Bachelor's Degree in Engineering / Technology in relevant fields from a recognized university",
+    "skill_id": null
+   },
+   {
+    "text": "Disciplines: Aeronautical, Electrical, Electronics, Mechanical, Computer Science, Metallurgy, Instrumentation",
+    "skill_id": null
+   },
+   {
+    "text": "Aggregate marks: UR/OBC/EWS require 70%; SC/ST/PWD require 60%",
+    "skill_id": null
+   },
+   {
+    "text": "Maximum age 28 years (with relaxations for SC/ST: 5 years; OBC: 3 years; PWD: 10 years)",
+    "skill_id": null
+   },
+   {
+    "text": "Engineering discipline knowledge (computer-based test)",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "General Awareness",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "English & Reasoning competency",
+    "skill_id": "gate_preparation_general_aptitude"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:skyroot_kalpana_fellowship",
+  "path_id": "defence_aerospace_space",
+  "title": "Kalpana Fellowship (12-month graduate programme)",
+  "company": "Skyroot Aerospace",
+  "location": "Hyderabad, Telangana",
+  "posted_on": null,
+  "url": "https://kalpanafellowship.com/",
+  "fresher": true,
+  "experience_text": "Final-year students and recent graduates (within 2 years)",
+  "salary_text": "Fixed monthly allowance for one year",
+  "requirements": [
+   {
+    "text": "Final-year and recent graduates (within 2 years) in Aerospace, Aeronautical, Mechanical, Electronics, Chemical, and Electrical Engineering",
+    "skill_id": null
+   },
+   {
+    "text": "Indian nationals only",
+    "skill_id": null
+   },
+   {
+    "text": "Willingness to work regular full-time hours for one year at the Skyroot Max-Q campus in Hyderabad",
+    "skill_id": null
+   },
+   {
+    "text": "Thorough evaluation across three stages to identify and assess the mental and academic competencies",
+    "skill_id": "interview_aptitude_and_hr"
+   },
+   {
+    "text": "Final-year students need written approval from the college Registrar",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ }
+]

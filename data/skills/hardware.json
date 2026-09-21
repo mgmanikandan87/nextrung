@@ -1,0 +1,1030 @@
+[
+ {
+  "id": "digital_design_fundamentals",
+  "name": "Digital Design",
+  "category": "hardware",
+  "description": "Design combinational and sequential logic, FSMs and counters by hand, reason about setup/hold and clocking, and explain CMOS gate behaviour in a screening test.",
+  "evidence_types": [
+   "repo",
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Digital Electronic Circuits (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/108105132",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "A GitHub repo with hand-drawn or Logisim schematics plus Verilog for a 4-bit ALU, a Moore and a Mealy FSM, and a truth-table/timing note for each"
+   },
+   {
+    "platform": "HDLBits",
+    "title": "HDLBits Verilog exercises (Circuits section)",
+    "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Screenshot of HDLBits progress page showing all Combinational Logic and Sequential Logic problems solved"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.111 Introductory Digital Systems Laboratory",
+    "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved problem sets 1 to 3 pushed to a repo with your worked timing calculations"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "verilog_systemverilog",
+  "name": "Verilog / SystemVerilog",
+  "category": "hardware",
+  "description": "Write synthesisable Verilog or SystemVerilog for a module such as a FIFO, UART or AXI-lite slave, and simulate it with a self-checking testbench on open-source tools.",
+  "evidence_types": [
+   "repo",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Hardware Modeling using Verilog (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105165",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "GitHub repo with a parameterised FIFO and a UART TX/RX in Verilog, testbenches, and GTKWave waveform screenshots in the README"
+   },
+   {
+    "platform": "HDLBits",
+    "title": "HDLBits Verilog exercises",
+    "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "HDLBits progress screenshot showing at least 150 problems solved, linked from your portfolio"
+   },
+   {
+    "platform": "ChipVerify",
+    "title": "SystemVerilog tutorial",
+    "url": "https://www.chipverify.com/systemverilog/systemverilog-tutorial",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Repo with your UART testbench rewritten in SystemVerilog using classes, interfaces and constrained-random stimulus, run on Icarus or Verilator"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "rtl_design",
+  "name": "RTL Design",
+  "category": "hardware",
+  "description": "Turn a spec into a micro-architecture and clean, lint-free, synthesisable RTL with clock-domain crossings, reset strategy and a register map handled correctly.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "VLSI Design Flow: RTL to GDS (IIIT Delhi)",
+    "url": "https://nptel.ac.in/courses/108106191",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "Repo with an AXI-lite peripheral (register map documented) whose RTL passes Verilator lint and synthesises in Yosys with the area report committed"
+   },
+   {
+    "platform": "ASIC World",
+    "title": "Verilog tutorial, examples and testbench writing",
+    "url": "https://www.asic-world.com/verilog/veritut.html",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Repo with a two-clock async FIFO (Gray-code pointers) and a CDC note explaining every synchroniser"
+   },
+   {
+    "platform": "Icarus Verilog",
+    "title": "Icarus Verilog user guide",
+    "url": "https://steveicarus.github.io/iverilog/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A Makefile in your repo that compiles, simulates and dumps VCD for every module with one command"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "functional_verification_uvm",
+  "name": "Functional Verification (SystemVerilog, UVM)",
+  "category": "hardware",
+  "description": "Build a UVM testbench with agents, sequences, a scoreboard, functional coverage and assertions, and close coverage against a written verification plan.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Verification Academy (Siemens)",
+    "title": "UVM Basics course",
+    "url": "https://verificationacademy.com/courses/uvm-basics",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Repo with a UVM testbench for your UART or AXI-lite block: verification plan, coverage report and bug list in the README"
+   },
+   {
+    "platform": "ChipVerify",
+    "title": "UVM tutorial",
+    "url": "https://www.chipverify.com/uvm/uvm-tutorial",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "The same repo extended with a scoreboard, at least 10 SystemVerilog assertions and a regression script that runs 100+ random seeds"
+   },
+   {
+    "platform": "Doulos",
+    "title": "Easier UVM coding guidelines and code generator",
+    "url": "https://www.doulos.com/knowhow/systemverilog/uvm/easier-uvm/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A generated UVM skeleton committed with a diff showing what you changed by hand and why"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "static_timing_analysis",
+  "name": "Static Timing Analysis (STA)",
+  "category": "hardware",
+  "description": "Write SDC constraints, read setup/hold reports, compute slack by hand, and explain CDC, multicycle and false paths for a synthesised design.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "VLSI Expert",
+    "title": "Static Timing Analysis and Signal Integrity chapters",
+    "url": "https://www.vlsi-expert.com/p/static-timing-analysis.html",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A one-page worked sheet (PDF in your repo) of setup and hold arithmetic for five paths in your own design, with the numbers matching the tool report"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "VLSI Physical Design (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105161",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "An SDC file for your design plus an OpenSTA timing report committed with the worst 10 paths annotated"
+   },
+   {
+    "platform": "OpenROAD",
+    "title": "OpenROAD documentation (includes OpenSTA)",
+    "url": "https://openroad.readthedocs.io/en/latest/",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "OpenSTA run script and report for your FIFO/UART showing timing closed at a stated clock on SKY130"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "dft_basics",
+  "name": "DFT (Scan, ATPG, BIST)",
+  "category": "hardware",
+  "description": "Insert scan chains, generate ATPG patterns, read fault-coverage reports and explain BIST and boundary scan at the level asked in DFT and test interviews.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Digital VLSI Testing (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/117105137",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A write-up in your repo with hand-derived stuck-at test vectors for a small circuit and the fault-coverage table"
+   },
+   {
+    "platform": "Fault (AUCOHL, open source)",
+    "title": "Fault: open-source DFT flow (scan insertion, ATPG)",
+    "url": "https://github.com/AUCOHL/Fault",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Scan-inserted netlist and ATPG pattern set for your UART or CAN controller with the fault-coverage report committed"
+   },
+   {
+    "platform": "Chips to Startup",
+    "title": "C2S EDA Tool Support (Cadence/Synopsys licences at supported colleges)",
+    "url": "https://c2s.gov.in/EDA_Tool_Support.jsp",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Screenshot and log of a scan-insertion and ATPG run on Synopsys or Cadence DFT tools via your college C2S licence"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "physical_design_basics",
+  "name": "Physical Design (Synthesis, Place and Route)",
+  "category": "hardware",
+  "description": "Run an RTL-to-GDS flow: synthesis, floorplan, placement, CTS, routing, DRC/LVS, and explain the reports and the trade-offs made at each step.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "VLSI Physical Design (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105161",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A design document (PDF in repo) explaining floorplan, placement and CTS choices for your block with area and timing numbers"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "VLSI Design Flow: RTL to GDS (IIIT Delhi)",
+    "url": "https://nptel.ac.in/courses/108106191",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "Completed RTL-to-GDS run of a small RISC-V core or your own block: GDS screenshot, timing and area reports in the README"
+   },
+   {
+    "platform": "OpenLane (open source)",
+    "title": "OpenLane automated RTL-to-GDSII flow",
+    "url": "https://github.com/The-OpenROAD-Project/OpenLane",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "OpenLane config and run logs for your design on SKY130 with DRC/LVS clean, committed with the final GDS"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "analog_circuit_basics",
+  "name": "Analog Circuits",
+  "category": "hardware",
+  "description": "Analyse and simulate op-amp, transistor and filter circuits, read a datasheet, and build a working amplifier or regulator on a breadboard.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Analog Circuits (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/108106084",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "LTspice files and a scope screenshot of a two-stage op-amp amplifier you built, with measured versus simulated gain and bandwidth"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.002 Circuits and Electronics",
+    "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved problem sets 1 to 5 and a repo of LTspice models for each circuit"
+   },
+   {
+    "platform": "Analog Devices",
+    "title": "LTspice simulator (free download and tutorials)",
+    "url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "An LTspice project of a linear regulator or active filter with a Monte Carlo tolerance run and the plots committed"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "semiconductor_fabrication_process",
+  "name": "Semiconductor Fabrication Process",
+  "category": "core_eng",
+  "description": "Explain the CMOS process flow (oxidation, lithography, etch, implant, deposition, CMP), yield and SPC basics, and cleanroom discipline for fab, ATMP and OSAT roles.",
+  "evidence_types": [
+   "document",
+   "cert",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Basic Overview of Semiconductor Device Processing and IC Fabrication (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/108104865",
+    "free": true,
+    "hours": 35,
+    "proof_of_done": "A 6-page process-flow document for an NMOS transistor with a cross-section sketch per step and one defect mechanism per step"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Fabrication of Silicon VLSI Circuits using the MOS technology (IIT Bombay)",
+    "url": "https://nptel.ac.in/courses/108101089",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A written SPC exercise: an X-bar/R chart built from a public or synthetic wafer dataset in Python with your out-of-control rules explained"
+   },
+   {
+    "platform": "SkyWater / Google (open source)",
+    "title": "SkyWater SKY130 PDK documentation",
+    "url": "https://skywater-pdk.readthedocs.io/en/main/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A note in your repo mapping five SKY130 design rules to the process steps that cause them"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "pcb_design",
+  "name": "PCB Design (KiCad / Altium)",
+  "category": "hardware",
+  "description": "Take a schematic to a manufacturable two- or four-layer PCB with correct footprints, DRC-clean layout, Gerbers and a BOM, and bring the board up.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "KiCad",
+    "title": "Getting Started in KiCad 8",
+    "url": "https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Gerber files, BOM and a photo of an assembled STM32 or sensor breakout board you designed, in a public repo"
+   },
+   {
+    "platform": "Altium",
+    "title": "Altium Education (free student licences and courses)",
+    "url": "https://www.altium.com/education",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A four-layer PCB project (CAN node or BMS front-end) with DRC report and 3D render committed alongside the Gerbers"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "embedded_c",
+  "name": "Embedded C",
+  "category": "hardware",
+  "description": "Write bare-metal C on an STM32 or similar MCU: GPIO, timers, UART, I2C, SPI, interrupts, and read the reference manual and datasheet to configure a peripheral.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Embedded Systems Design (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105159",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "Repo with firmware that reads cell voltage and temperature over I2C/ADC and prints over UART, plus a short demo video"
+   },
+   {
+    "platform": "STMicroelectronics",
+    "title": "STM32 MOOCs (free online courses)",
+    "url": "https://www.st.com/content/st_com/en/support/learning/stm32-education/stm32-moocs.html",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "STM32 Nucleo project using timers, DMA and interrupts committed with a README that cites the reference-manual sections used"
+   },
+   {
+    "platform": "edX (UT Austin)",
+    "title": "Embedded Systems - Shape the World: Microcontroller I/O (audit)",
+    "url": "https://www.edx.org/learn/embedded-systems/the-university-of-texas-at-austin-embedded-systems-shape-the-world-microcontroller-input-output",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Lab code for all modules in a repo plus a video of the final lab running on hardware"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "microcontrollers_and_rtos",
+  "name": "Microcontrollers and RTOS (FreeRTOS)",
+  "category": "hardware",
+  "description": "Structure firmware as FreeRTOS tasks with queues, semaphores and timers on an ARM Cortex-M board, and debug priority and timing problems with a logic analyser or trace.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "FreeRTOS",
+    "title": "FreeRTOS RTOS fundamentals and beginner's guide",
+    "url": "https://www.freertos.org/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A FreeRTOS project on STM32 with three tasks (sensor read, CAN transmit, fault monitor) and a README explaining priorities and stack sizes"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Embedded System Design with ARM (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105193",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Repo of ARM Cortex-M labs with a video showing an interrupt-driven peripheral working on the board"
+   },
+   {
+    "platform": "STMicroelectronics",
+    "title": "STM32 online training",
+    "url": "https://www.st.com/content/st_com/en/support/learning/stm32-education/stm32-online-training.html",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "STM32CubeIDE project using CMSIS-RTOS/FreeRTOS with a trace screenshot of task switching"
+   }
+  ],
+  "paths": [
+   "ev_automotive"
+  ]
+ },
+ {
+  "id": "can_lin_automotive_protocols",
+  "name": "CAN / LIN",
+  "category": "hardware",
+  "description": "Explain CAN frame structure, arbitration, bit timing and error handling; build a two-node CAN network on MCUs and decode logged traffic with a DBC or your own message map.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Texas Instruments",
+    "title": "Introduction to the Controller Area Network (SLOA101)",
+    "url": "https://www.ti.com/lit/an/sloa101b/sloa101b.pdf",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A one-page CAN bit-timing calculation for 500 kbit/s on your MCU clock, checked against the working bus"
+   },
+   {
+    "platform": "CSS Electronics",
+    "title": "CAN Bus Explained - A Simple Intro",
+    "url": "https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Logged CAN traces from your two-node network (SavvyCAN or candump) with a document explaining every message ID and signal"
+   },
+   {
+    "platform": "Vector",
+    "title": "E-Learning: Introduction to CAN",
+    "url": "https://elearning.vector.com/mod/page/view.php?id=333",
+    "free": true,
+    "hours": 12,
+    "proof_of_done": "A two-node STM32/MCP2515 CAN network video: one node reports pack voltage and temperature, the other displays it and raises a fault flag"
+   }
+  ],
+  "paths": [
+   "ev_automotive"
+  ]
+ },
+ {
+  "id": "matlab_simulink",
+  "name": "MATLAB / Simulink",
+  "category": "core_eng",
+  "description": "Build and run a Simulink model of a physical subsystem (drive cycle, motor, battery, attitude loop), tune it, and present results against a published spec.",
+  "evidence_types": [
+   "repo",
+   "cert",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "MathWorks",
+    "title": "MATLAB Onramp (free)",
+    "url": "https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "MATLAB Onramp certificate plus a script that plots your own logged sensor or CAN data"
+   },
+   {
+    "platform": "MathWorks",
+    "title": "Simulink Onramp (free)",
+    "url": "https://matlabacademy.mathworks.com/details/simulink-onramp/simulink",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A .slx model of a two-wheeler EV drive cycle (motor, battery, vehicle dynamics) with a report comparing predicted range to an OEM claim"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "battery_management_systems",
+  "name": "Battery Management Systems (BMS)",
+  "category": "hardware",
+  "description": "Explain lithium-ion cell behaviour, estimate SOC and SOH, design passive balancing and safety cut-offs on a cell-monitor IC, and run and log a cell-cycling test.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Battery University",
+    "title": "Battery University articles (cell chemistry, charging, testing)",
+    "url": "https://batteryuniversity.com/articles",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "A cell test log of at least 20 charge/discharge cycles with a capacity-fade plot and internal-resistance trend"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Electrochemical Energy Storage (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/113105102",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A 5-page note on your pack design: cell choice, series/parallel topology, C-rate limits and thermal runaway margin"
+   },
+   {
+    "platform": "Coursera (University of Colorado)",
+    "title": "Algorithms for Battery Management Systems specialization (audit)",
+    "url": "https://www.coursera.org/specializations/algorithms-for-battery-management-systems",
+    "free": true,
+    "hours": 60,
+    "proof_of_done": "A working 4-series BMS (BQ76920-class IC) with balancing, OV/OT cut-off and CAN output: schematic, firmware and fault-injection video on GitHub"
+   }
+  ],
+  "paths": [
+   "ev_automotive"
+  ]
+ },
+ {
+  "id": "ev_powertrain_and_motor_control",
+  "name": "EV Powertrain and Motor Control",
+  "category": "core_eng",
+  "description": "Size an EV powertrain from vehicle dynamics, explain BLDC six-step and FOC, and run a small motor from your own controller or a Simulink model with logged signals.",
+  "evidence_types": [
+   "repo",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "EV - Vehicle Dynamics and Electric Motor Drives (IIT Delhi)",
+    "url": "https://nptel.ac.in/courses/108102121",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A MATLAB/Simulink range and motor-sizing model for a two-wheeler with tractive-effort calculations in the README"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Fundamentals of Electric Vehicles: Technology and Economics (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/108106170",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A 4-page trade study comparing two motor and battery configurations for a scooter, with cost and range numbers"
+   },
+   {
+    "platform": "MathWorks",
+    "title": "Field-Oriented Control of PMSMs with Simulink (video series)",
+    "url": "https://www.mathworks.com/videos/series/field-oriented-control-of-pmsms-with-simulink.html",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A Simulink FOC model file plus a video of a small BLDC running six-step commutation from your own MCU code with scope traces"
+   }
+  ],
+  "paths": [
+   "ev_automotive"
+  ]
+ },
+ {
+  "id": "power_electronics_basics",
+  "name": "Power Electronics",
+  "category": "core_eng",
+  "description": "Analyse and simulate DC-DC converters, inverters and chargers, choose switches and magnetics, and build a low-voltage buck or half-bridge with measured waveforms.",
+  "evidence_types": [
+   "repo",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Power Electronics (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/108105066",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "LTspice or Simulink model of a buck converter and a three-phase inverter with a note on switching losses and ripple"
+   },
+   {
+    "platform": "MathWorks",
+    "title": "Power Electronics Simulation Onramp (free)",
+    "url": "https://matlabacademy.mathworks.com/details/power-electronics-simulation-onramp/powerelectronics",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Onramp certificate plus a Simscape buck-converter model with a closed-loop voltage controller"
+   },
+   {
+    "platform": "Texas Instruments",
+    "title": "TI Precision Labs (power, amplifiers, data converters)",
+    "url": "https://www.ti.com/video/series/precision-labs.html",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "A built 12 V to 5 V buck board photo with scope captures of switch node and output ripple, committed with the schematic"
+   }
+  ],
+  "paths": [
+   "ev_automotive"
+  ]
+ },
+ {
+  "id": "cad_solidworks_or_catia",
+  "name": "CAD (SolidWorks / CATIA / Onshape)",
+  "category": "core_eng",
+  "description": "Model parts and assemblies, produce dimensioned drawings with GD&T and a BOM, and share native files that a reviewer can open and check.",
+  "evidence_types": [
+   "repo",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Engineering Drawing and Computer Graphics (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/112105294",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A set of five orthographic drawings with tolerances, exported as PDF and native files, in a GrabCAD or GitHub folder"
+   },
+   {
+    "platform": "Onshape",
+    "title": "Onshape Learning Center (free)",
+    "url": "https://learn.onshape.com/",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A full CAD assembly of a two-wheeler battery pack or motor mount with drawings, tolerances and BOM, shared as a public Onshape document"
+   },
+   {
+    "platform": "Dassault Systemes",
+    "title": "SOLIDWORKS for Students",
+    "url": "https://www.solidworks.com/product/students",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A SolidWorks assembly (or CATIA if your college has it) with an exploded view, drawing pack and a one-page design-choice write-up"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "thermal_and_fea_simulation",
+  "name": "FEA and Thermal Simulation (ANSYS)",
+  "category": "core_eng",
+  "description": "Set up a static structural or steady-state thermal case with sensible boundary conditions, mesh it, check convergence, and validate the result against a hand calculation.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Ansys",
+    "title": "Ansys Student (free simulation software)",
+    "url": "https://ansys.synopsys.com/academic/students",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "An Ansys Student thermal case of a battery pack or bracket with a report comparing FEA result to a hand calculation within a stated error"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Finite Element Method (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/112104116",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A Python or MATLAB script solving a 1D bar and 2D truss by FEM, with results matching the analytical solution, in a repo"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "2.092 Finite Element Analysis of Solids and Fluids I",
+    "url": "https://ocw.mit.edu/courses/2-092-finite-element-analysis-of-solids-and-fluids-i-fall-2009/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved problem sets 1 to 4 plus a mesh-convergence study on your own part committed as a PDF"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "control_systems",
+  "name": "Control Systems",
+  "category": "core_eng",
+  "description": "Model a plant, design and tune a PID or state-feedback controller, read Bode and root-locus plots, and implement the loop on hardware or in Simulink.",
+  "evidence_types": [
+   "repo",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Control Engineering (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/108106098",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A repo with MATLAB scripts for a DC-motor speed loop: model, Bode plot, PID tuning and step-response comparison against a measured motor"
+   },
+   {
+    "platform": "MathWorks",
+    "title": "Control Design Onramp with Simulink (free)",
+    "url": "https://matlabacademy.mathworks.com/details/control-design-onramp-with-simulink/controls",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A Simulink quadcopter attitude controller model file with a video of it running on a flight board or a documented simulation"
+   }
+  ],
+  "paths": [
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "rf_and_antenna_basics",
+  "name": "RF and Antenna Design",
+  "category": "hardware",
+  "description": "Design and measure a simple antenna and receive chain, compute a link budget, and use an SDR to capture and analyse a real signal.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Antennas (IIT Bombay)",
+    "url": "https://nptel.ac.in/courses/108101092",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A two-element antenna built and measured (VSWR or received-signal plot) with a design note and photos in a repo"
+   },
+   {
+    "platform": "GNU Radio",
+    "title": "GNU Radio tutorials",
+    "url": "https://wiki.gnuradio.org/index.php/Tutorials",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A GNU Radio flowgraph file that demodulates FM or decodes a satellite beacon from your RTL-SDR, with a captured spectrum screenshot"
+   },
+   {
+    "platform": "RTL-SDR.com",
+    "title": "About RTL-SDR (what it is and how to use it)",
+    "url": "https://www.rtl-sdr.com/about-rtl-sdr/",
+    "free": true,
+    "hours": 5,
+    "proof_of_done": "An S-band or VHF link-budget spreadsheet for a CubeSat downlink checked against a measured receive test"
+   }
+  ],
+  "paths": [
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "avionics_and_propulsion_basics",
+  "name": "Avionics and Propulsion",
+  "category": "domain",
+  "description": "Explain rocket and jet propulsion fundamentals, flight-controller architecture and sensor fusion, and run an instrumented test (thrust stand or flight board) with calibrated data.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Rocket Propulsion (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/101106082",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A thrust-stand test report (load cell, pressure, thermocouple) comparing measured thrust curve to a simple internal-ballistics model, with raw data"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "16.50 Introduction to Propulsion Systems",
+    "url": "https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved problem sets 1 to 4 plus a Python nozzle-flow calculator committed to a repo"
+   },
+   {
+    "platform": "ArduPilot",
+    "title": "ArduPilot developer documentation",
+    "url": "https://ardupilot.org/dev/",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A flight-board build or SITL run with logs, a parameter file and a video of the attitude controller holding level"
+   }
+  ],
+  "paths": [
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "gate_preparation_ece_ee_me",
+  "name": "GATE (ECE / EE / ME)",
+  "category": "exam",
+  "description": "Prepare for and sit GATE in your branch paper to a score that opens M.Tech, DRDO, ISRO and PSU routes, tracked with weekly timed mocks.",
+  "evidence_types": [
+   "score",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GATE official (IIT Madras)",
+    "title": "GATE 2027 test papers and syllabus",
+    "url": "https://gate2027.iitm.ac.in/exam_papers_and_syllabus",
+    "free": true,
+    "hours": 300,
+    "proof_of_done": "A mock-score log (spreadsheet) of at least 12 full-length timed mocks with topic-wise error analysis, then the GATE score card"
+   },
+   {
+    "platform": "ISRO official",
+    "title": "ISRO Careers: current opportunities (ICRB Scientist/Engineer notices)",
+    "url": "https://www.isro.gov.in/Careers.html",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved previous ISRO ICRB papers with a score sheet, and your admit card or score for the current cycle"
+   },
+   {
+    "platform": "DRDO official",
+    "title": "DRDO Recruitment and Assessment Centre (RAC)",
+    "url": "https://rac.gov.in/",
+    "free": true,
+    "hours": 5,
+    "proof_of_done": "A one-page eligibility and timeline sheet for DRDO Scientist B in your discipline, with the GATE paper code and cut-off history"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "quality_and_manufacturing_basics",
+  "name": "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+  "category": "core_eng",
+  "description": "Apply SPC charts, 5S, poka-yoke and basic DMAIC on line data, and read GD&T on a drawing well enough to talk to a quality or production engineer.",
+  "evidence_types": [
+   "document",
+   "cert",
+   "repo"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Six Sigma (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/110105123",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A DMAIC case study (PDF) on a real or public dataset with X-bar/R charts, capability index and a recommended change"
+   },
+   {
+    "platform": "GD&T Basics",
+    "title": "GD&T symbols reference",
+    "url": "https://www.gdandtbasics.com/gdt-symbols/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A drawing of your own part annotated with datums, position and flatness tolerances, plus a one-page inspection plan"
+   }
+  ],
+  "paths": [
+   "ev_automotive",
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "signal_processing_basics",
+  "name": "Signal Processing (DSP)",
+  "category": "core_eng",
+  "description": "Sample, filter and analyse real signals: FFT, FIR/IIR design, aliasing and windowing, applied to sensor, radar or telemetry data in Python or MATLAB.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Digital Signal Processing (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/108106151",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "A repo of Python/MATLAB notebooks: FFT of a logged sensor signal, a designed FIR and IIR filter, and before/after plots"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.003 Signals and Systems",
+    "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Solved problem sets 1 to 6 committed as PDF with MATLAB or Python checks"
+   },
+   {
+    "platform": "dspguide.com",
+    "title": "The Scientist and Engineer's Guide to Digital Signal Processing (free book)",
+    "url": "https://www.dspguide.com/pdfbook.htm",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A working RTL-SDR or microphone capture pipeline that filters and demodulates a signal, with code and spectrogram plots"
+   }
+  ],
+  "paths": [
+   "defence_aerospace_space"
+  ]
+ },
+ {
+  "id": "fpga_prototyping",
+  "name": "FPGA (Vivado / Quartus)",
+  "category": "hardware",
+  "description": "Synthesise, constrain, implement and debug an RTL design on a real FPGA board, using ILA or a logic analyser to prove it works.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Digital System Design with PLDs and FPGAs (IISc Bangalore)",
+    "url": "https://nptel.ac.in/courses/117108040",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A video of your UART or FIFO running on an FPGA board (Basys, Nexys, DE10 or a low-cost Lattice board) with the bitstream project in a repo"
+   },
+   {
+    "platform": "AMD (Xilinx)",
+    "title": "AMD University Program",
+    "url": "https://www.amd.com/en/corporate/university-program.html",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A Vivado project with XDC constraints, timing summary screenshot and an ILA capture of your design on hardware"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.111 Introductory Digital Systems Laboratory",
+    "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "An FPGA lab-style project (VGA, audio or serial) with a demo video and a lab report in the repo"
+   }
+  ],
+  "paths": [
+   "semiconductor_electronics"
+  ]
+ },
+ {
+  "id": "labview_and_daq_basics",
+  "name": "LabVIEW and DAQ",
+  "category": "core_eng",
+  "description": "Build a LabVIEW or Python data-acquisition program that samples sensors, calibrates them, logs to file, plots live and flags out-of-range readings for a test campaign.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NI",
+    "title": "LabVIEW Community Edition (free for non-commercial use)",
+    "url": "https://www.ni.com/en/shop/labview/select-edition/labview-community-edition.html",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A LabVIEW VI that logs load-cell and thermocouple readings from an Arduino or DAQ, with calibration records and a sample CSV in a repo"
+   },
+   {
+    "platform": "NI Learning Center",
+    "title": "Getting Started with Arduino and LabVIEW Community Edition",
+    "url": "https://learn.ni.com/courses/getting-started-with-arduino-and-labview-community-edition",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A screen recording of your VI streaming live sensor data with an out-of-range alarm, plus the VI files"
+   }
+  ],
+  "paths": [
+   "defence_aerospace_space"
+  ]
+ }
+]

@@ -1,0 +1,1203 @@
+[
+ {
+  "id": "python",
+  "name": "Python",
+  "category": "foundation",
+  "description": "Write a 100-line program from a problem statement, using functions, files, lists and dicts, without copying from an assistant.",
+  "evidence_types": [
+   "repo",
+   "cert",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Programming, Data Structures and Algorithms using Python",
+    "url": "https://nptel.ac.in/courses/106106145",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "NPTEL exam certificate id, or a repo with all weekly programming assignments solved and passing the given tests"
+   },
+   {
+    "platform": "CS50",
+    "title": "CS50's Introduction to Programming with Python (CS50P)",
+    "url": "https://cs50.harvard.edu/python/",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "Public repo with the nine problem sets and the final project, plus the CS50P certificate URL"
+   },
+   {
+    "platform": "Kaggle Learn",
+    "title": "Python",
+    "url": "https://www.kaggle.com/learn/python",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Kaggle Learn completion certificate URL for Python plus a notebook of your own solving five exercises"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services"
+  ]
+ },
+ {
+  "id": "sql",
+  "name": "SQL",
+  "category": "foundation",
+  "description": "Write joins, group by, window functions and subqueries against a real dataset and explain the query plan of one slow query.",
+  "evidence_types": [
+   "repo",
+   "cert",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "Kaggle Learn",
+    "title": "Intro to SQL",
+    "url": "https://www.kaggle.com/learn/intro-to-sql",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Kaggle Learn completion certificate URL for Intro to SQL"
+   },
+   {
+    "platform": "Kaggle Learn",
+    "title": "Advanced SQL",
+    "url": "https://www.kaggle.com/learn/advanced-sql",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Kaggle Learn completion certificate URL for Advanced SQL plus a notebook with three window-function queries on a public BigQuery dataset"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Data Base Management System (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105175",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "NPTEL certificate id, or a repo with a normalised schema (ERD plus DDL) and 20 answered queries on it"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "dsa",
+  "name": "Data Structures and Algorithms",
+  "category": "foundation",
+  "description": "Solve LeetCode easy-to-medium problems on arrays, strings, hashing, trees, graphs and basic DP in 30 minutes each, and state time and space complexity.",
+  "evidence_types": [
+   "score",
+   "repo",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Data Structures and Algorithms (IIT Delhi, Naveen Garg)",
+    "url": "https://nptel.ac.in/courses/106102064",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "NPTEL certificate id, or a repo implementing stack, queue, BST, heap, hash table, BFS, DFS and Dijkstra with tests"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "6.006 Introduction to Algorithms (Spring 2020)",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "free": true,
+    "hours": 60,
+    "proof_of_done": "Repo with solutions to problem sets 1 to 6 and a LeetCode profile screenshot showing 150 solved"
+   },
+   {
+    "platform": "roadmap.sh",
+    "title": "Data Structures and Algorithms Roadmap",
+    "url": "https://roadmap.sh/datastructures-and-algorithms",
+    "free": true,
+    "hours": 80,
+    "proof_of_done": "LeetCode or Codeforces profile link with 150 solved (at least 60 medium) and the roadmap marked complete"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services"
+  ]
+ },
+ {
+  "id": "git_github",
+  "name": "Git and GitHub",
+  "category": "foundation",
+  "description": "Branch, commit, rebase, resolve a merge conflict, open a pull request and review one, with a public GitHub profile that shows weekly activity.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "The Odin Project",
+    "title": "Introduction to Git",
+    "url": "https://www.theodinproject.com/lessons/foundations-introduction-to-git",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "A public repo with at least 20 commits on two branches merged through pull requests"
+   },
+   {
+    "platform": "GitHub Docs",
+    "title": "Hello World (pull request workflow tutorial)",
+    "url": "https://docs.github.com/en/get-started/start-your-journey/hello-world",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "URL of the merged pull request created in the tutorial repo"
+   },
+   {
+    "platform": "Git official docs",
+    "title": "Pro Git book, 2nd edition (chapters 1 to 3 and 5)",
+    "url": "https://git-scm.com/book/en/v2",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A GitHub profile with 12 consecutive weeks of commits and one repo showing a resolved merge conflict in its history"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services"
+  ]
+ },
+ {
+  "id": "linux_shell",
+  "name": "Linux and shell scripting",
+  "category": "foundation",
+  "description": "Navigate a Linux server over SSH, manage files, permissions and processes, read logs with grep and tail, and write a 30-line bash script.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "The Odin Project",
+    "title": "Command Line Basics",
+    "url": "https://www.theodinproject.com/lessons/foundations-command-line-basics",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "Screenshot of a terminal session completing the lesson's exercises, committed to a notes repo"
+   },
+   {
+    "platform": "Ubuntu official docs",
+    "title": "The Linux command line for beginners",
+    "url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "A repo containing a bash script that backs up a folder, rotates logs and prints disk usage, with a README showing it run"
+   },
+   {
+    "platform": "MIT",
+    "title": "The Missing Semester of Your CS Education",
+    "url": "https://missing.csail.mit.edu/",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Repo with the exercises from the shell, shell tools, editors and command-line environment lectures solved"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "rest_apis",
+  "name": "REST APIs",
+  "category": "software",
+  "description": "Design and document a resource-oriented HTTP API with correct status codes, pagination, versioning and auth, and consume a third-party API from code.",
+  "evidence_types": [
+   "repo",
+   "deployed_url",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "roadmap.sh",
+    "title": "API Design Roadmap",
+    "url": "https://roadmap.sh/api-design",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "An OpenAPI (Swagger) spec for your own service committed to its repo, with the roadmap marked complete"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Web API design best practices (Azure Architecture Center)",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "A one-page API design document for your project that applies the guide's rules on URIs, methods, pagination and versioning"
+   },
+   {
+    "platform": "roadmap.sh",
+    "title": "Backend Developer Roadmap",
+    "url": "https://roadmap.sh/backend",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A deployed API URL with /docs enabled and a Postman or curl collection in the repo exercising every endpoint"
+   }
+  ],
+  "paths": [
+   "it_services"
+  ]
+ },
+ {
+  "id": "fastapi_or_spring",
+  "name": "FastAPI or Spring Boot",
+  "category": "software",
+  "description": "Build a backend service with routing, validation, a database layer, authentication and tests in FastAPI (Python) or Spring Boot (Java).",
+  "evidence_types": [
+   "repo",
+   "deployed_url",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "FastAPI official docs",
+    "title": "FastAPI Tutorial - User Guide",
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Repo of a FastAPI service with SQL database, OAuth2 login, pytest suite and a deployed URL"
+   },
+   {
+    "platform": "Spring official guides",
+    "title": "Building a RESTful Web Service (Spring)",
+    "url": "https://spring.io/guides/gs/rest-service",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Repo of a Spring Boot REST service extended with a JPA entity, a repository and three tests, with the build passing in CI"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Programming in Java (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105191",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "NPTEL certificate id, or a repo with the weekly Java assignments and a console application using JDBC"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services"
+  ]
+ },
+ {
+  "id": "javascript_typescript",
+  "name": "JavaScript and TypeScript",
+  "category": "software",
+  "description": "Write modern JavaScript (ES modules, async/await, fetch, DOM events) and add TypeScript types to a small codebase.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "MDN Web Docs",
+    "title": "Dynamic scripting with JavaScript (Learn web development)",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Repo with the module's challenges (number-guessing game, image gallery, house data UI) working and deployed on GitHub Pages"
+   },
+   {
+    "platform": "The Odin Project",
+    "title": "Foundations course (JavaScript sections)",
+    "url": "https://www.theodinproject.com/paths/foundations/courses/foundations",
+    "free": true,
+    "hours": 60,
+    "proof_of_done": "Deployed URLs and repos for the Rock Paper Scissors, Etch-a-Sketch and Calculator projects"
+   },
+   {
+    "platform": "TypeScript official docs",
+    "title": "The TypeScript Handbook",
+    "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A repo where a JavaScript project is converted to TypeScript with strict mode on and zero type errors in CI"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "react_or_frontend",
+  "name": "React (front-end)",
+  "category": "software",
+  "description": "Build a multi-page React front end with components, state, routing and API calls, and deploy it.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "React official docs",
+    "title": "Learn React (Quick Start and Tutorial)",
+    "url": "https://react.dev/learn",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "Deployed URL and repo of the tic-tac-toe tutorial extended with time travel and a scoreboard fetched from an API"
+   },
+   {
+    "platform": "The Odin Project",
+    "title": "React course (Full Stack JavaScript path)",
+    "url": "https://www.theodinproject.com/paths/full-stack-javascript/courses/react",
+    "free": true,
+    "hours": 60,
+    "proof_of_done": "Deployed URLs and repos of the CV Application, Memory Card and Shopping Cart projects"
+   },
+   {
+    "platform": "roadmap.sh",
+    "title": "Frontend Developer Roadmap",
+    "url": "https://roadmap.sh/frontend",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A deployed front end for your own API with Lighthouse performance and accessibility scores above 90, screenshot in the README"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "databases_postgresql",
+  "name": "PostgreSQL",
+  "category": "software",
+  "description": "Model a schema, write migrations, add indexes, use transactions and explain a query plan on PostgreSQL.",
+  "evidence_types": [
+   "repo",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "PostgreSQL official docs",
+    "title": "PostgreSQL Tutorial (Part I of the manual)",
+    "url": "https://www.postgresql.org/docs/current/tutorial.html",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "Repo with schema.sql, seed data, ten queries including a window function and a view, and an EXPLAIN ANALYZE output before and after adding an index"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Data Base Management System (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105175",
+    "free": true,
+    "hours": 45,
+    "proof_of_done": "NPTEL certificate id, or an ERD plus normalised DDL for your project committed to the repo"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "docker",
+  "name": "Docker",
+  "category": "software",
+  "description": "Write a Dockerfile and docker-compose for an app plus database, build a small image, and run it locally and on a cloud host.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "Docker official docs",
+    "title": "Get started with Docker",
+    "url": "https://docs.docker.com/get-started/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Repo with a Dockerfile and compose.yaml that starts your app and PostgreSQL with one command, image pushed to Docker Hub or GHCR"
+   },
+   {
+    "platform": "roadmap.sh",
+    "title": "Docker Roadmap",
+    "url": "https://roadmap.sh/docker",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "A multi-stage Dockerfile under 200 MB for your service, with an image size screenshot in the README"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Build a containerized web application with Docker",
+    "url": "https://learn.microsoft.com/en-us/training/modules/intro-to-containers/",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "Microsoft Learn profile URL showing the module badge, and the container running at a public URL"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "cloud_fundamentals_aws",
+  "name": "AWS (cloud fundamentals)",
+  "category": "software",
+  "description": "Deploy a container or VM on the AWS free tier, set up a queue and a bucket, read CloudWatch logs and explain the monthly bill.",
+  "evidence_types": [
+   "cert",
+   "deployed_url",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "AWS Skill Builder",
+    "title": "AWS Cloud Practitioner Essentials (free digital course)",
+    "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "Skill Builder completion badge URL, plus a one-page write-up of your own free-tier bill with each line explained"
+   },
+   {
+    "platform": "AWS",
+    "title": "AWS Educate (free labs and badges for students)",
+    "url": "https://aws.amazon.com/education/awseducate/",
+    "free": true,
+    "hours": 12,
+    "proof_of_done": "Two AWS Educate digital badge URLs (for example Cloud Computing 101 and Compute)"
+   },
+   {
+    "platform": "AWS",
+    "title": "AWS Certified Cloud Practitioner (CLF-C02) exam",
+    "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "free": false,
+    "hours": 30,
+    "proof_of_done": "Certification validation number from Credly or the AWS certification portal"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services"
+  ]
+ },
+ {
+  "id": "cloud_fundamentals_azure",
+  "name": "Azure (cloud fundamentals)",
+  "category": "software",
+  "description": "Explain cloud service and deployment models, deploy a web app or container on Azure free credits, and read its cost and monitoring pages.",
+  "evidence_types": [
+   "cert",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "Microsoft Learn",
+    "title": "AZ-900: Describe cloud concepts (learning path 1 of 4)",
+    "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+    "free": true,
+    "hours": 12,
+    "proof_of_done": "Microsoft Learn profile URL showing all four AZ-900 learning paths complete, plus a public URL of an app deployed on Azure"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+    "free": false,
+    "hours": 30,
+    "proof_of_done": "AZ-900 certificate number and Credly badge URL (exam fee is waived at many college Cloud Skills Challenge events)"
+   }
+  ],
+  "paths": [
+   "it_services"
+  ]
+ },
+ {
+  "id": "llm_apis_and_agents",
+  "name": "LLM APIs and agents",
+  "category": "ai_data",
+  "description": "Call an LLM API with prompts, structured outputs, tool calling and streaming, track tokens and cost, and build a simple agent loop with and without a framework.",
+  "evidence_types": [
+   "repo",
+   "deployed_url",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "Hugging Face",
+    "title": "AI Agents Course",
+    "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Hugging Face Agents Course certificate URL and the final-project Space link with its leaderboard score"
+   },
+   {
+    "platform": "Anthropic",
+    "title": "Anthropic courses: API fundamentals, prompt engineering, tool use (GitHub notebooks)",
+    "url": "https://github.com/anthropics/courses",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "Repo with the notebooks run on your own key and a tool-using script that answers questions from a live API (weather, exchange rate), with a cost log per call"
+   },
+   {
+    "platform": "DeepLearning.AI",
+    "title": "AI Agents in LangGraph (short course)",
+    "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Repo of an agent with persistence and human-in-the-loop, plus a 2-minute demo video link"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "rag_and_vector_search",
+  "name": "RAG and vector search",
+  "category": "ai_data",
+  "description": "Chunk and embed documents, store vectors in pgvector or Chroma, retrieve with hybrid search and re-ranking, and answer with citations.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "DeepLearning.AI",
+    "title": "Building and Evaluating Advanced RAG (short course)",
+    "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Repo with a RAG pipeline over 100+ of your own documents and a table comparing baseline vs sentence-window retrieval on the RAG triad"
+   },
+   {
+    "platform": "Hugging Face",
+    "title": "LLM Course (chapters 1 to 3 and 5: transformers, embeddings, datasets)",
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "Repo with an embedding-based search over a dataset you built, with recall@5 reported on 50 hand-written queries"
+   },
+   {
+    "platform": "pgvector official docs",
+    "title": "pgvector: vector similarity search for Postgres (README)",
+    "url": "https://github.com/pgvector/pgvector",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Repo with a PostgreSQL schema using vector columns and an HNSW index, and a script that returns top-k results with citations"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "llm_evals_and_observability",
+  "name": "LLM evals and observability",
+  "category": "ai_data",
+  "description": "Build a 50-question eval set, score it automatically in CI, and log every prompt, latency and cost with a tracing tool.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "DeepLearning.AI",
+    "title": "Evaluating AI Agents (short course)",
+    "url": "https://www.deeplearning.ai/short-courses/evaluating-ai-agents/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Repo with traced agent runs and an experiment table showing two versions scored on the same eval set"
+   },
+   {
+    "platform": "Anthropic official docs",
+    "title": "Define success criteria and build evaluations (Claude Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "An eval set of 50+ questions with expected answers, a grading script (code or LLM graded) and results committed to the repo on every CI run"
+   },
+   {
+    "platform": "Langfuse official docs",
+    "title": "Langfuse documentation (open-source LLM observability)",
+    "url": "https://langfuse.com/docs",
+    "free": true,
+    "hours": 5,
+    "proof_of_done": "Screenshot of a Langfuse dashboard (self-hosted or free cloud) showing traces, cost and latency for your app over one week, in the README"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "data_engineering_pipelines",
+  "name": "Data engineering (pipelines)",
+  "category": "ai_data",
+  "description": "Schedule a pipeline that loads a public dataset into a warehouse daily, with idempotent loads, tests and alerting on failure.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Apache Airflow official docs",
+    "title": "Airflow Tutorials (Airflow 101, TaskFlow API, simple data pipeline)",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "Repo with a DAG that fetches a public dataset, loads it into DuckDB or PostgreSQL and passes data quality checks, with a screenshot of 7 successful daily runs"
+   },
+   {
+    "platform": "Google Cloud official docs",
+    "title": "Try BigQuery using the sandbox (free, no credit card)",
+    "url": "https://docs.cloud.google.com/bigquery/docs/sandbox",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "A BigQuery sandbox dataset you loaded and three saved queries, screenshots plus SQL in the repo"
+   },
+   {
+    "platform": "DataTalksClub",
+    "title": "Data Engineering Zoomcamp (free, open-source course)",
+    "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+    "free": true,
+    "hours": 80,
+    "proof_of_done": "Repo with the homework for modules 1 to 4 and the end-to-end capstone pipeline with a dashboard screenshot"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "pandas_and_data_analysis",
+  "name": "Pandas and data analysis",
+  "category": "ai_data",
+  "description": "Clean, join, group and plot a messy real dataset with pandas and present three findings that survive a sanity check against the source.",
+  "evidence_types": [
+   "repo",
+   "cert",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Kaggle Learn",
+    "title": "Pandas",
+    "url": "https://www.kaggle.com/learn/pandas",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Kaggle Learn completion certificate URL for Pandas"
+   },
+   {
+    "platform": "Kaggle Learn",
+    "title": "Data Cleaning",
+    "url": "https://www.kaggle.com/learn/data-cleaning",
+    "free": true,
+    "hours": 5,
+    "proof_of_done": "Kaggle Learn completion certificate URL for Data Cleaning plus a public notebook cleaning a dataset of your choice"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Python for Data Science (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/106106212",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or a notebook analysing an Indian public dataset (data.gov.in) with three charted findings"
+   }
+  ],
+  "paths": [
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "machine_learning_basics",
+  "name": "Machine learning basics",
+  "category": "ai_data",
+  "description": "Train, validate and explain a regression and a classification model with scikit-learn, and know when not to use ML.",
+  "evidence_types": [
+   "repo",
+   "cert",
+   "score"
+  ],
+  "learning": [
+   {
+    "platform": "Kaggle Learn",
+    "title": "Intro to Machine Learning",
+    "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "Kaggle Learn completion certificate URL and a Kaggle competition submission with a public leaderboard score"
+   },
+   {
+    "platform": "Google",
+    "title": "Machine Learning Crash Course",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Repo of the course's exercises completed plus a notebook training a model on your own dataset with a validation report"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Introduction to Machine Learning (IIT Madras, Balaraman Ravindran)",
+    "url": "https://nptel.ac.in/courses/106106139",
+    "free": true,
+    "hours": 50,
+    "proof_of_done": "NPTEL certificate id, or a repo implementing linear regression, logistic regression and a decision tree from scratch with tests against scikit-learn"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "mlops_basics",
+  "name": "MLOps basics",
+  "category": "ai_data",
+  "description": "Track experiments, version a model, serve it behind an API and retrain it on a schedule with CI.",
+  "evidence_types": [
+   "repo",
+   "deployed_url"
+  ],
+  "learning": [
+   {
+    "platform": "MLflow official docs",
+    "title": "Getting started with MLflow",
+    "url": "https://mlflow.org/docs/latest/ml/getting-started/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Repo with MLflow tracking of at least 10 runs, a registered model and a served endpoint returning predictions"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Introduction to machine learning operations (MLOps) learning path",
+    "url": "https://learn.microsoft.com/en-us/training/paths/introduction-machine-learn-operations/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "Microsoft Learn profile URL showing the four modules complete and a GitHub Actions workflow that retrains and tests your model"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "testing_and_automation",
+  "name": "Testing and CI/CD",
+  "category": "software",
+  "description": "Write unit, integration and contract tests, run them in GitHub Actions on every push, and publish a coverage number.",
+  "evidence_types": [
+   "repo"
+  ],
+  "learning": [
+   {
+    "platform": "pytest official docs",
+    "title": "pytest: Get started",
+    "url": "https://docs.pytest.org/en/stable/getting-started.html",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "Repo with a pytest suite of 30+ tests using fixtures and parametrize, coverage above 80% reported in the README"
+   },
+   {
+    "platform": "GitHub Docs",
+    "title": "Quickstart for GitHub Actions",
+    "url": "https://docs.github.com/en/actions/get-started/quickstart",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "A green CI badge on the repo README linking to a workflow that runs lint, tests and a Docker build on every push"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Software Testing (IIT Kharagpur, Rajib Mall)",
+    "url": "https://nptel.ac.in/courses/106105150",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or a test plan document with equivalence classes and boundary cases for your project's API"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "system_design_basics",
+  "name": "System design basics",
+  "category": "software",
+  "description": "Design a service end to end on paper with queues, caching, idempotency, retries and rate limits, and defend the trade-offs for 30 minutes.",
+  "evidence_types": [
+   "document",
+   "repo"
+  ],
+  "learning": [
+   {
+    "platform": "roadmap.sh",
+    "title": "System Design Roadmap",
+    "url": "https://roadmap.sh/system-design",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "A design document with architecture diagram, capacity estimates and failure modes for your own project, committed to its repo"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Cloud Design Patterns (Azure Architecture Center)",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A README section naming the three patterns (for example retry, circuit breaker, queue-based load leveling) implemented in your service, with code links"
+   },
+   {
+    "platform": "GitHub (donnemartin)",
+    "title": "The System Design Primer",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "Repo with your written solutions to three of the primer's design questions and a recorded 20-minute walkthrough of one"
+   }
+  ],
+  "paths": [
+   "ai_native_software"
+  ]
+ },
+ {
+  "id": "cybersecurity_fundamentals",
+  "name": "Application security fundamentals",
+  "category": "software",
+  "description": "Find and fix OWASP Top 10 issues in your own app, manage secrets properly, and add prompt-injection defences to an LLM feature.",
+  "evidence_types": [
+   "repo",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "OWASP",
+    "title": "OWASP Top 10",
+    "url": "https://owasp.org/www-project-top-ten/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A security review checklist in your repo mapping each Top 10 item to what you did (or why it does not apply), with the fixes as linked commits"
+   },
+   {
+    "platform": "OWASP",
+    "title": "OWASP Top 10 for LLM Applications",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "A documented prompt-injection test set (20 attacks) with pass/fail results for your LLM app, committed to the repo"
+   },
+   {
+    "platform": "PortSwigger",
+    "title": "Web Security Academy (free labs)",
+    "url": "https://portswigger.net/web-security",
+    "free": true,
+    "hours": 20,
+    "proof_of_done": "Web Security Academy profile screenshot showing 20+ labs solved, including SQL injection, XSS and authentication"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "excel_and_business_analysis",
+  "name": "Excel and business analysis",
+  "category": "professional",
+  "description": "Build lookups, pivots, conditional logic and a simple cash-flow or unit-economics model that a manager can change assumptions in.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "Coursera (audit)",
+    "title": "Excel Skills for Business: Essentials (Macquarie University)",
+    "url": "https://www.coursera.org/learn/excel-essentials",
+    "free": true,
+    "hours": 15,
+    "proof_of_done": "A workbook (shared link) with a cleaned dataset, a pivot summary and a lookup-driven report built during the course"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Business Analytics for Management Decision (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/110105089",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or a workbook and two-page memo analysing a real small business's three months of sales"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Design effective reports in Power BI (learning path)",
+    "url": "https://learn.microsoft.com/en-us/training/paths/create-use-analytics-reports-power-bi/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "A published Power BI report link (or PDF export) built on your own dataset, with the Learn profile showing the path complete"
+   }
+  ],
+  "paths": [
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "dashboards_and_bi_tools",
+  "name": "Dashboards (Power BI, Looker Studio, Metabase)",
+  "category": "professional",
+  "description": "Turn a SQL or spreadsheet dataset into a refreshable dashboard with three charts a non-technical owner uses to make one decision.",
+  "evidence_types": [
+   "deployed_url",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "Metabase official docs",
+    "title": "Learn Metabase (dashboards, SQL, data visualisation)",
+    "url": "https://www.metabase.com/learn/",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A public Metabase dashboard link (or screenshots plus the SQL) built on a real or public dataset, refreshed at least weekly"
+   },
+   {
+    "platform": "Microsoft Learn",
+    "title": "Design effective reports in Power BI (learning path)",
+    "url": "https://learn.microsoft.com/en-us/training/paths/create-use-analytics-reports-power-bi/",
+    "free": true,
+    "hours": 10,
+    "proof_of_done": "Published Power BI report link and the decision it informed, written in one paragraph"
+   }
+  ],
+  "paths": [
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "communication_written_english",
+  "name": "Written and spoken English (workplace)",
+  "category": "professional",
+  "description": "Write a clear one-page problem statement or README and give a two-minute spoken answer that passes a phone screen or client call.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Technical English for Engineers (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/109106094",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "NPTEL certificate id, or three written artefacts reviewed by a working professional: a README, a status email and a one-page problem statement"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Technical English (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/109106066",
+    "free": true,
+    "hours": 25,
+    "proof_of_done": "NPTEL certificate id, or a recorded two-minute self-introduction plus a domain answer that a working professional signs off as passable"
+   }
+  ],
+  "paths": [
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "interview_aptitude_and_hr",
+  "name": "Aptitude tests and interviews",
+  "category": "professional",
+  "description": "Score in the top band on a timed aptitude and coding test (TCS NQT pattern) and answer behavioural questions with structured project stories.",
+  "evidence_types": [
+   "score",
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "TCS iON",
+    "title": "TCS National Qualifier Test (NQT) official page: pattern and registration",
+    "url": "https://learning.tcsionhub.in/hub/national-qualifier-test/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "TCS NQT scorecard (or a weekly log of timed mock scores for 8 weeks showing the trend)"
+   },
+   {
+    "platform": "Google",
+    "title": "How to prepare for an interview (Grow with Google)",
+    "url": "https://grow.google/certificates/interview-warmup/",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "A document with five project stories in STAR format and a recorded mock interview reviewed by a peer or mentor"
+   },
+   {
+    "platform": "NPTEL",
+    "title": "Developing Soft Skills and Personality (IIT Kanpur)",
+    "url": "https://nptel.ac.in/courses/109104107",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or an interview log listing every round attempted, what failed and what was fixed"
+   }
+  ],
+  "paths": [
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "domain_bfsi_basics",
+  "name": "Banking, insurance and fintech basics",
+  "category": "domain",
+  "description": "Explain KYC, CASA, NPA, settlement, chargebacks and a claim lifecycle, and find the regulator's rule that applies to a process.",
+  "evidence_types": [
+   "cert",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Financial Institutions and Markets (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/110105121",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or a five-page glossary and process map of one BFSI process (loan origination, motor claim, UPI settlement) with regulator citations"
+   },
+   {
+    "platform": "RBI official",
+    "title": "Reserve Bank of India FAQs (banking, payments, KYC, fintech)",
+    "url": "https://www.rbi.org.in/commonperson/English/Scripts/FAQs.aspx",
+    "free": true,
+    "hours": 8,
+    "proof_of_done": "A written one-page summary of the KYC and digital payments FAQs, with the source links, used as the domain section of your project README"
+   },
+   {
+    "platform": "NISM (SEBI)",
+    "title": "NISM certification examinations (Series V-A mutual funds, VI, VII, VIII)",
+    "url": "https://www.nism.ac.in/certifications/",
+    "free": false,
+    "hours": 25,
+    "proof_of_done": "NISM certificate number for the series your target role names"
+   }
+  ],
+  "paths": [
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "open_source_contribution",
+  "name": "Open-source contribution",
+  "category": "professional",
+  "description": "Get one pull request (bug fix, test or docs) merged into a project you did not create and explain the review discussion.",
+  "evidence_types": [
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GitHub",
+    "title": "Open Source Guides: How to Contribute to Open Source",
+    "url": "https://opensource.guide/how-to-contribute/",
+    "free": true,
+    "hours": 6,
+    "proof_of_done": "URL of one merged pull request to a project with 100+ stars that you do not own"
+   },
+   {
+    "platform": "GitHub (firstcontributions)",
+    "title": "First Contributions: a hands-on first pull request tutorial",
+    "url": "https://github.com/firstcontributions/first-contributions",
+    "free": true,
+    "hours": 1,
+    "proof_of_done": "URL of your merged pull request to the first-contributions repo"
+   },
+   {
+    "platform": "Google",
+    "title": "Google Summer of Code",
+    "url": "https://summerofcode.withgoogle.com/",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "A submitted GSoC proposal (PDF in your repo) plus at least one merged PR to the chosen organisation, whether or not selected"
+   }
+  ],
+  "paths": []
+ },
+ {
+  "id": "deployed_portfolio_project",
+  "name": "Deployed portfolio project",
+  "category": "professional",
+  "description": "Ship one working application to a public URL with a README a recruiter can run, a demo video and a one-page portfolio site linking to it.",
+  "evidence_types": [
+   "deployed_url",
+   "repo",
+   "document"
+  ],
+  "learning": [
+   {
+    "platform": "GitHub Docs",
+    "title": "Quickstart for GitHub Pages",
+    "url": "https://docs.github.com/en/pages/quickstart",
+    "free": true,
+    "hours": 2,
+    "proof_of_done": "A live username.github.io portfolio page listing your projects with links, eval numbers and a demo video"
+   },
+   {
+    "platform": "Render official docs",
+    "title": "Deploy a FastAPI app on Render (free tier)",
+    "url": "https://render.com/docs/deploy-fastapi",
+    "free": true,
+    "hours": 3,
+    "proof_of_done": "A public onrender.com (or Railway or AWS) URL of your own API, linked from the repo README with a 3-minute demo video"
+   },
+   {
+    "platform": "roadmap.sh",
+    "title": "Project ideas (112+ graded projects)",
+    "url": "https://roadmap.sh/projects",
+    "free": true,
+    "hours": 40,
+    "proof_of_done": "Three roadmap.sh project submissions with deployed URLs and repos, marked complete on your roadmap.sh profile"
+   }
+  ],
+  "paths": [
+   "ai_native_software",
+   "it_services",
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "sales_and_customer_conversation",
+  "name": "Sales and customer conversation",
+  "category": "professional",
+  "description": "Run a discovery call, handle three objections, demo a product to a non-technical buyer and log it in a CRM.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "NPTEL",
+    "title": "Sales and Distribution Management (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/110105122",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "NPTEL certificate id, or a written objection-handling document for one real product with ten objections and answers"
+   },
+   {
+    "platform": "HubSpot Academy",
+    "title": "Inbound Sales course (free)",
+    "url": "https://academy.hubspot.com/courses/inbound-sales",
+    "free": true,
+    "hours": 4,
+    "proof_of_done": "HubSpot Academy Inbound Sales certificate URL and a CRM export (or sheet) of ten logged calls with next steps"
+   }
+  ],
+  "paths": [
+   "startups_and_non_engineering"
+  ]
+ },
+ {
+  "id": "operations_and_process_basics",
+  "name": "Operations and process basics",
+  "category": "professional",
+  "description": "Map a process, define an SLA and a fill-rate or TAT metric, write a one-page problem statement with data, and automate one repetitive step.",
+  "evidence_types": [
+   "document",
+   "cert"
+  ],
+  "learning": [
+   {
+    "platform": "Startup India (Government of India)",
+    "title": "Startup India Learning and Development programme (free 4-week course)",
+    "url": "https://www.startupindia.gov.in/content/sih/en/learning-and-development_v2.html",
+    "free": true,
+    "hours": 12,
+    "proof_of_done": "Startup India course certificate id and a one-page unit-economics sheet for a real or planned small business"
+   },
+   {
+    "platform": "MIT OCW",
+    "title": "15.760A Operations Management (Sloan)",
+    "url": "https://ocw.mit.edu/courses/15-760a-operations-management-spring-2002/",
+    "free": true,
+    "hours": 30,
+    "proof_of_done": "A process map plus a written case analysis of one real small business or team process, with a before-and-after metric after one change"
+   }
+  ],
+  "paths": [
+   "startups_and_non_engineering"
+  ]
+ }
+]

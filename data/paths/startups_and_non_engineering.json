@@ -1,162 +1,462 @@
 {
-  "id": "startups_and_non_engineering",
-  "name": "Startups and non-engineering roles",
-  "tagline": "Growing overall, but the entry-level share is falling; non-IT sectors are where freshers get in",
-  "door_state": "growing",
-  "door_size": {
-    "people_per_year": 180000,
-    "stat_ids": ["paths.startups.dpiit_recognised.fy26", "paths.startups.entry_level_share.2026", "paths.non_eng.naukri_sector_growth.fy26", "demand.naukri.jobspeak.fresher_yoy.aug2026", "demand.foundit.entry_level_yoy.aug2026"],
-    "caveat": "Derived: 4.99 lakh direct jobs self-reported by DPIIT-recognised startups in FY26 times the 36 percent entry-level share of startup hiring; self-reported, includes non-engineering roles, and the entry-level share fell from 41 percent. Non-IT fresher hiring outside startups (hospitality +21%, BPO/ITES +18%, oil and gas +15% in FY26 on Naukri) is not in this number. Trackers disagree on the trend: Naukri shows freshers +15% in August 2026, foundit shows entry-level -9%."
+ "id": "startups_and_non_engineering",
+ "name": "Startups and non-engineering roles",
+ "tagline": "Growing overall, but the entry-level share is falling; non-IT sectors are where freshers get in",
+ "door_state": "growing",
+ "door_size": {
+  "people_per_year": 180000,
+  "stat_ids": [
+   "paths.startups.dpiit_recognised.fy26",
+   "paths.startups.entry_level_share.2026",
+   "paths.non_eng.naukri_sector_growth.fy26",
+   "demand.naukri.jobspeak.fresher_yoy.aug2026",
+   "demand.foundit.entry_level_yoy.aug2026"
+  ],
+  "caveat": "Derived: 4.99 lakh direct jobs self-reported by DPIIT-recognised startups in FY26 times the 36 percent entry-level share of startup hiring; self-reported, includes non-engineering roles, and the entry-level share fell from 41 percent. Non-IT fresher hiring outside startups (hospitality +21%, BPO/ITES +18%, oil and gas +15% in FY26 on Naukri) is not in this number. Trackers disagree on the trend: Naukri shows freshers +15% in August 2026, foundit shows entry-level -9%."
+ },
+ "pay_band": {
+  "low_lpa": 3,
+  "high_lpa": 8,
+  "stat_ids": [
+   "paths.non_eng.fresher_ctc_bands.2026",
+   "demand.fresher_ctc.bands.2026"
+  ],
+  "note": "Inside sales 3 to 5 and ops analyst 3.5 to 5.5 are the common bands; product and engineering roles at funded startups pay 8 to 15 and AI/ML roles 18 to 25 for a very small number. Bank PO and BPO associate roles sit at the low end, and some bank trainee programmes charge a fee before paying."
+ },
+ "branches": {
+  "CS": 2,
+  "IT": 2,
+  "ECE": 2,
+  "EE": 2,
+  "MECH": 2,
+  "CIVIL": 1,
+  "CHEM": 1,
+  "OTHER": 2
+ },
+ "tiers_realistic": {
+  "tier1": "Yes; funded startups, fintech product roles and IIM-style programme-manager roles recruit from tier-1 campuses. The trap is chasing a founding role or a high-pay startup offer that disappears in a funding downturn.",
+  "tier2": "Yes. Sales engineering, operations, analytics and fintech ops roles hire on a work sample and a conversation, not a brand. The substitute for brand is an Excel or SQL analysis you can walk through, a communication test you pass, and a domain you can talk about (payments, lending, logistics, hospitality).",
+  "tier3": "Yes, and this is the widest door for tier-3 graduates right now: bank PO programmes, BPO and ITES associate walk-ins, insurance and fintech operations, hospitality trainee programmes. Honest caveat: much of it is contract or rotating-shift work at 3 to 4 LPA with a fee-paying training programme in some banks. Treat the first role as a domain entry, and move within 18 months."
+ },
+ "entry_requirements": [
+  "Excel at a working level (lookups, pivots, basic modelling) and, for analytics and ops roles, SQL; these appear on nearly every ops, analyst and fintech-ops posting",
+  "Spoken and written English at a level that passes a 10-minute phone screen; sales, customer success, BPO and bank roles test this first",
+  "Any-graduate eligibility is common (bank PO, BPO, hospitality, sales), so the engineering degree neither helps nor hurts; what helps is a domain story",
+  "For fintech and broking ops: NISM certification (Series V-A for mutual funds, Series VI, VII or VIII depending on the role) is often mandatory before joining",
+  "For bank programmes: age under 25 to 28, 60 percent in 10th and graduation, and a clean CIBIL record; some charge a training fee (HDFC Future Bankers 2.0 charges a fee before the salary starts) which you must weigh honestly",
+  "For sales engineering at product and industrial companies: ability to demo a product and explain a technical spec to a non-technical buyer; a CRM record of calls or a sales internship is the proof",
+  "For founding or joining an early startup: a registered entity or a live product with users; DPIIT recognition or Udyam MSME registration unlocks the schemes"
+ ],
+ "two_year_plan": [
+  {
+   "block": "H1",
+   "title": "Pick a sector that is actually hiring freshers, and build the two tool skills",
+   "learn": [
+    "Sectors where fresher hiring grew in FY26 on Naukri: hospitality (+21%), BPO and ITES (+18%), oil and gas (+15%), insurance (positive 11 of 12 months); plus banking ops and fintech ops which run standing fresher programmes. Pick one and learn its vocabulary: for banking, KYC, CASA, NPA, cross-sell; for payments, settlement, chargebacks, merchant onboarding; for hospitality, revenue management, occupancy, RevPAR; for logistics, first-mile, SLA, fill rate",
+    "Excel to a working level in four weeks: lookups, pivots, conditional logic, a cash-flow model; then SQL basics (joins, group by, window functions) on a public dataset",
+    "Communication: one mock phone screen a week, recorded, with a friend or an AI interviewer; the goal is a clear two-minute answer to 'tell me about yourself' and a domain question",
+    "Read one fintech or SaaS company's annual report or product documentation end to end; interviews reward this more than a certificate"
+   ],
+   "build": [
+    "A ten-row spreadsheet of target roles: company, role, sector, tool requirement, fresher-eligible yes or no, application link, date seen; refresh weekly from company career pages and walk-in notices",
+    "Version one of the small business or ops analytics project below"
+   ],
+   "evidence": [
+    "An Excel model and a SQL notebook you can screen-share; a recorded mock screen that a working professional says is passable",
+    "At least ten applications a week, tracked; one walk-in attended if BPO or ITES is the sector"
+   ],
+   "target": [
+    "Genpact and WNS walk-ins",
+    "ICICI Bank PO programme",
+    "PhonePe and Groww ops and customer-experience roles",
+    "Razorpay junior associate roles",
+    "Freshworks graduate trainee",
+    "Zoho fresher drives"
+   ]
   },
-  "pay_band": {
-    "low_lpa": 3,
-    "high_lpa": 8,
-    "stat_ids": ["paths.non_eng.fresher_ctc_bands.2026", "demand.fresher_ctc.bands.2026"],
-    "note": "Inside sales 3 to 5 and ops analyst 3.5 to 5.5 are the common bands; product and engineering roles at funded startups pay 8 to 15 and AI/ML roles 18 to 25 for a very small number. Bank PO and BPO associate roles sit at the low end, and some bank trainee programmes charge a fee before paying."
+  {
+   "block": "H2",
+   "title": "First role, or a founding trial with a scheme behind it",
+   "learn": [
+    "If employed: your sector's operating metrics and the tool stack (CRM such as Salesforce or Zoho CRM, ticketing, payment dashboards); learn the process you run well enough to automate part of it",
+    "Sales engineering track: shadow senior sales on ten calls, learn the product's technical spec to demo level, and write the objection-handling document yourself",
+    "Founding track: register the entity, apply for DPIIT Startup India recognition and Udyam MSME registration, and learn what they actually give (tax benefits require an inter-ministerial board approval; MSME opens priority-sector lending and government tender relaxations; state startup policies give small seed grants)",
+    "For fintech and broking ops: complete the NISM certification your employer or target role names"
+   ],
+   "build": [
+    "One automation of a routine task in your role using an agent (report generation, lead qualification, ticket triage), documented with before-and-after time saved",
+    "Founding track: a live product with paying or actively using customers, and a one-page unit economics sheet"
+   ],
+   "evidence": [
+    "An offer letter in the chosen sector, or a founding trial with DPIIT or Udyam registration and first customers",
+    "A documented automation your manager signed off, or a customer log for the founding trial"
+   ],
+   "target": [
+    "Bajaj Finance trainee programmes",
+    "HDFC Bank branch and ops roles",
+    "Insurance operations at large insurers",
+    "Hospitality management trainee programmes",
+    "Startup India and Udyam portals"
+   ]
   },
-  "branches": {"CS": 2, "IT": 2, "ECE": 2, "EE": 2, "MECH": 2, "CIVIL": 1, "CHEM": 1, "OTHER": 2},
-  "tiers_realistic": {
-    "tier1": "Yes; funded startups, fintech product roles and IIM-style programme-manager roles recruit from tier-1 campuses. The trap is chasing a founding role or a high-pay startup offer that disappears in a funding downturn.",
-    "tier2": "Yes. Sales engineering, operations, analytics and fintech ops roles hire on a work sample and a conversation, not a brand. The substitute for brand is an Excel or SQL analysis you can walk through, a communication test you pass, and a domain you can talk about (payments, lending, logistics, hospitality).",
-    "tier3": "Yes, and this is the widest door for tier-3 graduates right now: bank PO programmes, BPO and ITES associate walk-ins, insurance and fintech operations, hospitality trainee programmes. Honest caveat: much of it is contract or rotating-shift work at 3 to 4 LPA with a fee-paying training programme in some banks. Treat the first role as a domain entry, and move within 18 months."
+  {
+   "block": "H3",
+   "title": "Move from process to analysis, or from associate to owner of a number",
+   "learn": [
+    "Analytics: Python (pandas) on top of SQL; one dashboard tool (Power BI, Looker Studio or Metabase); statistics for A/B tests and cohort analysis",
+    "Ops: process mapping, SLA design, vendor management; the ability to write a one-page problem statement with data is what gets you to team lead",
+    "Sales engineering: forecasting, territory planning, and the technical depth to run a proof of concept without engineering support",
+    "Founding: fundraising basics only if the unit economics work; otherwise, how to run a profitable small business, which is what most MSMEs are"
+   ],
+   "build": [
+    "A dashboard or analysis that changed a decision at work, with the decision written down",
+    "Version two of the ops analytics project with the real (anonymised) data from your role, if allowed, or a public dataset from your sector"
+   ],
+   "evidence": [
+    "A promotion, a role change to analyst or team lead, or a documented owned metric (conversion, TAT, retention) with a before-and-after",
+    "Founding track: 12 months of accounts and a decision to continue, pivot or close, taken on numbers"
+   ],
+   "target": [
+    "Product ops and analyst roles at Swiggy, Zomato, PhonePe, Razorpay, Groww",
+    "Bank and NBFC analytics teams",
+    "Insurance and fintech operations leadership tracks"
+   ]
   },
-  "entry_requirements": [
-    "Excel at a working level (lookups, pivots, basic modelling) and, for analytics and ops roles, SQL; these appear on nearly every ops, analyst and fintech-ops posting",
-    "Spoken and written English at a level that passes a 10-minute phone screen; sales, customer success, BPO and bank roles test this first",
-    "Any-graduate eligibility is common (bank PO, BPO, hospitality, sales), so the engineering degree neither helps nor hurts; what helps is a domain story",
-    "For fintech and broking ops: NISM certification (Series V-A for mutual funds, Series VI, VII or VIII depending on the role) is often mandatory before joining",
-    "For bank programmes: age under 25 to 28, 60 percent in 10th and graduation, and a clean CIBIL record; some charge a training fee (HDFC Future Bankers 2.0 charges a fee before the salary starts) which you must weigh honestly",
-    "For sales engineering at product and industrial companies: ability to demo a product and explain a technical spec to a non-technical buyer; a CRM record of calls or a sales internship is the proof",
-    "For founding or joining an early startup: a registered entity or a live product with users; DPIIT recognition or Udyam MSME registration unlocks the schemes"
-  ],
-  "two_year_plan": [
-    {
-      "block": "H1",
-      "title": "Pick a sector that is actually hiring freshers, and build the two tool skills",
-      "learn": [
-        "Sectors where fresher hiring grew in FY26 on Naukri: hospitality (+21%), BPO and ITES (+18%), oil and gas (+15%), insurance (positive 11 of 12 months); plus banking ops and fintech ops which run standing fresher programmes. Pick one and learn its vocabulary: for banking, KYC, CASA, NPA, cross-sell; for payments, settlement, chargebacks, merchant onboarding; for hospitality, revenue management, occupancy, RevPAR; for logistics, first-mile, SLA, fill rate",
-        "Excel to a working level in four weeks: lookups, pivots, conditional logic, a cash-flow model; then SQL basics (joins, group by, window functions) on a public dataset",
-        "Communication: one mock phone screen a week, recorded, with a friend or an AI interviewer; the goal is a clear two-minute answer to 'tell me about yourself' and a domain question",
-        "Read one fintech or SaaS company's annual report or product documentation end to end; interviews reward this more than a certificate"
-      ],
-      "build": [
-        "A ten-row spreadsheet of target roles: company, role, sector, tool requirement, fresher-eligible yes or no, application link, date seen; refresh weekly from company career pages and walk-in notices",
-        "Version one of the small business or ops analytics project below"
-      ],
-      "evidence": [
-        "An Excel model and a SQL notebook you can screen-share; a recorded mock screen that a working professional says is passable",
-        "At least ten applications a week, tracked; one walk-in attended if BPO or ITES is the sector"
-      ],
-      "target": ["Genpact and WNS walk-ins", "ICICI Bank PO programme", "PhonePe and Groww ops and customer-experience roles", "Razorpay junior associate roles", "Freshworks graduate trainee", "Zoho fresher drives"]
-    },
-    {
-      "block": "H2",
-      "title": "First role, or a founding trial with a scheme behind it",
-      "learn": [
-        "If employed: your sector's operating metrics and the tool stack (CRM such as Salesforce or Zoho CRM, ticketing, payment dashboards); learn the process you run well enough to automate part of it",
-        "Sales engineering track: shadow senior sales on ten calls, learn the product's technical spec to demo level, and write the objection-handling document yourself",
-        "Founding track: register the entity, apply for DPIIT Startup India recognition and Udyam MSME registration, and learn what they actually give (tax benefits require an inter-ministerial board approval; MSME opens priority-sector lending and government tender relaxations; state startup policies give small seed grants)",
-        "For fintech and broking ops: complete the NISM certification your employer or target role names"
-      ],
-      "build": [
-        "One automation of a routine task in your role using an agent (report generation, lead qualification, ticket triage), documented with before-and-after time saved",
-        "Founding track: a live product with paying or actively using customers, and a one-page unit economics sheet"
-      ],
-      "evidence": [
-        "An offer letter in the chosen sector, or a founding trial with DPIIT or Udyam registration and first customers",
-        "A documented automation your manager signed off, or a customer log for the founding trial"
-      ],
-      "target": ["Bajaj Finance trainee programmes", "HDFC Bank branch and ops roles", "Insurance operations at large insurers", "Hospitality management trainee programmes", "Startup India and Udyam portals"]
-    },
-    {
-      "block": "H3",
-      "title": "Move from process to analysis, or from associate to owner of a number",
-      "learn": [
-        "Analytics: Python (pandas) on top of SQL; one dashboard tool (Power BI, Looker Studio or Metabase); statistics for A/B tests and cohort analysis",
-        "Ops: process mapping, SLA design, vendor management; the ability to write a one-page problem statement with data is what gets you to team lead",
-        "Sales engineering: forecasting, territory planning, and the technical depth to run a proof of concept without engineering support",
-        "Founding: fundraising basics only if the unit economics work; otherwise, how to run a profitable small business, which is what most MSMEs are"
-      ],
-      "build": [
-        "A dashboard or analysis that changed a decision at work, with the decision written down",
-        "Version two of the ops analytics project with the real (anonymised) data from your role, if allowed, or a public dataset from your sector"
-      ],
-      "evidence": [
-        "A promotion, a role change to analyst or team lead, or a documented owned metric (conversion, TAT, retention) with a before-and-after",
-        "Founding track: 12 months of accounts and a decision to continue, pivot or close, taken on numbers"
-      ],
-      "target": ["Product ops and analyst roles at Swiggy, Zomato, PhonePe, Razorpay, Groww", "Bank and NBFC analytics teams", "Insurance and fintech operations leadership tracks"]
-    },
-    {
-      "block": "H4",
-      "title": "Specialise: product ops, revenue ops, analytics, or a second startup role",
-      "learn": [
-        "Choose one of: product operations, revenue operations, business analytics, sales engineering leadership, or a founding-team role at an early startup with your domain",
-        "Agent tooling for your function: building and supervising the agents that now do the routine parts of ops and sales (lead scoring, ticket triage, reconciliation), because managing those is the job that remains",
-        "If aiming at an MBA later: CAT preparation starts now with two years of work experience, which IIM interviews reward"
-      ],
-      "build": [
-        "A portfolio of three work artefacts: an analysis, a process you redesigned, an automation you own; each with the business result",
-        "A network of ten people in your sector who would take your call, built through real work, not LinkedIn requests"
-      ],
-      "evidence": [
-        "A role with a title that carries a number (analyst II, product ops lead, sales engineer), or a founding-team role with equity, or a CAT registration with a work-experience story",
-        "Pay above the entry band, with the offer letter as the proof"
-      ],
-      "target": ["Funded startups in fintech, logistics, SaaS", "Banks and NBFC analytics and product teams", "CAT and the higher_studies path if the MBA route is chosen"]
-    }
-  ],
-  "evidenced_project_spec": {
-    "title": "Small-business operations analytics: a real shop, clinic or delivery outlet",
-    "scope": "Find one real small business near you (a pharmacy, a two-wheeler service centre, a restaurant with delivery, a coaching centre, a kirana with UPI sales) and, with the owner's permission, build them a working operations dashboard and one decision from it. Collect three months of sales, stock and customer data (from bills, UPI statements, delivery-platform exports, or a simple sheet you set up), clean it, and answer three questions the owner cares about: which items or services make the money, where cash is stuck (stock or receivables), and what one change would raise weekly profit. Deliver a dashboard the owner can refresh, a two-page plan, and a follow-up measurement four weeks later. Eight to ten weekends.",
-    "domain": "Small-business and MSME operations: retail, food delivery, services; the same skills transfer to bank ops, fintech ops, insurance and hospitality analytics",
-    "agent_use": "A coding agent builds the data-cleaning script, the SQL or pandas analysis and the dashboard (Google Sheets, Looker Studio, or Metabase). A research agent finds the sector benchmarks (typical margins, stock turns, delivery commission rates) that you compare against, and drafts the owner's plan in plain language. You do the parts agents cannot: sitting with the owner, understanding what the numbers mean in that shop, choosing the one change, and checking every figure against the actual bills. Keep the agent prompts and outputs in the repository so an interviewer can see what was yours.",
-    "done_looks_like": "A refreshed dashboard in use by the owner; a two-page plan with one implemented change; a four-week before-and-after measurement with the profit or cash impact stated honestly, even if it is small or negative; and a 10-slide case you can present in an interview for ops, analyst, sales engineering or fintech ops roles.",
-    "verification": "The owner confirms the numbers and the change in a short signed note or a recorded call. Every figure reconciles to source bills or statements. A working analyst or a faculty member reviews the method. The interview test: a 30-minute walk-through in which you can answer 'how do you know that' for every chart and 'what would you do differently' for the change."
+  {
+   "block": "H4",
+   "title": "Specialise: product ops, revenue ops, analytics, or a second startup role",
+   "learn": [
+    "Choose one of: product operations, revenue operations, business analytics, sales engineering leadership, or a founding-team role at an early startup with your domain",
+    "Agent tooling for your function: building and supervising the agents that now do the routine parts of ops and sales (lead scoring, ticket triage, reconciliation), because managing those is the job that remains",
+    "If aiming at an MBA later: CAT preparation starts now with two years of work experience, which IIM interviews reward"
+   ],
+   "build": [
+    "A portfolio of three work artefacts: an analysis, a process you redesigned, an automation you own; each with the business result",
+    "A network of ten people in your sector who would take your call, built through real work, not LinkedIn requests"
+   ],
+   "evidence": [
+    "A role with a title that carries a number (analyst II, product ops lead, sales engineer), or a founding-team role with equity, or a CAT registration with a work-experience story",
+    "Pay above the entry band, with the offer letter as the proof"
+   ],
+   "target": [
+    "Funded startups in fintech, logistics, SaaS",
+    "Banks and NBFC analytics and product teams",
+    "CAT and the higher_studies path if the MBA route is chosen"
+   ]
+  }
+ ],
+ "evidenced_project_spec": {
+  "title": "Small-business operations analytics: a real shop, clinic or delivery outlet",
+  "scope": "Find one real small business near you (a pharmacy, a two-wheeler service centre, a restaurant with delivery, a coaching centre, a kirana with UPI sales) and, with the owner's permission, build them a working operations dashboard and one decision from it. Collect three months of sales, stock and customer data (from bills, UPI statements, delivery-platform exports, or a simple sheet you set up), clean it, and answer three questions the owner cares about: which items or services make the money, where cash is stuck (stock or receivables), and what one change would raise weekly profit. Deliver a dashboard the owner can refresh, a two-page plan, and a follow-up measurement four weeks later. Eight to ten weekends.",
+  "domain": "Small-business and MSME operations: retail, food delivery, services; the same skills transfer to bank ops, fintech ops, insurance and hospitality analytics",
+  "agent_use": "A coding agent builds the data-cleaning script, the SQL or pandas analysis and the dashboard (Google Sheets, Looker Studio, or Metabase). A research agent finds the sector benchmarks (typical margins, stock turns, delivery commission rates) that you compare against, and drafts the owner's plan in plain language. You do the parts agents cannot: sitting with the owner, understanding what the numbers mean in that shop, choosing the one change, and checking every figure against the actual bills. Keep the agent prompts and outputs in the repository so an interviewer can see what was yours.",
+  "done_looks_like": "A refreshed dashboard in use by the owner; a two-page plan with one implemented change; a four-week before-and-after measurement with the profit or cash impact stated honestly, even if it is small or negative; and a 10-slide case you can present in an interview for ops, analyst, sales engineering or fintech ops roles.",
+  "verification": "The owner confirms the numbers and the change in a short signed note or a recorded call. Every figure reconciles to source bills or statements. A working analyst or a faculty member reviews the method. The interview test: a 30-minute walk-through in which you can answer 'how do you know that' for every chart and 'what would you do differently' for the change."
+ },
+ "ai_task_shift": [
+  {
+   "task_2019": "Inside sales: dialling cold lists and qualifying leads by hand",
+   "now": "Agents score and qualify inbound leads, draft outreach and update the CRM; the human call is reserved for qualified prospects",
+   "human_owns": "The conversation that closes, objection handling, and reading a customer's real constraint; sales engineers who can demo and negotiate are more valuable, list-callers less"
   },
-  "ai_task_shift": [
-    {"task_2019": "Inside sales: dialling cold lists and qualifying leads by hand", "now": "Agents score and qualify inbound leads, draft outreach and update the CRM; the human call is reserved for qualified prospects", "human_owns": "The conversation that closes, objection handling, and reading a customer's real constraint; sales engineers who can demo and negotiate are more valuable, list-callers less"},
-    {"task_2019": "Operations associate: reconciling transactions, updating trackers, chasing status by email", "now": "Reconciliation, status chasing and routine reporting are agent workflows in fintech and bank ops", "human_owns": "Exceptions, disputes, vendor and customer escalations, and designing the process the agents run; ops roles are fewer but own more"},
-    {"task_2019": "Business analyst: writing SQL, building weekly dashboards, formatting decks", "now": "Agents write the SQL and build the dashboard from a question", "human_owns": "Asking the right question, sanity-checking the answer against the business, and persuading a manager to act; this is why domain knowledge now outranks tool skill"},
-    {"task_2019": "Customer support and BPO voice and chat work", "now": "Chatbots and agent-assist handle the first tier; walk-in drives now ask for judgement roles such as risk investigation and complex-query handling", "human_owns": "Complex, emotional or high-value cases, fraud and risk judgement, and the languages and contexts models handle poorly"},
-    {"task_2019": "Founder's first hires: a developer to build the MVP and an ops person to run spreadsheets", "now": "A founder with agents ships an MVP and runs ops alone for the first year", "human_owns": "Finding customers, selling, and deciding what to build; a founding team is now sales and domain first, code second"},
-    {"task_2019": "Hospitality and insurance back-office: manual booking, claims data entry, document checks", "now": "OCR and agents do the data entry and first-level document checks", "human_owns": "Guest and claimant interaction, judgement calls on exceptions, and revenue and yield decisions; these sectors are still adding freshers for the front-line roles"}
-  ],
-  "fallback_path_id": "it_services",
-  "employers": [
-    {"name": "Zoho Corporation", "type": "company", "location": "Chennai (also Tenkasi, and other Tamil Nadu and Andhra centres)", "roles": "Off-campus drives for technical support engineers, application security and software roles; B.E./B.Tech, 0 to 2 years for the security role; Zoho also hires non-engineering graduates for sales and support", "fresher": true, "source_url": "https://www.freshersvoice.com/zoho-corp-off-campus-drive", "seen_on": "2026-04"},
-    {"name": "Freshworks", "type": "company", "location": "Chennai", "roles": "Graduate Trainee, customer support: 2024 to 2026 batches, 0 to 6 months' experience, rotating shifts; a communication-first role that leads to customer success and solutions engineering", "fresher": true, "source_url": "https://www.freshersnow.com/freshworks-recruitment/", "seen_on": "2026-09"},
-    {"name": "Razorpay", "type": "company", "location": "Bengaluru (some roles in Mumbai and Gandhinagar)", "roles": "Junior Associate roles in enterprise partnerships and SME sales for 0 to 1 year candidates, plus finance executive and analyst roles; live job board", "fresher": true, "source_url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4498055005", "seen_on": "2026-09"},
-    {"name": "PhonePe", "type": "company", "location": "Bengaluru", "roles": "Customer Experience Specialist for mutual funds and operations associate (video KYC) roles; any graduate, 2026 batch eligible, NISM certification mandatory for the mutual-fund role; posted 19 August 2026", "fresher": true, "source_url": "https://job4freshers.co.in/phonepe-customer-experience-specialist/", "seen_on": "2026-08"},
-    {"name": "Groww", "type": "company", "location": "Bengaluru and remote across India", "roles": "Research Associate (social media and finance content), 0 to 3 years, any graduate with finance interest; Groww also runs operations and customer-support fresher intakes", "fresher": true, "source_url": "https://www.freshersnow.com/groww-off-campus/", "seen_on": "2026-09"},
-    {"name": "ICICI Bank Probationary Officer Programme", "type": "scheme", "location": "Across India; must be locationally mobile", "roles": "PO programme for relationship-manager roles: graduates and engineers with 60 percent in 10th and graduation, under 25, 0 to 2 years; training stipend then a branch posting; posted 16 August 2026", "fresher": true, "source_url": "https://www.freshersvoice.com/icici-bank-recruitment", "seen_on": "2026-08"},
-    {"name": "HDFC Bank Future Bankers Programme 2.0 (with Manipal Academy of BFSI)", "type": "scheme", "location": "Training in Bengaluru; posting to any HDFC Bank branch in India", "roles": "12-month fee-paying programme (classroom, internship with stipend, on-the-job training) leading to Deputy Manager, Personal Banker; any graduate, 21 to 28; weigh the programme fee against the offered CTC before joining; posted 18 March 2026", "fresher": true, "source_url": "https://www.freshersvoice.com/hdfc-bank-recruitment", "seen_on": "2026-03"},
-    {"name": "Bajaj Finance (Bajaj Finserv group)", "type": "company", "location": "Pune and Bengaluru (hybrid); branches across India for sales and ops", "roles": "Trainee (Tech) for 2023 to 2026 batch B.E./B.Tech, MCA and B.Sc graduates, 0 to 1 year; campus programmes EON and BYTE for management and technology campuses; sales, ops and analytics trainee tracks; posted 26 June 2026, updated 9 August 2026", "fresher": true, "source_url": "https://cloudsoftsol.com/blog/bajaj-finserv-trainee-tech-fresher-pune-2026/", "seen_on": "2026-08"},
-    {"name": "Genpact", "type": "company", "location": "Kolkata (this drive); Noida, Hyderabad, Bengaluru, Jaipur, Gurugram for others", "roles": "Walk-in for Transaction Risk Investigator (non-voice), any degree except law, freshers only, 3 to 6 month contract to start; walk-in 11 September 2026; regular process-associate drives in other cities", "fresher": true, "source_url": "https://www.freshersvoice.com/genpact-walk-in-drive", "seen_on": "2026-09"},
-    {"name": "WNS (part of Capgemini)", "type": "company", "location": "Nashik (this drive); Pune, Mumbai, Chennai, Bengaluru, Gurugram, Visakhapatnam for others", "roles": "Associate, Operations: bachelor's degree, 0 to 2 years, typing 25 wpm, round-the-clock operations; walk-in 18 September to 30 October 2026; posted 19 September 2026", "fresher": true, "source_url": "https://www.freshersvoice.com/wns-walk-in-drive", "seen_on": "2026-09"}
-  ],
-  "fit_rules": [
-    {"field": "interests", "value": "people_business", "score": 3, "reason": "Sales, operations, customer roles and founding are built around people and business, not code or circuits."},
-    {"field": "priority", "value": "income_now", "score": 2, "reason": "Bank PO programmes, BPO walk-ins, fintech ops and sales roles hire in weeks, not exam cycles; the pay is modest but immediate."},
-    {"field": "enjoyed", "value": "organising_people", "score": 3, "reason": "Running events and clubs is the closest college experience to operations, sales and founding work."},
-    {"field": "interests", "value": "data_numbers", "score": 2, "reason": "Ops analytics, fintech ops and business analyst roles are where Excel and SQL skills get freshers hired now."},
-    {"field": "runway_months", "value": "0_3", "score": 1, "reason": "This path has the fastest time to first salary of all nine; walk-ins and PO programmes start within a month or two."},
-    {"field": "priority", "value": "high_pay_growth", "score": 1, "reason": "Founding and funded-startup roles have the highest upside, though most roles here start at 3 to 5 LPA."},
-    {"field": "priority", "value": "stability", "score": -2, "reason": "Startups fail, contracts end, and BPO and sales roles have high churn; this is not a stable path."},
-    {"field": "priority", "value": "abroad", "score": -1, "reason": "These are Indian domestic roles; abroad comes later, if at all, through an MBA or a global company."},
-    {"field": "interests", "value": "research_theory", "score": -2, "reason": "Very little of this path is deep study; it rewards action and conversation."},
-    {"field": "interests", "value": "hardware_electronics", "score": -1, "reason": "Non-engineering roles do not use electronics skills; sales engineering at an electronics firm is the one exception."},
-    {"field": "enjoyed", "value": "exams_theory", "score": -1, "reason": "Entry here is by interview, work sample and phone screen, not by exam; exam strength does not transfer."},
-    {"field": "college_tier", "value": "3", "score": 1, "reason": "This is the widest door for tier-3 graduates: any-graduate eligibility, walk-ins, and programmes that hire on communication and a work sample."},
-    {"field": "relocation", "value": "anywhere_india", "score": 1, "reason": "Fintech and startup ops are concentrated in Bengaluru, Chennai, Pune, Mumbai and NCR; bank and BPO roles are everywhere."},
-    {"field": "relocation", "value": "hometown_only", "score": 0, "reason": "Bank branches, insurance, BPO centres in tier-2 cities and founding a local business all work near home; startup product roles do not."},
-    {"field": "preparation", "value": "internship_done", "score": 2, "reason": "An internship is the strongest signal for ops, sales and analyst roles, which hire on demonstrated work."},
-    {"field": "preparation", "value": "none", "score": 0, "reason": "You can start here with four weeks of Excel and communication practice; no long preparation is required, but the pay reflects that."},
-    {"field": "graduation_year", "value": "graduated", "score": 1, "reason": "Walk-ins, PO programmes and off-campus drives are open now and favour candidates who can join immediately."},
-    {"field": "branch", "value": "OTHER", "score": 1, "reason": "Any-graduate roles do not care about branch; a non-core branch loses nothing here."}
-  ],
-  "base_score": 6,
-  "stat_ids_used": ["paths.startups.dpiit_recognised.fy26", "paths.startups.entry_level_share.2026", "paths.non_eng.naukri_sector_growth.fy26", "demand.naukri.jobspeak.fresher_yoy.aug2026", "demand.foundit.entry_level_yoy.aug2026", "paths.non_eng.fresher_ctc_bands.2026", "demand.fresher_ctc.bands.2026"],
-  "last_reviewed": "2026-09-21",
-  "changed_fields": ["all"]
+  {
+   "task_2019": "Operations associate: reconciling transactions, updating trackers, chasing status by email",
+   "now": "Reconciliation, status chasing and routine reporting are agent workflows in fintech and bank ops",
+   "human_owns": "Exceptions, disputes, vendor and customer escalations, and designing the process the agents run; ops roles are fewer but own more"
+  },
+  {
+   "task_2019": "Business analyst: writing SQL, building weekly dashboards, formatting decks",
+   "now": "Agents write the SQL and build the dashboard from a question",
+   "human_owns": "Asking the right question, sanity-checking the answer against the business, and persuading a manager to act; this is why domain knowledge now outranks tool skill"
+  },
+  {
+   "task_2019": "Customer support and BPO voice and chat work",
+   "now": "Chatbots and agent-assist handle the first tier; walk-in drives now ask for judgement roles such as risk investigation and complex-query handling",
+   "human_owns": "Complex, emotional or high-value cases, fraud and risk judgement, and the languages and contexts models handle poorly"
+  },
+  {
+   "task_2019": "Founder's first hires: a developer to build the MVP and an ops person to run spreadsheets",
+   "now": "A founder with agents ships an MVP and runs ops alone for the first year",
+   "human_owns": "Finding customers, selling, and deciding what to build; a founding team is now sales and domain first, code second"
+  },
+  {
+   "task_2019": "Hospitality and insurance back-office: manual booking, claims data entry, document checks",
+   "now": "OCR and agents do the data entry and first-level document checks",
+   "human_owns": "Guest and claimant interaction, judgement calls on exceptions, and revenue and yield decisions; these sectors are still adding freshers for the front-line roles"
+  }
+ ],
+ "fallback_path_id": "it_services",
+ "employers": [
+  {
+   "name": "Zoho Corporation",
+   "type": "company",
+   "location": "Chennai (also Tenkasi, and other Tamil Nadu and Andhra centres)",
+   "roles": "Off-campus drives for technical support engineers, application security and software roles; B.E./B.Tech, 0 to 2 years for the security role; Zoho also hires non-engineering graduates for sales and support",
+   "fresher": true,
+   "source_url": "https://www.freshersvoice.com/zoho-corp-off-campus-drive",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "Freshworks",
+   "type": "company",
+   "location": "Chennai",
+   "roles": "Graduate Trainee, customer support: 2024 to 2026 batches, 0 to 6 months' experience, rotating shifts; a communication-first role that leads to customer success and solutions engineering",
+   "fresher": true,
+   "source_url": "https://www.freshersnow.com/freshworks-recruitment/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Razorpay",
+   "type": "company",
+   "location": "Bengaluru (some roles in Mumbai and Gandhinagar)",
+   "roles": "Junior Associate roles in enterprise partnerships and SME sales for 0 to 1 year candidates, plus finance executive and analyst roles; live job board",
+   "fresher": true,
+   "source_url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4498055005",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "PhonePe",
+   "type": "company",
+   "location": "Bengaluru",
+   "roles": "Customer Experience Specialist for mutual funds and operations associate (video KYC) roles; any graduate, 2026 batch eligible, NISM certification mandatory for the mutual-fund role; posted 19 August 2026",
+   "fresher": true,
+   "source_url": "https://job4freshers.co.in/phonepe-customer-experience-specialist/",
+   "seen_on": "2026-08"
+  },
+  {
+   "name": "Groww",
+   "type": "company",
+   "location": "Bengaluru and remote across India",
+   "roles": "Research Associate (social media and finance content), 0 to 3 years, any graduate with finance interest; Groww also runs operations and customer-support fresher intakes",
+   "fresher": true,
+   "source_url": "https://www.freshersnow.com/groww-off-campus/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "ICICI Bank Probationary Officer Programme",
+   "type": "scheme",
+   "location": "Across India; must be locationally mobile",
+   "roles": "PO programme for relationship-manager roles: graduates and engineers with 60 percent in 10th and graduation, under 25, 0 to 2 years; training stipend then a branch posting; posted 16 August 2026",
+   "fresher": true,
+   "source_url": "https://www.freshersvoice.com/icici-bank-recruitment",
+   "seen_on": "2026-08"
+  },
+  {
+   "name": "HDFC Bank Future Bankers Programme 2.0 (with Manipal Academy of BFSI)",
+   "type": "scheme",
+   "location": "Training in Bengaluru; posting to any HDFC Bank branch in India",
+   "roles": "12-month fee-paying programme (classroom, internship with stipend, on-the-job training) leading to Deputy Manager, Personal Banker; any graduate, 21 to 28; weigh the programme fee against the offered CTC before joining; posted 18 March 2026",
+   "fresher": true,
+   "source_url": "https://www.freshersvoice.com/hdfc-bank-recruitment",
+   "seen_on": "2026-03"
+  },
+  {
+   "name": "Bajaj Finance (Bajaj Finserv group)",
+   "type": "company",
+   "location": "Pune and Bengaluru (hybrid); branches across India for sales and ops",
+   "roles": "Trainee (Tech) for 2023 to 2026 batch B.E./B.Tech, MCA and B.Sc graduates, 0 to 1 year; campus programmes EON and BYTE for management and technology campuses; sales, ops and analytics trainee tracks; posted 26 June 2026, updated 9 August 2026",
+   "fresher": true,
+   "source_url": "https://cloudsoftsol.com/blog/bajaj-finserv-trainee-tech-fresher-pune-2026/",
+   "seen_on": "2026-08"
+  },
+  {
+   "name": "Genpact",
+   "type": "company",
+   "location": "Kolkata (this drive); Noida, Hyderabad, Bengaluru, Jaipur, Gurugram for others",
+   "roles": "Walk-in for Transaction Risk Investigator (non-voice), any degree except law, freshers only, 3 to 6 month contract to start; walk-in 11 September 2026; regular process-associate drives in other cities",
+   "fresher": true,
+   "source_url": "https://www.freshersvoice.com/genpact-walk-in-drive",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "WNS (part of Capgemini)",
+   "type": "company",
+   "location": "Nashik (this drive); Pune, Mumbai, Chennai, Bengaluru, Gurugram, Visakhapatnam for others",
+   "roles": "Associate, Operations: bachelor's degree, 0 to 2 years, typing 25 wpm, round-the-clock operations; walk-in 18 September to 30 October 2026; posted 19 September 2026",
+   "fresher": true,
+   "source_url": "https://www.freshersvoice.com/wns-walk-in-drive",
+   "seen_on": "2026-09"
+  }
+ ],
+ "fit_rules": [
+  {
+   "field": "interests",
+   "value": "people_business",
+   "score": 3,
+   "reason": "Sales, operations, customer roles and founding are built around people and business, not code or circuits."
+  },
+  {
+   "field": "priority",
+   "value": "income_now",
+   "score": 2,
+   "reason": "Bank PO programmes, BPO walk-ins, fintech ops and sales roles hire in weeks, not exam cycles; the pay is modest but immediate."
+  },
+  {
+   "field": "enjoyed",
+   "value": "organising_people",
+   "score": 3,
+   "reason": "Running events and clubs is the closest college experience to operations, sales and founding work."
+  },
+  {
+   "field": "interests",
+   "value": "data_numbers",
+   "score": 2,
+   "reason": "Ops analytics, fintech ops and business analyst roles are where Excel and SQL skills get freshers hired now."
+  },
+  {
+   "field": "runway_months",
+   "value": "0_3",
+   "score": 1,
+   "reason": "This path has the fastest time to first salary of all nine; walk-ins and PO programmes start within a month or two."
+  },
+  {
+   "field": "priority",
+   "value": "high_pay_growth",
+   "score": 1,
+   "reason": "Founding and funded-startup roles have the highest upside, though most roles here start at 3 to 5 LPA."
+  },
+  {
+   "field": "priority",
+   "value": "stability",
+   "score": -2,
+   "reason": "Startups fail, contracts end, and BPO and sales roles have high churn; this is not a stable path."
+  },
+  {
+   "field": "priority",
+   "value": "abroad",
+   "score": -1,
+   "reason": "These are Indian domestic roles; abroad comes later, if at all, through an MBA or a global company."
+  },
+  {
+   "field": "interests",
+   "value": "research_theory",
+   "score": -2,
+   "reason": "Very little of this path is deep study; it rewards action and conversation."
+  },
+  {
+   "field": "interests",
+   "value": "hardware_electronics",
+   "score": -1,
+   "reason": "Non-engineering roles do not use electronics skills; sales engineering at an electronics firm is the one exception."
+  },
+  {
+   "field": "enjoyed",
+   "value": "exams_theory",
+   "score": -1,
+   "reason": "Entry here is by interview, work sample and phone screen, not by exam; exam strength does not transfer."
+  },
+  {
+   "field": "college_tier",
+   "value": "3",
+   "score": 1,
+   "reason": "This is the widest door for tier-3 graduates: any-graduate eligibility, walk-ins, and programmes that hire on communication and a work sample."
+  },
+  {
+   "field": "relocation",
+   "value": "anywhere_india",
+   "score": 1,
+   "reason": "Fintech and startup ops are concentrated in Bengaluru, Chennai, Pune, Mumbai and NCR; bank and BPO roles are everywhere."
+  },
+  {
+   "field": "relocation",
+   "value": "hometown_only",
+   "score": 0,
+   "reason": "Bank branches, insurance, BPO centres in tier-2 cities and founding a local business all work near home; startup product roles do not."
+  },
+  {
+   "field": "preparation",
+   "value": "internship_done",
+   "score": 2,
+   "reason": "An internship is the strongest signal for ops, sales and analyst roles, which hire on demonstrated work."
+  },
+  {
+   "field": "preparation",
+   "value": "none",
+   "score": 0,
+   "reason": "You can start here with four weeks of Excel and communication practice; no long preparation is required, but the pay reflects that."
+  },
+  {
+   "field": "graduation_year",
+   "value": "graduated",
+   "score": 1,
+   "reason": "Walk-ins, PO programmes and off-campus drives are open now and favour candidates who can join immediately."
+  },
+  {
+   "field": "branch",
+   "value": "OTHER",
+   "score": 1,
+   "reason": "Any-graduate roles do not care about branch; a non-core branch loses nothing here."
+  }
+ ],
+ "base_score": 6,
+ "stat_ids_used": [
+  "paths.startups.dpiit_recognised.fy26",
+  "paths.startups.entry_level_share.2026",
+  "paths.non_eng.naukri_sector_growth.fy26",
+  "demand.naukri.jobspeak.fresher_yoy.aug2026",
+  "demand.foundit.entry_level_yoy.aug2026",
+  "paths.non_eng.fresher_ctc_bands.2026",
+  "demand.fresher_ctc.bands.2026"
+ ],
+ "last_reviewed": "2026-09-21",
+ "changed_fields": [
+  "all"
+ ],
+ "skills": [
+  {
+   "id": "excel_and_business_analysis",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 3
+  },
+  {
+   "id": "sales_and_customer_conversation",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "operations_and_process_basics",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "interview_aptitude_and_hr",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "sql",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "dashboards_and_bi_tools",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "domain_bfsi_basics",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "pandas_and_data_analysis",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "llm_apis_and_agents",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "deployed_portfolio_project",
+   "level": "preferred",
+   "weight": 1
+  }
+ ]
 }

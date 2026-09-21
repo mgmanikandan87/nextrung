@@ -1,0 +1,630 @@
+[
+ {
+  "id": "internshala:1788767117",
+  "path_id": "infrastructure_energy",
+  "title": "Junior Civil Engineer (Fresher)",
+  "company": "Onycon Infrastructure",
+  "location": "Mumbai, Maharashtra",
+  "posted_on": "2026-09-14",
+  "url": "https://internshala.com/job/detail/fresher-junior-civil-engineer-job-in-mumbai-at-onycon-infrastructure1788767117",
+  "fresher": true,
+  "experience_text": "No experience required (freshers; 1-2 months construction background also considered)",
+  "salary_text": "₹2,16,000 - 2,22,000 per year",
+  "requirements": [
+   {
+    "text": "BTech/BE in Civil Engineering",
+    "skill_id": null
+   },
+   {
+    "text": "AutoCAD",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Proficiency in MS Office and relevant QS software",
+    "skill_id": "excel_and_business_analysis"
+   },
+   {
+    "text": "Understanding technical drawings and BOQ; assisting with work schedules and milestone tracking",
+    "skill_id": "primavera_or_ms_project"
+   },
+   {
+    "text": "Monitor actual work progress against the plan and compile site team data",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Measure completed work, prepare measurement documentation and calculate RA bill quantities",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Verify subcontractor work completion against submitted bills",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Track major materials such as steel, cement, concrete and aggregates (material reconciliation)",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Mumbai residency required",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789885908",
+  "path_id": "infrastructure_energy",
+  "title": "Design Coordination Engineer",
+  "company": "MARVIS INFRATECH PRIVATE LIMITED",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": "2026-09-21",
+  "url": "https://internshala.com/job/detail/fresher-design-coordination-engineer-job-in-chennai-at-marvis-infratech-private-limited1789885908",
+  "fresher": true,
+  "experience_text": "No experience required (fresher; 1-3 years in PEB/civil industrial work also accepted)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E./M.E. in Civil Engineering from an accredited institution",
+    "skill_id": null
+   },
+   {
+    "text": "Proficiency in Computer-Aided Design (CAD) tools for preparing, modifying and reviewing technical drawings",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Proficiency with MS Office applications",
+    "skill_id": "excel_and_business_analysis"
+   },
+   {
+    "text": "Knowledge of infrastructure, industrial or construction project standards and codes",
+    "skill_id": "staad_pro_structural_analysis"
+   },
+   {
+    "text": "Cost estimation, quantity surveying and tender/BOQ submissions",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Coordinate design activities between PEB and civil domains; resolve design conflicts",
+    "skill_id": "project_management_basics"
+   },
+   {
+    "text": "Strong coordination, documentation and communication abilities",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Occasional site visits and support to site teams with technical information",
+    "skill_id": "site_engineering_and_safety"
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1788445169",
+  "path_id": "infrastructure_energy",
+  "title": "Civil Engineer (Fresher)",
+  "company": "ATHIRA PROJECTS",
+  "location": "Chennai / Madurai, Tamil Nadu",
+  "posted_on": "2026-09-10",
+  "url": "https://internshala.com/job/detail/fresher-civil-engineer-job-in-multiple-locations-at-athira-projects1788445169",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "₹2,45,000 - 3,75,000 per year",
+  "requirements": [
+   {
+    "text": "Civil, Mechanical or Electrical Engineering degree",
+    "skill_id": null
+   },
+   {
+    "text": "Monitoring and reporting of progress in site",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Measurements taking",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Coordinating with multiple agencies",
+    "skill_id": "project_management_basics"
+   },
+   {
+    "text": "Report writing",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Analytical thinking, critical thinking and mathematics",
+    "skill_id": "gate_preparation_general_aptitude"
+   },
+   {
+    "text": "Willingness to travel to multiple cities",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1788411460",
+  "path_id": "infrastructure_energy",
+  "title": "Junior Quantity Surveyor (Fresher)",
+  "company": "Walls Asia Architects & Engineers",
+  "location": "Hyderabad, Telangana",
+  "posted_on": "2026-09-10",
+  "url": "https://internshala.com/job/detail/fresher-junior-quantity-surveyor-job-in-hyderabad-at-walls-asia-architects-engineers1788411460",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "₹2,00,000 - 2,10,000 per year",
+  "requirements": [
+   {
+    "text": "Quantity Survey (QS): price and forecast material costs for construction projects",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "AutoCAD",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "MS-Excel",
+    "skill_id": "excel_and_business_analysis"
+   },
+   {
+    "text": "Construction Management: track budget vs actual spend and keep projects on schedule",
+    "skill_id": "project_management_basics"
+   },
+   {
+    "text": "Prepare and analyse costing for tenders",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Identify, analyse and develop responses to commercial risks",
+    "skill_id": null
+   },
+   {
+    "text": "Fluent in English; write detailed progress reports",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Ability to learn sophisticated design and costing software packages",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1788175069",
+  "path_id": "infrastructure_energy",
+  "title": "Construction Site Supervisor (Fresher)",
+  "company": "Spacesmiths",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-09-18",
+  "url": "https://internshala.com/job/detail/fresher-construction-site-supervisor-job-in-bangalore-at-spacesmiths1788175069",
+  "fresher": true,
+  "experience_text": "No experience required (up to 1 year construction experience acceptable)",
+  "salary_text": "₹2,00,000 - 3,00,000 per year",
+  "requirements": [
+   {
+    "text": "Civil Engineering degree or diploma",
+    "skill_id": null
+   },
+   {
+    "text": "Construction Management and civil construction knowledge",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Drawing interpretation ability; verify execution against approved plans",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Monitor RCC, masonry, plastering and waterproofing work; quality assessment",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Mason and labour supervision; contractor coordination",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Safety protocol enforcement at site",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Measurement verification assistance and material management",
+    "skill_id": "quantity_surveying_and_estimation"
+   },
+   {
+    "text": "Communication and coordination; report progress to senior engineers",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1788511662",
+  "path_id": "infrastructure_energy",
+  "title": "Trainee Engineer (Fresher) - Steel Structural Design",
+  "company": "Drivensteel Engineering Private Limited",
+  "location": "Nashik / Dhule / Chandwad / Sambhajinagar / Ahilyanagar, Maharashtra",
+  "posted_on": "2026-09-14",
+  "url": "https://internshala.com/job/detail/fresher-trainee-engineer-job-in-multiple-locations-at-drivensteel-engineering-private-limited1788511662",
+  "fresher": true,
+  "experience_text": "No experience required (2024, 2025, 2026 batches)",
+  "salary_text": "₹2,00,000 - 2,30,000 per year",
+  "requirements": [
+   {
+    "text": "BTech/BE/Diploma in Civil Engineering (Mechanical, Electrical, ECE, Computer also welcome)",
+    "skill_id": null
+   },
+   {
+    "text": "Basic structural engineering knowledge; work on structural calculations and detailing",
+    "skill_id": "staad_pro_structural_analysis"
+   },
+   {
+    "text": "Interest in steel structural design; assist in steel structural design for US projects",
+    "skill_id": "staad_pro_structural_analysis"
+   },
+   {
+    "text": "Learn and apply US design codes",
+    "skill_id": null
+   },
+   {
+    "text": "Coordinate with design and drafting teams",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Prepare technical documentation",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Collaboration and teamwork",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789115887",
+  "path_id": "infrastructure_energy",
+  "title": "Junior Electrical Engineer (Fresher)",
+  "company": "Metagro Private Limited",
+  "location": "Hyderabad, Telangana",
+  "posted_on": "2026-09-14",
+  "url": "https://internshala.com/job/detail/fresher-junior-electrical-engineer-job-in-hyderabad-at-metagro-private-limited1789115887",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "₹2,50,000 - 3,20,000 per year (probation ₹10,000 - 12,000 per month)",
+  "requirements": [
+   {
+    "text": "Circuit Design: assist in the design and development of electrical circuits",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Electrical Machines: analyse and simulate electrical machines for enhanced reliability",
+    "skill_id": "etap_or_power_systems_analysis"
+   },
+   {
+    "text": "Conduct testing and circuit troubleshooting",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Optimise electrical systems with senior engineers",
+    "skill_id": "power_electronics_basics"
+   },
+   {
+    "text": "Follow company standards and safety procedures",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Only candidates from Hyderabad are eligible",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789000369",
+  "path_id": "infrastructure_energy",
+  "title": "Project and Facilities Engineer (Fresher)",
+  "company": "Tata Electronics",
+  "location": "Kolar, Karnataka",
+  "posted_on": "2026-09-14",
+  "url": "https://internshala.com/job/detail/fresher-project-and-facilities-engineer-job-in-kolar-at-tata-electronics1789000369",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "BE - Electrical/Mechanical",
+    "skill_id": null
+   },
+   {
+    "text": "Monitor 11KV HT substation power parameters; load balancing in electrical systems, UPS, transformers and BBT",
+    "skill_id": "power_grid_and_transmission_basics"
+   },
+   {
+    "text": "Monitoring of HV/MV/LV electrical systems, building lighting, DG sets, UPS and chillers",
+    "skill_id": "etap_or_power_systems_analysis"
+   },
+   {
+    "text": "Prepare 52-week preventive maintenance schedules and plant shutdown maintenance schedules",
+    "skill_id": "primavera_or_ms_project"
+   },
+   {
+    "text": "Support internal audits including 5S and ISO audits",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Identify site energy-saving equipment opportunities",
+    "skill_id": "renewable_energy_fundamentals"
+   },
+   {
+    "text": "Handle emergency breakdowns and maintenance activities; electrical panel thermography",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Maintain activity logbooks, history cards, asset tracking and checklists",
+    "skill_id": "excel_and_business_analysis"
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789533083",
+  "path_id": "infrastructure_energy",
+  "title": "Shift Engineer - Wind Turbine O&M (Fresher)",
+  "company": "Suzlon Group",
+  "location": "Gandhidham, Kutch, Gujarat",
+  "posted_on": "2026-09-16",
+  "url": "https://internshala.com/job/detail/fresher-shift-engineer-job-in-gandhidham-sub-district-at-suzlon-group1789533083",
+  "fresher": true,
+  "experience_text": "0-3 years (no experience required)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Achieve WTG availability above 97% through breakdown management and preventive maintenance",
+    "skill_id": "renewable_energy_fundamentals"
+   },
+   {
+    "text": "Perform root cause analysis on recurring turbine faults",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Maintain SCADA and communication network uptime for turbine monitoring",
+    "skill_id": "power_grid_and_transmission_basics"
+   },
+   {
+    "text": "Execute predictive and preventive maintenance activities",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Participate in safety initiatives targeting zero accidents",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Contribute to MTBF targets (120+ hours) via reliability programs",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789369772",
+  "path_id": "infrastructure_energy",
+  "title": "Sales Engineer (Solar) - Fresher",
+  "company": "Aerem Solutions",
+  "location": "Maharashtra",
+  "posted_on": "2026-09-15",
+  "url": "https://internshala.com/job/detail/fresher-sales-engineer-solar-job-in-maharashtra-at-aerem1789369772",
+  "fresher": true,
+  "experience_text": "No experience required (up to 1 year with renewable energy projects encouraged)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Degree in Electrical Engineering (mandatory)",
+    "skill_id": null
+   },
+   {
+    "text": "Understanding of single-line diagrams, AC/DC components and solar PV physics",
+    "skill_id": "solar_pv_design_pvsyst"
+   },
+   {
+    "text": "Conduct preliminary site surveys for roof space and electrical assessment",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Prepare customised solar proposals with system sizing and ROI calculations",
+    "skill_id": "solar_pv_design_pvsyst"
+   },
+   {
+    "text": "Lead generation, sales presentations and end-to-end customer journey",
+    "skill_id": "sales_and_customer_conversation"
+   },
+   {
+    "text": "DISCOM documentation, net-metering regulations and local utility policies",
+    "skill_id": "renewable_energy_fundamentals"
+   },
+   {
+    "text": "Fluency in Marathi and Hindi (highly preferred)",
+    "skill_id": null
+   },
+   {
+    "text": "Possession of a two-wheeler (mandatory)",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789885903",
+  "path_id": "infrastructure_energy",
+  "title": "Maintenance Engineer (Electrical) - Fresher",
+  "company": "UltraTech Cement",
+  "location": "Maharashtra",
+  "posted_on": "2026-09-21",
+  "url": "https://internshala.com/job/detail/fresher-maintenance-engineer-job-in-maharashtra-at-ultratech-cement1789885903",
+  "fresher": true,
+  "experience_text": "Minimum -1 years (entry level)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Compile electrical maintenance data including consumption metrics and power factors",
+    "skill_id": "etap_or_power_systems_analysis"
+   },
+   {
+    "text": "Oversee electrical systems to ensure reliable power supply",
+    "skill_id": "power_grid_and_transmission_basics"
+   },
+   {
+    "text": "Develop and execute preventive maintenance protocols",
+    "skill_id": "operations_and_process_basics"
+   },
+   {
+    "text": "Maintain batching plant equipment through scheduled calibration",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Monitor maintenance expenditures against budgets",
+    "skill_id": "excel_and_business_analysis"
+   },
+   {
+    "text": "Enforce safety protocols, PPE usage and LOTOTO procedures; conduct toolbox meetings",
+    "skill_id": "site_engineering_and_safety"
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1789929242",
+  "path_id": "infrastructure_energy",
+  "title": "Graduate Engineer Trainee - Automation (Fresher)",
+  "company": "JIVA INNOVATIVE AUTOMATIONS PVT LTD",
+  "location": "Bengaluru (Rajarajeshwari Nagar), Karnataka",
+  "posted_on": "2026-09-21",
+  "url": "https://internshala.com/job/detail/fresher-graduate-diploma-engineer-trainees-automation-engineers-job-in-bangalore-at-jiva-innovative-automations-pvt-ltd1789929242",
+  "fresher": true,
+  "experience_text": "No experience required (freshers considered for GET/DET tracks)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Graduate or Diploma engineer background",
+    "skill_id": null
+   },
+   {
+    "text": "PLC (Programmable Logic Controller) knowledge; operate and maintain PLC and automation systems",
+    "skill_id": "microcontrollers_and_rtos"
+   },
+   {
+    "text": "Automation systems expertise",
+    "skill_id": "control_systems"
+   },
+   {
+    "text": "Technical field support at project sites (Bellary/Hosapet)",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Sales application engineering capability",
+    "skill_id": "sales_and_customer_conversation"
+   },
+   {
+    "text": "Project management ability",
+    "skill_id": "project_management_basics"
+   },
+   {
+    "text": "Kannada language knowledge (preferred, not mandatory)",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1787818109",
+  "path_id": "infrastructure_energy",
+  "title": "Associate Electrical Engineer - Solar",
+  "company": "ENERGENIUSS SOLAR",
+  "location": "Chandigarh / Zirakpur",
+  "posted_on": "2026-08-31",
+  "url": "https://internshala.com/job/detail/associate-electrical-engineer-job-in-multiple-locations-at-energeniuss-solar1787818109",
+  "fresher": true,
+  "experience_text": "1 year",
+  "salary_text": "₹3,00,000 - 5,50,000 per year",
+  "requirements": [
+   {
+    "text": "AutoCAD: design and model electrical systems for residential and commercial installations",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Circuit Design: create layouts and schematics for solar panels and inverters",
+    "skill_id": "solar_pv_design_pvsyst"
+   },
+   {
+    "text": "Wireframing and testing to validate electrical component functionality and safety",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Solar energy system development and design with engineering teams",
+    "skill_id": "renewable_energy_fundamentals"
+   },
+   {
+    "text": "Coordinate with project managers and installation teams",
+    "skill_id": "project_management_basics"
+   },
+   {
+    "text": "Support commissioning and testing of solar systems",
+    "skill_id": "site_engineering_and_safety"
+   },
+   {
+    "text": "Candidates must be from Chandigarh or Zirakpur area; willingness to relocate to African countries",
+    "skill_id": null
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "internshala:1788419621",
+  "path_id": "infrastructure_energy",
+  "title": "Electrical Engineer - Solar Service (WFH)",
+  "company": "Suntastic Engineering Private Limited",
+  "location": "Kollam, Kerala (work from home / field visits)",
+  "posted_on": "2026-09-07",
+  "url": "https://internshala.com/job/detail/remote-electrical-engineer-job-at-suntastic-enginerring-private-limited1788419621",
+  "fresher": true,
+  "experience_text": "Minimum 1 year",
+  "salary_text": "₹2,01,000 - 3,62,000 per year",
+  "requirements": [
+   {
+    "text": "Inspect, maintain and service solar power systems",
+    "skill_id": "renewable_energy_fundamentals"
+   },
+   {
+    "text": "Check solar panels, inverters, cables, connectors, batteries and electrical components",
+    "skill_id": "solar_pv_design_pvsyst"
+   },
+   {
+    "text": "Identify and troubleshoot solar system faults (low generation, inverter errors, wiring)",
+    "skill_id": "power_electronics_basics"
+   },
+   {
+    "text": "Circuit Design",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Electrical Machines",
+    "skill_id": "etap_or_power_systems_analysis"
+   },
+   {
+    "text": "Visit customer locations for service and technical support; ready to travel, bike required",
+    "skill_id": "site_engineering_and_safety"
+   }
+  ],
+  "source": "internshala",
+  "seen_on": "2026-09-21"
+ }
+]

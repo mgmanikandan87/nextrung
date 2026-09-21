@@ -1,0 +1,566 @@
+[
+ {
+  "id": "indeed:JOBSEARCH_99",
+  "path_id": "semiconductor_electronics",
+  "title": "Software Developer - VLSI / M.tech Fresher",
+  "company": "Five Feed Learning Solutions Pvt. Ltd.",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-02-27",
+  "url": "https://to.indeed.com/aaxgjz4wftvl",
+  "fresher": true,
+  "experience_text": "Fresher, 1 - 3 years",
+  "salary_text": "₹2,50,000 - ₹4,00,000 a year",
+  "requirements": [
+   {
+    "text": "Hands-on experience on FPGA / RTL Design involving verilog HDL, Tanner, Vivado ISE/Xilinx ISE, Modelsim and synplify Synopsys",
+    "skill_id": "rtl_design"
+   },
+   {
+    "text": "Strong knowledge on VLSI Circuit designs, parameter synthesis etc",
+    "skill_id": "digital_design_fundamentals"
+   },
+   {
+    "text": "Knowledge on TCAD, HSPICE, PSPICE will be an added advantage",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "RTL design, verification, FPGA partitioning and implementation, and lab-based bring up of the SoC on FPGAs",
+    "skill_id": "fpga_prototyping"
+   },
+   {
+    "text": "Recent FPGA experience including implementation, synthesis (Synplify), timing closure (Vivado/ISE)",
+    "skill_id": "static_timing_analysis"
+   },
+   {
+    "text": "Proficient in Verilog, Perl, and Make",
+    "skill_id": "verilog_systemverilog"
+   },
+   {
+    "text": "Both simulation-based verification and lab-based debug skills on FPGAs",
+    "skill_id": "functional_verification_uvm"
+   },
+   {
+    "text": "Good communication and analytical problem solving capability",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "B.E, B.Tech; M.E., M.Tech VLSI",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:JOBSEARCH_103",
+  "path_id": "semiconductor_electronics",
+  "title": "Physical Design Engineer (Trained Intern)",
+  "company": "MAXVY",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-07-06",
+  "url": "https://to.indeed.com/aa2xy9z6d8q2",
+  "fresher": true,
+  "experience_text": "Fresher",
+  "salary_text": "Unpaid",
+  "requirements": [
+   {
+    "text": "Strong understanding of the ASIC Physical Design flow",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Execute floor planning, placement, clock tree synthesis (CTS), routing, and physical optimization",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Support timing closure and resolve setup/hold violations",
+    "skill_id": "static_timing_analysis"
+   },
+   {
+    "text": "Hands-on knowledge of Open ROAD and Open Lane tools, or a strong interest in working with them",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Exposure to one or more semiconductor process technologies or PDKs such as SKY130, SCL180, TSMC, Global Foundries (GF)",
+    "skill_id": "semiconductor_fabrication_process"
+   },
+   {
+    "text": "Project work involving GDSII generation is preferred",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Familiarity with Linux and basic scripting (Tcl/Shell/Python) is an advantage",
+    "skill_id": "linux_shell"
+   },
+   {
+    "text": "Excellent analytical and debugging skills",
+    "skill_id": null
+   },
+   {
+    "text": "Good communication and teamwork skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:JOBSEARCH_100",
+  "path_id": "semiconductor_electronics",
+  "title": "DESIGN ENGINEER (M.TECH - FRESHER)",
+  "company": "vhunt4u",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-08-28",
+  "url": "https://to.indeed.com/aantbbb86fns",
+  "fresher": true,
+  "experience_text": "0 Years",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's / Master's degree in engineering from EEE / E&C / VLSI with more than 75% or 7.9 CGPA",
+    "skill_id": null
+   },
+   {
+    "text": "The candidate must have completed BE in 2022 / 2023",
+    "skill_id": null
+   },
+   {
+    "text": "The candidate must have completed M.Tech in 2025 / 2026",
+    "skill_id": null
+   },
+   {
+    "text": "Must be ready to work on analog layout",
+    "skill_id": "analog_circuit_basics"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:4a9cc47a4bff7a5c",
+  "path_id": "semiconductor_electronics",
+  "title": "Young Graduate Trainee",
+  "company": "Infineon Technologies AG",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=4a9cc47a4bff7a5c",
+  "fresher": true,
+  "experience_text": "0 - 3 years of experience",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's/Master's degree in Electronics, Electrical related field of study",
+    "skill_id": null
+   },
+   {
+    "text": "0 - 3 years of experience and understanding of Microcontroller and SoC products",
+    "skill_id": "microcontrollers_and_rtos"
+   },
+   {
+    "text": "Experience in Bench Characterization with Analog, Digital and Mixed signal IPs",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Hands-on experience in using equipment such as SMUs, DMM, Oscilloscopes and Signal generators",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Good understanding of C, Python, LabVIEW. LabVIEW knowledge will be a great plus",
+    "skill_id": "python"
+   },
+   {
+    "text": "Good knowledge about electronic circuits, regulators and reference measurements",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Develop and build test list, automation suite including software and firmware",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Validation on FPGA (pre-silicon) and Silicon (post-silicon)",
+    "skill_id": "fpga_prototyping"
+   },
+   {
+    "text": "Python/LabVIEW based bench test equipment automation",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Excellent communication and interpersonal skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:0aa5663a3708fb1e",
+  "path_id": "semiconductor_electronics",
+  "title": "Hardware Design Trainee Engineer",
+  "company": "Agnisys Technology Private Limited",
+  "location": "Noida, Uttar Pradesh",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=0aa5663a3708fb1e",
+  "fresher": true,
+  "experience_text": "Freshers/graduates",
+  "salary_text": "Up to ₹30,000 a month",
+  "requirements": [
+   {
+    "text": "Candidates should be B.Tech CS & MCA freshers/graduate",
+    "skill_id": null
+   },
+   {
+    "text": "Basic Knowledge in Verilog, VHDL, SystemVerilog & C",
+    "skill_id": "verilog_systemverilog"
+   },
+   {
+    "text": "FPGA, EDA Tools",
+    "skill_id": "fpga_prototyping"
+   },
+   {
+    "text": "Linux, Perl, Python, Tcl, Bash scripting",
+    "skill_id": "linux_shell"
+   },
+   {
+    "text": "Should have excellent communication skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Ability to work independently with little supervision as well as ability to work within a team",
+    "skill_id": null
+   },
+   {
+    "text": "Self-motivated with strong team spirit",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:6764e582fa77c4c0",
+  "path_id": "semiconductor_electronics",
+  "title": "Engineer - RF SW - ECE - 2024/25/26",
+  "company": "Qualcomm India Private Limited",
+  "location": "Hyderabad, Telangana",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=6764e582fa77c4c0",
+  "fresher": true,
+  "experience_text": "0-3 years",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Masters or Bachelor's in Electronics and Communication Engineering or equivalent",
+    "skill_id": null
+   },
+   {
+    "text": "Strong C programming skills with an understanding of RF and/or Communications systems",
+    "skill_id": "embedded_c"
+   },
+   {
+    "text": "Knowledge of digital communications and RF theory",
+    "skill_id": "rf_and_antenna_basics"
+   },
+   {
+    "text": "Understanding of embedded real time systems is desired",
+    "skill_id": "microcontrollers_and_rtos"
+   },
+   {
+    "text": "C and/or C++ Software Programming and Debugging skills on Embedded real time operating systems/RTOS",
+    "skill_id": "microcontrollers_and_rtos"
+   },
+   {
+    "text": "Good understanding of the Software Engineering concepts",
+    "skill_id": null
+   },
+   {
+    "text": "Knowledge of wireless communication in any of the radio access technologies (e.g. LTE, 5GNR, etc.)",
+    "skill_id": "rf_and_antenna_basics"
+   },
+   {
+    "text": "Modem/Communications device driver development experience is an added advantage",
+    "skill_id": "embedded_c"
+   },
+   {
+    "text": "Demonstrated working knowledge with HW and RF Test equipment (Protocol Test Equipment, Spectrum Analyzer, Oscilloscope, etc.)",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Digital/Wireless Communications, ECE fundamentals and RF Theory",
+    "skill_id": "signal_processing_basics"
+   },
+   {
+    "text": "Good communication skills and be a team player",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:4972e3d5b9fa41d4",
+  "path_id": "semiconductor_electronics",
+  "title": "SMT Engineer (Freshers)",
+  "company": "Numato",
+  "location": "Electronic City, Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=4972e3d5b9fa41d4",
+  "fresher": true,
+  "experience_text": "Fresher",
+  "salary_text": "₹17,500 - ₹18,000 a month",
+  "requirements": [
+   {
+    "text": "Freshers with Diploma/BSc/BE in Electronics can apply",
+    "skill_id": null
+   },
+   {
+    "text": "Basic knowledge about Pick and Place, Reflow, AOI, Solder paste printer",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Programming and operating SMT machines (Reflow, Pick and place, AOI, SPI)",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Performing visual inspections and quality checks on finished products",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Identifying and resolving minor technical problems with SMT equipment",
+    "skill_id": null
+   },
+   {
+    "text": "Willingness to work at least for 2 years",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:5144b5207b8d4383",
+  "path_id": "semiconductor_electronics",
+  "title": "PCB Design Engineer - Fresher",
+  "company": "Hourglass IT Solutions",
+  "location": "Chennai, Tamil Nadu",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=5144b5207b8d4383",
+  "fresher": true,
+  "experience_text": "Fresher",
+  "salary_text": "₹15,409.91 - ₹45,789.66 a month",
+  "requirements": [
+   {
+    "text": "B.E./B.Tech or Diploma in Electronics and Communication (ECE) or Electrical Engineering (EEE)",
+    "skill_id": null
+   },
+   {
+    "text": "Basic understanding of electronic components, circuit design, and industry standards like IPC",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Familiarity with CAD software",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Knowledge of DFM/DFT (Design for Manufacturing/Testing) principles",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Strong analytical skills",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:095df6d9ae59467a",
+  "path_id": "semiconductor_electronics",
+  "title": "ELECTRONICS ENGINEER (FRESHER)",
+  "company": "SANSEL INSTRUMENTS AND CONTROLS",
+  "location": "Maduravoyal, Chennai, Tamil Nadu",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=095df6d9ae59467a",
+  "fresher": true,
+  "experience_text": "Fresher or 1 year preferred",
+  "salary_text": "₹15,000 - ₹20,000 a month",
+  "requirements": [
+   {
+    "text": "Diploma/B.E in EEE, ECE, or E&I preferred",
+    "skill_id": null
+   },
+   {
+    "text": "Knowledge in PCB Assembling",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Knowledge in electronic circuits",
+    "skill_id": "analog_circuit_basics"
+   },
+   {
+    "text": "Knowledge in electronic components",
+    "skill_id": null
+   },
+   {
+    "text": "Soldering in PCB boards",
+    "skill_id": null
+   },
+   {
+    "text": "Fixing and testing of instruments",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Trouble shooting in PCB board using circuits",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Quality checking",
+    "skill_id": "quality_and_manufacturing_basics"
+   },
+   {
+    "text": "Onsite Installation and demonstration; Onsite Service",
+    "skill_id": "site_engineering_and_safety"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:0d69fb4789d9a6d6",
+  "path_id": "semiconductor_electronics",
+  "title": "Physical Design Engineer",
+  "company": "Corp Match Private Limited",
+  "location": "Bangalore City, Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=0d69fb4789d9a6d6",
+  "fresher": true,
+  "experience_text": "Trained Freshers – B.Tech 2023 or M.Tech 2025 passed-out",
+  "salary_text": "₹4,00,000 - ₹6,00,000 a year",
+  "requirements": [
+   {
+    "text": "B.Tech/B.E. in ECE, EEE, Electronics, VLSI, or related branches",
+    "skill_id": null
+   },
+   {
+    "text": "Candidates should have completed relevant VLSI / Physical Design training",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Good knowledge of Digital Electronics and VLSI fundamentals",
+    "skill_id": "digital_design_fundamentals"
+   },
+   {
+    "text": "Understanding of the ASIC Physical Design flow",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Basic knowledge of Synthesis and STA",
+    "skill_id": "static_timing_analysis"
+   },
+   {
+    "text": "Familiarity with Linux/Unix commands",
+    "skill_id": "linux_shell"
+   },
+   {
+    "text": "Knowledge of Physical Design / EDA tools is an advantage",
+    "skill_id": "physical_design_basics"
+   },
+   {
+    "text": "Good communication and problem-solving skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:JOBSEARCH_215",
+  "path_id": "semiconductor_electronics",
+  "title": "Electrical Design Engineer (Freshers only )",
+  "company": "Hival IT Solutions",
+  "location": "Jakkur, Bengaluru, Karnataka",
+  "posted_on": "2026-09-02",
+  "url": "https://to.indeed.com/aaq8wpm8gtkh",
+  "fresher": true,
+  "experience_text": "Freshers only; 1 Years- E-plan exposure",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Qualification – B.E Electrical/Electronics, or Diploma in Electrical/Electronics",
+    "skill_id": null
+   },
+   {
+    "text": "Possess knowledge of Electrical Engineering & Standards, this is essential",
+    "skill_id": null
+   },
+   {
+    "text": "Production of P&ID drawings and bill of materials for each design using AutoCAD and E Plan",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Create electrical schematics that show how electrical components and panels work together",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Produce layout drawings of the given plan, components, and devices",
+    "skill_id": "autocad"
+   },
+   {
+    "text": "Create necessary system calculations – Power requirements etc.",
+    "skill_id": "etap_or_power_systems_analysis"
+   },
+   {
+    "text": "Control Panel Design and Wiring",
+    "skill_id": null
+   },
+   {
+    "text": "Have good interpersonal skills & Communication skills",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "indeed:21270cd68b158687",
+  "path_id": "semiconductor_electronics",
+  "title": "Hardware Test Engineer",
+  "company": "Vougavent Technologies",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": null,
+  "url": "https://in.indeed.com/viewjob?jk=21270cd68b158687",
+  "fresher": true,
+  "experience_text": "total work: 1 year (Preferred)",
+  "salary_text": "₹10,000 - ₹15,000 a month",
+  "requirements": [
+   {
+    "text": "BE/BTech/BSC/Diploma in Electronics",
+    "skill_id": null
+   },
+   {
+    "text": "Proficient in using test equipment like oscilloscopes, signal generators, spectrum analyzers, and digital multimeters",
+    "skill_id": "labview_and_daq_basics"
+   },
+   {
+    "text": "Familiarity with reading circuit diagrams, schematics, and technical documentation",
+    "skill_id": "pcb_design"
+   },
+   {
+    "text": "Experience with soldering, assembly, and rework of electronic components is a plus",
+    "skill_id": null
+   },
+   {
+    "text": "Strong understanding of hardware testing methodologies, troubleshooting techniques, and industry best practices",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Familiarity with Electronics components, embedded systems and microcontrollers",
+    "skill_id": "microcontrollers_and_rtos"
+   },
+   {
+    "text": "Conduct functional and EMI-EMC test on electronic hardware",
+    "skill_id": null
+   }
+  ],
+  "source": "indeed",
+  "seen_on": "2026-09-21"
+ }
+]

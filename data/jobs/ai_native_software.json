@@ -1,0 +1,678 @@
+[
+ {
+  "id": "career_page:squareyards_genai_engineer_mumbai",
+  "path_id": "ai_native_software",
+  "title": "Generative AI Engineer | Artificial Intelligence | Mumbai",
+  "company": "SquareYards",
+  "location": "Mumbai (Andheri East), Maharashtra",
+  "posted_on": "2026-07-21",
+  "url": "https://wellfound.com/jobs/3000999-generative-ai-engineer-artificial-intelligence-mumbai",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "₹10L – ₹18L • No equity",
+  "requirements": [
+   {
+    "text": "Solid Python proficiency with functions, classes, virtual environments, code reading and debugger usage",
+    "skill_id": "python"
+   },
+   {
+    "text": "Hands-on experience building with an LLM API (project, internship, hackathon or side project)",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Basic understanding of modern LLMs: tokens, context windows, temperature, embeddings, prompt variability",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Git knowledge (branches, pull requests, commits)",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "SQL or database familiarity for independent data retrieval",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Clear written communication explaining approaches and challenges",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Preferred: Python web framework exposure (FastAPI or Flask)",
+    "skill_id": "fastapi_or_spring"
+   },
+   {
+    "text": "Preferred: experience with LangChain/LangGraph, Docker, Linux, pandas or PyTorch",
+    "skill_id": "docker"
+   },
+   {
+    "text": "Preferred: front-end capability (React, Streamlit or Gradio)",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "Nice to have: portfolio, GitHub profile or project write-ups",
+    "skill_id": "deployed_portfolio_project"
+   },
+   {
+    "text": "Nice to have: open-source contributions, Kaggle work or published projects",
+    "skill_id": "open_source_contribution"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:troopr_ai_first_mern_sde_bangalore",
+  "path_id": "ai_native_software",
+  "title": "AI-First MERN Stack Developer (SDE)",
+  "company": "Troopr.ai",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-08-21",
+  "url": "https://wellfound.com/jobs/4572847-ai-first-mern-stack-developer-sde",
+  "fresher": true,
+  "experience_text": "1+ years (listed as 1 year of exp)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "1+ years building full-stack applications using the MERN stack (MongoDB, Express.js, React, Node.js)",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "Strong AI-first engineering mindset with demonstrated use of AI tools for code generation, refactoring and debugging",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Strong analytical thinking and problem-solving ability",
+    "skill_id": null
+   },
+   {
+    "text": "Excellent communication skills for cross-functional collaboration",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "JavaScript (ES5/ES6)",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "LLMs, Retrieval-Augmented Generation (RAG) and LLM frameworks (LangChain, Claude, LlamaIndex)",
+    "skill_id": "rag_and_vector_search"
+   },
+   {
+    "text": "GitHub profile, deployed apps or shipped projects demonstrating ownership",
+    "skill_id": "deployed_portfolio_project"
+   },
+   {
+    "text": "Production systems familiarity (deployment, monitoring, debugging)",
+    "skill_id": "mlops_basics"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:clearfeed_software_engineer_bangalore",
+  "path_id": "ai_native_software",
+  "title": "Software Engineer",
+  "company": "ClearFeed",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-07-21",
+  "url": "https://wellfound.com/jobs/4377418-software-engineer",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Node.js",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "PostgreSQL",
+    "skill_id": "databases_postgresql"
+   },
+   {
+    "text": "TypeScript",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "Nest.js",
+    "skill_id": "fastapi_or_spring"
+   },
+   {
+    "text": "Daily use of AI coding tools (Claude, Cursor, ChatGPT, Codex or similar)",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Strong software fundamentals with critical code review ability",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Ability to work across backend, product, integrations and basic frontend",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "Bonus: experience building with AI agents",
+    "skill_id": "llm_apis_and_agents"
+   },
+   {
+    "text": "Bonus: shipped side projects using AI",
+    "skill_id": "deployed_portfolio_project"
+   },
+   {
+    "text": "Bonus: published engineering work or open-source contributions",
+    "skill_id": "open_source_contribution"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:cypherock_software_engineer_gurgaon",
+  "path_id": "ai_native_software",
+  "title": "Software Engineer",
+  "company": "Cypherock Wallet",
+  "location": "Gurugram, Haryana",
+  "posted_on": "2026-08-21",
+  "url": "https://wellfound.com/jobs/2351282-software-engineer",
+  "fresher": true,
+  "experience_text": "No experience required",
+  "salary_text": "₹8L – ₹15L • 0.01% – 1.0%",
+  "requirements": [
+   {
+    "text": "High level: JavaScript (minimum required), TypeScript, React, Node.js",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "Low level: C/C++ (minimum required), Makefile, Rust",
+    "skill_id": null
+   },
+   {
+    "text": "React.js",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "MongoDB",
+    "skill_id": null
+   },
+   {
+    "text": "Docker",
+    "skill_id": "docker"
+   },
+   {
+    "text": "AWS",
+    "skill_id": "cloud_fundamentals_aws"
+   },
+   {
+    "text": "Cryptography and security paranoia",
+    "skill_id": "cybersecurity_fundamentals"
+   },
+   {
+    "text": "Microservices / microservice architecture",
+    "skill_id": "system_design_basics"
+   },
+   {
+    "text": "Interest in creating an open source Web 3.0 app store from the ground up",
+    "skill_id": "open_source_contribution"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:navtech_software_engineer_hyderabad",
+  "path_id": "ai_native_software",
+  "title": "Software Engineer",
+  "company": "Navtech",
+  "location": "Hyderabad, Telangana (Remote)",
+  "posted_on": "2026-06-21",
+  "url": "https://wellfound.com/jobs/4273883-software-engineer",
+  "fresher": true,
+  "experience_text": "No experience required; 2025/2026 graduates preferred",
+  "salary_text": "₹3L – ₹5L • No equity",
+  "requirements": [
+   {
+    "text": "Good knowledge of Python programming",
+    "skill_id": "python"
+   },
+   {
+    "text": "Understanding of basic programming concepts, OOPs and data structures",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Familiarity with APIs, databases and backend development concepts",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Basic knowledge of SQL/MySQL/PostgreSQL (preferred)",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Understanding of Git/version control (added advantage)",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "Good analytical and problem-solving skills",
+    "skill_id": null
+   },
+   {
+    "text": "Strong communication and learning attitude",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Internship experience, academic projects or certification projects in Python (preferred)",
+    "skill_id": "deployed_portfolio_project"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:dronapay_data_engineer_mumbai",
+  "path_id": "ai_native_software",
+  "title": "Data Engineer (Python & SQL)",
+  "company": "Drona Pay",
+  "location": "Mumbai, Maharashtra",
+  "posted_on": "2026-09-14",
+  "url": "https://wellfound.com/jobs/3626686-data-engineer-python-sql",
+  "fresher": true,
+  "experience_text": "1 year of exp",
+  "salary_text": "₹5L – ₹8L • No equity",
+  "requirements": [
+   {
+    "text": "Designing and developing data pipelines for data ingestion or transformation using Python and SQL",
+    "skill_id": "data_engineering_pipelines"
+   },
+   {
+    "text": "Experience with Python is mandatory",
+    "skill_id": "python"
+   },
+   {
+    "text": "Experience with SQL is mandatory",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Exposure to training and deployment of ML models will be a plus",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "BFSI exposure is a plus",
+    "skill_id": "domain_bfsi_basics"
+   },
+   {
+    "text": "Databricks",
+    "skill_id": "data_engineering_pipelines"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:sciative_junior_data_engineer_navi_mumbai",
+  "path_id": "ai_native_software",
+  "title": "Junior Data engineer & Intelligence",
+  "company": "Sciative - We Price Right",
+  "location": "Navi Mumbai, Maharashtra",
+  "posted_on": "2026-08-21",
+  "url": "https://wellfound.com/jobs/3497707-junior-data-engineer-intelligence",
+  "fresher": true,
+  "experience_text": "1+ years in a fast-paced tech or SaaS role (exceptional freshers will also be considered)",
+  "salary_text": "₹28,000 – ₹50,000 per month • No equity",
+  "requirements": [
+   {
+    "text": "BTech / BE / MTech / MCA in Computer Science, IT or other engineering streams",
+    "skill_id": null
+   },
+   {
+    "text": "Strong in Python, and familiar with Selenium, Flask, HTML/CSS, JS, AJAX, jQuery",
+    "skill_id": "python"
+   },
+   {
+    "text": "Exposure to SQL, QA testing and version control (Git, Jira) is a plus",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Strong logical and analytical thinking",
+    "skill_id": null
+   },
+   {
+    "text": "Excellent written and verbal communication",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, Seaborn",
+    "skill_id": "pandas_and_data_analysis"
+   },
+   {
+    "text": "Python/Django/Flask and APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "LangChain, LlamaIndex",
+    "skill_id": "llm_apis_and_agents"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:airveda_full_stack_developer_ml_gurugram",
+  "path_id": "ai_native_software",
+  "title": "Full Stack Developer (ML)",
+  "company": "Airveda",
+  "location": "Gurugram, Haryana",
+  "posted_on": "2026-09-17",
+  "url": "https://wellfound.com/jobs/4722380-full-stack-developer-ml",
+  "fresher": true,
+  "experience_text": "0–1 year of experience",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Bachelor's degree in Computer Science, Information Technology or related field",
+    "skill_id": null
+   },
+   {
+    "text": "Python and Django proficiency",
+    "skill_id": "python"
+   },
+   {
+    "text": "HTML, CSS and JavaScript",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "SQL and relational databases; work with MySQL and write efficient SQL queries",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Object-Oriented Programming (OOP)",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Git and version control",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "REST APIs and client-server architecture; build and integrate REST APIs using Django REST Framework",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Data analysis using NumPy, Pandas, Matplotlib and Plotly",
+    "skill_id": "pandas_and_data_analysis"
+   },
+   {
+    "text": "Regression and classification algorithms",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Analyze data and build simple data-processing pipelines",
+    "skill_id": "data_engineering_pipelines"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:paralleldots_machine_learning_engineer_remote",
+  "path_id": "ai_native_software",
+  "title": "Machine Learning Engineer",
+  "company": "ParallelDots",
+  "location": "Remote (India) / Gurugram, Haryana",
+  "posted_on": "2026-09-16",
+  "url": "https://wellfound.com/jobs/4176912-machine-learning-engineer",
+  "fresher": true,
+  "experience_text": "No experience required; freshers who are pursuing or have pursued an internship in the data science domain",
+  "salary_text": "₹4L – ₹6L • No equity",
+  "requirements": [
+   {
+    "text": "Excellent Python programming with PyTorch experience",
+    "skill_id": "python"
+   },
+   {
+    "text": "Work experience training image classification and object detection algorithms",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Diligence and attention to detail",
+    "skill_id": null
+   },
+   {
+    "text": "NLP experience (optional but beneficial)",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Web development and model serving with TorchServe (bonus)",
+    "skill_id": "mlops_basics"
+   },
+   {
+    "text": "Knowledge of PyTorch, ONNX Runtime, transformers and FastAPI",
+    "skill_id": "fastapi_or_spring"
+   },
+   {
+    "text": "Understanding of computer vision pipelines",
+    "skill_id": "machine_learning_basics"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:clouddefense_fresher_software_engineer_remote",
+  "path_id": "ai_native_software",
+  "title": "Fresher Software Engineer",
+  "company": "CloudDefense.AI",
+  "location": "Remote (India) / Gurugram, Haryana",
+  "posted_on": "2026-09-14",
+  "url": "https://wellfound.com/jobs/3147802-fresher-software-engineer",
+  "fresher": true,
+  "experience_text": "Fresh graduate (no prior experience needed)",
+  "salary_text": "₹7L – ₹11L • No equity",
+  "requirements": [
+   {
+    "text": "Bachelor's degree in Computer Science, Engineering or related field",
+    "skill_id": null
+   },
+   {
+    "text": "Basic understanding of software testing concepts and methodologies",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Knowledge of programming fundamentals",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Familiarity with any programming language (Java/JavaScript preferred)",
+    "skill_id": "javascript_typescript"
+   },
+   {
+    "text": "Basic understanding of web technologies and REST APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Good analytical and problem-solving skills",
+    "skill_id": null
+   },
+   {
+    "text": "Strong communication and teamwork abilities",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "SQL",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Technologies to learn: Cypress, Selenium, GitLab, Git and Agile development practices",
+    "skill_id": "git_github"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:accenture_ai_ml_computational_science_associate_bengaluru",
+  "path_id": "ai_native_software",
+  "title": "AI/ML Computational Science Associate",
+  "company": "Accenture",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-09-20",
+  "url": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01665346_en",
+  "fresher": true,
+  "experience_text": "0-1 year (fresh graduates welcome)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "BE/BTech degree",
+    "skill_id": null
+   },
+   {
+    "text": "Good knowledge of Python programming",
+    "skill_id": "python"
+   },
+   {
+    "text": "Understanding of Object Oriented Programming (OOP) concepts",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "Basic knowledge of Data Structures and Algorithms",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "SQL and database concepts",
+    "skill_id": "sql"
+   },
+   {
+    "text": "REST APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Git version control",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "Software Development Life Cycle (SDLC)",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Excellent communication and teamwork skills",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Relevant certifications in Python, Cloud, Data Analytics or AI (advantageous)",
+    "skill_id": "cloud_fundamentals_aws"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:digitalxnode_fresher_software_engineer_gurugram",
+  "path_id": "ai_native_software",
+  "title": "Fresher – Software Engineer",
+  "company": "DigitalXNode",
+  "location": "Gurugram, Haryana (Onsite)",
+  "posted_on": "2026-07-01",
+  "url": "https://digitalxnode.com/jobs/fresher-software-engineer-gurugram/",
+  "fresher": true,
+  "experience_text": "0 to 1 Year",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Basic knowledge of Java, C++, Python, C#, JavaScript",
+    "skill_id": "python"
+   },
+   {
+    "text": "Basic understanding of HTML5, CSS3, JavaScript, REST APIs",
+    "skill_id": "rest_apis"
+   },
+   {
+    "text": "Object-Oriented Programming (OOP), Data Structures and Algorithms, SDLC, debugging and troubleshooting",
+    "skill_id": "dsa"
+   },
+   {
+    "text": "MySQL, PostgreSQL, SQL fundamentals",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Git, GitHub, Visual Studio Code, IntelliJ IDEA / Eclipse",
+    "skill_id": "git_github"
+   },
+   {
+    "text": "Strong analytical and problem-solving abilities, communication skills, teamwork",
+    "skill_id": "communication_written_english"
+   },
+   {
+    "text": "Preferred: Spring Boot, .NET, Node.js",
+    "skill_id": "fastapi_or_spring"
+   },
+   {
+    "text": "Preferred: React/Angular/Vue.js",
+    "skill_id": "react_or_frontend"
+   },
+   {
+    "text": "Preferred: AWS/Azure/Google Cloud",
+    "skill_id": "cloud_fundamentals_aws"
+   },
+   {
+    "text": "Preferred: Agile/Scrum, software testing concepts",
+    "skill_id": "testing_and_automation"
+   },
+   {
+    "text": "Preferred: internship/project experience",
+    "skill_id": "deployed_portfolio_project"
+   },
+   {
+    "text": "B.Tech/BE, BCA or B.Sc. in Computer Science/IT (MCA/M.Tech/M.Sc. preferred)",
+    "skill_id": null
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "career_page:american_express_analyst_data_science_bangalore",
+  "path_id": "ai_native_software",
+  "title": "Analyst – Data Science",
+  "company": "American Express",
+  "location": "Bengaluru, Karnataka",
+  "posted_on": "2026-09-18",
+  "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26012381",
+  "fresher": true,
+  "experience_text": "Freshers from institutes of global repute",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.E/B.Tech, B.Sc, M.E/M.Tech or M.Sc in Computer Science, Information Technology or Mathematics",
+    "skill_id": null
+   },
+   {
+    "text": "Strong background in AI/ML with proficiency in Python",
+    "skill_id": "python"
+   },
+   {
+    "text": "Proficiency in SQL",
+    "skill_id": "sql"
+   },
+   {
+    "text": "Knowledge of Google Cloud Platform (GCP), BigQuery and Vertex AI",
+    "skill_id": "cloud_fundamentals_aws"
+   },
+   {
+    "text": "Familiarity with Big Data platforms like Hadoop and PySpark",
+    "skill_id": "data_engineering_pipelines"
+   },
+   {
+    "text": "Understanding of ML model development lifecycle (MDLC), including decision trees and boosting algorithms",
+    "skill_id": "machine_learning_basics"
+   },
+   {
+    "text": "Knowledge of notebook-based IDEs (Jupyter) and Airflow",
+    "skill_id": "pandas_and_data_analysis"
+   },
+   {
+    "text": "Familiarity with product management tools like Rally, JIRA and Confluence",
+    "skill_id": null
+   },
+   {
+    "text": "Strong quantitative and structured problem-solving skills with excellent communication abilities",
+    "skill_id": "communication_written_english"
+   }
+  ],
+  "source": "career_page",
+  "seen_on": "2026-09-21"
+ }
+]

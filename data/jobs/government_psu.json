@@ -1,0 +1,454 @@
+[
+ {
+  "id": "notification:upsc_ese_2027",
+  "path_id": "government_psu",
+  "title": "Engineering Services Examination 2027 (Preliminary)",
+  "company": "Union Public Service Commission (UPSC)",
+  "location": "India",
+  "posted_on": "2026-09-16",
+  "url": "https://www.upsc.gov.in/sites/default/files/Notif-ESEP-2027-Engl-160926.pdf",
+  "fresher": true,
+  "experience_text": "Fresher / no experience required",
+  "salary_text": "Group A Engineering Services (Level 10, CPC pay matrix)",
+  "requirements": [
+   {
+    "text": "Degree in Engineering from a University incorporated by an Act of the Central or State Legislature in India (or equivalent)",
+    "skill_id": null
+   },
+   {
+    "text": "Branch: Civil Engineering",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Branch: Electrical Engineering",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Branch: Mechanical or Electronics & Telecommunication Engineering",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Age 21 to 30 years as on 1 January 2027 (relaxations for SC/ST/OBC/PwBD/ex-servicemen)",
+    "skill_id": null
+   },
+   {
+    "text": "Preliminary exam 31 January 2027 (objective) and Main exam 18 June 2027 (conventional papers)",
+    "skill_id": "ese_upsc_preparation"
+   },
+   {
+    "text": "Apply online at upsconline.nic.in by 6 October 2026, 6:00 PM",
+    "skill_id": null
+   },
+   {
+    "text": "Personality test / interview after Main examination",
+    "skill_id": "psu_interview_preparation"
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ssc_je_2026",
+  "path_id": "government_psu",
+  "title": "Junior Engineer (Civil, Mechanical, Electrical) Examination 2026",
+  "company": "Staff Selection Commission (SSC)",
+  "location": "India",
+  "posted_on": "2026-09-02",
+  "url": "https://ssc.gov.in/",
+  "fresher": true,
+  "experience_text": "Fresher for most posts (some department posts ask 2 to 3 years)",
+  "salary_text": "Group B non-gazetted, Level 6 pay matrix",
+  "requirements": [
+   {
+    "text": "Degree or 3-year Diploma in Civil, Mechanical or Electrical Engineering from a recognised university/institution",
+    "skill_id": null
+   },
+   {
+    "text": "Civil Engineering paper (Paper I objective, Paper II conventional)",
+    "skill_id": "ssc_je_rrb_je_preparation"
+   },
+   {
+    "text": "Electrical Engineering paper",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "General Intelligence, Reasoning and General Awareness section",
+    "skill_id": "gate_preparation_general_aptitude"
+   },
+   {
+    "text": "Age 18 to 30 years for most posts (up to 32 for some departments)",
+    "skill_id": null
+   },
+   {
+    "text": "Online application 2 to 22 September 2026; Paper I October/November 2026, Paper II December 2026",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:rrb_je_cen_04_2026",
+  "path_id": "government_psu",
+  "title": "Junior Engineer, Depot Material Superintendent and Chemical & Metallurgical Assistant (CEN 04/2026)",
+  "company": "Railway Recruitment Boards (Indian Railways)",
+  "location": "India",
+  "posted_on": "2026-08-13",
+  "url": "https://www.rrbapply.gov.in/",
+  "fresher": true,
+  "experience_text": "Fresher / no experience required",
+  "salary_text": "Level 6 pay matrix (Rs 35,400 initial)",
+  "requirements": [
+   {
+    "text": "Diploma or Degree in Electrical, Mechanical, Civil, Electronics/S&T Engineering or relevant stream",
+    "skill_id": null
+   },
+   {
+    "text": "First Stage CBT (mathematics, reasoning, general awareness, general science)",
+    "skill_id": "gate_preparation_general_aptitude"
+   },
+   {
+    "text": "Second Stage CBT with technical abilities paper in the candidate's branch",
+    "skill_id": "ssc_je_rrb_je_preparation"
+   },
+   {
+    "text": "Age 18 to 33 years as on 1 January 2027 (category relaxations)",
+    "skill_id": null
+   },
+   {
+    "text": "Document verification and medical examination; no interview",
+    "skill_id": null
+   },
+   {
+    "text": "Application window 14 August to 13 September 2026; CBT-1 on 27, 28 and 30 October 2026",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:npcil_et_2026",
+  "path_id": "government_psu",
+  "title": "Executive Trainee (ET-2026) through GATE",
+  "company": "Nuclear Power Corporation of India Limited (NPCIL)",
+  "location": "India",
+  "posted_on": "2026-04-10",
+  "url": "https://www.npcilcareers.co.in/",
+  "fresher": true,
+  "experience_text": "Fresher (one-year training as Executive Trainee)",
+  "salary_text": "Stipend Rs 35,000 per month plus Rs 10,000 book allowance during training; Scientific Officer-C Rs 56,100 after training",
+  "requirements": [
+   {
+    "text": "Full-time 4-year B.E./B.Tech./B.Sc. (Engineering) or 5-year Integrated M.Tech. with at least 60% marks in aggregate",
+    "skill_id": null
+   },
+   {
+    "text": "Disciplines: Mechanical, Chemical, Electrical, Electronics, Instrumentation, Civil",
+    "skill_id": null
+   },
+   {
+    "text": "Valid GATE score of 2024, 2025 or 2026 in the relevant discipline",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Shortlisting based on GATE score in Electrical / Electronics / Instrumentation",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Shortlisting based on GATE score in Mechanical",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Personal interview with qualifying marks of 70% (General) / 60% (reserved)",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Age limit 26 years for General category (relaxations for OBC/SC/ST/PwBD)",
+    "skill_id": null
+   },
+   {
+    "text": "Online registration 10 April 2026 (10:00 AM) to 30 April 2026 (4:00 PM)",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ntpc_eet_2026",
+  "path_id": "government_psu",
+  "title": "Engineering Executive Trainee (EET) 2026 through GATE",
+  "company": "NTPC Limited",
+  "location": "India",
+  "posted_on": "2026-02-10",
+  "url": "https://careers.ntpc.co.in/",
+  "fresher": true,
+  "experience_text": "Fresher / no experience required",
+  "salary_text": "E1 grade, Rs 40,000 to 1,40,000 plus DA and HRA",
+  "requirements": [
+   {
+    "text": "Graduate degree in Electrical, Mechanical, Civil, Electronics, Instrumentation or Computer Science/IT engineering",
+    "skill_id": null
+   },
+   {
+    "text": "Valid GATE 2025 registration number and score in the corresponding discipline",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Civil engineering candidates shortlisted on GATE Civil score",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Mechanical / Electronics candidates shortlisted on GATE score",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Shortlisting based on valid GATE 2025 scores followed by further selection rounds",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Application window 11 to 25 February 2026 (next cycle expected on the same annual pattern)",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:pgcil_et_gate_2026",
+  "path_id": "government_psu",
+  "title": "Engineer Trainee (Electrical, Electronics, Civil, Computer Science) through GATE 2026",
+  "company": "Power Grid Corporation of India Limited (POWERGRID)",
+  "location": "India",
+  "posted_on": "2025-09-27",
+  "url": "https://www.powergrid.in/",
+  "fresher": true,
+  "experience_text": "Fresher / no experience required",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Full-time B.E./B.Tech./B.Sc. (Engg.) in Electrical, Electronics, Civil or Computer Science with minimum 60% marks or equivalent CGPA",
+    "skill_id": null
+   },
+   {
+    "text": "Valid GATE 2026 score in the corresponding discipline (Electrical)",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Valid GATE 2026 score in Civil Engineering",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Valid GATE 2026 score in Electronics",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Merit = GATE score 85% + Group Discussion 3% + Personal Interview 12%",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Age limit 28 years (General/EWS), 31 (OBC-NCL), 33 (SC/ST) as on 31 December 2025",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:iocl_graduate_engineers_2026",
+  "path_id": "government_psu",
+  "title": "Graduate Engineers / Officers (Grade A) through CBT 2026",
+  "company": "Indian Oil Corporation Limited (IOCL)",
+  "location": "India",
+  "posted_on": "2026-08-14",
+  "url": "https://iocl.com/latest-job-opening",
+  "fresher": true,
+  "experience_text": "No experience required for Graduate Engineer (Grade A) posts",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "B.Tech./B.E./equivalent degree in Computer Science & IT, Chemical, Civil, Electrical, Electronics, Instrumentation or Mechanical",
+    "skill_id": null
+   },
+   {
+    "text": "Minimum 65% marks for General/EWS/OBC(NCL); 55% for SC/ST/PwBD",
+    "skill_id": null
+   },
+   {
+    "text": "Computer Based Test (CBT) on 24 September 2026 in the discipline",
+    "skill_id": "ssc_je_rrb_je_preparation"
+   },
+   {
+    "text": "Group Discussion, Group Task and Personal Interview after CBT",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Age limit 26 years for General/EWS",
+    "skill_id": null
+   },
+   {
+    "text": "Final degree/marksheet to be produced by 30 September 2026; applications 14 August to 3 September 2026 via ibpsreg.ibps.in/iocljun26",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:ongc_gt_2026",
+  "path_id": "government_psu",
+  "title": "Graduate Trainee (Engineering and Geoscience) 2026",
+  "company": "Oil and Natural Gas Corporation (ONGC)",
+  "location": "India",
+  "posted_on": "2026-07-10",
+  "url": "https://ongcindia.com/web/eng/career/recruitment-notice",
+  "fresher": true,
+  "experience_text": "Fresher; final-year students eligible with proof at interview",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Regular full-time B.E./B.Tech. from an AICTE-approved institution with minimum 60% aggregate marks",
+    "skill_id": null
+   },
+   {
+    "text": "Shortlisting on valid GATE score performance / Computer Based Test as applicable",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "Electrical / Electronics / Instrumentation candidates shortlisted on GATE score",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Civil candidates shortlisted on GATE Civil score",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Personal Interview, document verification and medical examination",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Applications open 17 July 2026 at ongcindia.com; CBT scheduled 6 September 2026",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:isro_icrb_sc_2026",
+  "path_id": "government_psu",
+  "title": "Scientist/Engineer 'SC' (ISRO:ICRB:03(EMC):2026)",
+  "company": "Indian Space Research Organisation (ISRO Centralised Recruitment Board)",
+  "location": "India",
+  "posted_on": "2026-08-27",
+  "url": "https://www.isro.gov.in/ICRB_Recruitment13.html",
+  "fresher": true,
+  "experience_text": "Fresher / entry-level Scientist/Engineer SC",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "BE/B.Tech or equivalent in the advertised disciplines (see bilingual advertisement)",
+    "skill_id": null
+   },
+   {
+    "text": "Centralised Computer Based Test (CBT) on 19 October 2026",
+    "skill_id": "gate_preparation_ece_ee_me"
+   },
+   {
+    "text": "CBT covers core engineering subjects in Electrical / Electronics disciplines",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Interview for candidates shortlisted from the CBT",
+    "skill_id": "psu_interview_preparation"
+   },
+   {
+    "text": "Online applications 27 August 2026 to 16 September 2026 (11:55 PM)",
+    "skill_id": null
+   },
+   {
+    "text": "Posting at Bengaluru and other ISRO centres",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:tgpsc_aee_2026",
+  "path_id": "government_psu",
+  "title": "Assistant Executive Engineer (Civil, Electrical) and Assistant Environmental Engineer 2026",
+  "company": "Telangana Public Service Commission (TGPSC)",
+  "location": "India",
+  "posted_on": "2026-06-02",
+  "url": "https://www.tspsc.gov.in/",
+  "fresher": true,
+  "experience_text": "Fresher / no experience required",
+  "salary_text": "Rs 54,220 to 1,33,630 per month",
+  "requirements": [
+   {
+    "text": "Bachelor's degree in Civil Engineering (222 posts)",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Bachelor's degree in Electrical Engineering (49 posts)",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Written test (OMR/CBT) in October 2026 followed by document verification and medical examination; no interview",
+    "skill_id": "ssc_je_rrb_je_preparation"
+   },
+   {
+    "text": "General Studies and General Abilities paper",
+    "skill_id": "gate_preparation_general_aptitude"
+   },
+   {
+    "text": "Age 18 to 44 years (relaxations for SC/ST/BC/EWS/PwD)",
+    "skill_id": null
+   },
+   {
+    "text": "Applications: Civil 6 June to 13 July 2026, Electrical 8 June to 15 July 2026 via One Time Registration",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ },
+ {
+  "id": "notification:manipur_psc_ae_2026",
+  "path_id": "government_psu",
+  "title": "Assistant Engineer (Civil, Electrical) 2026 - 130 posts",
+  "company": "Manipur Public Service Commission",
+  "location": "India",
+  "posted_on": "2026-02-04",
+  "url": "https://empsconline.gov.in/",
+  "fresher": true,
+  "experience_text": "Fresher (or 3-year diploma with 5 years service)",
+  "salary_text": null,
+  "requirements": [
+   {
+    "text": "Degree or AMIE in Civil Engineering (108 posts across PWD, PHED, Water Resources, Minor Irrigation)",
+    "skill_id": "gate_preparation_civil"
+   },
+   {
+    "text": "Degree in Electrical Engineering or equivalent (22 posts with MSPDCL/MSPCL)",
+    "skill_id": "gate_preparation_electrical"
+   },
+   {
+    "text": "Written examination 4 to 6 April 2026",
+    "skill_id": "ssc_je_rrb_je_preparation"
+   },
+   {
+    "text": "Age 21 to 38 years as on 1 July 2026 (relaxation per government guidelines)",
+    "skill_id": null
+   },
+   {
+    "text": "Applications 7 to 28 February 2026 through empsconline.gov.in",
+    "skill_id": null
+   }
+  ],
+  "source": "notification",
+  "seen_on": "2026-09-21"
+ }
+]
