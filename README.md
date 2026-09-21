@@ -60,3 +60,10 @@ Fix a number with a source. Add an employer with a fresher-hiring page from the 
 ## Licence
 
 Code: MIT. Content and data: CC BY 4.0.
+
+## Deployed (v0.1, 21 Sep 2026)
+
+- Site: https://main.d1pntf15nafb3u.amplifyapp.com (AWS Amplify Hosting, ap-south-1)
+- Responses API: API Gateway HTTP API → Lambda `disha-responses` → DynamoDB `disha-responses`
+- Export: `deploy/outputs.json` in the CloudShell home of the deploying account holds the export URLs and key. Keep the key private.
+- Redeploy: upload `deploy/` (with `site/index.html` from `dist/`) to CloudShell and run `bash deploy.sh`; re-runs update the Lambda code and push a new site build.

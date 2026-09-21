@@ -116,6 +116,8 @@ footer{max-width:760px;margin:0 auto;padding:16px;font-size:13px;color:var(--ink
 
 <script id="data" type="application/json">/*__DATA__*/</script>
 <script>
+const ENDPOINT = '__ENDPOINT__'; // replaced by deploy/deploy.sh with the responses API URL; left as-is, the opt-in card stays hidden
+const SITE_VERSION = '0.1.0';
 const D = JSON.parse(document.getElementById('data').textContent);
 const PATHS = D.paths, QS = D.questions.questions, STATS = D.stats;
 const SBY = Object.fromEntries(STATS.map(s => [s.id, s]));
@@ -256,10 +258,34 @@ function results() {
       ${r.hits.map(h => `<div class="reason ${h.score > 0 ? 'pos' : 'neg'}"><span class="s">${h.score > 0 ? '+' : ''}${h.score}</span><span>${esc(h.reason)}</span></div>`).join('') || '<p class="cap">No profile rule matched; ranked on door size alone.</p>'}
       <div class="row" style="margin-top:12px"><a class="btn" href="#/path/${r.path.id}">Open the ${esc(r.path.name)} plan</a></div>
     </div>`).join('')}
+    <div class="card" id="optin" hidden>
+      <h3>Help make this better for the next batch</h3>
+      <p style="font-size:14px">Save your answers and this ranking so we can check whether the directions are right and tune the rules. No name or email unless you add one below. Nothing is sold; the project is open source.</p>
+      <div class="row" style="gap:8px"><input id="c-name" placeholder="Name (optional)" style="flex:1;min-width:140px"><input id="c-college" placeholder="College (optional)" style="flex:1;min-width:140px"><input id="c-email" placeholder="Email, if you want a follow-up (optional)" type="email" style="flex:2;min-width:200px"></div>
+      <div class="row" style="margin-top:10px"><button class="btn" id="send">Save my answers and ranking</button><span class="cap" id="send-msg"></span></div>
+    </div>
     <h2>The rest, for comparison</h2>
     <div class="list">${ranked.slice(3).map(r => `<a class="pathrow" href="#/path/${r.path.id}"><span><span class="t">${esc(r.path.name)}</span><br><span class="d">${esc(r.path.tagline)}</span></span><span class="val" style="font-family:var(--mono)">${r.total}</span></a>`).join('')}</div>
     <p class="cap" style="margin-top:18px"><a href="#/quiz/0">Change my answers</a> · <a href="#" id="reset">Clear and start over</a></p>`;
   document.getElementById('reset').addEventListener('click', e => { e.preventDefault(); answers = {}; save(); location.hash = '#/quiz'; });
+  // opt-in response collection (endpoint set at deploy time)
+  const box = document.getElementById('optin');
+  let sent = false; try { sent = localStorage.getItem('disha.sent') === '1'; } catch (e) {}
+  if (ENDPOINT && /^https:\/\//.test(ENDPOINT) && !sent) {
+    box.hidden = false;
+    const btn = document.getElementById('send'), msg = document.getElementById('send-msg');
+    btn.addEventListener('click', async () => {
+      btn.disabled = true; msg.textContent = 'Saving…';
+      const contact = {}; ['name', 'college', 'email'].forEach(k => { const v = document.getElementById('c-' + k).value.trim(); if (v) contact[k] = v; });
+      try {
+        const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ consent: true, answers, ranking: ranked.map(x => ({ id: x.path.id, score: x.total })), contact, site_version: SITE_VERSION }) });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        msg.textContent = 'Saved. Thank you.'; try { localStorage.setItem('disha.sent', '1'); } catch (e) {}
+        setTimeout(() => { box.hidden = true; }, 1500);
+      } catch (e) { msg.textContent = 'Could not save (' + e.message + '). You can try again.'; btn.disabled = false; }
+    });
+  }
 }
 
 function pathsList() {
@@ -339,6 +365,8 @@ function about() {
   <h2>How it works</h2>
   <p>Ten questions build a profile. A rules engine, not a language model, scores nine paths: a base score for how many fresher seats the door has this year, plus fit rules written by people and shown on every path page. The top three come with the rules that fired, so every ranking can be argued with.</p>
   <p>Three agent skills maintain the content: one refreshes the statistics quarterly from primary sources and refuses to emit a number without a URL; one maintains the path records (door size, pay, plan, project, employers, fit rules); one writes the graduate-facing text in plain English. Changes arrive as pull requests that maintainers review.</p>
+  <h2>Your data</h2>
+  <p>Your answers stay in your browser unless you press "Save my answers and ranking" on the results page. If you do, your answers and the ranking are stored so the rules can be checked against real profiles; name, college and email are optional and used only for a follow-up if you gave one. Nothing is sold or shared with recruiters.</p>
   <h2>What it is not</h2>
   <p>It is not a job board, a course, or a guarantee. Projections from staffing firms are labelled as projections. Where two credible sources disagree, both are shown. Where no number exists, the site says so instead of inventing one.</p>
   <h2>Contribute</h2>

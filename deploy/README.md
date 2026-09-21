@@ -1,0 +1,10 @@
+# Deploying
+
+1. `python3 scripts/build.py` at the repo root.
+2. Bundle: `deploy/deploy.sh`, `deploy/lambda/handler.py`, and `dist/index.html` copied to `deploy/site/index.html`.
+3. Upload the bundle to AWS CloudShell (Actions → Upload file), `unzip`, `bash deploy.sh`.
+4. The script prints the site URL, the responses endpoint, and the export URLs; it also writes `outputs.json` and `.export_key` next to itself. Keep the key private.
+
+Costs: Amplify Hosting, API Gateway, Lambda and DynamoDB are all pay-per-use and sit inside the free tier at test scale.
+
+Cleanup: `aws amplify delete-app --app-id <id>`, `aws apigatewayv2 delete-api --api-id <id>`, `aws lambda delete-function --function-name disha-responses`, `aws dynamodb delete-table --table-name disha-responses`, `aws iam delete-role-policy --role-name disha-responses-lambda --policy-name ddb && aws iam detach-role-policy --role-name disha-responses-lambda --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole && aws iam delete-role --role-name disha-responses-lambda`.
