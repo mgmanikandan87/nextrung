@@ -53,7 +53,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           branch: refresh/${{ github.run_id }}
-          title: 'Quarterly data refresh (${{ github.event.inputs.scope || 'all' }})'
+          title: "Quarterly data refresh (${{ github.event.inputs.scope || 'all' }})"
           commit-message: 'data: quarterly refresh by the agent'
           body: |
             Automated refresh by the data agent. Review `review/refresh-*.md` for what changed and any decisions needed, spot-check a few sources, then merge. Merging deploys via `ci`.
