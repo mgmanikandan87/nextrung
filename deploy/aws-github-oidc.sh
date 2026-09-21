@@ -17,11 +17,17 @@ if ! aws iam get-open-id-connect-provider --open-id-connect-provider-arn "$PROV"
   echo "created OIDC provider"
 fi
 
-# 2. Role trusted only by this repo's main branch (and PRs cannot assume it)
+# 2. Role trusted only by this repo's main branch (and PRs cannot assume it).
+#    GitHub now issues an "immutable subject" by default: repo:<owner>@<owner_id>/<repo>@<repo_id>:ref:...
+#    so we trust both the classic and the immutable form (ids from the public GitHub API).
+IDS=$(curl -sS "https://api.github.com/repos/$REPO")
+OWNER_ID=$(echo "$IDS" | python3 -c 'import json,sys;d=json.load(sys.stdin);print(d["owner"]["id"])')
+REPO_ID=$(echo "$IDS" | python3 -c 'import json,sys;d=json.load(sys.stdin);print(d["id"])')
+IMM="repo:${REPO%%/*}@$OWNER_ID/${REPO##*/}@$REPO_ID"
 TRUST=$(cat <<EOF
 {"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Federated":"$PROV"},"Action":"sts:AssumeRoleWithWebIdentity",
  "Condition":{"StringEquals":{"token.actions.githubusercontent.com:aud":"sts.amazonaws.com"},
-              "StringLike":{"token.actions.githubusercontent.com:sub":"repo:$REPO:ref:refs/heads/main"}}}]}
+              "StringLike":{"token.actions.githubusercontent.com:sub":["repo:$REPO:ref:refs/heads/main","$IMM:ref:refs/heads/main"]}}}]}
 EOF
 )
 if aws iam get-role --role-name "$ROLE" >/dev/null 2>&1; then
@@ -48,4 +54,4 @@ ARN=$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)
 echo; echo "================ DONE ================"
 echo "GitHub secret AWS_DEPLOY_ROLE_ARN = $ARN"
 echo "Export key lives in SSM parameter /$NAME/export_key (no GitHub secret needed)."
-echo "Trusted: repo:$REPO, branch main only."
+echo "Trusted: repo:$REPO and $IMM, branch main only."
