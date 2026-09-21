@@ -45,7 +45,8 @@ jobs:
     needs: validate-build-smoke
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    environment: production
+    # No `environment:` here on purpose: with one, the OIDC subject becomes
+    # repo:<repo>:environment:<name>, which the deploy role's trust policy does not allow.
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
