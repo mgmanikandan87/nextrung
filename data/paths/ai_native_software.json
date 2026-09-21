@@ -1,0 +1,399 @@
+{
+  "id": "ai_native_software",
+  "name": "AI-native software",
+  "tagline": "Narrow fresher door, but the only software door that is growing in 2026",
+  "door_state": "growing",
+  "door_size": {
+    "people_per_year": 20000,
+    "stat_ids": [
+      "demand.gcc.entry_level_jobs_to_2030",
+      "demand.xpheno.entry_level_openings.2026",
+      "demand.gcc.fresher_share.2025",
+      "demand.gcc.ai_data_platform_share_of_new_roles.q4fy26"
+    ],
+    "caveat": "FirstMeridian projection of 1 lakh entry-level GCC jobs over 2025 to 2030 spread evenly; only about 10,000 entry-level tech openings were live in May 2026 (Xpheno), and freshers were 15% of GCC hiring in 2025, down from 28%."
+  },
+  "pay_band": {
+    "low_lpa": 8,
+    "high_lpa": 15,
+    "stat_ids": [
+      "demand.fresher_ctc.bands.2026"
+    ],
+    "note": "GCC 8 to 12 and product companies 8 to 15 for most; AI/ML roles at funded startups 18 to 25 and a few big-tech new-grad offers above 30 go to a very small number, mostly from tier-1 campuses. Source is a low-confidence salary guide."
+  },
+  "branches": {
+    "CS": 3,
+    "IT": 3,
+    "ECE": 2,
+    "EE": 1,
+    "MECH": 1,
+    "CIVIL": 0,
+    "CHEM": 0,
+    "OTHER": 1
+  },
+  "tiers_realistic": {
+    "tier1": "Yes. GCCs, product companies and AI startups still run campus drives at IITs, NITs, IIITs and BITS, but even there 38% of the 2024 IIT batch was unplaced (supply.iit.unplaced_share.2024), so the brand alone no longer closes the offer.",
+    "tier2": "Yes, with a portfolio. Off-campus drives (Amazon SDE-1, Fractal Imagineers, Mu Sigma, Zoho, Flipkart GRiD) accept any college; a 7+ CGPA filter and an online coding test are the first gates, then the shipped project decides.",
+    "tier3": "Possible but the minority outcome; expect 12 to 18 months of building before the first offer. What substitutes for the brand: a deployed, working AI application in a real domain with a public repo and a written evaluation, plus one open-source contribution or a paid freelance build. Only 6 in 100 tech postings were entry-level in mid-2026 (demand.prepnplaced.entry_level_posting_share.2026), so apply through hackathons, hiring challenges and referrals, not job boards alone. Employability for AI/ML roles among graduates tested was 46% (supply.mettl2025.employability.ai_ml_roles): most applicants fail the basics, so basics done properly are a real edge."
+  },
+  "entry_requirements": [
+    "Python with the standard data stack (pandas, FastAPI or Flask) and SQL: every online test and take-home starts here",
+    "Data structures and algorithms at LeetCode easy-to-medium level; still the first screen at Amazon, Flipkart, Razorpay, Zoho",
+    "One deployed project that calls an LLM API, uses retrieval (RAG), has written evals and is visible on GitHub with a README a recruiter can run",
+    "One cloud (AWS, Azure or GCP) at free-tier level: deploy a container, set up a queue, read logs, know what a bill looks like",
+    "Git, Docker, basic Linux and CI (GitHub Actions); GCC interviews ask how you shipped, not just what you built",
+    "Ability to explain a system you built for 30 minutes, including what broke and how you tested it; interviewers now assume the code was AI-assisted and probe understanding",
+    "7+ CGPA and no active backlogs for most GCC and analytics trainee filters (Fractal Imagineers screens on both)"
+  ],
+  "two_year_plan": [
+    {
+      "block": "H1",
+      "title": "Foundations: Python, SQL, DSA, one cloud",
+      "learn": [
+        "Python properly: NPTEL 'Programming, Data Structures and Algorithms using Python' (free), then Harvard CS50P (free)",
+        "SQL on a real dataset: SQLBolt then Mode SQL tutorial; practice joins, window functions, indexes on PostgreSQL",
+        "DSA: 150 LeetCode problems (arrays, strings, hashing, trees, graphs, DP basics) at 1 to 2 a day",
+        "Git and GitHub, Linux shell, Docker basics via the free Docker curriculum",
+        "AWS Cloud Practitioner material (free digital training) or Microsoft Learn AZ-900; FutureSkills Prime cloud pathway if you want a government-recognised certificate at no cost"
+      ],
+      "build": [
+        "A CLI or small web app (FastAPI) that reads and writes a PostgreSQL database, deployed on Render, Railway or AWS free tier",
+        "A public GitHub profile with weekly commits; README for every repo"
+      ],
+      "evidence": [
+        "Deployed URL plus repo",
+        "LeetCode profile with 150 solved",
+        "One cloud fundamentals certificate"
+      ],
+      "target": [
+        "TCS NQT, Infosys, Cognizant GenC as fallback registrations",
+        "Flipkart GRiD if in third year",
+        "College hackathons"
+      ]
+    },
+    {
+      "block": "H2",
+      "title": "Build with LLM APIs, RAG and evals",
+      "learn": [
+        "Calling LLM APIs (OpenAI, Anthropic, Gemini, or open models via Ollama and Hugging Face): prompts, structured outputs, tool calling, streaming, cost and token maths",
+        "Retrieval-augmented generation: chunking, embeddings, pgvector or Chroma, hybrid search, re-ranking",
+        "Evals: build a 50-question test set for your app, score it automatically, track regressions; read the OpenAI and Anthropic eval cookbooks",
+        "Agent frameworks at a working level (LangGraph, the OpenAI Agents SDK, or CrewAI); understand what they do so you can also build without them",
+        "Observability: log every prompt, latency and cost; use Langfuse (open-source) or OpenTelemetry"
+      ],
+      "build": [
+        "The evidenced project below: an agentic assistant over real domain documents with retrieval, evals and a cost dashboard",
+        "A second, smaller build: a data pipeline (Airflow or Prefect, free) that loads a public dataset into a warehouse (DuckDB or BigQuery sandbox) and refreshes daily"
+      ],
+      "evidence": [
+        "Demo video under 3 minutes",
+        "Eval results table in the README",
+        "Blog post on one hard bug"
+      ],
+      "target": [
+        "Fractal Imagineers, Mu Sigma trainee decision scientist",
+        "Zoho off-campus developer roles",
+        "Internship applications at GCCs (Sparkplug-style programmes if your college is on the list)"
+      ]
+    },
+    {
+      "block": "H3",
+      "title": "Production skills and a domain",
+      "learn": [
+        "System design for freshers: queues, caching, idempotency, retries, rate limits; design one service end to end on paper",
+        "Testing and CI: pytest, GitHub Actions, contract tests for your API",
+        "Kubernetes basics (minikube) and infrastructure as code (Terraform free tier) for platform and MLOps roles",
+        "Security basics: OWASP top 10, secrets management, prompt-injection defences for LLM apps",
+        "Pick one domain (banking, insurance, logistics, healthcare, retail, telecom) and learn its vocabulary and its regulator's rules; GCCs hire into domains"
+      ],
+      "build": [
+        "Harden the H2 project: auth, rate limiting, CI, a load test, a runbook",
+        "One open-source contribution (a bug fix or docs PR to LangGraph, Langfuse, FastAPI or a similar project)"
+      ],
+      "evidence": [
+        "Merged PR link",
+        "Architecture diagram and runbook in the repo",
+        "Load-test numbers"
+      ],
+      "target": [
+        "Amazon SDE-1 off-campus, Razorpay, Flipkart, Zoho",
+        "GCC early-careers pages (Goldman Sachs, Deloitte USI, Walmart Global Tech)",
+        "Juspay-style hiring challenges"
+      ]
+    },
+    {
+      "block": "H4",
+      "title": "Interviews, referrals and the first offer",
+      "learn": [
+        "Revise DSA to 250 solved with mock interviews (Pramp, peers); GCC rounds are 3 to 4 technical interviews plus a values round",
+        "Behavioural stories: five projects framed as problem, action, measured result",
+        "Salary negotiation basics and how to read a CTC breakup (fixed vs variable vs joining bonus)"
+      ],
+      "build": [
+        "A one-page portfolio site listing the three builds with links and eval numbers",
+        "Weekly applications: 10 targeted, referral-first, tracked in a sheet; message alumni on LinkedIn with the demo link, not a CV"
+      ],
+      "evidence": [
+        "Portfolio site",
+        "Interview log with what failed and what was fixed"
+      ],
+      "target": [
+        "Any GCC, product company or AI startup with an entry or junior posting",
+        "Fallback: it_services specialist tracks (Infosys DSE, TCS Digital) which pay above the mass-recruiter band"
+      ]
+    }
+  ],
+  "evidenced_project_spec": {
+    "title": "Claims copilot for a general insurer",
+    "scope": "An assistant that ingests 200 to 500 anonymised or synthetic motor-insurance claim documents (FIR, surveyor report, policy PDF, garage invoice), answers a claims officer's questions with citations, flags missing documents against the policy's checklist, and drafts the settlement note. Includes retrieval over the documents, a tool that reads the policy schedule, an eval set of 60 questions with expected answers, and a dashboard of cost, latency and accuracy per release.",
+    "domain": "insurance",
+    "agent_use": "A coding agent (Claude Code, Cursor, or an open-source equivalent) scaffolds the FastAPI service, writes the first tests and generates synthetic claim files; the graduate reviews every diff, writes the retrieval and eval logic by hand, and keeps a log of what the agent got wrong. A research agent is used to summarise IRDAI motor-claim timelines, which the graduate then verifies against the regulator's page.",
+    "done_looks_like": "Deployed at a public URL with login; answers 60-question eval at 85% or better with citations; flags missing documents correctly on 20 held-out claims; total cost per claim under Rs 5; README explains architecture, eval method, failure cases and what is not automated (final settlement decision stays with the officer).",
+    "verification": "Automated eval run in CI on every commit with results committed to the repo; a 3-minute demo video; one insurance professional or faculty member reviews five outputs and their comments are in the repo; a 30-minute walkthrough the graduate can give without notes covering chunking choices, one hallucination they caught and how the eval set was built."
+  },
+  "ai_task_shift": [
+    {
+      "task_2019": "Write CRUD endpoints, boilerplate and unit tests by hand",
+      "now": "Coding agents generate most boilerplate and first-draft tests; a fresher who only does this has no edge",
+      "human_owns": "Specifying the behaviour precisely, reviewing generated code for correctness and security, and owning what ships"
+    },
+    {
+      "task_2019": "Read documentation and Stack Overflow to learn a new library",
+      "now": "Agents explain and integrate libraries on demand",
+      "human_owns": "Judging which tool fits, what the trade-offs are, and knowing enough fundamentals to catch a wrong answer"
+    },
+    {
+      "task_2019": "Manual testing and bug triage on a ticket queue (the classic fresher job)",
+      "now": "Agents write regression tests, reproduce bugs and propose fixes; this entry-level rung is shrinking fastest",
+      "human_owns": "Designing evals and test strategy, deciding what 'correct' means for the business, and debugging the cases agents cannot reproduce"
+    },
+    {
+      "task_2019": "Build dashboards and reports in SQL and Excel for analysts",
+      "now": "Text-to-SQL and agentic analytics produce first drafts",
+      "human_owns": "Data modelling, checking the numbers against the source of truth, and explaining them to the business"
+    },
+    {
+      "task_2019": "Deploy and monitor a service by following a runbook",
+      "now": "Agents execute runbooks and draft incident summaries",
+      "human_owns": "Architecture, cost control, reliability targets and the judgement call during an incident"
+    },
+    {
+      "task_2019": "Not a fresher task: building AI features",
+      "now": "Every product team is adding LLM features; building, evaluating and running them is the new entry-level work, and AI/ML postings grew 31% year on year in Aug 2026 (demand.naukri.jobspeak.ai_ml_yoy.aug2026)",
+      "human_owns": "Product sense for what the model should and should not do, evaluation, guardrails, and observability"
+    }
+  ],
+  "fallback_path_id": "it_services",
+  "employers": [
+    {
+      "name": "Amazon India",
+      "type": "company",
+      "location": "Bengaluru, Hyderabad, Chennai, Delhi, Pune",
+      "roles": "SDE-1 via Amazon University Talent Acquisition; 2025 and 2026 batches",
+      "fresher": true,
+      "source_url": "https://www.enggwave.com/amazon-hiring-freshers-2026/106873",
+      "seen_on": "2026-04"
+    },
+    {
+      "name": "Fractal Analytics",
+      "type": "company",
+      "location": "Bengaluru, Mumbai, Pune, Chennai, Gurgaon",
+      "roles": "Campus Imagineer (data and AI trainee), 2026 batch; screens on 7+ CGPA, Python, SQL",
+      "fresher": true,
+      "source_url": "https://fractal.wd1.myworkdayjobs.com/en-US/Careers/job/Campus-Imagineer-Hiring--2026-_SR-34085-1",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Mu Sigma",
+      "type": "company",
+      "location": "Bengaluru",
+      "roles": "Trainee Decision Scientist; students and recent graduates apply by email to DSRecruitment",
+      "fresher": true,
+      "source_url": "https://www.mu-sigma.com/career/",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Zoho",
+      "type": "company",
+      "location": "Chennai, Tenkasi and other Tamil Nadu centres",
+      "roles": "Software developer and network operations engineer; fresher to 5 years; known for hiring from any college",
+      "fresher": true,
+      "source_url": "https://www.fresheroffcampus.com/zoho-off-campus/",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Flipkart",
+      "type": "company",
+      "location": "Bengaluru",
+      "roles": "GRiD 8.0 (software, AI engineering, data science tracks) for classes of 2027 to 2030; pathway to SDE and internship interviews",
+      "fresher": true,
+      "source_url": "https://internshala.com/competitions/flipkart-grid-8-0/",
+      "seen_on": "2026-06"
+    },
+    {
+      "name": "Razorpay",
+      "type": "company",
+      "location": "Bengaluru",
+      "roles": "Roadies new-grad programme and SDE-1 openings; DSA-heavy screen",
+      "fresher": true,
+      "source_url": "https://www.ownyourcareer.in/blog/off-campus-drives-june-2026-freshers-india-hiring",
+      "seen_on": "2026-07"
+    },
+    {
+      "name": "Goldman Sachs (Engineering, India)",
+      "type": "company",
+      "location": "Bengaluru, Hyderabad",
+      "roles": "Engineering summer analyst 2026 (campus portal); converts to analyst offers",
+      "fresher": true,
+      "source_url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CampusHiring/job/148695/?sortBy=POSTING_DATES_DESC",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Deloitte USI",
+      "type": "company",
+      "location": "Hyderabad, Bengaluru",
+      "roles": "Associate analyst and analyst roles (cloud infrastructure, data analytics, technology controls); role-specific, no single pan-India drive",
+      "fresher": true,
+      "source_url": "https://www.sahildubey.com/2026/07/deloitte-recruitment-for-freshers.html",
+      "seen_on": "2026-07"
+    }
+  ],
+  "fit_rules": [
+    {
+      "field": "branch",
+      "value": "CS",
+      "score": 2,
+      "reason": "CS is what most GCC and product filters ask for, and your syllabus already covers DSA and databases."
+    },
+    {
+      "field": "branch",
+      "value": "IT",
+      "score": 2,
+      "reason": "IT degrees pass the same filters as CS for software and data roles."
+    },
+    {
+      "field": "branch",
+      "value": "ECE",
+      "score": 1,
+      "reason": "ECE graduates are accepted by most software drives (Fractal lists ECE) but must self-teach DSA and databases."
+    },
+    {
+      "field": "branch",
+      "value": "CIVIL",
+      "score": -2,
+      "reason": "Few software drives accept Civil; you would compete against CS graduates with no syllabus support."
+    },
+    {
+      "field": "college_tier",
+      "value": "1",
+      "score": 2,
+      "reason": "Campus drives from GCCs and product companies still come to tier-1 colleges."
+    },
+    {
+      "field": "college_tier",
+      "value": "3",
+      "score": -1,
+      "reason": "Almost no AI-native employer visits tier-3 campuses; you enter through off-campus drives and a portfolio, which takes longer."
+    },
+    {
+      "field": "relocation",
+      "value": "anywhere_india",
+      "score": 1,
+      "reason": "These jobs are concentrated in Bengaluru, Hyderabad, Pune, Chennai and NCR."
+    },
+    {
+      "field": "relocation",
+      "value": "hometown_only",
+      "score": -3,
+      "reason": "Unless home is one of six metros, there are almost no AI-native fresher jobs near home; remote fresher roles are rare."
+    },
+    {
+      "field": "region",
+      "value": "south",
+      "score": 1,
+      "reason": "Bengaluru, Hyderabad and Chennai hold most GCC and AI startup seats."
+    },
+    {
+      "field": "runway_months",
+      "value": "0_3",
+      "score": -2,
+      "reason": "The first offer on this path usually takes 12 to 18 months of building for a tier-2/3 graduate; with no runway, take an IT services or apprenticeship job and build on the side."
+    },
+    {
+      "field": "runway_months",
+      "value": "12_plus",
+      "score": 1,
+      "reason": "A year of runway is enough to build the portfolio this path needs."
+    },
+    {
+      "field": "interests",
+      "value": "building_software",
+      "score": 3,
+      "reason": "This path is building software every day."
+    },
+    {
+      "field": "interests",
+      "value": "data_numbers",
+      "score": 2,
+      "reason": "Data engineering, analytics trainee and evaluation work are large parts of this path."
+    },
+    {
+      "field": "interests",
+      "value": "physical_systems",
+      "score": -1,
+      "reason": "Little of this path touches machines or structures; consider ev_automotive or semiconductor if that is what you like."
+    },
+    {
+      "field": "priority",
+      "value": "high_pay_growth",
+      "score": 2,
+      "reason": "Fresher pay here is two to four times the IT services band, with faster growth, at the cost of a harder entry."
+    },
+    {
+      "field": "priority",
+      "value": "income_now",
+      "score": -2,
+      "reason": "This is the slowest path to a first salary for most tier-2/3 graduates."
+    },
+    {
+      "field": "preparation",
+      "value": "projects_portfolio",
+      "score": 3,
+      "reason": "A shipped project is the single strongest signal on this path."
+    },
+    {
+      "field": "preparation",
+      "value": "dsa",
+      "score": 2,
+      "reason": "DSA is still the first screen at Amazon, Flipkart, Razorpay and most GCCs."
+    },
+    {
+      "field": "preparation",
+      "value": "none",
+      "score": -2,
+      "reason": "Starting from zero, plan for the full two-year timeline before expecting offers here."
+    },
+    {
+      "field": "enjoyed",
+      "value": "coding_projects",
+      "score": 2,
+      "reason": "You already like the daily work of this path."
+    }
+  ],
+  "base_score": 6,
+  "stat_ids_used": [
+    "demand.gcc.entry_level_jobs_to_2030",
+    "demand.xpheno.entry_level_openings.2026",
+    "demand.gcc.fresher_share.2025",
+    "demand.gcc.ai_data_platform_share_of_new_roles.q4fy26",
+    "demand.fresher_ctc.bands.2026",
+    "supply.iit.unplaced_share.2024",
+    "demand.prepnplaced.entry_level_posting_share.2026",
+    "supply.mettl2025.employability.ai_ml_roles",
+    "demand.naukri.jobspeak.ai_ml_yoy.aug2026"
+  ],
+  "last_reviewed": "2026-09-21",
+  "changed_fields": [
+    "all"
+  ]
+}

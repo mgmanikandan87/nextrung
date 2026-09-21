@@ -1,0 +1,395 @@
+{
+ "id": "infrastructure_energy",
+ "name": "Infrastructure and energy",
+ "tagline": "Steady, large door, but most new jobs are technician-level; graduate seats sit at EPCs and PSUs",
+ "door_state": "steady",
+ "door_size": {
+  "people_per_year": null,
+  "stat_ids": [
+   "paths.energy.clean_energy_jobs_2030",
+   "paths.govt.psu_via_gate_examples.2026",
+   "demand.naukri.jobspeak.fresher_yoy.aug2026"
+  ],
+  "caveat": "No stat counts graduate engineer hires per year. CEEW projects 44 lakh clean-energy jobs by 2030, but about 43% are rooftop solar and mostly technician-level; PSU engineer intake via GATE is in the hundreds per company (NTPC about 500, NPCIL 330); EPC GET intake is unpublished. Non-IT sectors are driving fresher hiring growth in 2026."
+ },
+ "pay_band": {
+  "low_lpa": 3,
+  "high_lpa": 8,
+  "stat_ids": [
+   "paths.infra.fresher_ctc_bands.2026"
+  ],
+  "note": "Private EPC GETs earn 3 to 6; PSU executive trainees (NTPC, Power Grid, NHAI) earn 5 to 8 with allowances on top; site roles add hardship and site allowances that are not in the CTC figure."
+ },
+ "branches": {
+  "CS": 0,
+  "IT": 0,
+  "ECE": 1,
+  "EE": 3,
+  "MECH": 2,
+  "CIVIL": 3,
+  "CHEM": 1,
+  "OTHER": 1
+ },
+ "tiers_realistic": {
+  "tier1": "Yes. L&T, Tata Projects and Afcons run campus GET drives at NITs and top state colleges; NHIDCL associate posts are restricted to IIT, NIT and top-100 NIRF colleges; PSUs via GATE are brand-blind.",
+  "tier2": "Yes. L&T visits over a hundred and fifty campuses, and PSU trainee posts (NTPC, Power Grid) are decided by GATE score, not college. Solar EPCs and IPPs (ReNew, Adani Green, Tata Power) take tier-2 GETs with a PVsyst or ETAP portfolio.",
+  "tier3": "Yes, more than most paths. Site engineering is short of people who will actually go to site, and the GATE route to PSUs is open to everyone. What substitutes for the brand is a site internship or a Power Grid or NTPC graduate apprenticeship under NATS, a STAAD or ETAP or PVsyst portfolio, and a GATE score. The trap is stopping at diploma-level site supervisor work at a subcontractor; aim for the EPC or PSU payroll."
+ },
+ "entry_requirements": [
+  "B.E./B.Tech in Civil, Electrical, Mechanical or (for solar and grid) EEE or Electronics; PSU notices ask for 60 to 65% aggregate and an age limit around 28 to 30",
+  "A valid GATE score for NTPC, Power Grid, NHAI and other PSU trainee posts; EPC campus drives use their own online tests",
+  "Tool skill that recruiters name in postings: AutoCAD, STAAD.Pro, Revit or BIM for civil; ETAP for electrical; Primavera P6 or MS Project for planning; PVsyst for solar design",
+  "Site exposure: an internship or NATS apprenticeship where you handled a bar-bending schedule, a pour, a cable pull or a substation test",
+  "Basic quantity estimation and billing (BOQ, measurement book) because most fresher EPC roles are site or planning engineer",
+  "Willingness to live at remote project sites for the first years and to move between projects"
+ ],
+ "two_year_plan": [
+  {
+   "block": "H1",
+   "title": "Core tools and a site internship",
+   "learn": [
+    "NPTEL: Construction Planning and Management, Design of RC Structures (civil) or Power System Analysis and Electrical Machines (electrical); free with an optional exam",
+    "AutoCAD to a drafting standard (free student licence); STAAD.Pro or ETAP student or trial versions; PVsyst demo for solar sizing",
+    "Reading drawings and BOQs: get a set of GFC drawings from a college project or a public tender and take off quantities by hand",
+    "Register on the NATS portal so Power Grid, NTPC and state utilities' graduate apprentice notices are open to you"
+   ],
+   "build": [
+    "Civil: a STAAD model of a small RC building or a steel pipe rack with a design check and a bar-bending schedule; Electrical: an ETAP model of a small industrial substation with load flow and short-circuit results",
+    "A Primavera or MS Project schedule for that same job with a critical path and a resource histogram"
+   ],
+   "evidence": [
+    "A folder with drawings, model files, calculation sheets and a two-page design note",
+    "A one-month site internship at any contractor, documented with photos and a daily log"
+   ],
+   "target": [
+    "Summer internship at a local contractor, a state PWD or discom, or an L&T or Tata Projects site",
+    "Power Grid graduate apprentice notices (Electrical and Civil, regions across India)"
+   ]
+  },
+  {
+   "block": "H2",
+   "title": "GATE and a real project workflow",
+   "learn": [
+    "GATE for your paper (CE, EE or ME) with a fixed daily schedule; the same score serves NTPC, Power Grid, NHAI and other PSUs",
+    "Revit basics and what BIM means on a metro or building job; Autodesk offers free student access",
+    "Solar plant design: irradiation data, tilt, string sizing, inverter selection and losses in PVsyst; Skill India or NISE short courses for solar are free or cheap",
+    "Site safety and quality: IS codes you will actually be asked about (IS 456, IS 800 for civil; IS 3043 earthing and IE Rules for electrical)"
+   ],
+   "build": [
+    "A solar plant of a few megawatts designed end to end in PVsyst with a single-line diagram in AutoCAD and a cable schedule",
+    "A quantity take-off and cost estimate for a small road or building package using a public schedule of rates"
+   ],
+   "evidence": [
+    "GATE score card (February exam)",
+    "The PVsyst report and cost estimate published with assumptions listed"
+   ],
+   "target": [
+    "NTPC Engineering Executive Trainee (applications around February) and Power Grid Engineer Trainee via GATE",
+    "NHIDCL associate (civil, July notice, top-100 NIRF only) if eligible",
+    "ReNew and Adani Green GET drives"
+   ]
+  },
+  {
+   "block": "H3",
+   "title": "Apprenticeship or GET, and planning skill",
+   "learn": [
+    "On the job: measurement book, RA bills, subcontractor management and daily progress reporting; this is what a site engineer does all day",
+    "Primavera P6 properly: WBS, baselines, earned value, delay analysis; the planning engineer role is the fastest route off the site and into the office",
+    "How to use a coding agent to build spreadsheet and Python tools for quantity tracking, and a research agent to summarise IS codes, checking each clause against the code"
+   ],
+   "build": [
+    "A progress-tracking dashboard for your site or apprenticeship that pulls from daily reports and shows planned versus actual",
+    "The evidenced project below, using your site's real data where permitted"
+   ],
+   "evidence": [
+    "NATS apprenticeship (Power Grid, NTPC or a state utility at the NATS graduate stipend of Rs 12,300 a month or higher) or an EPC GET offer",
+    "A planning or QS deliverable your site actually used"
+   ],
+   "target": [
+    "L&T Construction GET (campus route) and Afcons GET",
+    "Metro corporations' junior engineer and graduate engineer notices (Maha Metro, BMRCL, CMRL) where fresh entry is allowed",
+    "Tata Power and ReNew GET programmes"
+   ]
+  },
+  {
+   "block": "H4",
+   "title": "Convert and specialise",
+   "learn": [
+    "Choose a specialisation with a labour shortage: BIM coordination, solar or wind O&M, transmission line design, metro systems, or planning and contracts",
+    "Contracts basics (FIDIC clauses, EPC contract structure) because claims and variations decide project money",
+    "PMP or CAPM later, after two to three years of site time; not before, employers discount it on a fresher CV"
+   ],
+   "build": [
+    "A second version of the evidenced project with a colleague's review incorporated",
+    "A short case write-up of one site problem you solved (a delay, a rework, a safety near miss) with numbers"
+   ],
+   "evidence": [
+    "A permanent role at an EPC, IPP or PSU, or a second GATE attempt with a higher score",
+    "Portfolio site listing STAAD, ETAP, PVsyst, Primavera and site work with the write-ups"
+   ],
+   "target": [
+    "PSU trainee posts on the new GATE score",
+    "Adani Green, ReNew and Tata Power site and O&M roles",
+    "Metro and highway project offices"
+   ]
+  }
+ ],
+ "evidenced_project_spec": {
+  "title": "Ground-mounted solar plant of a few megawatts: complete design, cost, schedule and grid-connection study for a real plot",
+  "scope": "Pick a real plot (from a state land bank or a public tender), design the plant end to end: PVsyst energy yield with losses, module and string layout in AutoCAD, structure design in STAAD for the local wind zone, inverter and transformer sizing, single-line diagram and cable schedule, ETAP load-flow and short-circuit study at the point of connection, a BOQ priced from public schedule of rates and vendor quotes, and a Primavera schedule with a critical path. Close with a one-page tariff calculation and the three biggest risks.",
+  "domain": "Utility-scale solar EPC and IPP work, where Sterling and Wilson, Tata Power, ReNew and Adani Green hire site, design and planning engineers, and where the CEEW jobs projection is concentrated.",
+  "agent_use": "A coding agent writes the Python that turns the PVsyst hourly output into a cash-flow and tariff model and builds the BOQ spreadsheet from the layout; a research agent summarises CEA grid-connection requirements, MNRE guidelines and the relevant IS codes into a checklist. Every summarised clause is checked against the source document, and every agent-generated formula is cross-checked with a hand calculation for one string, one cable and one footing; the prompts and corrections are kept in the project folder so an interviewer can see what the agent got wrong.",
+  "done_looks_like": "A design report with drawings, models, calculation sheets, BOQ, schedule and grid study that a senior engineer at a solar EPC could review in an hour; every number traceable to an input; a thirty-minute walkthrough you can give from the drawings alone.",
+  "verification": "Hand checks on one string voltage window, one cable voltage drop, one footing uplift; PVsyst yield compared against a published plant of similar size in the same state; ETAP results sanity-checked against fault-level data from the state utility; a practising engineer or a faculty member reviews and signs a one-page critique that you include unedited."
+ },
+ "ai_task_shift": [
+  {
+   "task_2019": "Drafting drawings and preparing BOQs by hand from drawings",
+   "now": "BIM tools and agents generate drawings, quantities and BOQs from the model; agents draft schedules of rates comparisons",
+   "human_owns": "Site verification of quantities, the measurement book, and the bill certification signature"
+  },
+  {
+   "task_2019": "Standard structural and electrical calculations (beam design, cable sizing, load flow set-up)",
+   "now": "Agents set up STAAD and ETAP cases and produce first-pass calculation sheets",
+   "human_owns": "Load assumptions from site conditions, code interpretation, and the design sign-off that carries liability"
+  },
+  {
+   "task_2019": "Building and updating Primavera schedules and progress reports",
+   "now": "Agents draft schedules from the WBS and write the weekly report from daily logs",
+   "human_owns": "Knowing what actually happened on site, the delay conversation with the subcontractor, and the claim decision"
+  },
+  {
+   "task_2019": "Solar yield studies and tender documentation",
+   "now": "Agents run PVsyst variants and draft tender responses",
+   "human_owns": "Site visit, shading and soil reality, the bid price, and the safety plan"
+  },
+  {
+   "task_2019": "Writing method statements, safety plans and quality checklists",
+   "now": "Agents draft them from templates and the drawings",
+   "human_owns": "The toolbox talk, the permit to work, the pour or cable-pull itself, and stopping unsafe work"
+  },
+  {
+   "task_2019": "Summarising IS codes and contract clauses for a query",
+   "now": "Research agents answer code and contract questions in seconds",
+   "human_owns": "Checking the clause, the client and authority negotiation, and requirements that only exist on site"
+  }
+ ],
+ "fallback_path_id": "government_psu",
+ "employers": [
+  {
+   "name": "L&T Construction (Larsen & Toubro)",
+   "type": "company",
+   "location": "Chennai HQ; sites across India and the Gulf",
+   "roles": "Graduate Engineer Trainee and Post-Graduate Engineer Trainee through campus recruitment at over a hundred and fifty campuses, with one-year rotation; Diploma Engineer Trainee programme runs separately",
+   "fresher": true,
+   "source_url": "https://www.larsentoubro.com/corporate/careers/campus-recruitment",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Afcons Infrastructure",
+   "type": "company",
+   "location": "Mumbai HQ; marine, metro, tunnel and bridge sites across India and abroad",
+   "roles": "Graduate Engineer Trainee via campus; off-campus postings are mostly experienced site and planning engineers",
+   "fresher": true,
+   "source_url": "https://careers.afcons.com/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "NHIDCL (with NHAI deputy manager posts via GATE)",
+   "type": "exam",
+   "location": "North-East, J&K, Ladakh, Uttarakhand, Andaman",
+   "roles": "Associate (Civil) contract posts for 0 to 2 years' experience from IIT, NIT or top-100 NIRF colleges, July 2026 notice; NHAI Deputy Manager (Technical) via GATE Civil runs in January",
+   "fresher": true,
+   "source_url": "https://www.pw.live/gate/exams/nhidcl-recruitment-2026",
+   "seen_on": "2026-07"
+  },
+  {
+   "name": "Maharashtra Metro (and other metro corporations: DMRC, BMRCL, CMRL)",
+   "type": "exam",
+   "location": "Nagpur, Pune; Delhi, Bengaluru, Chennai for the others",
+   "roles": "Junior Engineer (Civil, Electrical, Rolling Stock, S&T) contract posts, August 2026 notice; many metro JE posts ask for experience, so watch for the graduate engineer notices that allow fresh entry",
+   "fresher": true,
+   "source_url": "https://rightjobalert.com/maha-metro-recruitment/",
+   "seen_on": "2026-08"
+  },
+  {
+   "name": "NTPC",
+   "type": "exam",
+   "location": "Plants and projects across India",
+   "roles": "Engineering Executive Trainee via GATE in Civil, Mechanical, Electrical, Electronics, Instrumentation and CS; advance notice for the GATE 2027 cycle issued; deputy manager posts for experienced engineers",
+   "fresher": true,
+   "source_url": "https://www.sarkarijobs.com/ntpc-recruitment/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Power Grid Corporation of India (PGCIL)",
+   "type": "exam",
+   "location": "Regions across India",
+   "roles": "Engineer Trainee via GATE (Electrical, Electronics, Civil, CS) and graduate apprentices under NATS in Electrical and Civil, August 2026 notice with monthly stipend",
+   "fresher": true,
+   "source_url": "https://www.adda247.com/engineering-jobs/pgcil-apprentice-recruitment-2026/",
+   "seen_on": "2026-08"
+  },
+  {
+   "name": "ReNew",
+   "type": "company",
+   "location": "Gurugram HQ; solar and wind sites in Rajasthan, Gujarat, Karnataka, Maharashtra",
+   "roles": "Graduate Engineer Trainee with the GOLD programme (bootcamps at NISE and NIWE), diploma engineer intake, and the Global Green Scholars internship",
+   "fresher": true,
+   "source_url": "https://www.renew.com/renew-early-careers-programs/programs-in-detail",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Adani Green Energy (and Adani group GET drives)",
+   "type": "company",
+   "location": "Ahmedabad HQ; Khavda and other solar and wind sites",
+   "roles": "Site and O&M engineers via careers portal and CV submission; group-level GET drives in 2026 were for technology roles in Ahmedabad",
+   "fresher": true,
+   "source_url": "https://www.adanigreenenergy.com/careers",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Tata Power",
+   "type": "company",
+   "location": "Mumbai, Delhi, Odisha discoms; renewable sites",
+   "roles": "Graduate Engineer Trainee (Electrical) through the careers portal and TCS iON tests, plus internships; freshers section on the career compass page",
+   "fresher": true,
+   "source_url": "https://www.tatapower.com/career-compass",
+   "seen_on": "2026-09"
+  }
+ ],
+ "fit_rules": [
+  {
+   "field": "branch",
+   "value": "CIVIL",
+   "score": 3,
+   "reason": "Civil is the main intake for EPC, highway, metro and NHIDCL roles, and the largest branch in NTPC and Power Grid civil posts."
+  },
+  {
+   "field": "branch",
+   "value": "EE",
+   "score": 3,
+   "reason": "Electrical is what Power Grid, discoms, solar EPCs and NTPC electrical posts ask for."
+  },
+  {
+   "field": "branch",
+   "value": "MECH",
+   "score": 2,
+   "reason": "Mechanical enters through NTPC, plant erection and O&M, and wind projects."
+  },
+  {
+   "field": "branch",
+   "value": "ECE",
+   "score": 1,
+   "reason": "Metro signalling, substation automation and Power Grid electronics posts take ECE, but the seats are few."
+  },
+  {
+   "field": "branch",
+   "value": "CS",
+   "score": -3,
+   "reason": "Almost no infrastructure or energy fresher notice lists CS or IT; the software path is the better use of a CS degree."
+  },
+  {
+   "field": "branch",
+   "value": "IT",
+   "score": -3,
+   "reason": "Almost no infrastructure or energy fresher notice lists IT."
+  },
+  {
+   "field": "interests",
+   "value": "physical_systems",
+   "score": 2,
+   "reason": "Structures, grids and plants are physical systems built on site."
+  },
+  {
+   "field": "interests",
+   "value": "building_software",
+   "score": -2,
+   "reason": "Software here is a tool (STAAD, ETAP, Primavera), not the product."
+  },
+  {
+   "field": "enjoyed",
+   "value": "workshops_site",
+   "score": 3,
+   "reason": "Site is where the first years happen; liking site visits and machines is the best predictor of staying."
+  },
+  {
+   "field": "enjoyed",
+   "value": "exams_theory",
+   "score": 1,
+   "reason": "The PSU route is a GATE exam, so exam ability opens NTPC, Power Grid and NHAI."
+  },
+  {
+   "field": "preparation",
+   "value": "core_tools",
+   "score": 2,
+   "reason": "STAAD, AutoCAD, ETAP or Primavera already in hand is what postings name."
+  },
+  {
+   "field": "preparation",
+   "value": "gate_prep",
+   "score": 2,
+   "reason": "GATE decides PSU trainee posts; preparation already started is a head start."
+  },
+  {
+   "field": "preparation",
+   "value": "internship_done",
+   "score": 2,
+   "reason": "Site internship or apprenticeship is what EPC recruiters ask about first."
+  },
+  {
+   "field": "relocation",
+   "value": "anywhere_india",
+   "score": 2,
+   "reason": "Projects are wherever the road, line or plant is; mobility is the job."
+  },
+  {
+   "field": "relocation",
+   "value": "hometown_only",
+   "score": -3,
+   "reason": "Site roles move every project; staying near home only works at a local discom or PWD."
+  },
+  {
+   "field": "relocation",
+   "value": "within_state",
+   "score": -1,
+   "reason": "Possible at a state discom, PWD or metro, but EPC and PSU postings cross states."
+  },
+  {
+   "field": "priority",
+   "value": "stability",
+   "score": 2,
+   "reason": "PSU trainee posts and utility jobs are among the most stable engineering jobs in India."
+  },
+  {
+   "field": "priority",
+   "value": "income_now",
+   "score": 2,
+   "reason": "Site engineer and apprentice roles are available quickly at tier-3, even if pay starts low; EPC firms and metro corporations run GET intakes every year and site roles start quickly."
+  },
+  {
+   "field": "priority",
+   "value": "high_pay_growth",
+   "score": -2,
+   "reason": "Fresher pay is modest and growth is by years on site, not by fast promotion."
+  },
+  {
+   "field": "college_tier",
+   "value": "3",
+   "score": 1,
+   "reason": "This door is more open to tier-3 graduates than most, because site roles are short of people and the PSU route is brand-blind."
+  }
+ ],
+ "base_score": 5,
+ "stat_ids_used": [
+  "paths.energy.clean_energy_jobs_2030",
+  "paths.govt.psu_via_gate_examples.2026",
+  "demand.naukri.jobspeak.fresher_yoy.aug2026",
+  "paths.infra.fresher_ctc_bands.2026",
+  "paths.skilling.nats_graduate_stipend.2026"
+ ],
+ "last_reviewed": "2026-09-21",
+ "changed_fields": [
+  "all"
+ ]
+}

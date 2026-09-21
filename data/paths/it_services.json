@@ -1,0 +1,407 @@
+{
+ "id": "it_services",
+ "name": "IT services (mass recruiters)",
+ "tagline": "Shrinking door: most fresher seats in India, but fewer each year and pay flat since 2008",
+ "door_state": "shrinking",
+ "door_size": {
+  "people_per_year": 100000,
+  "stat_ids": [
+   "demand.tcs.freshers_added.fy26",
+   "demand.infosys.freshers.fy26",
+   "demand.cognizant.freshers.2025",
+   "demand.hcltech.freshers.fy26",
+   "demand.wipro.freshers.fy26",
+   "supply.teamlease.it_fresher_hiring.fy22",
+   "supply.teamlease.it_fresher_hiring.fy24"
+  ],
+  "caveat": "Sum of five companies' own FY26 statements (TCS 44,000 trainees, Infosys 20,000, Cognizant 20,000, HCLTech 11,000, Wipro 7,500), rounded down; the industry took about 4 lakh freshers in FY22 and an estimated 1.6 lakh in FY24, so the door has roughly halved in four years and Wipro has no FY27 target at all."
+ },
+ "pay_band": {
+  "low_lpa": 3.1,
+  "high_lpa": 4.5,
+  "stat_ids": [
+   "demand.it_services.fresher_ctc.tcs",
+   "demand.fresher_ctc.bands.2026"
+  ],
+  "note": "TCS and Infosys base offers are around Rs 3.1 to 3.4 lakh and have not moved since about 2008; specialist tracks (Infosys DSE, TCS Digital and Prime, Cognizant GenC Next, Accenture AASE) pay roughly double for a small share who clear a harder coding test."
+ },
+ "branches": {
+  "CS": 3,
+  "IT": 3,
+  "ECE": 3,
+  "EE": 2,
+  "MECH": 2,
+  "CIVIL": 1,
+  "CHEM": 1,
+  "OTHER": 1
+ },
+ "tiers_realistic": {
+  "tier1": "Yes, but most tier-1 graduates treat these offers as a floor; the specialist tracks (Rs 7 to 9 lakh) are where tier-1 candidates actually join.",
+  "tier2": "Yes; this is the core catchment. Campus drives still visit well-known state and private colleges, though intake per college has fallen and offer-to-joining gaps of 6 to 12 months are common.",
+  "tier3": "Yes, this remains the most realistic first job for a tier-3 graduate, through open tests (TCS NQT, Infosys off-campus, Cognizant GenC, Accenture ASE, Capgemini, Mphasis) rather than campus visits. What substitutes for the brand: a 60%+ academic record with no backlogs, a clear aptitude and basic coding test score, spoken English good enough for a client call, and one small deployed project. Be honest with yourself that seats are fewer each year (five firms' net headcount fell in FY26, demand.top5_it.net_headcount.fy26) and only 35% of IT employers intended to hire freshers in ISR 2026 (supply.isr2026.it_fresher_hiring_intent)."
+ },
+ "entry_requirements": [
+  "60% or 6.0 CGPA throughout (10th, 12th, degree) with no active backlogs; most mass recruiters hard-filter on this",
+  "Aptitude plus basic programming test (TCS NQT, Infosys InfyTQ-style, Cognizant GenC, Wipro NLTH, Accenture cognitive and coding assessment): arrays, strings, SQL queries, simple OOP in Java or Python",
+  "Spoken and written English at a level that passes a communication round; Accenture and Cognizant test this explicitly",
+  "One programming language to working level (Java or Python) plus SQL; for specialist tracks, LeetCode-easy DSA and a second language",
+  "Willingness to sign a service agreement and accept any base location and any project (banking, insurance, retail, telecom support are the usual first postings)",
+  "Increasingly: a certificate in cloud (AWS or Azure fundamentals) or a GenAI foundations badge; TCS reports 312,000 AI/ML-proficient staff (demand.tcs.ai_ml_proficient.q1fy27) and expects trainees to start at that baseline",
+  "Eligibility often limited to the current and previous two batches (2024 to 2026), so apply in the graduation year"
+ ],
+ "two_year_plan": [
+  {
+   "block": "H1",
+   "title": "Clear the filters: aptitude, one language, SQL",
+   "learn": [
+    "Quantitative aptitude, logical reasoning and verbal ability: free resources (IndiaBIX, PrepInsta free tier, NPTEL 'Aptitude' lectures); 45 minutes a day",
+    "Java or Python to the level of writing a 50-line program from a problem statement without help; NPTEL 'Programming in Java' or CS50P",
+    "SQL basics through joins and group by on PostgreSQL or MySQL",
+    "TCS NQT syllabus and Infosys, Cognizant GenC, Accenture test patterns; register on TCS NextStep, Infosys Careers, Accenture India campus portal, Capgemini Students/Graduates and Mphasis campus pages in your final year"
+   ],
+   "build": [
+    "A small Java or Python console application (library, billing or attendance) with a MySQL backend, on GitHub"
+   ],
+   "evidence": [
+    "Timed mock test scores tracked weekly",
+    "One GitHub repo with README"
+   ],
+   "target": [
+    "TCS NQT (open year-round)",
+    "Infosys off-campus",
+    "Cognizant GenC",
+    "Accenture ASE",
+    "Capgemini",
+    "Mphasis"
+   ]
+  },
+  {
+   "block": "H2",
+   "title": "Aim for the specialist track, not just the base offer",
+   "learn": [
+    "DSA to LeetCode-easy plus some medium (100 problems): this is what separates Infosys DSE, TCS Digital and Prime, Cognizant GenC Next and Accenture AASE from the base offer",
+    "A cloud fundamentals certificate: AWS Cloud Practitioner (free training) or Azure AZ-900 via FutureSkills Prime at no cost",
+    "Spring Boot (Java) or Django/FastAPI (Python) basics; REST APIs; Git",
+    "GenAI foundations: how to call an LLM API, what RAG is, prompt basics; recruiters now ask for this even at base level"
+   ],
+   "build": [
+    "A REST API with a database and a simple front end, deployed on a free tier, with an LLM-powered feature (for example, a support chatbot over the product's FAQ)"
+   ],
+   "evidence": [
+    "Cloud certificate",
+    "Deployed URL and repo",
+    "TCS Digital or Infosys DSE test attempt"
+   ],
+   "target": [
+    "TCS Digital and Prime via NQT",
+    "Infosys DSE and Specialist Programmer",
+    "Cognizant GenC Next and GenC Pro",
+    "Accenture AASE",
+    "Tech Mahindra campus drive (resumed July 2026)"
+   ]
+  },
+  {
+   "block": "H3",
+   "title": "First posting: become useful fast, pick a domain",
+   "learn": [
+    "Whatever your training batch teaches (usually Java full stack, .NET, SAP, Salesforce, ServiceNow or testing): finish the internal certification in the first attempt",
+    "The client's domain: banking, insurance, retail or telecom; read the process documents nobody else reads",
+    "Agentic tooling used on the account (GitHub Copilot, internal assistants): learn to review AI-generated code and tests, because that review is the job now",
+    "If still waiting for a joining date: the same cloud and GenAI material, plus a NATS graduate apprenticeship (Rs 12,300 per month stipend, paths.skilling.nats_graduate_stipend.2026) rather than sitting idle"
+   ],
+   "build": [
+    "One automation for your own team's repetitive work (a script, a dashboard, a test suite) and show it to your lead"
+   ],
+   "evidence": [
+    "Internal certification",
+    "A written summary of what you automated and time saved"
+   ],
+   "target": [
+    "Your own account's rotation to a development role",
+    "Internal specialist programmes"
+   ]
+  },
+  {
+   "block": "H4",
+   "title": "Use the job as a base to move up or across",
+   "learn": [
+    "Choose one exit: (a) a specialist role inside (cloud, data engineering, SAP, cybersecurity) with the vendor certificate (AWS Solutions Architect Associate, Azure Data Engineer, SAP), or (b) the ai_native_software path with a portfolio built on evenings, or (c) a GCC role in the same domain",
+    "Interview preparation for GCCs: DSA medium, system design basics, domain questions"
+   ],
+   "build": [
+    "The evidenced project below, built in the domain of your first posting, outside work hours and with no client data"
+   ],
+   "evidence": [
+    "One vendor certificate",
+    "Evidenced project deployed and documented",
+    "Two years of appraisal ratings"
+   ],
+   "target": [
+    "GCCs in your domain (banking or insurance captives)",
+    "Product companies via referrals",
+    "Specialist tracks in your own company"
+   ]
+  }
+ ],
+ "evidenced_project_spec": {
+  "title": "Order-to-cash reconciliation service for a retail chain",
+  "scope": "A service that ingests daily sales files from 20 synthetic stores (POS CSV exports), payment-gateway settlement files and bank statements, matches them, flags mismatches with reasons, exposes a REST API and a small dashboard, and lets a finance user ask questions about exceptions in plain language via an LLM tool that only queries the reconciled tables. Includes automated tests, a nightly scheduled run and a runbook.",
+  "domain": "retail",
+  "agent_use": "A coding agent generates the CSV parsers, test fixtures and the first version of the matching rules; the graduate specifies the matching logic in writing first, reviews every generated function against it, and keeps a changelog of the agent's mistakes (wrong date handling, missed partial settlements). The LLM query feature is built with strict read-only SQL and a small eval set of 30 finance questions.",
+  "done_looks_like": "Runs end to end nightly on a free-tier VM; matches 98% of synthetic transactions correctly with every mismatch labelled; the finance chat answers 25 of 30 eval questions correctly and refuses out-of-scope requests; README explains the business process (order, invoice, settlement, bank credit), the rules and the failure cases.",
+  "verification": "Test suite in CI with a published coverage number; a seeded set of 50 known mismatches that the system must catch every run; a 30-minute walkthrough the graduate can give covering the retail cash cycle, one rule that was wrong and how it was found, and why the LLM is restricted to read-only queries; a reviewer from finance or a faculty member signs off on five outputs."
+ },
+ "ai_task_shift": [
+  {
+   "task_2019": "Manual and scripted testing on a fresher bench (the largest fresher intake)",
+   "now": "Agents generate and run regression suites; testing benches are the first seats cut, which is why fresher intake halved between FY22 and FY24",
+   "human_owns": "Test strategy, exploratory testing of business flows, and signing off that the client's process actually works"
+  },
+  {
+   "task_2019": "Level-1 application support: read the ticket, follow the runbook, escalate",
+   "now": "Agents triage, summarise and resolve routine tickets; TCS says its delivery model, not layoffs, changed and it expects fewer trainees per unit of work",
+   "human_owns": "Level-2 root-cause work, changes that touch the client's data, and talking to the client"
+  },
+  {
+   "task_2019": "Write CRUD screens and reports to a specification",
+   "now": "Copilots draft the code; the trainee is expected to review, test and integrate, and to know the domain well enough to spot a wrong assumption",
+   "human_owns": "Requirement clarification, domain rules, code review and accountability for production"
+  },
+  {
+   "task_2019": "Migrate code between versions or platforms by hand (legacy modernisation)",
+   "now": "Agents do bulk translation; large modernisation deals still need people to verify behaviour and fix edge cases",
+   "human_owns": "Verification design, edge-case handling, and cutover planning"
+  },
+  {
+   "task_2019": "Prepare status reports, documentation and meeting notes",
+   "now": "Generated automatically from tickets and calls",
+   "human_owns": "Deciding what matters, negotiating scope, and client relationships; communication skills now count for more, not less"
+  }
+ ],
+ "fallback_path_id": "ai_native_software",
+ "employers": [
+  {
+   "name": "TCS",
+   "type": "company",
+   "location": "Pan-India",
+   "roles": "Ninja, Digital and Prime via TCS NQT; 44,000 trainees added in FY26, 25,000 campus offers for FY27 so far",
+   "fresher": true,
+   "source_url": "https://www.peoplematters.in/news/business/tcs-workforce-shrinks-by-24000-in-fy26-says-layoffs-over-hiring-remains-on-track-49257",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "Infosys",
+   "type": "company",
+   "location": "Pan-India",
+   "roles": "System Engineer, Digital Specialist Engineer, Specialist Programmer; 20,000 freshers in FY26 and same plan for FY27",
+   "fresher": true,
+   "source_url": "https://www.peoplematters.in/news/recruiting-and-onboarding/infosys-to-hire-20000-freshers-as-headcount-falls-and-attrition-drops-to-126percent-49381",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "Cognizant",
+   "type": "company",
+   "location": "Chennai, Hyderabad, Pune, Kolkata, Bengaluru",
+   "roles": "GenC, GenC Next, GenC Pro; 20,000 freshers in 2025, plan of 24,000 to 25,000 in 2026",
+   "fresher": true,
+   "source_url": "https://www.thehansindia.com/tech/cognizant-bets-on-ai-ready-talent-plans-to-hire-up-to-25000-fresh-graduates-in-2026-1045995",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "Wipro",
+   "type": "company",
+   "location": "Pan-India",
+   "roles": "Elite and Turbo via NLTH; 7,500 freshers in FY26, no FY27 target, hiring 'on demand'",
+   "fresher": true,
+   "source_url": "https://www.businesstoday.in/technology/story/wipro-hits-pause-on-campus-hiring-as-ai-shift-forces-526096-2026-04-17",
+   "seen_on": "2026-04"
+  },
+  {
+   "name": "HCLTech",
+   "type": "company",
+   "location": "Noida, Chennai, Bengaluru, Madurai, Lucknow, Nagpur",
+   "roles": "Graduate engineer trainee and TechBee (post-12th); 11,000 freshers in FY26, only 1,056 in Q1 FY27",
+   "fresher": true,
+   "source_url": "https://www.peoplematters.in/news/strategic-hr/hcltech-sees-biggest-workforce-reduction-in-a-year-cuts-3292-jobs-in-q1-50816",
+   "seen_on": "2026-07"
+  },
+  {
+   "name": "Tech Mahindra",
+   "type": "company",
+   "location": "Pune, Hyderabad, Bengaluru, Chennai, Noida",
+   "roles": "Campus hiring resumed after a pause, announced with Q1 FY27 results; headcount still falling",
+   "fresher": true,
+   "source_url": "https://www.whalesbook.com/news/English/technology/Tech-Mahindra-Resumes-Campus-Hiring-After-Q1-Profit-Rises-316percent/6a58fb9f5cb7edf90c340a45",
+   "seen_on": "2026-07"
+  },
+  {
+   "name": "Accenture India",
+   "type": "company",
+   "location": "Bengaluru, Hyderabad, Chennai, Pune, Mumbai",
+   "roles": "Associate Software Engineer, Advanced ASE, System and Application Services Associate; 2024 to 2026 passouts via the India campus portal",
+   "fresher": true,
+   "source_url": "https://www.freshersbridge.in/companies/accenture",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Capgemini India",
+   "type": "company",
+   "location": "Mumbai, Pune, Bengaluru, Chennai, Hyderabad, Kolkata",
+   "roles": "Technical graduate programmes across Capgemini, Capgemini Engineering and Sogeti; apply via Students/Graduates filter",
+   "fresher": true,
+   "source_url": "https://www.capgemini.com/in-en/careers/career-paths/students-and-graduates/",
+   "seen_on": "2026-09"
+  },
+  {
+   "name": "Mphasis",
+   "type": "company",
+   "location": "Bengaluru, Pune, Chennai, Mangaluru",
+   "roles": "T-School campus programmes (MLA, MASE) and internships; tier-1 and tier-2 institutes named, off-campus trainee drives for others",
+   "fresher": true,
+   "source_url": "https://careers.mphasis.com/home/hot-jobs/category/campus-programs.html",
+   "seen_on": "2026-09"
+  }
+ ],
+ "fit_rules": [
+  {
+   "field": "branch",
+   "value": "CS",
+   "score": 1,
+   "reason": "Accepted everywhere; your competition here is every other branch, so aim for the specialist track."
+  },
+  {
+   "field": "branch",
+   "value": "ECE",
+   "score": 1,
+   "reason": "Mass recruiters take ECE at the same rate as CS if you pass the coding test."
+  },
+  {
+   "field": "branch",
+   "value": "MECH",
+   "score": 1,
+   "reason": "Mass recruiters still take Mechanical and Electrical graduates when core jobs are scarce; the test does not depend on your branch."
+  },
+  {
+   "field": "college_tier",
+   "value": "3",
+   "score": 2,
+   "reason": "This is the path where a tier-3 college matters least: open tests like TCS NQT and Infosys off-campus do not look at your college."
+  },
+  {
+   "field": "college_tier",
+   "value": "2",
+   "score": 1,
+   "reason": "Campus drives still visit tier-2 colleges, though with fewer seats than before."
+  },
+  {
+   "field": "college_tier",
+   "value": "1",
+   "score": -1,
+   "reason": "You will likely get this offer, but treat it as a floor; better doors are open to you."
+  },
+  {
+   "field": "graduation_year",
+   "value": "graduated",
+   "score": 1,
+   "reason": "Most drives accept the previous two batches, so an already-graduated candidate can still apply through 2026."
+  },
+  {
+   "field": "graduation_year",
+   "value": "2026",
+   "score": 1,
+   "reason": "The 2026 batch is in the eligibility window for every current drive."
+  },
+  {
+   "field": "relocation",
+   "value": "anywhere_india",
+   "score": 2,
+   "reason": "Offers come with a base location you do not choose; accepting any city is often the difference between an offer and none."
+  },
+  {
+   "field": "relocation",
+   "value": "hometown_only",
+   "score": -3,
+   "reason": "Mass recruiters post you where the project is; refusing relocation usually means the offer lapses."
+  },
+  {
+   "field": "runway_months",
+   "value": "0_3",
+   "score": 1,
+   "reason": "This is the fastest route to a salary for most graduates, even though joining dates can slip."
+  },
+  {
+   "field": "runway_months",
+   "value": "12_plus",
+   "score": -1,
+   "reason": "With a year of runway you can afford to aim at a better-paying door first and keep this as fallback."
+  },
+  {
+   "field": "interests",
+   "value": "building_software",
+   "score": 1,
+   "reason": "Day-to-day work is software delivery, mostly maintenance and support at the start."
+  },
+  {
+   "field": "interests",
+   "value": "people_business",
+   "score": 1,
+   "reason": "Client communication and coordination matter more as routine coding is automated."
+  },
+  {
+   "field": "interests",
+   "value": "research_theory",
+   "score": -2,
+   "reason": "There is little research or theory in entry-level services work."
+  },
+  {
+   "field": "priority",
+   "value": "income_now",
+   "score": 3,
+   "reason": "The largest number of fresher seats and the shortest time to a first salary."
+  },
+  {
+   "field": "priority",
+   "value": "stability",
+   "score": -1,
+   "reason": "Intake is falling and five firms' net headcount shrank in FY26; the first job is real but not a long-term guarantee."
+  },
+  {
+   "field": "priority",
+   "value": "high_pay_growth",
+   "score": -3,
+   "reason": "Base pay has been about Rs 3 lakh for nearly two decades; growth is slow unless you move to a specialist track or out."
+  },
+  {
+   "field": "preparation",
+   "value": "dsa",
+   "score": 1,
+   "reason": "Coding practice lifts you from the base track to the specialist track, which roughly doubles pay."
+  }
+ ],
+ "base_score": 7,
+ "stat_ids_used": [
+  "demand.tcs.freshers_added.fy26",
+  "demand.infosys.freshers.fy26",
+  "demand.cognizant.freshers.2025",
+  "demand.hcltech.freshers.fy26",
+  "demand.wipro.freshers.fy26",
+  "supply.teamlease.it_fresher_hiring.fy22",
+  "supply.teamlease.it_fresher_hiring.fy24",
+  "demand.it_services.fresher_ctc.tcs",
+  "demand.fresher_ctc.bands.2026",
+  "demand.top5_it.net_headcount.fy26",
+  "supply.isr2026.it_fresher_hiring_intent",
+  "demand.tcs.ai_ml_proficient.q1fy27",
+  "paths.skilling.nats_graduate_stipend.2026",
+  "demand.tcs.fresher_offers.fy27",
+  "demand.infosys.freshers_plan.fy27",
+  "demand.cognizant.freshers_plan.2026",
+  "demand.wipro.freshers_plan.fy27",
+  "demand.hcltech.freshers.q1fy27"
+ ],
+ "last_reviewed": "2026-09-21",
+ "changed_fields": [
+  "fit_rules",
+  "all"
+ ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "government_psu",
+  "name": "Government and PSU engineering",
+  "tagline": "Steady but tiny: a few thousand posts a year against 7.5 lakh GATE takers",
+  "door_state": "steady",
+  "door_size": {
+    "people_per_year": 3000,
+    "stat_ids": ["paths.govt.upsc_ese_posts.2026", "paths.govt.ssc_je_posts.2025", "paths.govt.psu_via_gate_examples.2026", "paths.govt.gate_appeared.2025"],
+    "caveat": "Sum of ESE posts, SSC JE posts and three PSU-via-GATE examples (NPCIL, NTPC, Grid-India) only; RRB JE and state PSC AE notifications add a few thousand more but no stat is recorded yet. Against 7.47 lakh GATE takers the competition is well over 100 applicants per post."
+  },
+  "pay_band": {
+    "low_lpa": 5,
+    "high_lpa": 8,
+    "stat_ids": ["paths.infra.fresher_ctc_bands.2026"],
+    "note": "PSU band from the infrastructure hiring outlook. ESE and PSU executive (E1) grades pay above this once allowances are counted; SSC JE and RRB JE Level 6 pay starts below it. No separate stat recorded for those grades."
+  },
+  "branches": {"CS": 1, "IT": 0, "ECE": 2, "EE": 3, "MECH": 3, "CIVIL": 3, "CHEM": 2, "OTHER": 1},
+  "tiers_realistic": {
+    "tier1": "Yes, but the brand gives no advantage; ESE, SSC JE, RRB JE and GATE are blind to college. Tier-1 students mostly use GATE for IIT/IISc M.Tech or PSU intake and have the best coaching-free preparation base.",
+    "tier2": "Yes. This is the path where a tier-2 degree costs you nothing. What substitutes for brand is a disciplined 12 to 18 month GATE or ESE schedule, previous-year papers solved under time, and the right branch (Civil, Mechanical, Electrical have the most posts).",
+    "tier3": "Yes on paper, and many tier-3 graduates do clear SSC JE and RRB JE. The honest caveat: most attempts fail because of competition over 100:1, so treat it as one of two parallel tracks, never the only one. Never spend more than two exam cycles without a paying fallback."
+  },
+  "entry_requirements": [
+    "A valid GATE score in your branch paper; PSUs such as NPCIL, NTPC, IOCL and Power Grid shortlist on GATE score and then interview",
+    "B.E./B.Tech in the exact discipline the notification names (ESE: Civil, Mechanical, Electrical, Electronics and Telecom only; CS/IT graduates are excluded from ESE and most PSU-via-GATE intakes)",
+    "Age within the limit on the notification date (ESE typically 21 to 30; SSC JE up to 32; RRB JE 18 to 36 with relaxations)",
+    "For SSC JE and RRB JE: Paper 1 objective score above the category cut-off, then Paper 2 or document verification",
+    "For state PSC AE: domicile or state-language requirement in several states; check the notification before preparing",
+    "Clean document trail: 10th, 12th, all semester marksheets, caste or EWS certificate in the prescribed format, because document verification rejects late paperwork",
+    "For PSU interviews: ability to explain final-year project and core subjects at whiteboard depth; the interview is 15 to 25 percent of the final score in most PSUs"
+  ],
+  "two_year_plan": [
+    {
+      "block": "H1",
+      "title": "Pick the exam, build the syllabus map, start the fallback",
+      "learn": [
+        "GATE syllabus for your paper. Civil (CE): strength of materials, structural analysis, geotech, fluid mechanics, transportation, environmental, plus engineering mathematics and general aptitude. Mechanical (ME): thermodynamics, fluid mechanics, heat transfer, SOM, theory of machines, manufacturing, industrial engineering. Electrical (EE): networks, machines, power systems, control, power electronics, signals, measurements. ECE (EC): networks, signals, control, analog and digital, EM, communications. CS (CS): DSA, algorithms, TOC, compilers, OS, DBMS, networks, discrete maths.",
+        "Engineering mathematics and general aptitude first: they are 25 to 30 percent of every paper and the fastest marks",
+        "Exam calendar for the year: GATE registration opens late August or early September (GATE 2027 by IIT Madras: registration 2 to 27 September 2026, exam 6 to 21 February 2027); UPSC ESE notification mid-September (ESE 2027: notified 16 September 2026, prelims 31 January 2027); SSC JE notification around September with Paper 1 in October or November; RRB JE CEN in July with CBT 1 in October; state PSC AE notifications are irregular, so subscribe to your state PSC's notice board",
+        "Excel and one scripting language (Python) for the fallback track, because most private-sector fallbacks screen for them"
+      ],
+      "build": [
+        "A single-sheet study tracker: topic, source, first pass date, revision dates, previous-year-question accuracy",
+        "Personal formula and error notebook per subject, updated weekly",
+        "One PYQ set per subject solved on paper under time, from the last ten years of your GATE paper"
+      ],
+      "evidence": [
+        "Ten years of previous-year GATE questions attempted, with accuracy above 60 percent in engineering maths and aptitude",
+        "Registered for GATE 2027 and, if eligible by branch, for ESE 2027 prelims",
+        "Fallback track started: NATS graduate apprenticeship application filed (stipend from 12,300 per month with government DBT) or a private core-sector or IT-services application pipeline running"
+      ],
+      "target": ["GATE 2027 (IIT Madras)", "UPSC ESE 2027", "SSC JE 2026", "NATS apprenticeship portal"]
+    },
+    {
+      "block": "H2",
+      "title": "Full syllabus pass, first attempts, mock discipline",
+      "learn": [
+        "Complete every syllabus subject once; leave no subject unread because GATE questions are spread evenly",
+        "Full-length mock tests weekly from November: three hours, sitting, no phone; analyse every wrong and every guessed answer",
+        "For ESE prelims: General Studies and Engineering Aptitude paper (Paper 1) needs its own 6 to 8 weeks; standards, project management, ethics, energy and environment, ICT basics",
+        "For SSC JE and RRB JE: speed. Paper 1 and CBT 1 reward 100 to 200 correct objective answers in two hours, so drill numericals to under 90 seconds each"
+      ],
+      "build": [
+        "Twenty full-length mocks with a score curve you can show; if the curve is flat after ten mocks, change method, not hours",
+        "A one-page profile for each PSU you can enter via GATE: NPCIL, NTPC, IOCL, ONGC, Power Grid, BHEL, and the GATE cut-offs of the last two cycles by branch and category"
+      ],
+      "evidence": [
+        "GATE 2027 appeared (February 2027); ESE prelims appeared (January 2027) if eligible; SSC JE Paper 1 appeared (October or November 2026); RRB JE CBT 1 appeared if the CEN is open",
+        "Fallback track evidence: an apprenticeship joined, or a private-sector offer, or a portfolio project in your core domain (see the evidenced project below)"
+      ],
+      "target": ["GATE 2027", "UPSC ESE 2027 prelims", "SSC JE 2026 Paper 1", "RRB JE CEN 04/2026 CBT 1", "TGPSC or your own state PSC AE"]
+    },
+    {
+      "block": "H3",
+      "title": "Results, PSU applications, decide on a second attempt",
+      "learn": [
+        "PSU application season runs March to July after GATE results: NPCIL executive trainee (April window in 2026, GATE 2024 to 2026 accepted), NTPC engineering executive trainee (May 2026 short notice, GATE 2025 score), IOCL graduate engineers (August 2026 window), ONGC graduate engineer trainee (July 2026 short notice), Power Grid engineer trainee (advertised around September against the next GATE). Read each advertisement for which GATE year it accepts; many accept two or three years",
+        "PSU interview preparation: core subjects at whiteboard depth, your final-year project, the company's plants and projects, and current affairs in your sector (grid, nuclear, refining)",
+        "If GATE rank is outside PSU cut-offs, decide within two weeks whether a second attempt is justified; the honest test is whether your mock curve was still rising in January"
+      ],
+      "build": [
+        "Applications to every PSU whose cut-off your score meets, tracked in one sheet with dates and document status",
+        "ESE mains (June) answer-writing practice if you cleared prelims: conventional questions, derivations, neatly drawn diagrams, 30 minutes per question"
+      ],
+      "evidence": [
+        "PSU applications filed, interview calls received or not; SSC JE Paper 2 or RRB JE CBT 2 appeared",
+        "If no interview call: fallback track has now produced income or a signed apprenticeship, and the decision on a second GATE attempt is written down with a date"
+      ],
+      "target": ["NPCIL", "NTPC", "IOCL", "ONGC", "Power Grid", "UPSC ESE mains", "SSC JE Paper 2", "RRB JE CBT 2"]
+    },
+    {
+      "block": "H4",
+      "title": "Join, or convert the preparation into a core-sector job",
+      "learn": [
+        "If selected: PSU induction, the company's safety and plant systems; nothing else to plan",
+        "If in a second attempt: repeat H2 with the mock discipline, but cap it at this cycle; a third exam-only year is not advised",
+        "If exiting: your GATE preparation maps directly to private core roles in infrastructure and energy (STAAD, ETAP, Primavera, Revit for Civil and Electrical; SolidWorks and CATIA plus GD&T for Mechanical) and to M.Tech via GATE at IITs, NITs and IISc if you qualified"
+      ],
+      "build": [
+        "One domain project in your branch that you can explain for 30 minutes (see the evidenced project) so a private employer sees applied skill, not just exam scores",
+        "Applications to private EPC, power and manufacturing firms where the GATE syllabus is the interview syllabus"
+      ],
+      "evidence": [
+        "A joining letter (PSU, JE post, state AE, apprenticeship converted, or private core role), or an M.Tech admission via COAP or CCMT",
+        "A written record of exam cycles used and the result, so the next decision is made on data and not on hope"
+      ],
+      "target": ["Joined PSU or JE post", "M.Tech via COAP or CCMT", "Private core-sector employers in the infrastructure_energy path"]
+    }
+  ],
+  "evidenced_project_spec": {
+    "title": "GATE study system plus one plant-level domain project",
+    "scope": "Two parts. Part A: a personal GATE study system, built in a spreadsheet or a small Python app, that logs every practice question by topic, tracks accuracy and time per question, and schedules revision by spaced repetition. Part B: one domain project in your branch, sized to two to three weekends, tied to a real installation you can name. Examples: Civil, a load and cost check of a two-lane RCC bridge deck near your town using IRC loads; Electrical, a load-flow and fault study of an 11 kV distribution feeder in a small town, modelled in an open-source tool; Mechanical, a heat-balance and efficiency estimate of a 500 MW thermal unit from public NTPC data; ECE, a link budget and antenna placement plan for a rural 4G cell; Chemical, a material and energy balance for a refinery distillation column using public IOCL data.",
+    "domain": "Public-sector engineering: power generation and transmission, nuclear, refining, railways, state public works",
+    "agent_use": "A coding agent builds the study tracker (schema, import of your PYQ logs, revision scheduler, weekly report). A research agent pulls the public data for Part B (IRC codes, feeder data from a discom tariff filing, NTPC plant heat-rate reports, IOCL refinery data) and drafts the calculation steps. You verify every number and every code clause by hand: the interview will ask you to derive it at the whiteboard, and an agent's mistake in a code reference is the fastest way to fail a PSU interview.",
+    "done_looks_like": "Part A: 12 weeks of logged practice with a visible accuracy curve per subject. Part B: a six to ten page report with assumptions, calculations, a diagram, results and a one-page critique of what you would change, plus a 10-slide explanation you can deliver without notes.",
+    "verification": "Part A: your GATE mock scores, which are external. Part B: a faculty member or a working engineer reviews the calculations against the code or standard used; every figure is reproducible from the public source cited; you can answer 'why this method' for each step in a 30-minute mock interview run by a senior or a coaching mentor."
+  },
+  "ai_task_shift": [
+    {"task_2019": "Solving and re-solving previous-year papers with a coaching solution book", "now": "An AI tutor explains any PYQ step by step on demand and generates unlimited practice variants; solution books are no longer a moat", "human_owns": "Sitting the three-hour paper without help: recall speed, calculation accuracy, and exam-day composure are untouched by AI and decide the rank"},
+    {"task_2019": "Drafting routine engineering reports, inspection notes and tender documents in a PSU or PWD office", "now": "Agents draft first versions from templates and site data; the engineer edits and signs", "human_owns": "Site judgement, measurement verification and legal accountability for the signed document; the JE or AE remains the person on record"},
+    {"task_2019": "Manual load, stress and heat-balance calculations for design checks", "now": "Agents set up the calculation in code or a tool from a spoken description", "human_owns": "Knowing which code clause applies, catching an absurd result, and defending the assumption in a departmental review"},
+    {"task_2019": "Tracking notifications, cut-offs and application deadlines across UPSC, SSC, RRB, PSUs and state PSCs by hand", "now": "An agent can watch notice boards and build the calendar for you", "human_owns": "Choosing which two or three exams to actually prepare for; spreading across six is the common failure mode"},
+    {"task_2019": "Interview preparation from printed question banks", "now": "Mock interviews with an AI interviewer on your branch and project are free and unlimited", "human_owns": "The whiteboard derivation and the plant-floor judgement the real panel probes; being fluent in front of five senior engineers"},
+    {"task_2019": "Operations logging and routine monitoring in plants and substations", "now": "SCADA analytics and agent-generated shift summaries do the routine monitoring", "human_owns": "Abnormal-event handling, safety permits, and the decision to trip or isolate; this is why PSUs still hire engineers into shifts"}
+  ],
+  "fallback_path_id": "infrastructure_energy",
+  "employers": [
+    {"name": "UPSC Engineering Services Examination (ESE 2027)", "type": "exam", "location": "All India; posts in central engineering services (railways, CPWD, MES, telecom, power, ordnance)", "roles": "Assistant Executive Engineer grade in Civil, Mechanical, Electrical and Electronics and Telecom; notified 16 September 2026, prelims 31 January 2027; CS/IT not eligible", "fresher": true, "source_url": "https://www.pw.live/gate/exams/upsc-ese-2027-vacancy", "seen_on": "2026-09"},
+    {"name": "SSC Junior Engineer (SSC JE 2026)", "type": "exam", "location": "All India; posts in CPWD, MES, BRO, CWC, IMD, DoT and other central departments", "roles": "Junior Engineer in Civil, Mechanical and Electrical, plus new Scientific Assistant (IMD) and JE Telecom posts; notified 2 September 2026, applications to 22 September 2026, Paper 1 October or November 2026", "fresher": true, "source_url": "https://testbook.com/news/ssc-je-2026-notification-out/", "seen_on": "2026-09"},
+    {"name": "RRB Junior Engineer (CEN 04/2026)", "type": "exam", "location": "All India, zone-wise railway postings", "roles": "Junior Engineer, Depot Material Superintendent, Chemical and Metallurgical Assistant; CEN released 21 July 2026, applications August to September 2026, CBT 1 late October 2026; the largest single JE intake of the year", "fresher": true, "source_url": "https://www.pw.live/ae-je/exams/rrb-je-2026", "seen_on": "2026-09"},
+    {"name": "NPCIL (Nuclear Power Corporation of India)", "type": "company", "location": "Mumbai HQ; plants at Kudankulam, Kaiga, Rawatbhata, Tarapur, Kakrapar, Gorakhpur", "roles": "Executive Trainee through GATE 2024, 2025 or 2026 in Mechanical, Electrical, Electronics, Chemical, Civil and Instrumentation; applications closed 30 April 2026", "fresher": true, "source_url": "https://www.careerpower.in/blog/npcil-executive-trainee-recruitment", "seen_on": "2026-04"},
+    {"name": "NTPC", "type": "company", "location": "New Delhi HQ; plants across India", "roles": "Engineering Executive Trainee through GATE 2025 score; May 2026 short notice covered Mining and Civil only, larger cycles cover Electrical, Mechanical, Electronics and Instrumentation", "fresher": true, "source_url": "https://www.careerpower.in/blog/ntpc-executive-trainee-recruitment-2026", "seen_on": "2026-05"},
+    {"name": "Power Grid Corporation of India (POWERGRID)", "type": "company", "location": "Gurugram HQ; regional transmission offices across India", "roles": "Engineer Trainee through GATE in Electrical, Electronics, Civil and Computer Science; last advertisement CC/04/2025 against GATE 2026 with notices through April 2026; next cycle expected against GATE 2027", "fresher": true, "source_url": "https://www.powergrid.in/en/job-opportunities/recruitment-engineer-trainees-2026-through-gate-2026-advt-no-cc042025-dated", "seen_on": "2026-04"},
+    {"name": "Indian Oil Corporation (IOCL)", "type": "company", "location": "Refineries, pipelines and marketing offices across India", "roles": "Graduate Engineers in Civil, Chemical, Electrical, Electronics and Communication, Mechanical, Instrumentation and CS/IT, plus officers and diploma engineers; notified 14 August 2026, applications to 3 September 2026, CBT 24 September 2026", "fresher": true, "source_url": "https://testbook.com/news/iocl-je-recruitment-2026-out/", "seen_on": "2026-09"},
+    {"name": "ONGC", "type": "company", "location": "Dehradun HQ; assets in Assam, Gujarat, Mumbai offshore, Andhra, Tamil Nadu, Tripura", "roles": "Graduate Engineer Trainee and geosciences trainees via GATE score; short notification 10 July 2026, applications from 17 July 2026", "fresher": true, "source_url": "https://www.pw.live/ae-je/exams/ongc-graduate-engineer-trainee-recruitment-2026", "seen_on": "2026-07"},
+    {"name": "TGPSC Assistant Executive Engineer (example of a state PSC AE recruitment)", "type": "exam", "location": "Telangana; other states run similar AE exams through their PSCs (MPPSC, MPSC, UPPSC, TNPSC, Manipur PSC)", "roles": "AEE Civil in state engineering departments; notified 2 June 2026, applications 6 June to 13 July 2026; written exam then verification and medical", "fresher": true, "source_url": "https://www.freejobalert.com/articles/tgpsc-aee-recruitment-2026-notification-out-3052407", "seen_on": "2026-06"},
+    {"name": "GATE 2027 (IIT Madras, on behalf of the National Coordination Board)", "type": "exam", "location": "All India, computer-based", "roles": "The score used by NPCIL, NTPC, IOCL, ONGC, Power Grid and other PSUs, and for M.Tech admission; registration 2 to 27 September 2026 (late fee to 5 October), exam 6 to 21 February 2027", "fresher": true, "source_url": "https://testbook.com/news/gate-2027-official-website/", "seen_on": "2026-09"}
+  ],
+  "fit_rules": [
+    {"field": "priority", "value": "stability", "score": 3, "reason": "This is the one path built for job security: a PSU or government post is permanent, pensioned or NPS-backed, and not subject to layoffs."},
+    {"field": "enjoyed", "value": "exams_theory", "score": 3, "reason": "Entry is decided entirely by written exams; being good at competitive exams is the single biggest predictor here."},
+    {"field": "preparation", "value": "gate_prep", "score": 3, "reason": "You have already started the preparation that every door in this path runs on."},
+    {"field": "runway_months", "value": "12_plus", "score": 2, "reason": "A serious ESE or GATE attempt takes 12 to 18 months from first study to joining; you can afford one full cycle."},
+    {"field": "runway_months", "value": "0_3", "score": -3, "reason": "Exam cycles take a year and pay nothing until you join; with no runway, an exam-only plan will force you to quit midway."},
+    {"field": "runway_months", "value": "4_12", "score": 0, "reason": "One attempt is possible only alongside a paying fallback; do not go exam-only."},
+    {"field": "priority", "value": "income_now", "score": -2, "reason": "Nothing pays for at least a year; the first salary arrives after selection, training and posting."},
+    {"field": "priority", "value": "high_pay_growth", "score": -2, "reason": "Pay is fixed by grade and rises slowly; growth is by seniority, not performance."},
+    {"field": "priority", "value": "abroad", "score": -3, "reason": "These are Indian government posts; there is no abroad track."},
+    {"field": "branch", "value": "CIVIL", "score": 2, "reason": "Civil has the most posts in ESE, SSC JE, RRB JE and every state PSC AE exam."},
+    {"field": "branch", "value": "MECH", "score": 2, "reason": "Mechanical has the second-largest post count in ESE and the largest in NPCIL and BHEL intakes."},
+    {"field": "branch", "value": "EE", "score": 2, "reason": "Electrical is eligible for ESE, SSC JE, RRB JE and nearly every PSU via GATE (Power Grid, NTPC, NPCIL)."},
+    {"field": "branch", "value": "ECE", "score": 1, "reason": "Eligible for ESE (E&T) and several PSUs, but fewer posts than Civil, Mechanical or Electrical."},
+    {"field": "branch", "value": "CS", "score": -2, "reason": "CS and IT are not eligible for ESE and most PSU-via-GATE engineer intakes; only a few (Power Grid, IOCL, some banks' IT officer posts) take CS."},
+    {"field": "branch", "value": "IT", "score": -2, "reason": "IT is excluded from ESE and most PSU engineer intakes; the government door for IT graduates is mostly bank IT officer or SSC posts outside engineering."},
+    {"field": "relocation", "value": "hometown_only", "score": -2, "reason": "Central posts go anywhere in India; only a state PSC AE post keeps you in your state, and rarely in your town."},
+    {"field": "relocation", "value": "within_state", "score": 0, "reason": "State PSC AE and some SSC JE and RRB zone postings can keep you in-state; central PSU postings will not."},
+    {"field": "graduation_year", "value": "2028_or_later", "score": 1, "reason": "You have two full GATE cycles before graduating, which is when this path is cheapest to attempt."},
+    {"field": "interests", "value": "physical_systems", "score": 1, "reason": "PSU and government engineering work is plants, grids, roads, railways and refineries."},
+    {"field": "enjoyed", "value": "coding_projects", "score": -1, "reason": "Very little of the entry exam or the day job is coding; graduates who loved building software tend to leave PSUs within a few years."}
+  ],
+  "base_score": 3,
+  "stat_ids_used": ["paths.govt.upsc_ese_posts.2026", "paths.govt.ssc_je_posts.2025", "paths.govt.psu_via_gate_examples.2026", "paths.govt.gate_appeared.2025", "paths.infra.fresher_ctc_bands.2026", "paths.skilling.nats_graduate_stipend.2026"],
+  "last_reviewed": "2026-09-21",
+  "changed_fields": ["all"]
+}

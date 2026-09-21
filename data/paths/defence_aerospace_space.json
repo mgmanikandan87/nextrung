@@ -1,0 +1,164 @@
+{
+  "id": "defence_aerospace_space",
+  "name": "Defence, aerospace and space",
+  "tagline": "Steady but small door, gated by GATE or a written test at PSUs and by a build portfolio at startups",
+  "door_state": "steady",
+  "door_size": {
+    "people_per_year": null,
+    "stat_ids": ["gap.hal_bel_drdo_annual_intake", "paths.defence.production_value.fy26", "paths.space.startups.2026"],
+    "caveat": "No market_stat gives annual graduate intake; the recruitment notices in employers sum to a few thousand graduate seats a year across ISRO, DRDO, HAL, BEL, BDL and the private primes, and each is a one-off notice, not a rolling pipeline. Production value and startup count are growing, but that growth lands mostly in experienced hiring."
+  },
+  "pay_band": {
+    "low_lpa": null,
+    "high_lpa": null,
+    "stat_ids": ["paths.skilling.nats_graduate_stipend.2026"],
+    "note": "No market_stat for defence or space fresher CTC; gap logged. The apprentice floor is the NATS graduate stipend of Rs 12,300 a month at DPSUs. Scientist and trainee pay for ISRO, DRDO, HAL and BEL is on each notice linked in employers; private space startups pay roughly what EV embedded roles pay."
+  },
+  "branches": {"CS": 2, "IT": 1, "ECE": 3, "EE": 2, "MECH": 3, "CIVIL": 1, "CHEM": 1, "OTHER": 2},
+  "tiers_realistic": {
+    "tier1": "Yes. IIT and NIT graduates with high marks get DRDO Scientist B consideration without GATE in some cycles, and ISRO and HAL campus visits and the space startups recruit here first.",
+    "tier2": "Yes through the exam route: ISRO ICRB written test, DRDO via GATE, HAL and BEL written tests do not ask where you studied. Startups (Skyroot, Agnikul) take tier-2 graduates who show a propulsion, avionics or GNC build.",
+    "tier3": "Yes but narrow. The exam route is brand-blind, so a tier-3 graduate who clears GATE or the ISRO CBT is on equal footing; the catch is that seats are few and competition is national. The realistic entry for most is a DPSU graduate apprenticeship under NATS (BDL, BEL, HAL units run these every year), then a written-test trainee post. What substitutes for the brand is a GATE score, a documented RF, propulsion or avionics build, and patience for cycles that open once a year."
+  },
+  "entry_requirements": [
+    "First-class B.E./B.Tech (most notices ask for 60% or a first class) in ECE, Mechanical, Electrical, CS, Aeronautical or Instrumentation, no backlogs, age under the notice limit (usually 28 to 30)",
+    "A valid GATE score for DRDO Scientist B, and for many PSU and DPSU trainee posts; ISRO ICRB and HAL run their own computer-based tests",
+    "For private primes and startups: a portfolio build in one of RF, propulsion, structures, avionics or GNC with test data, not a certificate",
+    "Working skill in one core tool set: CATIA or NX plus ANSYS or OpenFOAM for mechanical; LTspice, KiCad and an SDR or VNA for RF and avionics; MATLAB/Simulink for GNC",
+    "Indian citizenship and willingness to undergo security clearance and to work at posted locations (Bengaluru, Hyderabad, Thiruvananthapuram, Nashik, Koraput, Chennai)",
+    "A NATS registration if you are aiming at DPSU graduate apprenticeships"
+  ],
+  "two_year_plan": [
+    {
+      "block": "H1",
+      "title": "Pick a track and start GATE in parallel",
+      "learn": [
+        "GATE for your paper (ECE, ME, EE, CS or AE): start with NPTEL lectures and previous-year papers; free, and the paper you choose decides which notices you can answer",
+        "Track choice: RF and avionics (ECE, EE), propulsion and structures (Mech, Aero), or flight software and GNC (CS, EE); read one open textbook for the track (for example, Sutton for rockets, Pozar for RF)",
+        "Tool basics for the track: KiCad and LTspice for RF; CATIA or FreeCAD plus ANSYS Student for structures; MATLAB Onramp and Simulink for GNC"
+      ],
+      "build": [
+        "RF track: a two-element antenna and a receive chain measured with an RTL-SDR; propulsion track: a cold-gas thruster or a solid-motor test stand with a load cell; GNC track: a quadcopter attitude controller in Simulink then on a flight board"
+      ],
+      "evidence": [
+        "A GitHub repo or a folder of drawings, test logs and a one-page report per build",
+        "A GATE mock-test score log to see where you stand; only about one in five who appear qualify"
+      ],
+      "target": ["Register on NATS for DPSU graduate apprenticeships (BDL Hyderabad, BEL units, HAL divisions run annual notices)", "Note the ISRO ICRB cycle (notices around August, test around October) and the DRDO RAC cycle (applications around July)"]
+    },
+    {
+      "block": "H2",
+      "title": "First test cycle and a DPSU apprenticeship",
+      "learn": [
+        "GATE full syllabus completion; sit the exam in February",
+        "For ISRO ICRB and HAL CBTs: the discipline paper is core branch at B.Tech depth plus aptitude; practise from previous ISRO papers",
+        "Standards vocabulary: MIL-STD-461 for EMI, DO-178C for flight software, ECSS for space; read the summaries, not the full documents"
+      ],
+      "build": [
+        "Extend the H1 build with a test campaign: repeat runs, measurement uncertainty, and a failure you found and fixed",
+        "A structured test report in the format a DRDO lab or a startup would expect (objective, setup, results, deviations)"
+      ],
+      "evidence": [
+        "GATE score card; ISRO or HAL test admit card and score if the cycle falls here",
+        "The test report published with data files"
+      ],
+      "target": ["Apply to a NATS graduate apprenticeship at BDL, BEL or HAL at the NATS stipend of Rs 12,300 a month (some units pay more)", "BEL trainee engineer and project engineer notices run through the year at individual units"]
+    },
+    {
+      "block": "H3",
+      "title": "Portfolio for private primes and startups",
+      "learn": [
+        "For Skyroot, Agnikul, L&T PES and Tata Advanced Systems: manufacturing and quality vocabulary (GD&T, AS9100, NDT basics) because most fresher roles are in production engineering, methods or test, not design",
+        "Composite or welding basics for structures roles; LabVIEW and DAQ basics for test roles (Agnikul hires instrumentation software developers with LabVIEW)",
+        "How to use a research agent to summarise a standard or a paper and a coding agent to write data-acquisition and analysis scripts, checking each output against the source"
+      ],
+      "build": [
+        "One deeper project (see evidenced project) that runs a hardware test end to end with automated data capture and a written analysis",
+        "A DAQ script set in Python or LabVIEW that logs, plots and flags out-of-range readings"
+      ],
+      "evidence": [
+        "A thirty-minute walkthrough you have rehearsed with someone outside the field",
+        "Applications to Skyroot's Kalpana Fellowship or similar fresher programmes, with the portfolio attached"
+      ],
+      "target": ["Skyroot Kalpana Fellowship (Hyderabad)", "Agnikul fresher roles (Chennai)", "Tata Advanced Systems GET and PGET (Bengaluru, Hyderabad, Nagpur)", "L&T Precision Engineering & Systems campus route"]
+    },
+    {
+      "block": "H4",
+      "title": "Second exam cycle and fallback set",
+      "learn": [
+        "If GATE did not clear: reattempt with a focus on weak topics, and sit ISRO ICRB and HAL MT/DT tests regardless because they do not need GATE",
+        "Interview preparation for Scientist B and MT interviews: your build, your branch fundamentals, and current Indian programmes (Gaganyaan, Tejas Mk1A, SSLV) at a level you can discuss"
+      ],
+      "build": [
+        "Keep the apprenticeship or fellowship work documented; convert to a permanent role where the unit offers it",
+        "A short comparison of two designs you evaluated, in the format of a trade study"
+      ],
+      "evidence": [
+        "Apprenticeship completion certificate; test scores; the portfolio site",
+        "Offers or shortlists from at least one exam route and one private route"
+      ],
+      "target": ["DRDO Scientist B via GATE", "ISRO ICRB Scientist/Engineer SC", "HAL Management and Design Trainee", "BEL trainee engineer", "BDL management trainee", "Fallback: EV embedded and battery roles, or infrastructure PSUs via the same GATE score"]
+    }
+  ],
+  "evidenced_project_spec": {
+    "title": "Instrumented static test of a small solid rocket motor (or, for the RF track, a measured S-band receive chain for a CubeSat ground station)",
+    "scope": "Propulsion track: design and build a small solid motor test stand with a load cell, a pressure transducer and thermocouples, run a campaign of firings of a commercially available or club-built motor, and compare measured thrust curve and chamber pressure with a simple internal-ballistics model. RF track: design, simulate, build and measure a low-noise S-band receive chain and antenna, then characterise gain, noise figure and link budget against a published CubeSat downlink.",
+    "domain": "Launch vehicle propulsion testing (Skyroot, Agnikul, ISRO propulsion complexes) or satellite ground segment (ISRO, private ground-station startups); both are areas where test and instrumentation freshers are hired.",
+    "agent_use": "A coding agent writes the DAQ script (sampling, buffering, calibration, CSV output) and the analysis notebook that integrates thrust to impulse and overlays the model; a research agent drafts the safety checklist and summarises the internal-ballistics equations or the link-budget method from open sources. Every derived equation is re-derived by hand once and every safety item is checked against a club or NAR-style safety code; the prompts and corrections are kept in the repo so an interviewer can see what the agent got wrong.",
+    "done_looks_like": "A stand or receive chain that works repeatedly; a campaign of at least several runs with calibrated data; a report that shows model versus measurement, uncertainty, and the largest discrepancy explained; drawings, schematics, code and raw data public; a thirty-minute talk you can give without slides.",
+    "verification": "Calibration records for every sensor with known weights or a signal generator; repeatability across runs shown as a spread; an independent person reproduces the analysis from raw data using only the README; for propulsion, firings done only at a club range under a safety officer, with the safety sign-off documented."
+  },
+  "ai_task_shift": [
+    {"task_2019": "Writing test procedures and test reports from templates", "now": "Agents draft procedures and reports from the test plan and the logged data", "human_owns": "The test itself, the anomaly call on the pad or bench, and the signature on the report"},
+    {"task_2019": "Setting up CFD, FEA and thermal cases and post-processing plots", "now": "Agents write case files, meshing scripts and plotting code from a description", "human_owns": "Boundary conditions that match flight, physical plausibility checks, and correlation with hardware tests"},
+    {"task_2019": "Literature and standards review for a design decision", "now": "Research agents summarise papers and standards clauses in minutes", "human_owns": "Verifying the clause against the actual standard, the trade study decision, and the design review defence"},
+    {"task_2019": "Writing DAQ, telemetry-parsing and analysis code", "now": "Coding agents produce the scripts and unit tests", "human_owns": "Calibration, sensor placement, timing on real hardware, and debugging with the instrument in hand"},
+    {"task_2019": "Preparing BOMs, routing sheets and process plans for manufacturing", "now": "Agents generate first-pass BOMs and routings from CAD and ERP data (a skill TASL asks for in GAT notices)", "human_owns": "Shop-floor feasibility, supplier qualification, and the quality sign-off under AS9100"},
+    {"task_2019": "Drafting requirement documents and traceability matrices", "now": "Agents draft and cross-link requirements", "human_owns": "Deciding what the requirement is, negotiating it with the customer or programme office, and security-classified content that never goes to an external tool"}
+  ],
+  "fallback_path_id": "ev_automotive",
+  "employers": [
+    {"name": "ISRO Centralised Recruitment Board (ICRB)", "type": "exam", "location": "Bengaluru, Thiruvananthapuram, Sriharikota, Ahmedabad, Hyderabad", "roles": "Scientist/Engineer SC in Electronics, Mechanical and Computer Science by computer-based test; notice August 2026, test October 2026", "fresher": true, "source_url": "https://www.isro.gov.in/ICRB_Recruitment13.html", "seen_on": "2026-08"},
+    {"name": "DRDO Recruitment and Assessment Centre (RAC)", "type": "exam", "location": "Labs across India", "roles": "Scientist B via GATE score plus descriptive test for ECE, Mechanical and CS; other disciplines by GATE and interview; 630 posts in the 2026 cycle", "fresher": true, "source_url": "https://www.spinoneducation.com/blog/drdo-rac-recruitment/", "seen_on": "2026-07"},
+    {"name": "Hindustan Aeronautics Limited (HAL)", "type": "exam", "location": "Bengaluru, Nashik, Koraput, Kanpur, Lucknow, Hyderabad", "roles": "Management Trainee and Design Trainee by computer-based test; 120 posts in the 2026 cycle across Aeronautical, Electrical, Electronics, Mechanical, CS, Metallurgy and Civil", "fresher": true, "source_url": "https://www.careerpower.in/blog/hal-recruitment-2026", "seen_on": "2026-08"},
+    {"name": "Bharat Electronics Limited (BEL)", "type": "exam", "location": "Bengaluru, Ghaziabad, Hyderabad, Pune, Chennai, Kochi, Jodhpur", "roles": "Trainee Engineer and Project Engineer notices at individual units through 2026, plus graduate apprentice walk-ins; written test, no GATE for most trainee posts", "fresher": true, "source_url": "https://defence.sarkarijobs.com/bel-recruitment/", "seen_on": "2026-09"},
+    {"name": "Bharat Dynamics Limited (BDL)", "type": "exam", "location": "Hyderabad (Kanchanbagh), Bhanur, Visakhapatnam", "roles": "Graduate apprentices under NATS (122 B.E./B.Tech seats in July 2026 at the NATS stipend) and periodic Management Trainee tests", "fresher": true, "source_url": "https://www.adda247.com/engineering-jobs/bdl-trade-apprentice-recruitment/", "seen_on": "2026-07"},
+    {"name": "L&T Precision Engineering & Systems", "type": "company", "location": "Talegaon, Hazira, Coimbatore, Vadodara, Powai", "roles": "GET and PGET through the L&T group campus programme; direct fresher postings are rare, most openings are experienced", "fresher": true, "source_url": "https://www.lntpes.com/careers", "seen_on": "2026-09"},
+    {"name": "Tata Advanced Systems (TASL)", "type": "company", "location": "Hyderabad, Bengaluru (Jigani), Nagpur, Narasapura", "roles": "GET, PGET and Management Trainee programmes with shop-floor rotation; Graduate Apprentice Trainee notices for process planning and manufacturing", "fresher": true, "source_url": "https://www.tataadvancedsystems.com/careers", "seen_on": "2026-09"},
+    {"name": "Skyroot Aerospace", "type": "company", "location": "Hyderabad", "roles": "Kalpana Fellowship: twelve-month programme for recent graduates and final-year students with a fast track to full-time; regular openings are two years plus", "fresher": true, "source_url": "https://www.skyroot.in/careers", "seen_on": "2026-09"},
+    {"name": "Agnikul Cosmos", "type": "company", "location": "Chennai (IIT Madras Research Park)", "roles": "Fresher roles such as Instrumentation Software Developer (LabVIEW, C, DAQ) open to 2024 to 2026 batches; power electronics and mission software openings", "fresher": true, "source_url": "https://www.jobinsider.in/jobs/agnikul-instrument-software-developer-job-26/", "seen_on": "2026-08"}
+  ],
+  "fit_rules": [
+    {"field": "branch", "value": "ECE", "score": 3, "reason": "Electronics is the largest discipline in ISRO, BEL, BDL and HAL notices."},
+    {"field": "branch", "value": "MECH", "score": 3, "reason": "Mechanical is the second largest discipline at ISRO, HAL, BDL and the launch startups."},
+    {"field": "branch", "value": "EE", "score": 2, "reason": "Electrical appears in HAL, BEL and DRDO notices but with fewer seats than ECE."},
+    {"field": "branch", "value": "CS", "score": 2, "reason": "ISRO, DRDO and HAL all list Computer Science, and startups need flight and mission software."},
+    {"field": "branch", "value": "OTHER", "score": 1, "reason": "Aeronautical and instrumentation graduates are listed by HAL, DRDO and the startups; other branches rarely."},
+    {"field": "branch", "value": "CIVIL", "score": -2, "reason": "Only a few civil seats appear (HAL MT, DRDO Part II); not a realistic main route."},
+    {"field": "enjoyed", "value": "exams_theory", "score": 3, "reason": "The PSU and DPSU doors are exams; being good at competitive tests is the single biggest advantage."},
+    {"field": "preparation", "value": "gate_prep", "score": 3, "reason": "GATE is the entry for DRDO and many PSU trainee posts, and the same score opens NTPC and Power Grid as fallbacks."},
+    {"field": "preparation", "value": "projects_portfolio", "score": 1, "reason": "A propulsion, RF or avionics build is what Skyroot, Agnikul and TASL screen on."},
+    {"field": "preparation", "value": "core_tools", "score": 1, "reason": "CATIA, ANSYS or MATLAB skill shortens the private-route plan."},
+    {"field": "priority", "value": "meaningful_domain", "score": 2, "reason": "People choose this path for the mission; the pay and the wait only make sense if the domain matters to you."},
+    {"field": "priority", "value": "stability", "score": 2, "reason": "ISRO, DRDO and DPSU posts are permanent central government or PSU jobs."},
+    {"field": "priority", "value": "income_now", "score": -2, "reason": "Cycles open once a year and the first step is often an apprentice stipend; income is slow."},
+    {"field": "priority", "value": "abroad", "score": -3, "reason": "Defence and space work is citizenship-restricted and stays in India."},
+    {"field": "runway_months", "value": "0_3", "score": -2, "reason": "You need months to prepare and wait for a notice; with no runway, take an apprenticeship first."},
+    {"field": "runway_months", "value": "12_plus", "score": 1, "reason": "A year of runway covers one GATE cycle plus the ISRO and HAL tests."},
+    {"field": "relocation", "value": "anywhere_india", "score": 1, "reason": "Postings are wherever the lab or unit is, and you do not choose."},
+    {"field": "relocation", "value": "hometown_only", "score": -3, "reason": "PSU posting is all-India; startups are in Hyderabad, Chennai and Bengaluru."},
+    {"field": "interests", "value": "research_theory", "score": 1, "reason": "Scientist posts reward depth in one subject."},
+    {"field": "interests", "value": "physical_systems", "score": 1, "reason": "Rockets, aircraft and radars are physical systems tested on the ground."}
+  ],
+  "base_score": 3,
+  "stat_ids_used": [
+    "gap.hal_bel_drdo_annual_intake",
+    "paths.defence.production_value.fy26",
+    "paths.space.startups.2026",
+    "paths.skilling.nats_graduate_stipend.2026",
+    "paths.govt.gate_appeared.2025",
+    "paths.govt.gate_qualified.2025"
+  ],
+  "last_reviewed": "2026-09-21",
+  "changed_fields": ["all"]
+}

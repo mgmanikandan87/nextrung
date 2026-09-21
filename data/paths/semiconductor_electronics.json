@@ -1,0 +1,384 @@
+{
+  "id": "semiconductor_electronics",
+  "name": "Semiconductor and electronics",
+  "tagline": "Small but growing door; far fewer real jobs this year than the headlines promise",
+  "door_state": "growing",
+  "door_size": {
+    "people_per_year": 15000,
+    "stat_ids": [
+      "paths.semiconductor.direct_jobs_govt_statement.2026",
+      "paths.semiconductor.units_approved_in_production.2026",
+      "paths.semiconductor.engineers_trained_c2s.2026",
+      "paths.semiconductor.jobs_projection_nlb.2024"
+    ],
+    "caveat": "Minister's Aug 2026 statement of 50,000 to 60,000 direct jobs 'in coming years' spread over roughly four years; only 3 of 12 approved units are in production, 85,000 engineers have already been trained under C2S, and the earlier NLB projection of 1 million jobs by 2026 did not materialise."
+  },
+  "pay_band": {
+    "low_lpa": 4,
+    "high_lpa": 6,
+    "stat_ids": [
+      "paths.semiconductor.fresher_ctc_bands.2026"
+    ],
+    "note": "Design-services firms and ATMP/OSAT plants pay 4 to 6 for most freshers; NVIDIA 22 to 30, Qualcomm 17 to 23, Intel and Broadcom 16 to 22 go to a small number, mostly M.Tech or tier-1 B.Tech. Source is a low-confidence salary guide."
+  },
+  "branches": {
+    "CS": 1,
+    "IT": 0,
+    "ECE": 3,
+    "EE": 3,
+    "MECH": 1,
+    "CIVIL": 0,
+    "CHEM": 2,
+    "OTHER": 0
+  },
+  "tiers_realistic": {
+    "tier1": "Yes. Qualcomm, NVIDIA, Texas Instruments, Micron, Samsung and AMD run campus drives at IITs, NITs and IIITs, and prefer M.Tech VLSI for design roles; B.Tech offers go mainly to the top of the ECE class.",
+    "tier2": "Partly. Design-services firms (Tessolve, eInfochips, Sankalp, MosChip, HCLTech and Wipro engineering units) and the new fabs and OSATs (Tata Electronics, Micron Sanand, CG Semi, Kaynes) hire B.Tech ECE/EE from tier-2 colleges, usually through off-campus tests and their own training programmes; pay starts in the 4 to 6 band.",
+    "tier3": "Hard but not closed, and honesty matters here: about 1.6 lakh students enrol in ECE each year (supply.aicte.branch_enrolment.ece.2024_25) against a door of tens of thousands at most, so most tier-3 ECE graduates will not get a VLSI design job in two years. What substitutes for the brand: a C2S-supported college licence for Cadence or Synopsys tools with a finished RTL-to-GDS or verification project you can defend, a GATE ECE score (useful for M.Tech VLSI, ISRO and PSU routes), and a willingness to start in test, product engineering, DFT or fab/ATMP operations rather than front-end design. A paid VLSI training institute is not required; free NPTEL and C2S material plus a real project is a stronger signal than a certificate."
+  },
+  "entry_requirements": [
+    "Digital design fundamentals: combinational and sequential logic, FSMs, timing, CMOS basics; tested in every screening",
+    "Verilog or SystemVerilog to the level of writing and simulating a module (FIFO, UART, AXI-lite slave) with a testbench; open-source Icarus/Verilator or Cadence Xcelium via a C2S college licence",
+    "For verification roles (the largest fresher intake in design services): SystemVerilog and UVM basics, assertions, coverage",
+    "For back-end roles: static timing analysis, synthesis, place-and-route concepts, DFT basics (scan, ATPG, BIST) and familiarity with Synopsys or Cadence flows",
+    "For fab, ATMP and OSAT roles (Tata Electronics, Micron, CG Semi, Kaynes): semiconductor process basics, statistics and SPC, cleanroom discipline, shift work; Chemical and Mechanical graduates also enter here",
+    "Programming for scripting and automation: Python and TCL, plus Linux; C for embedded and post-silicon validation",
+    "M.Tech VLSI or a GATE ECE score for the higher-paying design houses; a 7+ CGPA filter at Qualcomm, NVIDIA, TI and Micron campus drives"
+  ],
+  "two_year_plan": [
+    {
+      "block": "H1",
+      "title": "Digital design and Verilog, with free tools",
+      "learn": [
+        "NPTEL 'Digital Circuits' and 'Hardware Modeling using Verilog' (IIT Kharagpur, free)",
+        "Verilog and SystemVerilog basics on open-source tools: Icarus Verilog, Verilator, GTKWave; HDLBits for daily practice",
+        "Get access to your college's C2S (Chips to Startup) licences for Cadence or Synopsys; if your college is not on C2S, ask the ECE department to apply and use open-source OpenROAD and SkyWater 130 nm PDK meanwhile",
+        "Python and Linux shell for scripting; basics of TCL",
+        "Start GATE ECE preparation alongside (networks, signals, digital, EDC) since it opens M.Tech VLSI, ISRO and PSU doors"
+      ],
+      "build": [
+        "A parameterised FIFO and a UART transmitter/receiver in Verilog with self-checking testbenches, on GitHub"
+      ],
+      "evidence": [
+        "HDLBits progress",
+        "GitHub repos with waveforms in the README"
+      ],
+      "target": [
+        "Nothing yet; use this half to decide between design/verification and fab/ATMP tracks based on what you enjoy"
+      ]
+    },
+    {
+      "block": "H2",
+      "title": "Verification (UVM) or physical design; first RTL-to-GDS",
+      "learn": [
+        "SystemVerilog for verification and UVM: free Verification Academy (Siemens) courses, Doulos tutorials, ChipVerify",
+        "Synthesis and STA concepts: setup and hold, clock domains, constraints (SDC); NPTEL 'VLSI Physical Design' (IIT Kharagpur)",
+        "DFT basics: scan insertion, ATPG, BIST; read the Synopsys or Cadence DFT user guide sections your C2S licence covers",
+        "Complete an RTL-to-GDS flow once on OpenROAD/OpenLane with SkyWater 130 nm, then repeat on Cadence Genus/Innovus via C2S if available"
+      ],
+      "build": [
+        "A UVM testbench for your UART or an AXI-lite peripheral with functional coverage and assertions",
+        "An RTL-to-GDS run of a small RISC-V core or your own design with timing closed and a DRC-clean layout"
+      ],
+      "evidence": [
+        "Coverage report and bug list from the UVM project",
+        "GDS screenshot, timing report and area numbers in the README"
+      ],
+      "target": [
+        "VLSI internships (summer): Tessolve, eInfochips, Sankalp, MosChip, Samsung SSIR and Qualcomm intern postings",
+        "Flipkart-style hiring challenges do not exist here; apply directly on career pages and via faculty referrals"
+      ]
+    },
+    {
+      "block": "H3",
+      "title": "Internship or fab/ATMP entry, and the evidenced project",
+      "learn": [
+        "If you got a design-services internship: the company's flow, scripting for regressions, reading a spec end to end",
+        "If not: semiconductor manufacturing basics for the fab and OSAT track (NPTEL 'Semiconductor Device Fabrication'; Micron and Tata Electronics operator-to-engineer pathways), plus six-sigma and SPC basics",
+        "Post-silicon validation and test (ATE basics, bench debugging) which is where Tessolve's TET programme and TI's test roles start",
+        "GATE ECE mock tests weekly if you are keeping the M.Tech or ISRO route open"
+      ],
+      "build": [
+        "The evidenced project below (an automotive-grade CAN or LIN controller IP with full verification and DFT)"
+      ],
+      "evidence": [
+        "Internship completion letter or a fab/ATMP trainee offer",
+        "Project repo with verification plan, coverage closure and DFT report"
+      ],
+      "target": [
+        "Tata Electronics early careers (Dholera fab, Jagiroad ATMP, Hosur)",
+        "Micron Sanand and Hyderabad new-college-grad roles",
+        "Tessolve TET",
+        "ISRO ICRB Scientist/Engineer SC (Electronics), CBT Oct 2026",
+        "GATE 2027"
+      ]
+    },
+    {
+      "block": "H4",
+      "title": "Interviews across design, DFT, test and manufacturing",
+      "learn": [
+        "Interview drill: FSM design on a whiteboard, setup/hold arithmetic, CDC, FIFO depth calculation, UVM phase questions, scan chain questions",
+        "Read two public datasheets end to end and explain the register map; interviewers test whether you can read a spec",
+        "Prepare a 30-minute walkthrough of the evidenced project and a one-page summary of the internship or trainee work"
+      ],
+      "build": [
+        "Portfolio page listing the three builds with reports; keep applying weekly to design services, OSATs and product companies' new-grad postings"
+      ],
+      "evidence": [
+        "Interview log",
+        "GATE score if taken",
+        "Offers or M.Tech admission"
+      ],
+      "target": [
+        "Qualcomm, NVIDIA, TI, AMD, Micron new-college-graduate postings (2026 and 2027 batches)",
+        "Design services and OSAT firms",
+        "M.Tech VLSI at an NIT or IIT via GATE as the alternative door; fallback to ev_automotive embedded roles"
+      ]
+    }
+  ],
+  "evidenced_project_spec": {
+    "title": "Automotive CAN 2.0B controller IP: RTL, UVM verification and DFT",
+    "scope": "Design a CAN 2.0B controller (bit timing, arbitration, CRC, error handling, TX/RX message buffers with an AXI-lite register interface) in Verilog; write a verification plan and a UVM testbench with a CAN bus model, functional coverage and assertions; synthesise, run STA, insert scan and generate ATPG patterns; run RTL-to-GDS on SkyWater 130 nm with OpenROAD or on Cadence tools through a C2S licence. Target use case: a body-control ECU in a two-wheeler EV.",
+    "domain": "automotive",
+    "agent_use": "A coding agent drafts the register map documentation, generates the UVM skeleton, scripts regressions and produces first-pass testbench sequences from the CAN specification; the graduate writes the RTL and the assertions by hand, reviews every generated sequence against the spec, and records the cases where the agent misread the standard (for example bit-stuffing rules). A research agent is used to summarise ISO 11898-1 timing requirements, which the graduate verifies against the standard text.",
+    "done_looks_like": "RTL passes a regression of at least 200 randomised tests with 95%+ functional coverage and zero open bugs; timing closed at 100 MHz on the target library; scan coverage above 95% with ATPG patterns; DRC/LVS-clean GDS; a 10-page design document with block diagram, register map, verification plan, coverage report, timing summary and DFT summary.",
+    "verification": "Regression and coverage reports committed to the repo and reproducible with one script; an independent check by interoperating with an open-source CAN model (or a second student's implementation); a faculty or industry reviewer signs off on the verification plan; the graduate can explain for 30 minutes how arbitration is verified, one real bug the testbench caught, why scan coverage was not 100%, and what changed between RTL and post-layout timing."
+  },
+  "ai_task_shift": [
+    {
+      "task_2019": "Write testbench boilerplate, sequences and regression scripts by hand",
+      "now": "Agents generate UVM skeletons, sequences and regression scripts from a spec; verification engineers spend more time on the plan and the coverage holes",
+      "human_owns": "Verification planning, deciding what to cover, reading the spec correctly, and debugging the failures the generator cannot explain"
+    },
+    {
+      "task_2019": "Hand-write RTL for standard blocks (FIFOs, arbiters, bus interfaces)",
+      "now": "Agents produce first-draft RTL for standard blocks; quality varies and must be checked against timing and area",
+      "human_owns": "Micro-architecture, power and timing trade-offs, and reviewing generated RTL for synthesisability and corner cases"
+    },
+    {
+      "task_2019": "Iterate synthesis, placement and timing closure by manually tuning constraints and scripts",
+      "now": "EDA vendors ship AI-driven flow optimisation (Synopsys DSO.ai-style and Cadence Cerebrus-style tools) that explore settings automatically",
+      "human_owns": "Setting the constraints and goals, judging when a result is real versus an artefact, and signing off tape-out risk"
+    },
+    {
+      "task_2019": "Read datasheets and standards and summarise them for the team",
+      "now": "Agents summarise standards in minutes, sometimes wrongly",
+      "human_owns": "Verifying the summary against the source, and the engineering judgement about what the standard means for this design"
+    },
+    {
+      "task_2019": "Fab and ATMP process monitoring by reading charts on shift",
+      "now": "Anomaly detection and yield analytics flag excursions automatically",
+      "human_owns": "Root-cause analysis, process changes, equipment ownership and the shift decisions that cost real money if wrong"
+    }
+  ],
+  "fallback_path_id": "ev_automotive",
+  "employers": [
+    {
+      "name": "Tata Electronics",
+      "type": "company",
+      "location": "Dholera (fab), Jagiroad Assam (ATMP), Hosur",
+      "roles": "Early careers: graduate engineer trainee via internship and boot-camp selection; engineering, operations and digital tracks",
+      "fresher": true,
+      "source_url": "https://www.tataelectronics.com/early-careers",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Micron Technology India",
+      "type": "company",
+      "location": "Sanand (ATMP), Hyderabad, Bengaluru",
+      "roles": "New College Grad programme; graduate engineering technician and associate engineer roles at Sanand; applications open around August",
+      "fresher": true,
+      "source_url": "https://in.micron.com/about/careers/university-recruiting",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Qualcomm India",
+      "type": "company",
+      "location": "Bengaluru, Hyderabad, Chennai, Noida",
+      "roles": "Engineer HW and Engineer SW, 2026 batch B.E./B.Tech/M.Tech in CS, ECE, EE, VLSI",
+      "fresher": true,
+      "source_url": "https://freshershunt.in/qualcomm-campus-hiring-2026/",
+      "seen_on": "2026-06"
+    },
+    {
+      "name": "NVIDIA India",
+      "type": "company",
+      "location": "Bengaluru, Gurugram, Pune",
+      "roles": "New College Graduate roles including formal verification engineer (Verilog/SystemVerilog) and system software engineer, 2026 batch",
+      "fresher": true,
+      "source_url": "https://offcampusjobs4u.com/nvidia-recruitment-2026-verification-india/",
+      "seen_on": "2026-06"
+    },
+    {
+      "name": "Texas Instruments India",
+      "type": "company",
+      "location": "Bengaluru",
+      "roles": "Software development engineer and test/product roles for 2026 batch; campus drives at select colleges",
+      "fresher": true,
+      "source_url": "https://offcampusjobs4u.com/texas-instruments-recruitment-2026-software-development-engineer/",
+      "seen_on": "2026-08"
+    },
+    {
+      "name": "AMD India",
+      "type": "company",
+      "location": "Bengaluru, Hyderabad",
+      "roles": "Software development engineer (GPU stack) for 2024 to 2026 batches; silicon design roles listed separately on the AMD careers site",
+      "fresher": true,
+      "source_url": "https://offcampusjobs4u.com/amd-recruitment-2026-software-engineer-bengaluru/",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "Tessolve",
+      "type": "company",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "roles": "Tessolve Engineering Trainee (TET) programme for fresh BE/B.Tech EEE and ECE graduates in post-silicon validation and test",
+      "fresher": true,
+      "source_url": "https://www.tessolve.com/careers/",
+      "seen_on": "2026-09"
+    },
+    {
+      "name": "ISRO Centralised Recruitment Board (ICRB)",
+      "type": "exam",
+      "location": "ISRO centres across India",
+      "roles": "Scientist/Engineer 'SC' 2026: Electronics 99 posts, Mechanical 52, Computer Science 21; BE/B.Tech with 65% or CGPA 6.84; CBT on 19 Oct 2026",
+      "fresher": true,
+      "source_url": "https://www.isro.gov.in/ICRB_Recruitment13.html",
+      "seen_on": "2026-08"
+    }
+  ],
+  "fit_rules": [
+    {
+      "field": "branch",
+      "value": "ECE",
+      "score": 3,
+      "reason": "ECE is the core branch for design, verification, DFT and test roles."
+    },
+    {
+      "field": "branch",
+      "value": "EE",
+      "score": 3,
+      "reason": "EE graduates are hired on the same terms as ECE for VLSI and for fab equipment roles."
+    },
+    {
+      "field": "branch",
+      "value": "CHEM",
+      "score": 1,
+      "reason": "Fab process and ATMP roles at Tata Electronics, Micron and CG Semi take Chemical and Materials graduates."
+    },
+    {
+      "field": "branch",
+      "value": "CIVIL",
+      "score": -3,
+      "reason": "There is no realistic entry for Civil graduates in this path."
+    },
+    {
+      "field": "branch",
+      "value": "IT",
+      "score": -2,
+      "reason": "Only software roles at chip companies are open, and those compete with CS graduates; chip design needs an ECE/EE base."
+    },
+    {
+      "field": "college_tier",
+      "value": "1",
+      "score": 2,
+      "reason": "The high-paying design houses run campus drives at IITs, NITs and IIITs and prefer M.Tech VLSI from them."
+    },
+    {
+      "field": "college_tier",
+      "value": "3",
+      "score": -2,
+      "reason": "Design houses rarely visit tier-3 colleges; the realistic entry is design services, test, or fab/ATMP operations, or M.Tech via GATE."
+    },
+    {
+      "field": "region",
+      "value": "south",
+      "score": 1,
+      "reason": "Bengaluru and Hyderabad hold most design and verification jobs."
+    },
+    {
+      "field": "region",
+      "value": "west",
+      "score": 1,
+      "reason": "Gujarat (Dholera fab, Sanand ATMP and OSATs) is where the new manufacturing jobs are."
+    },
+    {
+      "field": "region",
+      "value": "east_ne",
+      "score": 1,
+      "reason": "Tata's Jagiroad ATMP in Assam is the first large semiconductor employer in the North-East."
+    },
+    {
+      "field": "relocation",
+      "value": "anywhere_india",
+      "score": 1,
+      "reason": "Jobs are in Bengaluru, Hyderabad, Sanand, Dholera and Jagiroad; you need to be able to move."
+    },
+    {
+      "field": "relocation",
+      "value": "hometown_only",
+      "score": -3,
+      "reason": "Unless home is Bengaluru, Hyderabad or near Sanand, there are almost no semiconductor jobs near home."
+    },
+    {
+      "field": "runway_months",
+      "value": "0_3",
+      "score": -2,
+      "reason": "Design and verification roles take 12 to 24 months of preparation for a tier-2/3 graduate; fab/ATMP trainee roles are faster but shift-based."
+    },
+    {
+      "field": "runway_months",
+      "value": "12_plus",
+      "score": 1,
+      "reason": "A year of runway allows the project work or GATE attempt this path needs."
+    },
+    {
+      "field": "interests",
+      "value": "hardware_electronics",
+      "score": 3,
+      "reason": "This path is circuits and chips every day."
+    },
+    {
+      "field": "interests",
+      "value": "people_business",
+      "score": -2,
+      "reason": "Entry-level semiconductor work is deep technical work with little customer contact."
+    },
+    {
+      "field": "priority",
+      "value": "income_now",
+      "score": -2,
+      "reason": "Slow entry and a 4 to 6 lakh starting band for most; only a few reach the 16 to 30 band."
+    },
+    {
+      "field": "preparation",
+      "value": "core_tools",
+      "score": 3,
+      "reason": "Verilog/VHDL and EDA tool experience is exactly what screeners look for."
+    },
+    {
+      "field": "preparation",
+      "value": "gate_prep",
+      "score": 2,
+      "reason": "GATE ECE opens M.Tech VLSI, ISRO and PSU routes, which are the main tier-2/3 entries to design roles."
+    },
+    {
+      "field": "enjoyed",
+      "value": "labs_hardware",
+      "score": 2,
+      "reason": "If you enjoyed labs and hardware, the daily work here will suit you."
+    }
+  ],
+  "base_score": 5,
+  "stat_ids_used": [
+    "paths.semiconductor.direct_jobs_govt_statement.2026",
+    "paths.semiconductor.units_approved_in_production.2026",
+    "paths.semiconductor.engineers_trained_c2s.2026",
+    "paths.semiconductor.jobs_projection_nlb.2024",
+    "paths.semiconductor.fresher_ctc_bands.2026",
+    "supply.aicte.branch_enrolment.ece.2024_25"
+  ],
+  "last_reviewed": "2026-09-21",
+  "changed_fields": [
+    "all"
+  ]
+}

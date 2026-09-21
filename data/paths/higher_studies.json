@@ -1,0 +1,164 @@
+{
+  "id": "higher_studies",
+  "name": "Higher studies: M.Tech, MS abroad, MBA",
+  "tagline": "Doors are shifting: US narrowing (61% F-1 refusals), Germany and IIT/IISc growing",
+  "door_state": "steady",
+  "door_size": {
+    "people_per_year": 142000,
+    "stat_ids": ["paths.govt.gate_qualified.2025", "paths.govt.gate_appeared.2025", "paths.higher.indian_students_germany.ws2025_26", "paths.higher.cat_appeared.2025"],
+    "caveat": "This is the number who qualified GATE, not seats; IIT, IISc and NIT M.Tech seats are a small fraction of it and no seat stat is recorded. The Germany figure (69,816 Indian students) is total enrolment, not annual intake. CAT appearance (2.58 lakh) is competition, not seats. Overall the door is steady in count but moving in direction: US inflow is falling, Germany and domestic M.Tech are rising."
+  },
+  "pay_band": {
+    "low_lpa": 4,
+    "high_lpa": 15,
+    "stat_ids": ["demand.fresher_ctc.bands.2026", "demand.it_services.fresher_ctc.tcs"],
+    "note": "This is what you earn after, not during. An IIT or IISc M.Tech lands GCC and product bands (8 to 15) for those with a strong project; a tier-2 M.Tech without one lands near the IT-services fresher band. No stat is recorded for post-master's pay in Germany or Ireland, or for post-MBA pay; treat agent claims of those numbers as unverified."
+  },
+  "branches": {"CS": 3, "IT": 2, "ECE": 3, "EE": 3, "MECH": 2, "CIVIL": 2, "CHEM": 2, "OTHER": 1},
+  "tiers_realistic": {
+    "tier1": "Yes; this is where most tier-1 graduates who do not take a job go. The risk for you is different: doing an M.Tech to postpone a weak job market. Even IIT brands left 38 percent of the 2024 batch unplaced, so the degree alone is not the plan; the thesis project and the lab you join are.",
+    "tier2": "Yes, and GATE is the great equaliser: an IIT or IISc M.Tech via GATE rebrands a tier-2 degree completely. For Germany, public universities admit on marks and course match, not college name; APS verification treats all AICTE degrees the same. The substitute for brand is a GATE rank under about two thousand in your paper, or a first-class degree with a research-style project for Germany.",
+    "tier3": "Yes for domestic M.Tech via GATE (NITs through CCMT, IITs through COAP if the rank allows) and yes for Germany if your percentage is above the course cut-off and you can fund the blocked account. Honest warning: a master's from an unknown Indian private college adds nothing; a master's abroad without a job outcome in that country adds debt. Do it only with a named lab, a funded programme, or a clear job market at the other end."
+  },
+  "entry_requirements": [
+    "M.Tech at IIT, IISc, NIT: a valid GATE score in the matching paper (IISc: 100 percent GATE for CS, Civil, Aerospace, Materials, Signal Processing; 70 percent GATE plus interview or written test for EE, ME, AI, Chemical); then COAP (IITs, IISc) or CCMT (NITs, IIITs) counselling rounds",
+    "Germany: bachelor's marks above the programme cut-off (typically first class or CGPA 7 plus for TU9), APS certificate for Indian applicants (apply February to March for a winter intake; allow 8 to 12 weeks), uni-assist VPD where the university uses it, IELTS 6.5 or TOEFL for English-taught courses, German A1 to B1 improves part-time work and internships, blocked account of roughly one year's living cost",
+    "Ireland: 60 to 65 percent or a 2:1-equivalent bachelor's, IELTS 6.5, September main intake with some January intakes; two-year post-study stay-back for master's graduates",
+    "US MS: GRE optional at many programmes but a funded offer (TA, RA or fellowship) is now the entry requirement in practice, because 61 percent of Indian F-1 applications were refused in 2025 and unfunded students carry the highest visa and debt risk",
+    "MBA via CAT: CAT percentile in the high 90s for IIMs; work experience helps in interviews; engineers face heavier competition from non-engineers at the top scores now",
+    "For every route: a research-style or product-style project you can defend, because M.Tech lab admission, German university selection and MBA interviews all probe it",
+    "Financial runway: at least 12 months for domestic M.Tech (stipend covers living but not the wait), 18 to 24 months of savings or family support for abroad"
+  ],
+  "two_year_plan": [
+    {
+      "block": "H1",
+      "title": "Choose the route with a job outcome, and prepare the entry exam",
+      "learn": [
+        "Decide by outcome, not by brand: M.Tech via GATE for domestic core, VLSI, AI or research roles; Germany for engineering roles in mechanical, automotive, electrical, energy and CS with a path to a German work visa; Ireland for CS, data and pharma-adjacent roles with the two-year stay-back; US MS only with a funded offer; MBA via CAT for the ops, sales-engineering and product-management track",
+        "GATE syllabus for your paper (registration for GATE 2027 ran 2 to 27 September 2026 under IIT Madras; exam 6 to 21 February 2027); engineering maths and aptitude first",
+        "Germany track in parallel: German A1 (three months of daily practice), shortlist eight to twelve English-taught programmes on DAAD's database, note which use uni-assist and which take direct applications, and start APS document collection",
+        "CAT track: quant, verbal and data interpretation practice from September; CAT 2026 notified 25 July 2026 by IIM Indore with the exam at the end of November"
+      ],
+      "build": [
+        "A route comparison sheet: cost, funding, duration, language, visa refusal risk, and the job you expect at the end, with a source for each cell",
+        "The first version of the research-style project below, because every route will ask about it"
+      ],
+      "evidence": [
+        "GATE 2027 registered; or DAAD shortlist plus APS application filed; or CAT 2026 registered",
+        "A written 'when NOT to do it' check answered honestly: no runway, no funded offer, and no named job market at the end means you do not go this year"
+      ],
+      "target": ["GATE 2027", "DAAD India programme database", "APS India", "CAT 2026 (IIM Indore)"]
+    },
+    {
+      "block": "H2",
+      "title": "Sit the exam, apply, secure funding",
+      "learn": [
+        "GATE: weekly full mocks from November, PYQ accuracy tracked by subject; target a rank that clears IISc and old-IIT cut-offs in your paper, otherwise plan for NITs via CCMT",
+        "Germany: uni-assist deadlines are often 15 July for winter intake but many programmes close earlier (RWTH Aachen: 1 March for non-EU applicants to open-admission master's); submit at least eight weeks before; German A2",
+        "US: apply only to programmes where you have written contact with a professor about RA or TA funding; if no funded offer by April, drop the US for this cycle",
+        "MBA: CAT in late November; then IIM and other B-school interview preparation (your engineering project, current affairs, why MBA)"
+      ],
+      "build": [
+        "Complete the research-style project to a written report with reproducible results, ready to attach to German applications and to discuss in COAP interviews",
+        "Statement of purpose and CV in the German format (Lebenslauf) and the IIT lab-application format"
+      ],
+      "evidence": [
+        "GATE 2027 score (March 2027); German applications submitted with APS and VPD; CAT 2026 percentile; any funded US offer in writing",
+        "Project report public on GitHub or a personal page with data and code"
+      ],
+      "target": ["IISc", "IIT Bombay and other IITs via COAP", "NITs via CCMT", "RWTH Aachen, TU Munich, other TU9 and universities of applied sciences", "Irish universities September intake", "IIMs"]
+    },
+    {
+      "block": "H3",
+      "title": "Admission rounds, visa, and the exit test",
+      "learn": [
+        "COAP rounds (IIT Roorkee organising for 2026-27) and CCMT rounds run April to July: understand accept-and-wait versus accept-and-freeze, and the fellowship categories (TA, TAP, RA, RAP at IIT Bombay)",
+        "Germany: admission letters arrive May to August; open the blocked account, buy travel health insurance, book the visa appointment by mid-August at the latest",
+        "Ireland: offer, deposit, then the visa with proof of funds; check the university's Indian scholarship (fee reductions exist for taught master's)",
+        "The exit test: if you hold no admission with a clear job outcome by July, take the fallback job now and re-apply next year from employment; do not take an unfunded or unknown-college admission just to be a student"
+      ],
+      "build": [
+        "A first-semester plan for the programme you accepted: which lab, which elective cluster, which internship window",
+        "For Germany or Ireland: a part-time work and internship search plan (HiWi student assistant roles, Werkstudent positions) starting the month you land"
+      ],
+      "evidence": [
+        "An accepted admission with funding or a costed plan, and a visa; or a documented decision to defer and a job offer in the fallback path",
+        "Contact with at least two current students or alumni of the programme, with notes on placement reality"
+      ],
+      "target": ["COAP", "CCMT", "German consulate visa appointment", "Irish university international office"]
+    },
+    {
+      "block": "H4",
+      "title": "First year of the programme, aimed at the job at the end",
+      "learn": [
+        "M.Tech: choose the thesis lab in the first semester, not the third; pick a supervisor with industry links in your target (semiconductor, EV, AI, energy)",
+        "Germany: B1 German by the end of year one; a Werkstudent role in a company that sponsors; the master's thesis in industry is the standard route to a German engineering job",
+        "Ireland: internship in the summer between semesters; Critical Skills Employment Permit roles are the target after the stay-back",
+        "MBA: summer internship in operations, sales engineering or product at a manufacturing, energy, fintech or SaaS company; that internship converts to the placement"
+      ],
+      "build": [
+        "Thesis or capstone with a real dataset or hardware; publish a workshop paper or an open-source artefact",
+        "A portfolio page with the project, the thesis abstract and code, in English and (for Germany) a German one-paragraph summary"
+      ],
+      "evidence": [
+        "Named supervisor and thesis topic; an internship or Werkstudent contract; a conference or open-source artefact",
+        "Placement pipeline started 12 months before graduation with named companies"
+      ],
+      "target": ["Thesis labs at IITs and IISc", "German industry thesis hosts", "Irish employers with Critical Skills permits", "IIM placement companies in ops and product"]
+    }
+  ],
+  "evidenced_project_spec": {
+    "title": "A reproducible research-style study in your branch, with a written report and code",
+    "scope": "One question, one dataset or one test rig, one method, one honest result, in eight to twelve weeks. Examples: Mechanical, fatigue-life prediction of a 3D-printed bracket from a public dataset versus a physics model; Electrical, forecasting rooftop-solar output for a district from public weather and generation data and quantifying the error; ECE, characterising a low-cost SDR receiver's noise figure and comparing to datasheet; CS, evaluating three retrieval-augmented question-answering set-ups on a domain corpus with a held-out test set; Civil, comparing two pavement deterioration models against a state PWD road-condition dataset; Chemical, kinetics fit for a published reaction dataset with uncertainty. The deliverable is a report in the format of a workshop paper: abstract, method, results, limitations.",
+    "domain": "Your branch's research domain, chosen to match the lab or programme you are applying to",
+    "agent_use": "A research agent runs the literature search and summarises ten to fifteen papers with citations that you then read yourself. A coding agent writes the data pipeline, the experiment harness and the plots, and drafts the report sections from your notes. You write the research question, choose the method, decide the baselines, and sign off every claim. Keep an agent log of what was generated and what you changed, because a German or IIT supervisor will ask what was yours.",
+    "done_looks_like": "A six to ten page report, a repository that reproduces every figure from raw data with one command, a one-page limitations section that names what would break the result, and a 20-minute talk you can give without notes. The report is attached to your German applications and cited in your COAP or lab email.",
+    "verification": "Reproducibility: a friend clones the repository and regenerates the figures. Faculty review: one professor reads it and signs a one-line note. External check: submit to a student conference, a college research day, or an arXiv-style preprint server and record the feedback. Interview test: a 30-minute mock defence in which you answer 'why this baseline' and 'what would change the conclusion' for every figure."
+  },
+  "ai_task_shift": [
+    {"task_2019": "Literature review by reading fifty papers over a month", "now": "A research agent summarises and cross-references papers in an hour", "human_owns": "Choosing the question worth asking, judging which summary is wrong, and reading the five papers that matter line by line"},
+    {"task_2019": "Writing data pipelines, simulation scripts and plotting code for the thesis", "now": "Coding agents write and debug most of it from a description", "human_owns": "Experimental design, baselines, statistics, and the honesty of the limitations section; supervisors now grade this, not code volume"},
+    {"task_2019": "GATE and CAT coaching classes as the main preparation channel", "now": "AI tutors explain any problem on demand and generate unlimited practice", "human_owns": "Timed, unassisted exam performance; the exam itself is unchanged"},
+    {"task_2019": "Drafting statements of purpose and applications with a consultant", "now": "Agents draft SOPs and format applications; admissions committees see thousands of similar drafts", "human_owns": "A specific, verifiable project story that only you can tell, and direct contact with a professor"},
+    {"task_2019": "Entry-level research assistant work: cleaning data, running standard analyses, reporting", "now": "Largely automated in labs and companies; this is why unfunded master's degrees without a thesis are worth less", "human_owns": "Problem framing, physical experiments, hardware, field data, and the judgement to stop a wrong line of work"},
+    {"task_2019": "Post-master's entry jobs in the US for international graduates (analyst, junior engineer)", "now": "New-grad hiring at large US tech firms is well below 2019 and visa refusals for Indians are at 61 percent", "human_owns": "Choosing a country and programme where the graduate job market and visa path actually exist: Germany, Ireland, domestic"}
+  ],
+  "fallback_path_id": "government_psu",
+  "employers": [
+    {"name": "GATE 2027 (IIT Madras, for the National Coordination Board; GATE 2026 was conducted by IIT Guwahati)", "type": "exam", "location": "All India, computer-based", "roles": "The score for M.Tech admission at IITs, IISc, NITs and IIITs, and for PSU intake; registration 2 to 27 September 2026 (late fee to 5 October 2026), exam 6, 7, 13, 14, 20 and 21 February 2027", "fresher": true, "source_url": "https://testbook.com/news/gate-2027-official-website/", "seen_on": "2026-09"},
+    {"name": "Indian Institute of Science (IISc), Bengaluru", "type": "company", "location": "Bengaluru", "roles": "M.Tech and M.Des with a valid GATE score as on 1 August 2026; 100 percent GATE for CS, Civil, Aerospace, Materials and Signal Processing; GATE plus interview or written test for EE, ME, AI, Chemical, Computational and Data Sciences", "fresher": true, "source_url": "https://www.iisc.ac.in/admissions/m-tech-m-des/", "seen_on": "2026-09"},
+    {"name": "IIT Bombay (and other IITs via COAP)", "type": "company", "location": "Mumbai; COAP covers all IITs and IISc", "roles": "M.Tech with TA, TAP, RA and RAP support categories; applications closed 10 April 2026 for 2026-27; offers through the Common Offer Acceptance Portal organised by IIT Roorkee for this cycle", "fresher": true, "source_url": "https://acad.iitb.ac.in/admissions/masters/mtech", "seen_on": "2026-09"},
+    {"name": "CCMT 2026 (NITs, IIITs and centrally funded institutes M.Tech counselling)", "type": "scheme", "location": "All India", "roles": "Centralised GATE-score counselling for M.Tech at NITs and IIITs; registration and seat-allotment rounds announced for 2026 with a special round for vacant seats", "fresher": true, "source_url": "https://www.shiksha.com/engineering/ccmt-counselling-dates", "seen_on": "2026-09"},
+    {"name": "DAAD India (German Academic Exchange Service)", "type": "scheme", "location": "New Delhi, with information sessions online and across India", "roles": "Scholarship information, the programme database for English-taught master's, and regular 'Masters in Germany' web sessions (June 2026); the first stop for the Germany route", "fresher": true, "source_url": "https://www.daad.in/en/", "seen_on": "2026-06"},
+    {"name": "uni-assist (application service used by many German universities)", "type": "scheme", "location": "Berlin; online", "roles": "Document evaluation (VPD) for international applicants; winter-semester deadlines often 15 July with many programmes earlier; apply at least eight weeks before; page updated 14 September 2026", "fresher": true, "source_url": "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/", "seen_on": "2026-09"},
+    {"name": "RWTH Aachen University (example of a TU9 German university)", "type": "company", "location": "Aachen, Germany", "roles": "English-taught engineering master's; non-EU deadlines 1 March (winter) and 1 September (summer) for open-admission programmes, 15 July and 15 January for restricted ones; online application via RWTHonline", "fresher": true, "source_url": "https://www.rwth-aachen.de/cms/root/studium/vor-dem-studium/bewerbung-um-einen-studienplatz/master-bewerbung/~dqml/bewerbung-master-internationale/?lidx=1", "seen_on": "2026-09"},
+    {"name": "Irish universities (Trinity College Dublin, UCD, UCC, University of Galway, University of Limerick, DCU, TU Dublin)", "type": "company", "location": "Ireland", "roles": "Taught MSc and MEng programmes; September main intake (applications open October to November 2026) and January intakes at several universities; Indian-student fee reductions at some STEM faculties", "fresher": true, "source_url": "https://www.aeccglobal.com/study-in-ireland/upcoming-intakes", "seen_on": "2026-04"},
+    {"name": "CAT 2026 (IIM Indore) and the IIMs", "type": "exam", "location": "All India, computer-based", "roles": "Entrance to IIM and other MBA programmes for the operations, sales-engineering, product and general-management track; notification released 25 July 2026, exam at the end of November 2026", "fresher": true, "source_url": "https://www.shiksha.com/mba/cat-exam-notification", "seen_on": "2026-07"}
+  ],
+  "fit_rules": [
+    {"field": "runway_months", "value": "0_3", "score": -3, "reason": "Every route here costs a year or more before any income; without runway you will drop out or take on debt you cannot service."},
+    {"field": "runway_months", "value": "12_plus", "score": 2, "reason": "You can afford a domestic M.Tech (stipend covers living) or the application year for Germany."},
+    {"field": "priority", "value": "income_now", "score": -3, "reason": "Higher studies delay income by one to two years; this path is the opposite of what you asked for."},
+    {"field": "priority", "value": "abroad", "score": 3, "reason": "Germany and Ireland are the realistic study-to-work routes now; the US only with funding."},
+    {"field": "relocation", "value": "abroad_ok", "score": 2, "reason": "Being willing to move abroad opens the Germany and Ireland routes, where the door is growing."},
+    {"field": "relocation", "value": "hometown_only", "score": -2, "reason": "Every good programme requires moving; a local private-college M.Tech adds little."},
+    {"field": "interests", "value": "research_theory", "score": 3, "reason": "A thesis-based M.Tech or research master's is the one path built around deep study."},
+    {"field": "enjoyed", "value": "maths_analysis", "score": 2, "reason": "GATE, CAT and thesis work all reward analytical strength."},
+    {"field": "enjoyed", "value": "exams_theory", "score": 2, "reason": "Entry to IITs, IISc, NITs and IIMs is decided by GATE and CAT."},
+    {"field": "preparation", "value": "gate_prep", "score": 2, "reason": "GATE preparation already done feeds directly into M.Tech admission via COAP and CCMT."},
+    {"field": "preparation", "value": "projects_portfolio", "score": 1, "reason": "A shipped project strengthens German applications and IIT lab selection."},
+    {"field": "college_tier", "value": "3", "score": 1, "reason": "An M.Tech from an IIT, IISc or NIT via GATE, or a German public university, replaces a weak college brand completely."},
+    {"field": "college_tier", "value": "1", "score": 0, "reason": "You already have the brand; do a master's only for a research or abroad goal, not to postpone job search."},
+    {"field": "graduation_year", "value": "2027", "score": 1, "reason": "You can sit GATE 2027 in final year and enter M.Tech directly, or apply to Germany for winter 2027 without a gap."},
+    {"field": "graduation_year", "value": "2028_or_later", "score": 1, "reason": "Time to build the research-style project and German language before applying."},
+    {"field": "branch", "value": "CS", "score": 1, "reason": "CS M.Tech at IITs and IISc and CS master's in Germany and Ireland have the strongest job outcomes."},
+    {"field": "branch", "value": "ECE", "score": 1, "reason": "VLSI and signal-processing M.Tech at IITs and IISc is the main route into design roles at semiconductor firms."},
+    {"field": "branch", "value": "MECH", "score": 1, "reason": "Germany's automotive and manufacturing master's programmes are the strongest abroad route for mechanical graduates."},
+    {"field": "interests", "value": "people_business", "score": 1, "reason": "The MBA via CAT route into operations and sales-engineering suits this interest."},
+    {"field": "priority", "value": "stability", "score": -1, "reason": "A master's does not itself give stability; if security is the goal, the government_psu path is more direct."}
+  ],
+  "base_score": 4,
+  "stat_ids_used": ["paths.govt.gate_qualified.2025", "paths.govt.gate_appeared.2025", "paths.higher.indian_students_germany.ws2025_26", "paths.higher.cat_appeared.2025", "paths.higher.us_f1_refusal_rate_indians.2025", "demand.fresher_ctc.bands.2026", "demand.it_services.fresher_ctc.tcs", "supply.iit.unplaced_share.2024", "demand.signalfire.new_grad_hiring_big_tech_vs_2019"],
+  "last_reviewed": "2026-09-21",
+  "changed_fields": ["all"]
+}

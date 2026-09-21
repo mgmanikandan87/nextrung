@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0",
+  "note": "Ten profile questions. Each maps to one profile field; fit_rules in paths.json reference field + value. Values are stable ids; labels are what the graduate sees.",
+  "questions": [
+    {"id": "q1", "field": "branch", "type": "single", "prompt": "Which branch are you in (or did you graduate from)?",
+     "options": [
+       {"value": "CS", "label": "Computer Science / AI / Data Science"},
+       {"value": "IT", "label": "Information Technology"},
+       {"value": "ECE", "label": "Electronics and Communication"},
+       {"value": "EE", "label": "Electrical / Electrical and Electronics"},
+       {"value": "MECH", "label": "Mechanical / Automobile / Mechatronics"},
+       {"value": "CIVIL", "label": "Civil"},
+       {"value": "CHEM", "label": "Chemical / Biotech / Metallurgy"},
+       {"value": "OTHER", "label": "Other branch"}
+     ],
+     "discriminates": ["semiconductor_electronics", "ev_automotive", "infrastructure_energy", "ai_native_software"]},
+    {"id": "q2", "field": "college_tier", "type": "single", "prompt": "How would you describe your college?",
+     "options": [
+       {"value": "1", "label": "IIT, NIT, IIIT, BITS or a top state university (NIRF top 50)"},
+       {"value": "2", "label": "Well-known state or private college; companies visit campus every year (NIRF roughly 50 to 200)"},
+       {"value": "3", "label": "Any other college; few or no companies visit campus"}
+     ],
+     "discriminates": ["ai_native_software", "it_services", "higher_studies"]},
+    {"id": "q3", "field": "graduation_year", "type": "single", "prompt": "When do you graduate (or when did you)?",
+     "options": [
+       {"value": "graduated", "label": "Already graduated"},
+       {"value": "2026", "label": "2026"},
+       {"value": "2027", "label": "2027"},
+       {"value": "2028_or_later", "label": "2028 or later"}
+     ],
+     "discriminates": ["government_psu", "higher_studies", "it_services"]},
+    {"id": "q4", "field": "region", "type": "single", "prompt": "Which region is home?",
+     "options": [
+       {"value": "south", "label": "South (Karnataka, Tamil Nadu, Telangana, Andhra, Kerala)"},
+       {"value": "west", "label": "West (Maharashtra, Gujarat, Goa)"},
+       {"value": "north", "label": "North (Delhi NCR, UP, Punjab, Haryana, Rajasthan, Uttarakhand, HP, J&K)"},
+       {"value": "east_ne", "label": "East and North-East (WB, Odisha, Bihar, Jharkhand, NE states)"},
+       {"value": "central", "label": "Central (MP, Chhattisgarh)"}
+     ],
+     "discriminates": ["semiconductor_electronics", "ev_automotive", "ai_native_software"]},
+    {"id": "q5", "field": "relocation", "type": "single", "prompt": "Where can you work?",
+     "options": [
+       {"value": "anywhere_india", "label": "Anywhere in India"},
+       {"value": "abroad_ok", "label": "Anywhere, including abroad"},
+       {"value": "within_state", "label": "Only within my state"},
+       {"value": "hometown_only", "label": "Only near home"}
+     ],
+     "discriminates": ["semiconductor_electronics", "higher_studies", "ai_native_software", "government_psu"]},
+    {"id": "q6", "field": "runway_months", "type": "single", "prompt": "How long can you manage without a salary after graduating?",
+     "options": [
+       {"value": "0_3", "label": "0 to 3 months; I need income soon"},
+       {"value": "4_12", "label": "4 to 12 months"},
+       {"value": "12_plus", "label": "More than a year"}
+     ],
+     "discriminates": ["government_psu", "higher_studies", "it_services", "startups_and_non_engineering"]},
+    {"id": "q7", "field": "interests", "type": "multi", "max": 2, "prompt": "What do you like working on? Pick up to two.",
+     "options": [
+       {"value": "building_software", "label": "Building software and apps"},
+       {"value": "hardware_electronics", "label": "Circuits, chips and electronics"},
+       {"value": "physical_systems", "label": "Machines, vehicles, structures, energy"},
+       {"value": "data_numbers", "label": "Data, numbers and analysis"},
+       {"value": "people_business", "label": "People, selling, organising, business"},
+       {"value": "research_theory", "label": "Research, theory and deep study"}
+     ],
+     "discriminates": ["ai_native_software", "semiconductor_electronics", "ev_automotive", "infrastructure_energy", "startups_and_non_engineering", "higher_studies"]},
+    {"id": "q8", "field": "priority", "type": "single", "prompt": "What matters most to you in the next two years?",
+     "options": [
+       {"value": "income_now", "label": "A job and income as soon as possible"},
+       {"value": "stability", "label": "Stability and job security"},
+       {"value": "high_pay_growth", "label": "High pay and fast growth, even with risk"},
+       {"value": "meaningful_domain", "label": "Working in a field I care about"},
+       {"value": "abroad", "label": "Getting abroad"}
+     ],
+     "discriminates": ["it_services", "government_psu", "ai_native_software", "higher_studies", "defence_aerospace_space"]},
+    {"id": "q9", "field": "preparation", "type": "multi", "max": 3, "prompt": "What have you already done? Pick all that apply.",
+     "options": [
+       {"value": "dsa", "label": "DSA / coding practice (LeetCode, competitive programming)"},
+       {"value": "projects_portfolio", "label": "Built and shipped projects (GitHub, deployed apps, hardware builds)"},
+       {"value": "gate_prep", "label": "GATE preparation"},
+       {"value": "core_tools", "label": "Core tools (CAD, Verilog/VHDL, MATLAB, STAAD, PLC, Simulink)"},
+       {"value": "internship_done", "label": "Completed an internship or apprenticeship"},
+       {"value": "none", "label": "Nothing yet"}
+     ],
+     "discriminates": ["ai_native_software", "government_psu", "semiconductor_electronics", "it_services"]},
+    {"id": "q10", "field": "enjoyed", "type": "single", "prompt": "What did you enjoy most in college?",
+     "options": [
+       {"value": "coding_projects", "label": "Coding and project work"},
+       {"value": "labs_hardware", "label": "Labs and hardware tinkering"},
+       {"value": "workshops_site", "label": "Workshops, site visits, machines"},
+       {"value": "maths_analysis", "label": "Maths and analysis"},
+       {"value": "organising_people", "label": "Organising events, clubs, people"},
+       {"value": "exams_theory", "label": "Exams and theory; I am good at competitive exams"}
+     ],
+     "discriminates": ["ai_native_software", "semiconductor_electronics", "ev_automotive", "startups_and_non_engineering", "government_psu"]}
+  ]
+}
