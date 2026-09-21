@@ -1,0 +1,149 @@
+{
+  "skill_id": "cad_solidworks_or_catia",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "cad_solidworks_or_catia_01",
+      "level": "basic",
+      "q": "Your rectangle sketch shows blue lines. After adding horizontal and vertical relations and two dimensions, all lines turn black. What does black mean?",
+      "options": [
+        "The sketch is over-defined",
+        "The sketch is locked from editing",
+        "The sketch is under-defined",
+        "The sketch is fully defined"
+      ],
+      "answer": 3,
+      "explain": "Black means every entity is fixed by relations and dimensions; blue entities can still be dragged, so the geometry is not yet pinned down."
+    },
+    {
+      "id": "cad_solidworks_or_catia_02",
+      "level": "applied",
+      "q": "A sketch of a 25 mm x 100 mm rectangle is revolved 360 degrees about its 100 mm edge. What solid results?",
+      "options": [
+        "Cylinder, 25 mm diameter, 100 mm long",
+        "A disc 25 mm thick",
+        "Cylinder, 100 mm diameter, 25 mm long",
+        "Cylinder, 50 mm diameter, 100 mm long"
+      ],
+      "answer": 3,
+      "explain": "The 25 mm side becomes the radius when spun about the 100 mm axis, so the diameter is 50 mm and the length is 100 mm."
+    },
+    {
+      "id": "cad_solidworks_or_catia_03",
+      "level": "basic",
+      "q": "The drawing calls for R3 on all outer edges of a block. Which feature do you apply?",
+      "options": [
+        "Chamfer, 3 mm x 45 degrees",
+        "Draft, 3 degrees",
+        "Shell, 3 mm",
+        "Fillet, radius 3 mm"
+      ],
+      "answer": 3,
+      "explain": "R3 means a 3 mm radius round on the edge, which is a fillet; a chamfer would be a flat bevel."
+    },
+    {
+      "id": "cad_solidworks_or_catia_04",
+      "level": "applied",
+      "q": "After a Concentric mate, a shaft can still slide along the hole and rotate. You want to stop the sliding but keep the rotation. Which mate do you add?",
+      "options": [
+        "Parallel mate between the two axes",
+        "Tangent mate between the cylindrical faces",
+        "A second concentric mate",
+        "Coincident mate between the shaft shoulder face and housing face"
+      ],
+      "answer": 3,
+      "explain": "A coincident mate between two flat faces removes the axial translation while leaving rotation about the axis free."
+    },
+    {
+      "id": "cad_solidworks_or_catia_05",
+      "level": "applied",
+      "q": "A part inserted into an assembly has 6 degrees of freedom. After one Concentric mate between two cylindrical faces, how many are left?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 2,
+      "explain": "Concentric locks two translations and two rotations, leaving translation along the axis and rotation about it."
+    },
+    {
+      "id": "cad_solidworks_or_catia_06",
+      "level": "applied",
+      "q": "A boss extrude uses the Mid Plane end condition with depth 40 mm. How far does the solid grow on each side of the sketch plane?",
+      "options": [
+        "20 mm each side",
+        "40 mm on one side only",
+        "40 mm each side",
+        "10 mm each side"
+      ],
+      "answer": 0,
+      "explain": "Mid Plane splits the total depth equally about the sketch plane, so 40 mm total is 20 mm each way."
+    },
+    {
+      "id": "cad_solidworks_or_catia_07",
+      "level": "applied",
+      "q": "A hole on a drawing carries the feature control frame [Position] dia 0.2 | A | B. What does it require?",
+      "options": [
+        "The hole is concentric to datum A within 0.2 mm",
+        "The hole diameter can vary by 0.2 mm",
+        "The hole axis lies inside a 0.2 mm diameter zone located from datums A and B",
+        "The hole surface is flat within 0.2 mm"
+      ],
+      "answer": 2,
+      "explain": "Position tolerance controls where the axis is, not the size; the diameter symbol makes the tolerance zone a cylinder of 0.2 mm."
+    },
+    {
+      "id": "cad_solidworks_or_catia_08",
+      "level": "applied",
+      "q": "A shaft is dimensioned dia 20 h7. Which size range is acceptable?",
+      "options": [
+        "19.979 to 20.000 mm",
+        "19.990 to 20.010 mm",
+        "19.979 to 20.021 mm",
+        "20.000 to 20.021 mm"
+      ],
+      "answer": 0,
+      "explain": "An h tolerance always has its upper limit at the nominal size, and IT7 for 18 to 30 mm is 21 microns below it."
+    },
+    {
+      "id": "cad_solidworks_or_catia_09",
+      "level": "basic",
+      "q": "A tiny R0.5 groove is too small to dimension clearly on the main view of a drawing. Which view do you add?",
+      "options": [
+        "An isometric view",
+        "A detail view at a larger scale",
+        "An auxiliary view",
+        "A section view"
+      ],
+      "answer": 1,
+      "explain": "A detail view enlarges a circled area of an existing view so small features can be dimensioned."
+    },
+    {
+      "id": "cad_solidworks_or_catia_10",
+      "level": "applied",
+      "q": "An assembly contains 4 bolts inserted as 4 instances of the same part file. How does the bill of materials show them?",
+      "options": [
+        "No row, fasteners are excluded",
+        "One row with QTY 1",
+        "Four rows, one for each bolt",
+        "One row for the bolt with QTY 4"
+      ],
+      "answer": 3,
+      "explain": "The BOM groups identical components by part and counts the instances, so the same file appears once with quantity 4."
+    },
+    {
+      "id": "cad_solidworks_or_catia_11",
+      "level": "applied",
+      "q": "You dimension a sketch line to 50 mm, then try to add a second dimension of 60 mm to the same line. What happens?",
+      "options": [
+        "The line becomes 110 mm",
+        "The sketch becomes over-defined and the tool offers to make it a driven (reference) dimension",
+        "The line becomes 60 mm",
+        "The first dimension is deleted automatically"
+      ],
+      "answer": 1,
+      "explain": "Two driving dimensions on one length conflict; the tool flags over-definition and lets the new one be reference-only."
+    }
+  ]
+}

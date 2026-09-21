@@ -10,6 +10,8 @@ A graduate answers ten questions. A rules engine (not a language model) scores n
 
 The nine paths: AI-native software · IT services · Semiconductor and electronics · EV and automotive · Defence, aerospace and space · Infrastructure and energy · Government and PSU · Higher studies · Startups and non-engineering roles.
 
+With an account (email code, no password) the graduate saves the plan, adds proof links per skill, and watches the match with real fresher job ads. v0.4 adds the guardrails and the people: proof links are verified where the source allows it (GitHub commit history and ownership, LeetCode solved counts, live certificate pages), each skill has a six-question calibration check where the student predicts their score first, and a **mentor** (linked by code, or assigned by the admin with the student's consent) sees standing, flags and gaps, reviews proofs, confirms skills in person and sets the week's focus. An **admin** console shows the funnel, people, roles and mentor assignments. See `review/v0.4-mentor-and-guardrails.md` for the reasoning.
+
 ## Repository layout
 
 ```
@@ -18,10 +20,14 @@ data/
   paths/<id>.json       one record per path (door size, pay, branches, plan, project, AI task shift, employers, fit rules)
   paths.json            merged by the build
   questions.json        the ten profile questions and their value ids
-  PATH_SCHEMA.md        the path record contract
+  skills/, jobs/        skills taxonomy with free learning links; fresher job ads mapped to skill ids
+  checks/<skill>.json   calibration item banks (answers never reach the browser); see CHECKS_SCHEMA.md
+  PATH_SCHEMA.md        the path record contract (also SKILLS_SCHEMA.md, JOBS_SCHEMA.md, CHECKS_SCHEMA.md)
 site/template.html      the single-page app (vanilla JS, no build tooling); data is inlined at build time
-scripts/build.py        builds site/index.html (for claude.ai artifact) and dist/index.html (any static host)
-skills/                 the three agent skills that maintain the content
+scripts/build.py        builds site/index.html (for claude.ai artifact), dist/index.html (any static host) and deploy/lambda/checks.json
+scripts/test_handler.py offline tests for the API (in-memory DynamoDB stand-in, stubbed network)
+deploy/                 deploy.sh (idempotent AWS deploy), lambda/handler.py (the API), aws-github-oidc.sh (CI role)
+skills/                 the five agent skills that maintain the content
 ```
 
 ## The five agent skills
@@ -39,9 +45,10 @@ The loop is automated: `.github/workflows/refresh.yml` runs the skills quarterly
 ## Build and test
 
 ```
-python3 scripts/validate.py   # data checks; must pass
-python3 scripts/build.py      # dist/index.html
-node scripts/smoke.js         # browser smoke test (needs `npm i playwright`)
+python3 scripts/validate.py       # data checks incl. check banks; must pass
+python3 scripts/build.py          # dist/index.html + deploy/lambda/checks.json
+python3 scripts/test_handler.py   # API tests, no AWS needed
+node scripts/smoke.js             # browser smoke test (needs `npm i playwright@1.49.1`; PW_CHROMIUM=/path/to/chromium to reuse a browser)
 ```
 
 `dist/index.html` runs from any static host or a local file.
@@ -65,10 +72,11 @@ Fix a number with a source. Add an employer with a fresher-hiring page from the 
 
 Code: MIT. Content and data: CC BY 4.0.
 
-## Deployed (v0.2, 21 Sep 2026)
+## Deployed (v0.4, 21 Sep 2026)
 
 - Site: https://main.d1pntf15nafb3u.amplifyapp.com (AWS Amplify Hosting, ap-south-1)
 - API: API Gateway HTTP API `nextrung` → Lambda `nextrung-api` → DynamoDB `nextrung` (per-user) and `nextrung-responses` (anonymous, legacy)
 - Accounts: Cognito user pool `nextrung`, passwordless email OTP (Essentials tier; default sender is limited to ~50 emails/day, move to SES for scale)
 - Live data: 83 skills with 229 learning options (223 free), 105 fresher postings mapped to skills (`data/jobs/`), refreshed by agent runs
-- Redeploy: bundle `deploy/deploy.sh`, `deploy/lambda/handler.py`, `dist/index.html` → `deploy/site/index.html`; upload to CloudShell; `bash deploy.sh`. See `deploy/README.md`.
+- Roles: admin emails live in SSM `/nextrung/admin_emails` (comma separated); admins promote mentors from the Admin page. Optional SES sender in SSM `/nextrung/ses_from` turns on mentor/student emails and the weekly digest (`/admin/digest`).
+- Redeploy: push to `main` (GitHub Actions deploys), or bundle `deploy/deploy.sh`, `deploy/lambda/handler.py`, `deploy/lambda/checks.json`, `dist/index.html` → `deploy/site/index.html`; upload to CloudShell; `bash deploy.sh`. See `deploy/README.md`.

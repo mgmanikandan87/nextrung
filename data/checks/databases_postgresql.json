@@ -1,0 +1,149 @@
+{
+  "skill_id": "databases_postgresql",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "databases_postgresql_01",
+      "level": "applied",
+      "q": "orders.customer_id REFERENCES customers(id) with no ON DELETE clause. Customer 7 has 3 orders. What happens on DELETE FROM customers WHERE id = 7?",
+      "options": [
+        "The customer and the 3 orders are deleted",
+        "The delete fails with a foreign key violation",
+        "The customer is deleted and the orders get customer_id NULL",
+        "The delete succeeds and the orders keep customer_id 7"
+      ],
+      "answer": 1,
+      "explain": "The default action is NO ACTION / RESTRICT, so a parent row with children cannot be removed; ON DELETE CASCADE or SET NULL would change that."
+    },
+    {
+      "id": "databases_postgresql_02",
+      "level": "applied",
+      "q": "This query on a 5-million-row table takes 4 seconds. EXPLAIN shows \"Seq Scan on orders\". Which change most likely fixes it?\n\nSELECT * FROM orders WHERE customer_id = 1234;",
+      "options": [
+        "CREATE INDEX ON orders (customer_id);",
+        "VACUUM FULL orders;",
+        "Change SELECT * to SELECT id",
+        "Add LIMIT 100"
+      ],
+      "answer": 0,
+      "explain": "A B-tree index on the filtered column lets the planner use an Index Scan instead of reading every row."
+    },
+    {
+      "id": "databases_postgresql_03",
+      "level": "basic",
+      "q": "A students table stores hobbies as a comma-separated text column \"cricket,chess,music\". What is the standard schema fix?",
+      "options": [
+        "Make the column VARCHAR(500)",
+        "A separate student_hobbies table with (student_id, hobby) rows",
+        "Add hobby1, hobby2, hobby3 columns",
+        "Store the list as an integer code"
+      ],
+      "answer": 1,
+      "explain": "One value per cell (first normal form) makes hobbies searchable, countable and joinable; a child table models a one-to-many relation."
+    },
+    {
+      "id": "databases_postgresql_04",
+      "level": "applied",
+      "q": "Session A runs BEGIN; UPDATE accounts SET bal = bal - 500 WHERE id = 1; and has not committed. Session B runs SELECT bal FROM accounts WHERE id = 1; at the default isolation level. What does B see?",
+      "options": [
+        "The old balance",
+        "The new balance (500 less)",
+        "B waits until A commits",
+        "An error: row is locked"
+      ],
+      "answer": 0,
+      "explain": "Postgres uses MVCC; under READ COMMITTED a plain SELECT reads the last committed version and does not block on writers."
+    },
+    {
+      "id": "databases_postgresql_05",
+      "level": "basic",
+      "q": "Which column type is the right choice for storing ₹ amounts like 1,25,000.50 in an invoices table?",
+      "options": [
+        "FLOAT",
+        "NUMERIC(12, 2)",
+        "VARCHAR(20)",
+        "REAL"
+      ],
+      "answer": 1,
+      "explain": "NUMERIC stores exact decimals; floating types round in binary and cause paise errors when totals are summed."
+    },
+    {
+      "id": "databases_postgresql_06",
+      "level": "applied",
+      "q": "EXPLAIN ANALYZE prints:\n\nIndex Scan using idx_email on users\n  (cost=0.43..8.45 rows=1 width=80)\n  (actual time=0.031..0.033 rows=1 loops=1)\n\nWhich statement is true?",
+      "options": [
+        "The query took 8.45 ms",
+        "Estimated 1 row, got 1 row, via the index",
+        "The index was skipped because cost is low",
+        "Postgres read 80 rows"
+      ],
+      "answer": 1,
+      "explain": "cost is a unitless estimate, actual time is in ms, rows shows estimate versus actual, and width is the average row size in bytes."
+    },
+    {
+      "id": "databases_postgresql_07",
+      "level": "applied",
+      "q": "A migration adds NOT NULL to users.phone, but 200 existing rows have NULL phone. What happens when it runs?",
+      "options": [
+        "The 200 rows are deleted",
+        "Those rows get an empty string",
+        "The migration fails; you must backfill the values first",
+        "It succeeds and only new inserts are checked"
+      ],
+      "answer": 2,
+      "explain": "Constraints are checked against existing data when added, so you backfill (or add a DEFAULT) before tightening the column."
+    },
+    {
+      "id": "databases_postgresql_08",
+      "level": "basic",
+      "q": "Why do teams use migration files (Alembic, Flyway, Liquibase) instead of changing tables by hand in the database?",
+      "options": [
+        "Migrations run faster than ALTER TABLE",
+        "Schema changes are versioned and applied identically in every environment",
+        "Postgres does not allow manual ALTER TABLE",
+        "Migrations skip the need for backups"
+      ],
+      "answer": 1,
+      "explain": "A migration is code: it is reviewed, ordered and rerun on every environment, so schemas never drift between machines."
+    },
+    {
+      "id": "databases_postgresql_09",
+      "level": "applied",
+      "q": "orders has millions of rows and a B-tree index on created_at. Which WHERE clause can actually use that index?",
+      "options": [
+        "WHERE DATE(created_at) = '2026-09-01'",
+        "WHERE created_at >= '2026-09-01' AND created_at < '2026-09-02'",
+        "WHERE created_at::text LIKE '2026-09-01%'",
+        "WHERE EXTRACT(day FROM created_at) = 1"
+      ],
+      "answer": 1,
+      "explain": "Wrapping the column in a function hides it from a plain B-tree index; a range on the raw column keeps the index usable."
+    },
+    {
+      "id": "databases_postgresql_10",
+      "level": "basic",
+      "q": "A transfer moves ₹1,000 from account 1 to account 2. Which sequence is correct so that a crash never leaves money missing?",
+      "options": [
+        "UPDATE debit; COMMIT; UPDATE credit; COMMIT;",
+        "BEGIN; UPDATE debit; UPDATE credit; COMMIT;",
+        "UPDATE debit; UPDATE credit; (autocommit handles it)",
+        "BEGIN; UPDATE debit; COMMIT; UPDATE credit;"
+      ],
+      "answer": 1,
+      "explain": "Both updates inside one transaction are atomic: either both are committed or, on failure, both are rolled back."
+    },
+    {
+      "id": "databases_postgresql_11",
+      "level": "applied",
+      "q": "enrollments(student_id, course_id, joined_on). A student must not enrol in the same course twice, but may take many courses. Which key definition enforces this?",
+      "options": [
+        "PRIMARY KEY (student_id)",
+        "PRIMARY KEY (student_id, course_id)",
+        "PRIMARY KEY (course_id)",
+        "UNIQUE (joined_on)"
+      ],
+      "answer": 1,
+      "explain": "A composite key on the pair allows many rows per student and per course but rejects a repeated (student, course) combination."
+    }
+  ]
+}

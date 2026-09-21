@@ -31,10 +31,8 @@ jobs:
         run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
       - name: Smoke test (mocked backend)
         run: node scripts/smoke.js dist/index.html
-      - name: Lambda handler imports
-        run: |
-          pip install -q boto3
-          AWS_DEFAULT_REGION=ap-south-1 TABLE=x POOL_ID=p CLIENT_ID=c RESP_TABLE=r python3 -c "import sys; sys.path.insert(0,'deploy/lambda'); import handler; print('handler ok')"
+      - name: Lambda handler tests (offline, in-memory DynamoDB stand-in)
+        run: python3 scripts/test_handler.py
       - uses: actions/upload-artifact@v4
         with:
           name: site
@@ -59,6 +57,7 @@ jobs:
         env:
           CI: 'true'
         run: |
+          python3 scripts/build.py      # also writes deploy/lambda/checks.json (item banks with answers, Lambda only)
           mkdir -p deploy/site && cp dist/index.html deploy/site/index.html
           bash deploy/deploy.sh
       - name: Post-deploy checks

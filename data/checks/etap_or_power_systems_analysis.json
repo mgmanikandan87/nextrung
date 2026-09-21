@@ -1,0 +1,149 @@
+{
+  "skill_id": "etap_or_power_systems_analysis",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "etap_or_power_systems_analysis_01",
+      "level": "applied",
+      "q": "A study uses 100 MVA base. What is the base impedance on the 11 kV bus?",
+      "options": [
+        "9.09 ohm",
+        "0.11 ohm",
+        "1.21 ohm",
+        "12.1 ohm"
+      ],
+      "answer": 2,
+      "explain": "Zbase = kV^2 / MVA = 121 / 100 = 1.21 ohm; every per-unit impedance on that bus is the ohmic value divided by 1.21."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_02",
+      "level": "applied",
+      "q": "A 1000 kVA, 11 kV / 415 V transformer has Z = 5%. Assuming an infinite 11 kV source, roughly what 3-phase fault current does the short-circuit study show on the 415 V bus?",
+      "options": [
+        "2.78 kA",
+        "20 kA",
+        "1.39 kA",
+        "27.8 kA"
+      ],
+      "answer": 3,
+      "explain": "Fault MVA = 1000 kVA / 0.05 = 20 MVA, and I = 20e6 / (sqrt3 x 415) = 27.8 kA; 1.39 kA is only the full-load current."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_03",
+      "level": "applied",
+      "q": "A 75 kW, 415 V, 3-phase motor runs at pf 0.85 and efficiency 0.90. What full-load current should the feeder be rated for?",
+      "options": [
+        "123 A",
+        "136 A",
+        "181 A",
+        "104 A"
+      ],
+      "answer": 1,
+      "explain": "I = P / (sqrt3 x V x pf x eff) = 75000 / (1.732 x 415 x 0.85 x 0.90) = 136 A; 104 A ignores both pf and efficiency."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_04",
+      "level": "applied",
+      "q": "A 415 V 3-phase feeder carries 100 A at unity pf over 200 m of cable with R = 0.2 ohm/km (reactance negligible). What line-to-line voltage drop should the load flow show?",
+      "options": [
+        "6.9 V (about 1.7%)",
+        "4.0 V (about 1%)",
+        "40 V (about 9.6%)",
+        "13.9 V (about 3.3%)"
+      ],
+      "answer": 0,
+      "explain": "Vd = sqrt3 x I x R x L = 1.732 x 100 x 0.2 x 0.2 = 6.9 V; 4 V is the single-conductor IR drop without the sqrt3 factor."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_05",
+      "level": "applied",
+      "q": "The load flow report lists a 415 V bus at 0.94 pu. What is the actual bus voltage?",
+      "options": [
+        "415 V",
+        "376 V",
+        "390 V",
+        "441 V"
+      ],
+      "answer": 2,
+      "explain": "Actual voltage = per-unit value x nominal = 0.94 x 415 = 390 V, a 6% drop that most plant specifications flag as under-voltage."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_06",
+      "level": "basic",
+      "q": "In a load flow study, the utility grid at 11 kV is modelled as the swing bus. What does that fix, and what comes out of the solution?",
+      "options": [
+        "P and voltage fixed; Q is solved",
+        "P and Q fixed; voltage is solved",
+        "Voltage magnitude and angle fixed; P and Q are solved",
+        "Q and angle fixed; P is solved"
+      ],
+      "answer": 2,
+      "explain": "The swing (slack) bus holds a fixed voltage and reference angle and absorbs whatever real and reactive power is needed to balance the network."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_07",
+      "level": "applied",
+      "q": "For a 4 kA fault on an outgoing feeder, the feeder relay operates in 0.25 s. You want a 0.3 s grading margin. What is the minimum operating time to set for the incomer relay at that same fault current?",
+      "options": [
+        "0.05 s",
+        "0.30 s",
+        "0.25 s",
+        "0.55 s"
+      ],
+      "answer": 3,
+      "explain": "The upstream relay must be slower than the downstream one by the grading margin, so 0.25 + 0.30 = 0.55 s at that current."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_08",
+      "level": "applied",
+      "q": "The utility declares a 3-phase fault level of 250 MVA at the 11 kV incoming bus. What fault current should the 11 kV switchgear withstand?",
+      "options": [
+        "22.7 kA",
+        "7.6 kA",
+        "25 kA",
+        "13.1 kA"
+      ],
+      "answer": 3,
+      "explain": "I = MVA / (sqrt3 x kV) = 250 / (1.732 x 11) = 13.1 kA; 22.7 kA forgets the sqrt3 for a 3-phase system."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_09",
+      "level": "applied",
+      "q": "A transformer nameplate gives Z = 5% on its own 1 MVA rating. Your study base is 10 MVA. What impedance do you enter in per-unit on the study base?",
+      "options": [
+        "0.50 pu",
+        "0.005 pu",
+        "0.05 pu",
+        "0.25 pu"
+      ],
+      "answer": 0,
+      "explain": "Per-unit impedance scales with the MVA base: 0.05 x (10 / 1) = 0.50 pu; the ohmic value is unchanged but the base is ten times larger."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_10",
+      "level": "applied",
+      "q": "A cable is rated 200 A at 40 C ambient. At 50 C the derating factor is 0.87 and the grouping factor is 0.80. The load is 150 A. Is the cable adequate?",
+      "options": [
+        "No, derated capacity is 139 A",
+        "Yes, rating stays 200 A",
+        "Yes, derated capacity is 160 A",
+        "Yes, derated capacity is 174 A"
+      ],
+      "answer": 0,
+      "explain": "Both factors multiply: 200 x 0.87 x 0.80 = 139 A, which is below 150 A, so the next size up is needed."
+    },
+    {
+      "id": "etap_or_power_systems_analysis_11",
+      "level": "applied",
+      "q": "A 415 V panel draws 800 kW at pf 0.80. How much capacitor kVAr is needed to bring the pf to unity?",
+      "options": [
+        "200 kVAr",
+        "800 kVAr",
+        "1000 kVAr",
+        "600 kVAr"
+      ],
+      "answer": 3,
+      "explain": "kVA = 800 / 0.8 = 1000, so kVAr = sqrt(1000^2 - 800^2) = 600; unity pf means cancelling all 600 kVAr."
+    }
+  ]
+}

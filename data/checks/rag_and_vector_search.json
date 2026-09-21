@@ -1,0 +1,149 @@
+{
+  "skill_id": "rag_and_vector_search",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "rag_and_vector_search_01",
+      "level": "applied",
+      "q": "Two embeddings: a = [1, 0, 1] and b = [1, 1, 0]. What is their cosine similarity?",
+      "options": [
+        "0.5",
+        "1.0",
+        "0.0",
+        "0.71"
+      ],
+      "answer": 0,
+      "explain": "Dot product is 1, each vector has length sqrt(2), so cos = 1 / (sqrt(2) x sqrt(2)) = 0.5."
+    },
+    {
+      "id": "rag_and_vector_search_02",
+      "level": "applied",
+      "q": "A 20,000-token policy PDF is chunked at 500 tokens with 100-token overlap. Roughly how many chunks are created?",
+      "options": [
+        "40",
+        "50",
+        "100",
+        "20"
+      ],
+      "answer": 1,
+      "explain": "Each chunk advances by 500 - 100 = 400 tokens, so about 20,000 / 400 = 50 chunks."
+    },
+    {
+      "id": "rag_and_vector_search_03",
+      "level": "applied",
+      "q": "Users ask \"What is the leave policy for interns?\" and the answer is in the docs, but retrieval returns chunks about salary. The chunk containing the answer starts with \"They get 12 days per year...\". What is the most likely cause?",
+      "options": [
+        "The embedding model is too large",
+        "The chunk lost its context: \"intern\" sits in the previous chunk",
+        "Cosine similarity cannot handle questions",
+        "Top-k is set too high"
+      ],
+      "answer": 1,
+      "explain": "Chunks embedded without their heading or subject match poorly; add overlap, prepend section titles, or use larger context-aware chunks."
+    },
+    {
+      "id": "rag_and_vector_search_04",
+      "level": "basic",
+      "q": "You index documents with embedding model A. Later you switch queries to embedding model B without re-indexing. What happens to search quality?",
+      "options": [
+        "It improves if B is newer",
+        "It breaks; vectors from different models share no common space",
+        "It is unchanged, cosine similarity is model-independent",
+        "It works only for short queries"
+      ],
+      "answer": 1,
+      "explain": "Similarity is only meaningful between vectors produced by the same model; changing the model means re-embedding every document."
+    },
+    {
+      "id": "rag_and_vector_search_05",
+      "level": "applied",
+      "q": "A user searches for the exact error code \"E-4471\". Pure vector search returns unrelated error pages. Which change most directly fixes this?",
+      "options": [
+        "Increase top-k from 5 to 50",
+        "Add keyword (BM25) search and combine it with vector search (hybrid)",
+        "Use a larger chunk size",
+        "Lower the LLM temperature"
+      ],
+      "answer": 1,
+      "explain": "Embeddings blur rare exact tokens like codes and IDs; lexical search matches them exactly, and hybrid search gets the best of both."
+    },
+    {
+      "id": "rag_and_vector_search_06",
+      "level": "basic",
+      "q": "What does a re-ranker do in a retrieval pipeline?",
+      "options": [
+        "Splits documents into chunks before embedding",
+        "Rescores the shortlist with a stronger cross-encoder and reorders it",
+        "Generates the final answer from the chunks",
+        "Reduces embedding dimensions to save storage"
+      ],
+      "answer": 1,
+      "explain": "Vector search is a fast first pass over millions of chunks; the re-ranker reads query and chunk together for a more accurate score on the shortlist."
+    },
+    {
+      "id": "rag_and_vector_search_07",
+      "level": "applied",
+      "q": "Query vector q. Similarities: doc1 0.82, doc2 0.79, doc3 0.91, doc4 0.60, doc5 0.85. With top_k = 3, which chunks are sent to the model, in order?",
+      "options": [
+        "doc3, doc5, doc1",
+        "doc1, doc2, doc3",
+        "doc3, doc1, doc2",
+        "doc4, doc2, doc1"
+      ],
+      "answer": 0,
+      "explain": "Top-k takes the k highest similarity scores in descending order: 0.91, 0.85, 0.82."
+    },
+    {
+      "id": "rag_and_vector_search_08",
+      "level": "applied",
+      "q": "Retrieval returns the correct chunk at rank 1, but the model's answer still says \"I don't have that information\". Which is the most likely cause?",
+      "options": [
+        "The embedding dimension is too small",
+        "The chunk never reached the prompt or was truncated by max tokens",
+        "Cosine similarity should have been Euclidean distance",
+        "Top-k should be 1"
+      ],
+      "answer": 1,
+      "explain": "Retrieval and generation are separate steps; log the final prompt to confirm the chunk is really there and not truncated."
+    },
+    {
+      "id": "rag_and_vector_search_09",
+      "level": "basic",
+      "q": "You embed 100,000 chunks with a 1,536-dimension model stored as 4-byte floats. Roughly how much storage do the vectors need?",
+      "options": [
+        "About 6 MB",
+        "About 60 MB",
+        "About 600 MB",
+        "About 6 GB"
+      ],
+      "answer": 2,
+      "explain": "100,000 x 1,536 x 4 bytes is about 614 million bytes, roughly 600 MB before any index overhead."
+    },
+    {
+      "id": "rag_and_vector_search_10",
+      "level": "applied",
+      "q": "Your evaluation shows: chunk size 200 tokens gives recall@5 = 0.62; chunk size 800 gives recall@5 = 0.88 but answers become vaguer. What is a sensible next step?",
+      "options": [
+        "Keep 200 because smaller is always better",
+        "Retrieve small chunks but pass the parent section to the model",
+        "Set top-k to 1 to reduce vagueness",
+        "Remove the overlap between chunks"
+      ],
+      "answer": 1,
+      "explain": "Small chunks match precisely and larger context answers well; parent-document or sentence-window retrieval gives both."
+    },
+    {
+      "id": "rag_and_vector_search_11",
+      "level": "basic",
+      "q": "Which query is most likely to fail with plain semantic (vector) retrieval even when the data is indexed?",
+      "options": [
+        "\"How do I reset my password?\"",
+        "\"What is the total of all invoices from March?\"",
+        "\"Explain the refund process\"",
+        "\"What does the onboarding guide say about laptops?\""
+      ],
+      "answer": 1,
+      "explain": "Aggregations over many records need a database query or a tool, not the top few similar chunks; RAG answers questions whose answer sits in a few passages."
+    }
+  ]
+}

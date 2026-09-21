@@ -1,0 +1,149 @@
+{
+  "skill_id": "matlab_simulink",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "matlab_simulink_01",
+      "level": "applied",
+      "q": "What does this display?\n\nx = 1:2:9;\ndisp(x(end-1))",
+      "options": [
+        "9",
+        "Error: index out of range",
+        "8",
+        "7"
+      ],
+      "answer": 3,
+      "explain": "x is [1 3 5 7 9]; end is the last index (5), so end-1 picks the fourth element, 7."
+    },
+    {
+      "id": "matlab_simulink_02",
+      "level": "applied",
+      "q": "What does this display?\n\nA = [1 2; 3 4];\nB = A .* A;\ndisp(B(2,1))",
+      "options": [
+        "10",
+        "15",
+        "9",
+        "3"
+      ],
+      "answer": 2,
+      "explain": ".* multiplies element by element, so B(2,1) = 3 * 3 = 9; A * A would have given 15."
+    },
+    {
+      "id": "matlab_simulink_03",
+      "level": "applied",
+      "q": "What does this display?\n\nv = [3 8 1 6];\n[m, i] = max(v);\ndisp(i)",
+      "options": [
+        "1",
+        "8",
+        "4",
+        "2"
+      ],
+      "answer": 3,
+      "explain": "max returns the largest value (8) and its position; 8 is the second element, so i = 2."
+    },
+    {
+      "id": "matlab_simulink_04",
+      "level": "applied",
+      "q": "What does this display?\n\nt = 0:0.1:1;\ndisp(length(t))",
+      "options": [
+        "11",
+        "10",
+        "0.1",
+        "1"
+      ],
+      "answer": 0,
+      "explain": "The range includes both ends, 0 and 1, with 0.1 steps: that is 11 points."
+    },
+    {
+      "id": "matlab_simulink_05",
+      "level": "basic",
+      "q": "What does plot(t, y, 'r--') draw?",
+      "options": [
+        "A red dashed line",
+        "A blue dashed line",
+        "A red solid line with markers",
+        "A red dotted line"
+      ],
+      "answer": 0,
+      "explain": "In the line-spec string, r is the colour red and -- is the dashed line style."
+    },
+    {
+      "id": "matlab_simulink_06",
+      "level": "applied",
+      "q": "What does this display?\n\nx = [1 2 3];\ny = x';\ndisp(size(y))",
+      "options": [
+        "1 1",
+        "3 3",
+        "1 3",
+        "3 1"
+      ],
+      "answer": 3,
+      "explain": "The apostrophe transposes the 1x3 row vector into a 3x1 column vector."
+    },
+    {
+      "id": "matlab_simulink_07",
+      "level": "applied",
+      "q": "A Simulink model connects a Constant block (value 2) to an Integrator block (initial condition 0) and then to a Scope. The simulation runs for 5 s. What does the Scope show at t = 5 s?",
+      "options": [
+        "2",
+        "10",
+        "0",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "The integrator outputs the running integral of its input: 2 * 5 = 10, a straight ramp from 0 to 10."
+    },
+    {
+      "id": "matlab_simulink_08",
+      "level": "applied",
+      "q": "A Sine Wave block with amplitude 3 feeds a Saturation block with limits -1 and +1, then a Scope. What does the Scope show?",
+      "options": [
+        "A sine of amplitude 3",
+        "A constant +1",
+        "A sine clipped flat at +1 and -1",
+        "A clean sine of amplitude 1"
+      ],
+      "answer": 2,
+      "explain": "Saturation passes the signal unchanged inside the limits and holds it at the limit outside, so the peaks are cut flat."
+    },
+    {
+      "id": "matlab_simulink_09",
+      "level": "applied",
+      "q": "Step block (step time 1 s, final value 1) -> Gain block (gain 4) -> Integrator (initial condition 0) -> Scope. What is the Scope value at t = 3 s?",
+      "options": [
+        "12",
+        "4",
+        "2",
+        "8"
+      ],
+      "answer": 3,
+      "explain": "The integrator input is 4 only from t = 1 s onward, so at t = 3 s the integral is 4 * (3 - 1) = 8."
+    },
+    {
+      "id": "matlab_simulink_10",
+      "level": "basic",
+      "q": "You need to generate C code from a Simulink model for a microcontroller. Which solver setting must the model use?",
+      "options": [
+        "Variable-step ode45",
+        "A fixed-step solver",
+        "Any solver with zero-crossing detection on",
+        "ode23t only"
+      ],
+      "answer": 1,
+      "explain": "Embedded targets run at a constant sample rate, so code generation needs a fixed-step solver; variable-step solvers change the step size at run time."
+    },
+    {
+      "id": "matlab_simulink_11",
+      "level": "applied",
+      "q": "What happens when this script runs in a fresh workspace?\n\nfor i = 1:5\n  s = s + i;\nend\ndisp(s)",
+      "options": [
+        "Displays 5",
+        "Error because s is not defined before the loop",
+        "Displays 15",
+        "Displays 0"
+      ],
+      "answer": 1,
+      "explain": "MATLAB does not assume a starting value; s must be initialised (s = 0;) before you add to it."
+    }
+  ]
+}

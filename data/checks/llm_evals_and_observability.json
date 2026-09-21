@@ -1,0 +1,149 @@
+{
+  "skill_id": "llm_evals_and_observability",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "llm_evals_and_observability_01",
+      "level": "applied",
+      "q": "Your classifier labels support tickets. On a test set it marks 40 tickets as 'refund'; 30 of those really are refunds. The set contains 50 refund tickets in total. What is the recall for 'refund'?",
+      "options": [
+        "0.60",
+        "0.75",
+        "0.40",
+        "0.67"
+      ],
+      "answer": 0,
+      "explain": "Recall = true positives / all actual positives = 30 / 50 = 0.60; 0.75 (30 / 40) is the precision."
+    },
+    {
+      "id": "llm_evals_and_observability_02",
+      "level": "applied",
+      "q": "An extraction eval reports precision 0.90 and recall 0.50. What is the F1 score?",
+      "options": [
+        "0.50",
+        "0.45",
+        "0.70",
+        "0.64"
+      ],
+      "answer": 3,
+      "explain": "F1 = 2PR / (P + R) = 0.90 / 1.40 = 0.64; the arithmetic mean 0.70 hides how poor the recall is."
+    },
+    {
+      "id": "llm_evals_and_observability_03",
+      "level": "basic",
+      "q": "Your pipeline returns JSON with an order_id field. Which scoring method fits the check 'is order_id correct'?",
+      "options": [
+        "LLM-as-judge rating from 1 to 5",
+        "Exact match of the field against the labelled value",
+        "A human reviewer reading every output",
+        "BLEU score against the reference JSON"
+      ],
+      "answer": 1,
+      "explain": "When the expected answer is a single deterministic value, exact match is cheap, reproducible and strict; judges and text-similarity scores add noise for no benefit."
+    },
+    {
+      "id": "llm_evals_and_observability_04",
+      "level": "applied",
+      "q": "You are building the first eval set for a chatbot that answers HR policy questions. Which choice will hurt the eval most?",
+      "options": [
+        "Keeping a held-out slice the prompt author never sees",
+        "Including the questions that failed in production last month",
+        "Writing all 50 examples yourself in one sitting from the happy path",
+        "Writing the expected answers before running the model"
+      ],
+      "answer": 2,
+      "explain": "An eval set made only of easy, self-written cases scores high and catches nothing; real failures, ambiguous phrasing and edge cases are what make the set useful."
+    },
+    {
+      "id": "llm_evals_and_observability_05",
+      "level": "applied",
+      "q": "CI rule: fail the build if eval pass rate drops by more than 2 points. Baseline: 184 of 200 pass. New prompt: 178 of 200 pass. What happens?",
+      "options": [
+        "Passes, only 6 items changed",
+        "Fails, any drop at all fails the build",
+        "Fails, the drop is 3 points (92% to 89%)",
+        "Passes, the drop is within noise"
+      ],
+      "answer": 2,
+      "explain": "184/200 = 92% and 178/200 = 89%, a 3-point regression, which exceeds the 2-point gate; the rule is applied to the rate, not the raw item count."
+    },
+    {
+      "id": "llm_evals_and_observability_06",
+      "level": "applied",
+      "q": "A trace shows one request used 1,200 input tokens and 300 output tokens. Pricing is ₹0.25 per 1,000 input tokens and ₹1.00 per 1,000 output tokens. What is the cost of the request?",
+      "options": [
+        "₹0.30",
+        "₹0.375",
+        "₹1.50",
+        "₹0.60"
+      ],
+      "answer": 3,
+      "explain": "Input 1.2 x 0.25 = ₹0.30 plus output 0.3 x 1.00 = ₹0.30 gives ₹0.60; input and output tokens are priced separately."
+    },
+    {
+      "id": "llm_evals_and_observability_07",
+      "level": "applied",
+      "q": "The latency dashboard for your RAG endpoint shows p50 = 1.2 s and p95 = 6 s. What does the p95 figure mean?",
+      "options": [
+        "5% of requests take longer than 6 s",
+        "The slowest request took 6 s",
+        "The average request takes 6 s",
+        "95% of requests take exactly 6 s"
+      ],
+      "answer": 0,
+      "explain": "A percentile is a threshold: 95% of requests finish within 6 s and the remaining 5% are slower, which is why p95 is watched rather than the average."
+    },
+    {
+      "id": "llm_evals_and_observability_08",
+      "level": "basic",
+      "q": "A user reports a wrong answer from last Tuesday. Which logged fields let you reproduce that exact call?",
+      "options": [
+        "Prompt template version, model name, and the full input including retrieved context",
+        "Only the final answer text",
+        "Server CPU usage at the time",
+        "The user's name and email"
+      ],
+      "answer": 0,
+      "explain": "To replay a call you need what went in and which prompt and model processed it; the output alone tells you what went wrong but not why."
+    },
+    {
+      "id": "llm_evals_and_observability_09",
+      "level": "applied",
+      "q": "You use an LLM judge to compare outputs A and B. Over 200 pairs it prefers whichever output is shown first about 80% of the time. What is the right fix?",
+      "options": [
+        "Use a longer judge prompt with more criteria",
+        "Judge each pair twice with order swapped; keep consistent verdicts",
+        "Add 'be fair and unbiased' to the judge prompt",
+        "Set the judge temperature to 0"
+      ],
+      "answer": 1,
+      "explain": "This is position bias; swapping the order and discarding or averaging inconsistent verdicts removes it, while prompt wording and temperature do not."
+    },
+    {
+      "id": "llm_evals_and_observability_10",
+      "level": "applied",
+      "q": "An eval run has 300 items. Each item needs one generation call and one judge call, at about ₹0.60 per call. What does one full run cost?",
+      "options": [
+        "₹600",
+        "₹360",
+        "₹90",
+        "₹180"
+      ],
+      "answer": 1,
+      "explain": "300 items x 2 calls x ₹0.60 = ₹360; forgetting the judge calls halves the estimate."
+    },
+    {
+      "id": "llm_evals_and_observability_11",
+      "level": "applied",
+      "q": "Expected: 4521. Model output: \"Order ID: 4521.\" Exact match fails although the answer is right. What is the correct fix?",
+      "options": [
+        "Raise the model temperature so it varies the format",
+        "Switch the whole suite to LLM-as-judge",
+        "Mark the item as passed by hand",
+        "Normalise the output (extract the number, strip punctuation) before comparing"
+      ],
+      "answer": 3,
+      "explain": "Exact match should compare the normalised value being tested, not the raw string; loosening the whole suite or hand-passing items makes the eval less trustworthy."
+    }
+  ]
+}

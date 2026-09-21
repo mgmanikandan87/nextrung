@@ -18,8 +18,14 @@ jobs = []
 for f in sorted(glob.glob(str(ROOT / 'data/jobs/*.json'))):
     jobs += json.load(open(f))
 json.dump({'version': '0.2.0', 'seen_on': '2026-09-21', 'postings': jobs}, open(ROOT / 'data/jobs.json', 'w'), indent=1, ensure_ascii=False)
+# Skill checks: full banks (with answers) go only into the Lambda bundle; the site learns which skills have a check.
+banks = {}
+for f in sorted(glob.glob(str(ROOT / 'data/checks/*.json'))):
+    b = json.load(open(f)); banks[b['skill_id']] = b
+json.dump(banks, open(ROOT / 'deploy/lambda/checks.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 data = {
     'paths': paths,
+    'checks': {k: len(v['items']) for k, v in banks.items()},
     'questions': json.load(open(ROOT / 'data/questions.json')),
     'stats': json.load(open(ROOT / 'data/market_stats.json')),
     'skills': {'version': '0.2.0', 'skills': skills},
@@ -35,4 +41,4 @@ dist = ROOT / 'dist'; dist.mkdir(exist_ok=True)
     '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
     '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head>'
     '<body style="margin:0">\n' + body + '\n</body></html>')
-print(f'built: {len(paths)} paths, {len(data["stats"])} stats, {len(skills)} skills, {len(jobs)} jobs, {len(body)//1024} KB')
+print(f'built: {len(paths)} paths, {len(data["stats"])} stats, {len(skills)} skills, {len(jobs)} jobs, {len(banks)} check banks, {len(body)//1024} KB')

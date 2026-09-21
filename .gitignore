@@ -8,3 +8,4 @@ deploy/site.zip
 deploy/outputs.json
 deploy/.export_key
 node_modules/
+deploy/lambda/checks.json

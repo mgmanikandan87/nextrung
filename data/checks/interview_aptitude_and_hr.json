@@ -1,0 +1,149 @@
+{
+  "skill_id": "interview_aptitude_and_hr",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "interview_aptitude_and_hr_01",
+      "level": "applied",
+      "q": "Find the next term in the series:\n\n3, 7, 15, 31, ?",
+      "options": [
+        "63",
+        "47",
+        "55",
+        "62"
+      ],
+      "answer": 0,
+      "explain": "Each term is double the previous one plus 1 (the differences 4, 8, 16, 32 also double), so 31 x 2 + 1 = 63."
+    },
+    {
+      "id": "interview_aptitude_and_hr_02",
+      "level": "applied",
+      "q": "In a code language ROAD is written as SPBE. How is TAXI written in the same code?",
+      "options": [
+        "TBYJ",
+        "UBYJ",
+        "SZWH",
+        "UBXJ"
+      ],
+      "answer": 1,
+      "explain": "Every letter is shifted one place forward in the alphabet, so T-A-X-I becomes U-B-Y-J."
+    },
+    {
+      "id": "interview_aptitude_and_hr_03",
+      "level": "applied",
+      "q": "A 180 m long train passes a signal pole in 9 seconds. What is its speed?",
+      "options": [
+        "60 km/h",
+        "72 km/h",
+        "20 km/h",
+        "90 km/h"
+      ],
+      "answer": 1,
+      "explain": "Speed = 180 / 9 = 20 m/s, and 20 x 18/5 = 72 km/h; 20 is correct only in m/s."
+    },
+    {
+      "id": "interview_aptitude_and_hr_04",
+      "level": "applied",
+      "q": "Quarterly sales of a shop (in lakh):\n\nQ1: 30  Q2: 45  Q3: 60  Q4: 65\n\nWhat percentage of the year's sales came in Q3?",
+      "options": [
+        "32.5%",
+        "25%",
+        "22.5%",
+        "30%"
+      ],
+      "answer": 3,
+      "explain": "Total = 200 lakh, so Q3 share = 60 / 200 = 30%; 32.5% is Q4's share."
+    },
+    {
+      "id": "interview_aptitude_and_hr_05",
+      "level": "applied",
+      "q": "Rahul walks 3 km north, then turns right and walks 4 km. How far is he from his starting point?",
+      "options": [
+        "12 km",
+        "7 km",
+        "5 km",
+        "1 km"
+      ],
+      "answer": 2,
+      "explain": "North then east form a right angle, so the straight-line distance is sqrt(3^2 + 4^2) = 5 km; 7 km is the path length."
+    },
+    {
+      "id": "interview_aptitude_and_hr_06",
+      "level": "applied",
+      "q": "A shopkeeper sells a mixer for ₹4,600 and makes a 15% profit. What was the cost price?",
+      "options": [
+        "₹4,000",
+        "₹3,910",
+        "₹3,900",
+        "₹4,140"
+      ],
+      "answer": 0,
+      "explain": "Selling price = 1.15 x cost, so cost = 4600 / 1.15 = ₹4,000; subtracting 15% of 4,600 gives the wrong 3,910."
+    },
+    {
+      "id": "interview_aptitude_and_hr_07",
+      "level": "applied",
+      "q": "Which number does not belong in the group?\n\n2, 3, 5, 9, 11, 13",
+      "options": [
+        "11",
+        "13",
+        "2",
+        "9"
+      ],
+      "answer": 3,
+      "explain": "All the others are prime numbers; 9 = 3 x 3 is the only composite."
+    },
+    {
+      "id": "interview_aptitude_and_hr_08",
+      "level": "applied",
+      "q": "What is the simple interest on ₹50,000 at 8% per annum for 3 years?",
+      "options": [
+        "₹4,000",
+        "₹16,000",
+        "₹12,986",
+        "₹12,000"
+      ],
+      "answer": 3,
+      "explain": "SI = P x R x T / 100 = 50,000 x 8 x 3 / 100 = ₹12,000; ₹12,986 would be compound interest."
+    },
+    {
+      "id": "interview_aptitude_and_hr_09",
+      "level": "applied",
+      "q": "For the question 'Tell me about a time you handled a conflict in a team', which line is the Result part of a STAR answer?",
+      "options": [
+        "We shipped two days early and still pair on work today",
+        "I owned the backend, with a three-week deadline",
+        "I set up a call, listed trade-offs, and we chose together",
+        "In my final-year project two of us disagreed on the database design"
+      ],
+      "answer": 0,
+      "explain": "Situation sets the scene, Task states your responsibility, Action is what you personally did, and Result is the measurable outcome; interviewers mark you down when the Result is missing."
+    },
+    {
+      "id": "interview_aptitude_and_hr_10",
+      "level": "basic",
+      "q": "Interviewer asks: 'What is your biggest weakness?' Which answer is the weakest?",
+      "options": [
+        "I was weak at SQL; after a course, joins are easy now",
+        "I am a perfectionist and I work too hard",
+        "I over-committed; now I confirm dates before saying yes",
+        "I avoided presenting; I joined a club and presented thrice"
+      ],
+      "answer": 1,
+      "explain": "A 'weakness' that is secretly a boast sounds rehearsed and tells the interviewer nothing; a real weakness plus the concrete step you took is what scores."
+    },
+    {
+      "id": "interview_aptitude_and_hr_11",
+      "level": "applied",
+      "q": "A candidate answers: 'In our project we built an app, we found a bug before the demo, we fixed it and we got an A.' What is the main thing missing?",
+      "options": [
+        "The programming language used",
+        "The name of the college",
+        "How many marks the project carried",
+        "What the candidate personally did, in their own words"
+      ],
+      "answer": 3,
+      "explain": "Behavioural answers are judged on your individual action; an answer that says 'we' throughout never shows the interviewer what you can do."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "skill_id": "dsa",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "dsa_01",
+      "level": "applied",
+      "q": "What is the time complexity of this function for a list of n items?\n\ndef has_dup(a):\n    for i in range(len(a)):\n        for j in range(i + 1, len(a)):\n            if a[i] == a[j]:\n                return True\n    return False",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(2^n)"
+      ],
+      "answer": 2,
+      "explain": "In the worst case (no duplicates) the inner loop runs about n^2 / 2 times, and constants are dropped in Big-O."
+    },
+    {
+      "id": "dsa_02",
+      "level": "applied",
+      "q": "What does this print?\n\ns = []\nfor ch in \"a(b[c]d)\":\n    if ch in \"([\":\n        s.append(ch)\n    elif ch in \")]\":\n        s.pop()\nprint(len(s))",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Error: pop from empty list"
+      ],
+      "answer": 0,
+      "explain": "Every opening bracket is pushed and every closing one pops, and the string is balanced, so the stack ends empty."
+    },
+    {
+      "id": "dsa_03",
+      "level": "applied",
+      "q": "Which approach finds whether any two numbers in an unsorted array of n integers add up to a target in O(n) time?",
+      "options": [
+        "Sort, then use two pointers from both ends",
+        "Check every pair with two nested loops",
+        "Look up target - x in a hash set while scanning once",
+        "Binary search for target - x for each x"
+      ],
+      "answer": 2,
+      "explain": "A hash set gives O(1) average lookup, so one pass is enough; sorting first costs O(n log n) and nested loops cost O(n^2)."
+    },
+    {
+      "id": "dsa_04",
+      "level": "basic",
+      "q": "Push 4, push 7, push 2 onto a stack, then pop once. Separately, enqueue 4, 7, 2 into a queue and dequeue once. Which values come out?",
+      "options": [
+        "Stack gives 2, queue gives 4",
+        "Stack gives 4, queue gives 2",
+        "Both give 4",
+        "Both give 2"
+      ],
+      "answer": 0,
+      "explain": "A stack is last-in first-out and a queue is first-in first-out."
+    },
+    {
+      "id": "dsa_05",
+      "level": "applied",
+      "q": "A binary tree has root 5, left child 3, right child 8; node 3 has children 1 and 4; node 8 has right child 9.\nWhat is the in-order traversal?",
+      "options": [
+        "5 3 1 4 8 9",
+        "1 3 4 5 8 9",
+        "1 4 3 9 8 5",
+        "5 3 8 1 4 9"
+      ],
+      "answer": 1,
+      "explain": "In-order visits left subtree, node, right subtree; for a binary search tree this gives sorted order."
+    },
+    {
+      "id": "dsa_06",
+      "level": "basic",
+      "q": "You need the shortest path (fewest edges) from one node to another in an unweighted graph. Which traversal guarantees it?",
+      "options": [
+        "Depth-first search",
+        "Breadth-first search",
+        "In-order traversal",
+        "Any traversal, as long as you track the parent"
+      ],
+      "answer": 1,
+      "explain": "BFS explores nodes in order of distance from the start, so the first time it reaches the target is via the fewest edges."
+    },
+    {
+      "id": "dsa_07",
+      "level": "applied",
+      "q": "How many ways can you climb a staircase of 5 steps if each move is 1 or 2 steps?\n\nways[1] = 1, ways[2] = 2\nways[n] = ways[n-1] + ways[n-2]",
+      "options": [
+        "5",
+        "8",
+        "13",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "The recurrence builds 1, 2, 3, 5, 8, so ways[5] = 8; storing earlier answers is the basic idea of dynamic programming."
+    },
+    {
+      "id": "dsa_08",
+      "level": "applied",
+      "q": "What does this print?\n\ndef f(n):\n    if n <= 1:\n        return n\n    return f(n - 1) + f(n - 2)\n\nprint(f(6))",
+      "options": [
+        "8",
+        "13",
+        "5",
+        "21"
+      ],
+      "answer": 0,
+      "explain": "This is the Fibonacci sequence 0, 1, 1, 2, 3, 5, 8, so f(6) = 8; without memoisation it also runs in exponential time."
+    },
+    {
+      "id": "dsa_09",
+      "level": "basic",
+      "q": "What is the time complexity of this loop for input n?\n\ni = 1\nwhile i < n:\n    i = i * 2",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 1,
+      "explain": "i doubles each time, so it takes about log2(n) steps to reach n."
+    },
+    {
+      "id": "dsa_10",
+      "level": "applied",
+      "q": "What does this print?\n\ndef rev(s):\n    out = \"\"\n    for ch in s:\n        out = ch + out\n    return out\n\nprint(rev(\"nagar\") == \"nagar\", rev(\"level\") == \"level\")",
+      "options": [
+        "True True",
+        "False True",
+        "True False",
+        "False False"
+      ],
+      "answer": 1,
+      "explain": "Prepending each character reverses the string; \"nagar\" reversed is \"ragan\" but \"level\" is a palindrome."
+    },
+    {
+      "id": "dsa_11",
+      "level": "basic",
+      "q": "A sorted array has 1,000,000 elements. Roughly how many comparisons does binary search need in the worst case to find a value?",
+      "options": [
+        "About 20",
+        "About 1,000",
+        "About 500,000",
+        "About 1,000,000"
+      ],
+      "answer": 0,
+      "explain": "Each comparison halves the search range, and 2^20 is about 1,000,000."
+    }
+  ]
+}

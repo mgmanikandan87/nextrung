@@ -1,0 +1,149 @@
+{
+  "skill_id": "git_github",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "git_github_01",
+      "level": "applied",
+      "q": "You edited app.py and ran git commit -m \"fix\" but git says \"nothing to commit\". What did you forget?",
+      "options": [
+        "git push before committing",
+        "git add app.py to stage the change",
+        "git init in the folder again",
+        "git checkout main first"
+      ],
+      "answer": 1,
+      "explain": "A commit only records staged changes; git add moves your edit from the working tree into the staging area."
+    },
+    {
+      "id": "git_github_02",
+      "level": "applied",
+      "q": "During git merge feature, git stops and app.py contains this. What must you do?\n\n<<<<<<< HEAD\nrate = 0.18\n=======\nrate = 0.12\n>>>>>>> feature",
+      "options": [
+        "Run git merge --continue and git chooses the newer line",
+        "Edit to keep the right line, remove markers, git add, commit",
+        "Delete the file and run git pull",
+        "Run git rebase to remove the markers automatically"
+      ],
+      "answer": 1,
+      "explain": "Git cannot decide between two edits to the same lines; you resolve by hand, then stage and commit to finish the merge."
+    },
+    {
+      "id": "git_github_03",
+      "level": "basic",
+      "q": "Your last commit has a typo in its message and you have not pushed it yet. Which command fixes the message?",
+      "options": [
+        "git commit --amend",
+        "git revert HEAD",
+        "git reset --hard HEAD~1",
+        "git rebase main"
+      ],
+      "answer": 0,
+      "explain": "--amend rewrites the most recent commit in place; revert makes a new commit and reset --hard throws the commit away."
+    },
+    {
+      "id": "git_github_04",
+      "level": "applied",
+      "q": "You accidentally committed .env with a secret and pushed it to a public repo. Which is the correct set of actions?",
+      "options": [
+        "Add .env to .gitignore and push; the file disappears from history",
+        "Rotate the secret, remove the file, ignore it, rewrite history",
+        "Delete the repo's main branch and recreate it",
+        "Run git rm --cached .env only; the old commit is safe"
+      ],
+      "answer": 1,
+      "explain": "Anything pushed is already exposed, so the secret must be rotated first; .gitignore only stops future tracking, it does not touch history."
+    },
+    {
+      "id": "git_github_05",
+      "level": "basic",
+      "q": "logs/debug.log is already tracked by git. You add \"logs/\" to .gitignore. What happens on the next commit?",
+      "options": [
+        "The file is removed from the repo automatically",
+        "Changes to debug.log are still tracked until you git rm --cached it",
+        "Git errors because an ignored file is tracked",
+        "The file is kept but marked read-only"
+      ],
+      "answer": 1,
+      "explain": ".gitignore only affects untracked files; a file already in the index keeps being tracked until you remove it from the index."
+    },
+    {
+      "id": "git_github_06",
+      "level": "applied",
+      "q": "main has commits A-B. You branched feature at B and made C-D. Meanwhile main got E. After git rebase main on feature, what does feature look like?",
+      "options": [
+        "A-B-E-C'-D'",
+        "A-B-C-D-E",
+        "A-B-E-M (one merge commit M)",
+        "A-B-C-D (E is not included)"
+      ],
+      "answer": 0,
+      "explain": "Rebase replays your commits on top of the new main tip, creating new commits C' and D' and a straight-line history."
+    },
+    {
+      "id": "git_github_07",
+      "level": "basic",
+      "q": "What does git pull do?",
+      "options": [
+        "Downloads new commits only, without changing your branch",
+        "Fetches from the remote and merges (or rebases) into your current branch",
+        "Uploads your commits to the remote",
+        "Creates a pull request on GitHub"
+      ],
+      "answer": 1,
+      "explain": "pull is fetch plus merge (or rebase, if configured); a plain fetch never changes your working branch."
+    },
+    {
+      "id": "git_github_08",
+      "level": "applied",
+      "q": "You committed a bug 3 commits ago on main, which is already pushed and used by teammates. Which command undoes that change safely?",
+      "options": [
+        "git reset --hard HEAD~3 then git push --force",
+        "git revert <bad_commit_sha>",
+        "git checkout HEAD~3 -- .",
+        "git rebase -i HEAD~3 and drop the commit, then push"
+      ],
+      "answer": 1,
+      "explain": "revert adds a new commit that reverses the change, keeping shared history intact; rewriting pushed history breaks everyone else's clones."
+    },
+    {
+      "id": "git_github_09",
+      "level": "applied",
+      "q": "You pushed a branch and opened a pull request. The reviewer asks for one more change. What is the normal way to update the PR?",
+      "options": [
+        "Close the PR and open a new one from a fresh branch",
+        "Commit on the same branch and push; the PR updates",
+        "Edit the file in the PR description",
+        "Merge main into the PR from the GitHub UI"
+      ],
+      "answer": 1,
+      "explain": "A pull request tracks a branch, so every new push to that branch appears in the same PR."
+    },
+    {
+      "id": "git_github_10",
+      "level": "basic",
+      "q": "You changed config.py, have not staged it, and want to throw the change away and get the last committed version back. Which command?",
+      "options": [
+        "git restore config.py",
+        "git rm config.py",
+        "git stash pop",
+        "git commit config.py"
+      ],
+      "answer": 0,
+      "explain": "restore (or the older checkout -- file) overwrites the working copy with the version in the index or last commit."
+    },
+    {
+      "id": "git_github_11",
+      "level": "applied",
+      "q": "git status shows:\n\nOn branch main\nYour branch is ahead of 'origin/main' by 2 commits.\nnothing to commit, working tree clean\n\nWhat is true?",
+      "options": [
+        "Two commits on the remote are missing locally",
+        "You have 2 local commits that are not yet pushed",
+        "Two files are staged but not committed",
+        "The remote branch was deleted"
+      ],
+      "answer": 1,
+      "explain": "\"Ahead by 2\" means your local main has two commits the remote does not; git push sends them."
+    }
+  ]
+}

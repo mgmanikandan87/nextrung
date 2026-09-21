@@ -1,0 +1,149 @@
+{
+  "skill_id": "gate_preparation_general_aptitude",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "gate_preparation_general_aptitude_01",
+      "level": "applied",
+      "q": "The price of a laptop is raised by 25% and then the new price is reduced by 20%. The final price compared to the original is",
+      "options": [
+        "5% lower",
+        "5% higher",
+        "unchanged",
+        "45% higher"
+      ],
+      "answer": 2,
+      "explain": "1.25 x 0.80 = 1.00, so the two changes cancel exactly; adding percentages (+25 - 20) is the common mistake."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_02",
+      "level": "applied",
+      "q": "In a company, A : B = 2 : 3 and B : C = 4 : 5 for three salaries. What is A : B : C?",
+      "options": [
+        "2 : 3 : 5",
+        "8 : 12 : 20",
+        "8 : 12 : 15",
+        "2 : 4 : 5"
+      ],
+      "answer": 2,
+      "explain": "Make B common: multiply the first ratio by 4 and the second by 3, giving 8 : 12 and 12 : 15."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_03",
+      "level": "applied",
+      "q": "Priya can finish a report in 12 days and Arjun in 18 days. Working together, how many days will they take?",
+      "options": [
+        "7.2",
+        "30",
+        "15",
+        "6"
+      ],
+      "answer": 0,
+      "explain": "Combined rate = 1/12 + 1/18 = 5/36 per day, so the job takes 36/5 = 7.2 days."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_04",
+      "level": "applied",
+      "q": "Two fair six-sided dice are rolled. What is the probability that the sum is 9?",
+      "options": [
+        "1/12",
+        "1/9",
+        "1/6",
+        "1/8"
+      ],
+      "answer": 1,
+      "explain": "The favourable pairs are (3,6), (4,5), (5,4), (6,3), so 4 out of 36 = 1/9."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_05",
+      "level": "applied",
+      "q": "The eigenvalues of the matrix\n\n[ 4  1 ]\n[ 2  3 ]\n\nare",
+      "options": [
+        "-2 and -5",
+        "4 and 3",
+        "1 and 10",
+        "2 and 5"
+      ],
+      "answer": 3,
+      "explain": "Trace = 7 and determinant = 10, so the eigenvalues satisfy x^2 - 7x + 10 = 0, giving 2 and 5; the diagonal entries are eigenvalues only for triangular matrices."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_06",
+      "level": "applied",
+      "q": "For f(x) = x^3 - 3x, the local minimum occurs at",
+      "options": [
+        "x = 3",
+        "x = 1",
+        "x = -1",
+        "x = 0"
+      ],
+      "answer": 1,
+      "explain": "f'(x) = 3x^2 - 3 = 0 at x = +/-1, and f''(x) = 6x is positive at x = 1, so that is the minimum (x = -1 is the maximum)."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_07",
+      "level": "applied",
+      "q": "Evaluate the integral of 3x^2 dx from x = 0 to x = 2.",
+      "options": [
+        "8",
+        "4",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explain": "The antiderivative is x^3, so the value is 2^3 - 0^3 = 8."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_08",
+      "level": "basic",
+      "q": "Choose the correct word to fill the blank:\n\nNeither of the two designs ____ acceptable to the client.",
+      "options": [
+        "have been",
+        "are",
+        "is",
+        "were"
+      ],
+      "answer": 2,
+      "explain": "'Neither' is singular, so it takes the singular verb 'is' even though it refers to two things."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_09",
+      "level": "applied",
+      "q": "The average of five numbers is 20. If the number 30 is removed, what is the average of the remaining four?",
+      "options": [
+        "20",
+        "17.5",
+        "18",
+        "22.5"
+      ],
+      "answer": 1,
+      "explain": "Total = 5 x 20 = 100; removing 30 leaves 70 across four numbers, so 70/4 = 17.5."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_10",
+      "level": "applied",
+      "q": "The rank of the matrix\n\n[ 1  2  3 ]\n[ 2  4  6 ]\n[ 1  1  1 ]\n\nis",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 3,
+      "explain": "Row 2 is twice row 1, so only two rows are linearly independent and the rank is 2."
+    },
+    {
+      "id": "gate_preparation_general_aptitude_11",
+      "level": "applied",
+      "q": "Statements: All engineers are graduates. No graduate is a minor.\n\nWhich conclusion definitely follows?",
+      "options": [
+        "Some minors are graduates",
+        "Some engineers are minors",
+        "All graduates are engineers",
+        "No engineer is a minor"
+      ],
+      "answer": 3,
+      "explain": "Every engineer is inside the set of graduates, and that set has no overlap with minors, so no engineer can be a minor."
+    }
+  ]
+}

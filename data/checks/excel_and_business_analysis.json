@@ -1,0 +1,149 @@
+{
+  "skill_id": "excel_and_business_analysis",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "excel_and_business_analysis_01",
+      "level": "applied",
+      "q": "Sheet layout: A = Code, B = Item, C = Price.\n\nA2 P101 | B2 Bolt | C2 250\nA3 P102 | B3 Nut  | C3 300\nA4 P103 | B4 Clamp| C4 450\n\nWhat does =VLOOKUP(\"P103\", B2:C4, 2, FALSE) return?",
+      "options": [
+        "Clamp",
+        "#N/A",
+        "450",
+        "#REF!"
+      ],
+      "answer": 1,
+      "explain": "VLOOKUP searches only the first column of the given range; B2:C4 starts at the Item column, so the code P103 is never found."
+    },
+    {
+      "id": "excel_and_business_analysis_02",
+      "level": "applied",
+      "q": "Data (A = Region, B = Product, C = Sales):\n\nNorth | Bolt | 120\nSouth | Bolt | 80\nNorth | Nut  | 50\nNorth | Bolt | 30\n\nWhat does =SUMIFS(C:C, A:A, \"North\", B:B, \"Bolt\") return?",
+      "options": [
+        "230",
+        "200",
+        "120",
+        "150"
+      ],
+      "answer": 3,
+      "explain": "Only rows matching both criteria are summed: 120 + 30 = 150; 200 is all North rows and 230 is all Bolt rows."
+    },
+    {
+      "id": "excel_and_business_analysis_03",
+      "level": "applied",
+      "q": "Cell C2 contains =B2*$F$1, where F1 holds the GST rate. You copy C2 and paste it into C3. What formula appears in C3?",
+      "options": [
+        "=B2*$F$1",
+        "=B3*$F$2",
+        "=B3*F2",
+        "=B3*$F$1"
+      ],
+      "answer": 3,
+      "explain": "The relative reference B2 shifts down one row, while the $ signs lock F1 in place so every row uses the same rate."
+    },
+    {
+      "id": "excel_and_business_analysis_04",
+      "level": "applied",
+      "q": "A1:A6 contains the marks 45, 78, 92, 60, 88, 35. What does =COUNTIF(A1:A6, \">=60\") return?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "answer": 3,
+      "explain": "78, 92, 60 and 88 satisfy the condition; 60 itself counts because the operator is >= not >."
+    },
+    {
+      "id": "excel_and_business_analysis_05",
+      "level": "applied",
+      "q": "B2 contains 60. What does this return?\n\n=IF(B2>=75, \"Distinction\", IF(B2>=60, \"First\", \"Pass\"))",
+      "options": [
+        "Pass",
+        "Distinction",
+        "First",
+        "FALSE"
+      ],
+      "answer": 2,
+      "explain": "The outer test fails (60 < 75), the inner test passes (60 >= 60), so the nested IF returns \"First\"."
+    },
+    {
+      "id": "excel_and_business_analysis_06",
+      "level": "basic",
+      "q": "You want a pivot table showing total sales for each Region as rows and each Month as columns. Where does the Sales field go?",
+      "options": [
+        "Rows, next to Region",
+        "Filters",
+        "Values, as Sum of Sales",
+        "Columns, next to Month"
+      ],
+      "answer": 2,
+      "explain": "Rows and Columns hold the categories you group by; the number being aggregated goes into Values, where you choose Sum, Count or Average."
+    },
+    {
+      "id": "excel_and_business_analysis_07",
+      "level": "applied",
+      "q": "A2:A4 = P101, P102, P103 and C2:C4 = 250, 300, 450.\n\nWhat does =INDEX(C2:C4, MATCH(\"P102\", A2:A4, 0)) return?",
+      "options": [
+        "300",
+        "2",
+        "450",
+        "#N/A"
+      ],
+      "answer": 0,
+      "explain": "MATCH finds P102 at position 2, and INDEX returns the second value in C2:C4, which is 300; 2 alone is only the MATCH result."
+    },
+    {
+      "id": "excel_and_business_analysis_08",
+      "level": "applied",
+      "q": "A tiffin service sells each box at ₹250 with a variable cost of ₹150 per box. Fixed costs are ₹2 lakh per month. How many boxes per month to break even?",
+      "options": [
+        "800",
+        "2,000",
+        "1,333",
+        "20,000"
+      ],
+      "answer": 1,
+      "explain": "Contribution per box = 250 - 150 = ₹100, so break-even = 2,00,000 / 100 = 2,000 boxes; dividing by price or cost instead gives the wrong numbers."
+    },
+    {
+      "id": "excel_and_business_analysis_09",
+      "level": "applied",
+      "q": "Opening cash on 1 April is ₹5 lakh. During April, receipts are ₹3.2 lakh and payments are ₹4.5 lakh. What is the closing cash?",
+      "options": [
+        "₹12.7 lakh",
+        "₹4.7 lakh",
+        "₹3.7 lakh",
+        "₹6.3 lakh"
+      ],
+      "answer": 2,
+      "explain": "Closing = opening + receipts - payments = 5 + 3.2 - 4.5 = ₹3.7 lakh; the month's net outflow is 1.3 lakh."
+    },
+    {
+      "id": "excel_and_business_analysis_10",
+      "level": "applied",
+      "q": "A product line has revenue of ₹12 lakh and cost of goods sold of ₹9 lakh. What is the gross margin percentage?",
+      "options": [
+        "25%",
+        "33.3%",
+        "75%",
+        "3%"
+      ],
+      "answer": 0,
+      "explain": "Gross margin = (12 - 9) / 12 = 25% of revenue; 33.3% is the markup on cost, a different measure."
+    },
+    {
+      "id": "excel_and_business_analysis_11",
+      "level": "applied",
+      "q": "A2:A4 = P101, P102, P103 and C2:C4 = 250, 300, 450.\n\nWhat does =XLOOKUP(\"P105\", A2:A4, C2:C4, \"Not found\") return?",
+      "options": [
+        "#N/A",
+        "0",
+        "Not found",
+        "450"
+      ],
+      "answer": 2,
+      "explain": "XLOOKUP's fourth argument is the if-not-found value, so a missing code returns that text instead of the #N/A that VLOOKUP would give."
+    }
+  ]
+}

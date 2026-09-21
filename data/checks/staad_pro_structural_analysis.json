@@ -1,0 +1,149 @@
+{
+  "skill_id": "staad_pro_structural_analysis",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "staad_pro_structural_analysis_01",
+      "level": "basic",
+      "q": "In a STAAD.Pro input file a support is written as:\n\nSUPPORTS\n1 PINNED\n\nWhat does node 1 do under load?",
+      "options": [
+        "Cannot move or rotate in any direction",
+        "Can rotate about Z only, moves freely in Y",
+        "Cannot move in X, Y or Z, but can rotate freely",
+        "Can move in X only, cannot rotate"
+      ],
+      "answer": 2,
+      "explain": "PINNED restrains all three translations and releases all three rotations, so no moment develops at that support."
+    },
+    {
+      "id": "staad_pro_structural_analysis_02",
+      "level": "applied",
+      "q": "A simply supported beam spans 6 m and carries a factored UDL of 20 kN/m (self weight included). What maximum bending moment MZ should the STAAD member output show?",
+      "options": [
+        "90 kN.m",
+        "180 kN.m",
+        "45 kN.m",
+        "60 kN.m"
+      ],
+      "answer": 0,
+      "explain": "For a simply supported beam under UDL, Mmax = wL^2/8 = 20 x 36 / 8 = 90 kN.m at midspan; 60 kN is the end shear, not the moment."
+    },
+    {
+      "id": "staad_pro_structural_analysis_03",
+      "level": "applied",
+      "q": "Load case 1 (DL) gives a column base reaction of 100 kN and load case 2 (LL) gives 60 kN.\n\nLOAD COMB 3\n1 1.5 2 1.5\n\nWhat reaction does combination 3 report?",
+      "options": [
+        "240 kN",
+        "250 kN",
+        "210 kN",
+        "160 kN"
+      ],
+      "answer": 0,
+      "explain": "A load combination scales and adds the primary results: 1.5 x 100 + 1.5 x 60 = 240 kN, which is the IS 456 limit state 1.5(DL + LL) case."
+    },
+    {
+      "id": "staad_pro_structural_analysis_04",
+      "level": "applied",
+      "q": "You add PDELTA ANALYSIS to a 10-storey frame. For the 1.2(DL + LL + EQ) case, should the loads be defined with LOAD COMB or REPEAT LOAD?",
+      "options": [
+        "Neither, P-Delta needs a separate model",
+        "REPEAT LOAD, because P-Delta results cannot be added linearly",
+        "Either, the results are identical",
+        "LOAD COMB, because it runs faster"
+      ],
+      "answer": 1,
+      "explain": "LOAD COMB only adds results of already-solved primary cases, so a nonlinear P-Delta analysis needs REPEAT LOAD, which re-solves the frame under the combined loads."
+    },
+    {
+      "id": "staad_pro_structural_analysis_05",
+      "level": "basic",
+      "q": "With UNIT METER KN in force, a beam is given:\n\nMEMBER PROPERTY\n5 PRIS YD 0.45 ZD 0.3\n\nWhat section has been defined?",
+      "options": [
+        "300 mm deep and 450 mm wide rectangle",
+        "Circular section of 450 mm diameter",
+        "450 mm deep and 300 mm wide rectangle",
+        "0.45 mm x 0.3 mm plate"
+      ],
+      "answer": 2,
+      "explain": "For a PRIS rectangle YD is the depth along the local Y-axis (bending depth) and ZD the width, both in the current length unit, here metres."
+    },
+    {
+      "id": "staad_pro_structural_analysis_06",
+      "level": "applied",
+      "q": "Per IS 875 (Part 3), the design wind speed at a level works out to Vz = 40 m/s. What design wind pressure would you apply on the frame in STAAD?",
+      "options": [
+        "0.24 kN/m2",
+        "9.60 kN/m2",
+        "1.60 kN/m2",
+        "0.96 kN/m2"
+      ],
+      "answer": 3,
+      "explain": "Design wind pressure pz = 0.6 Vz^2 = 0.6 x 1600 = 960 N/m2 = 0.96 kN/m2, which is then converted to member loads on the exposed frame."
+    },
+    {
+      "id": "staad_pro_structural_analysis_07",
+      "level": "applied",
+      "q": "A steel tie has gross area 1100 mm2, Fe 250 (fy = 250 N/mm2). Per IS 800, what is the design strength for yielding of the gross section (gamma_m0 = 1.10)?",
+      "options": [
+        "250 kN",
+        "227 kN",
+        "275 kN",
+        "200 kN"
+      ],
+      "answer": 0,
+      "explain": "Tdg = Ag x fy / gamma_m0 = 1100 x 250 / 1.10 = 250,000 N = 250 kN; 275 kN forgets the partial safety factor."
+    },
+    {
+      "id": "staad_pro_structural_analysis_08",
+      "level": "applied",
+      "q": "You are running concrete design in STAAD with UNIT METER KN active. Which parameter line correctly sets M25 concrete?",
+      "options": [
+        "FC 0.025 ALL",
+        "FC 2500 ALL",
+        "FC 25000 ALL",
+        "FC 25 ALL"
+      ],
+      "answer": 2,
+      "explain": "FC must be in the current stress unit, and 25 N/mm2 equals 25,000 kN/m2; entering FC 25 in kN/m2 would design for almost zero-strength concrete."
+    },
+    {
+      "id": "staad_pro_structural_analysis_09",
+      "level": "basic",
+      "q": "The input contains:\n\nMEMBER RELEASE\n12 START MZ\n\nWhat effect does this have on member 12?",
+      "options": [
+        "No moment about Z at its start end (behaves as a hinge)",
+        "Its start node becomes fully fixed",
+        "Member 12 is removed from the analysis",
+        "Its start node cannot move in the Z direction"
+      ],
+      "answer": 0,
+      "explain": "A member release sets that end force to zero, so START MZ makes the start of the member behave like a pin for major-axis bending."
+    },
+    {
+      "id": "staad_pro_structural_analysis_10",
+      "level": "applied",
+      "q": "A 6 m simply supported beam carries a single point load of 60 kN at 2 m from the left support. What maximum MZ should the analysis output show?",
+      "options": [
+        "40 kN.m",
+        "80 kN.m",
+        "90 kN.m",
+        "60 kN.m"
+      ],
+      "answer": 1,
+      "explain": "Left reaction = 60 x 4 / 6 = 40 kN, so Mmax under the load = 40 x 2 = 80 kN.m; 90 kN.m is the PL/4 value, which applies only for a midspan load."
+    },
+    {
+      "id": "staad_pro_structural_analysis_11",
+      "level": "applied",
+      "q": "Building in Zone III (Z = 0.16), I = 1.0, SMRF with R = 5, Sa/g = 2.5, seismic weight W = 5000 kN. Per IS 1893, what design base shear should your equivalent static load produce?",
+      "options": [
+        "40 kN",
+        "200 kN",
+        "400 kN",
+        "1000 kN"
+      ],
+      "answer": 1,
+      "explain": "Ah = (Z/2)(I/R)(Sa/g) = 0.08 x 0.2 x 2.5 = 0.04, so VB = Ah x W = 0.04 x 5000 = 200 kN."
+    }
+  ]
+}

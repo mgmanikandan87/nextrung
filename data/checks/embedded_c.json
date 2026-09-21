@@ -1,0 +1,149 @@
+{
+  "skill_id": "embedded_c",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "embedded_c_01",
+      "level": "applied",
+      "q": "You must set bit 3 of an 8-bit register PORTB to 1 without changing the other bits. Which line does it?",
+      "options": [
+        "PORTB |= (1 << 3);",
+        "PORTB = (1 << 3);",
+        "PORTB &= (1 << 3);",
+        "PORTB ^= 3;"
+      ],
+      "answer": 0,
+      "explain": "OR-ing with a mask that has only bit 3 set forces that bit to 1 and leaves every other bit as it was."
+    },
+    {
+      "id": "embedded_c_02",
+      "level": "applied",
+      "q": "Which line clears only bit 5 of register REG?",
+      "options": [
+        "REG &= ~(1 << 5);",
+        "REG |= ~(1 << 5);",
+        "REG = ~(1 << 5);",
+        "REG &= (1 << 5);"
+      ],
+      "answer": 0,
+      "explain": "AND with the inverted mask keeps all bits except bit 5, which is forced to 0."
+    },
+    {
+      "id": "embedded_c_03",
+      "level": "applied",
+      "q": "With optimisation on, main() hangs in the while loop even though the ISR runs. What fixes it?\n\nuint8_t flag = 0;\nvoid ISR(void) { flag = 1; }\nint main(void) {\n  while (flag == 0) { }\n  do_work();\n}",
+      "options": [
+        "Declare flag as volatile uint8_t",
+        "Change flag to int",
+        "Add a small delay inside the loop",
+        "Make flag static"
+      ],
+      "answer": 0,
+      "explain": "Without volatile the compiler assumes nothing else changes flag and reads it only once; volatile forces a fresh read every loop."
+    },
+    {
+      "id": "embedded_c_04",
+      "level": "applied",
+      "q": "An 8-bit timer is clocked from 16 MHz through a prescaler of 64. How long between two overflow interrupts?",
+      "options": [
+        "16 µs",
+        "0.256 ms",
+        "4 µs",
+        "1.024 ms"
+      ],
+      "answer": 3,
+      "explain": "16 MHz / 64 = 250 kHz, so each tick is 4 µs and 256 ticks take 1.024 ms."
+    },
+    {
+      "id": "embedded_c_05",
+      "level": "applied",
+      "q": "Datasheet excerpt for CTRL (8-bit): bit 7 EN (1 = enable); bits 5:4 MODE (00 off, 01 continuous, 10 single); bit 0 START. Which line enables the block in single mode and starts it?",
+      "options": [
+        "CTRL = 0xA1;",
+        "CTRL = 0xA0;",
+        "CTRL = 0x83;",
+        "CTRL = 0x91;"
+      ],
+      "answer": 0,
+      "explain": "EN = 0x80, MODE 10 puts a 1 in bit 5 = 0x20, START = 0x01; together 0xA1."
+    },
+    {
+      "id": "embedded_c_06",
+      "level": "basic",
+      "q": "Which of these is bad practice inside an interrupt service routine?",
+      "options": [
+        "Clearing the interrupt flag",
+        "Calling printf() to log the event",
+        "Setting a volatile flag",
+        "Reading the peripheral data register"
+      ],
+      "answer": 1,
+      "explain": "An ISR should be short; printf is slow and may not be re-entrant, so it blocks other interrupts and can corrupt state."
+    },
+    {
+      "id": "embedded_c_07",
+      "level": "applied",
+      "q": "What does this print?\n\nuint8_t buf[4] = {10, 20, 30, 40};\nuint8_t *p = buf;\np += 2;\nprintf(\"%d\", *p + p[1]);",
+      "options": [
+        "70",
+        "30",
+        "50",
+        "60"
+      ],
+      "answer": 0,
+      "explain": "After p += 2, *p is buf[2] = 30 and p[1] is buf[3] = 40, so the sum is 70."
+    },
+    {
+      "id": "embedded_c_08",
+      "level": "basic",
+      "q": "A UART link runs at 9600 baud with 8 data bits, no parity, 1 stop bit. What is the maximum number of bytes per second?",
+      "options": [
+        "1200",
+        "1067",
+        "960",
+        "9600"
+      ],
+      "answer": 2,
+      "explain": "Each byte needs 10 bits on the wire (start + 8 data + stop), so 9600 / 10 = 960 bytes per second."
+    },
+    {
+      "id": "embedded_c_09",
+      "level": "applied",
+      "q": "An I2C EEPROM has 7-bit address 0x50. What is the first byte the master sends to start a write to it?",
+      "options": [
+        "0xA1",
+        "0x51",
+        "0x50",
+        "0xA0"
+      ],
+      "answer": 3,
+      "explain": "The address byte is the 7-bit address shifted left with the R/W bit in bit 0; 0x50 << 1 = 0xA0 and write means bit 0 = 0."
+    },
+    {
+      "id": "embedded_c_10",
+      "level": "basic",
+      "q": "A sensor datasheet says: clock idles low; data is shifted out on the falling edge and must be sampled on the rising edge. Which SPI mode do you configure?",
+      "options": [
+        "Mode 1 (CPOL = 0, CPHA = 1)",
+        "Mode 3 (CPOL = 1, CPHA = 1)",
+        "Mode 0 (CPOL = 0, CPHA = 0)",
+        "Mode 2 (CPOL = 1, CPHA = 0)"
+      ],
+      "answer": 2,
+      "explain": "Idle low means CPOL = 0, and sampling on the first (rising) edge means CPHA = 0."
+    },
+    {
+      "id": "embedded_c_11",
+      "level": "applied",
+      "q": "What happens when this runs?\n\nuint8_t count = 0;\nwhile (count < 300) {\n  count++;\n}",
+      "options": [
+        "Loop runs 300 times then exits",
+        "Compile error: 300 is too large",
+        "Loop never ends because count wraps to 0 at 255",
+        "Loop runs 255 times then exits"
+      ],
+      "answer": 2,
+      "explain": "A uint8_t can only reach 255, so count < 300 is always true; most compilers warn about the comparison."
+    }
+  ]
+}

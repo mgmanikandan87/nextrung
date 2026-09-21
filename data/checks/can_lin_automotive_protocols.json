@@ -1,0 +1,149 @@
+{
+  "skill_id": "can_lin_automotive_protocols",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "can_lin_automotive_protocols_01",
+      "level": "applied",
+      "q": "Two CAN nodes start transmitting at the same instant, one with ID 0x120 and one with ID 0x0A5. Which message goes through first?",
+      "options": [
+        "0x0A5",
+        "Both are destroyed and an error frame is sent",
+        "0x120",
+        "Whichever node has the faster crystal"
+      ],
+      "answer": 0,
+      "explain": "Dominant 0 bits win arbitration, so the numerically lower ID always gets the bus first."
+    },
+    {
+      "id": "can_lin_automotive_protocols_02",
+      "level": "applied",
+      "q": "A CAN bus runs at 500 kbit/s with 16 time quanta per bit. What is the length of one time quantum?",
+      "options": [
+        "2 µs",
+        "125 ns",
+        "62.5 ns",
+        "250 ns"
+      ],
+      "answer": 1,
+      "explain": "One bit lasts 1 / 500 kHz = 2 µs, and 2 µs / 16 = 125 ns per quantum."
+    },
+    {
+      "id": "can_lin_automotive_protocols_03",
+      "level": "applied",
+      "q": "Bit timing is set as Sync = 1, Prop = 5, Phase1 = 6, Phase2 = 4 time quanta. Where is the sample point?",
+      "options": [
+        "68.75%",
+        "75%",
+        "62.5%",
+        "80%"
+      ],
+      "answer": 1,
+      "explain": "The bit is sampled at the end of Phase1, which is (1 + 5 + 6) / 16 = 12 / 16 = 75% of the bit time."
+    },
+    {
+      "id": "can_lin_automotive_protocols_04",
+      "level": "basic",
+      "q": "In a standard CAN 2.0A data frame, what does the DLC field tell the receiver?",
+      "options": [
+        "The length of the CRC",
+        "The message priority",
+        "Number of data bytes (0 to 8)",
+        "The number of ID bits"
+      ],
+      "answer": 2,
+      "explain": "DLC is the Data Length Code, 4 bits that say how many data bytes follow."
+    },
+    {
+      "id": "can_lin_automotive_protocols_05",
+      "level": "applied",
+      "q": "With the ECUs powered off, you measure 120 Ω between CAN_H and CAN_L. What does this tell you?",
+      "options": [
+        "The bus is correctly terminated",
+        "CAN_H and CAN_L are shorted",
+        "Both terminators are missing",
+        "One of the two 120 Ω terminators is missing"
+      ],
+      "answer": 3,
+      "explain": "A healthy bus has two 120 Ω terminators in parallel, so the meter should read about 60 Ω."
+    },
+    {
+      "id": "can_lin_automotive_protocols_06",
+      "level": "applied",
+      "q": "A node's transmit error counter climbs to 130. What state is the node in now?",
+      "options": [
+        "Reset by the transceiver",
+        "Error passive",
+        "Bus off",
+        "Error active"
+      ],
+      "answer": 1,
+      "explain": "A counter above 127 makes the node error passive; it goes bus off only when the transmit error counter passes 255."
+    },
+    {
+      "id": "can_lin_automotive_protocols_07",
+      "level": "applied",
+      "q": "During arbitration a node transmits a recessive bit but reads a dominant bit back from the bus. What does it do?",
+      "options": [
+        "Retries in the very next bit slot",
+        "Continues, because the bits are ORed anyway",
+        "Stops transmitting and switches to receiving",
+        "Sends an error frame"
+      ],
+      "answer": 2,
+      "explain": "Reading dominant while sending recessive means another node with a higher-priority ID is on the bus, so the node backs off and retries after that frame."
+    },
+    {
+      "id": "can_lin_automotive_protocols_08",
+      "level": "applied",
+      "q": "A CAN transmitter sends the bit pattern 0000000 (seven zeros) in the data field. How many bits actually appear on the wire for these seven?",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "After five identical bits the transmitter inserts one opposite stuff bit, so seven zeros become 00000 1 00 = 8 bits."
+    },
+    {
+      "id": "can_lin_automotive_protocols_09",
+      "level": "basic",
+      "q": "In a LIN cluster, which node sends the header (break, sync, protected ID) for every frame?",
+      "options": [
+        "The master node only",
+        "Whichever slave has fresh data",
+        "All nodes in rotation",
+        "The node with the lowest ID"
+      ],
+      "answer": 0,
+      "explain": "LIN is single-master: only the master schedules and starts frames, slaves just fill the response when their ID is called."
+    },
+    {
+      "id": "can_lin_automotive_protocols_10",
+      "level": "applied",
+      "q": "The LIN sync field is always 0x55. Why that value?",
+      "options": [
+        "It tells the slave which checksum to use",
+        "It carries the LIN protocol version",
+        "Its 0101 0101 pattern lets slaves measure the master's bit rate",
+        "It is the master's node address"
+      ],
+      "answer": 2,
+      "explain": "0x55 gives evenly spaced edges, so a slave with a cheap RC oscillator can time them and lock to the master's baud rate."
+    },
+    {
+      "id": "can_lin_automotive_protocols_11",
+      "level": "applied",
+      "q": "A standard 8-byte CAN frame is about 111 bits (ignoring stuffing). One ECU sends such a frame every 10 ms on a 500 kbit/s bus. Roughly what bus load does that message alone add?",
+      "options": [
+        "About 0.2%",
+        "About 22%",
+        "About 11%",
+        "About 2.2%"
+      ],
+      "answer": 3,
+      "explain": "111 bits at 2 µs per bit take 222 µs, and 222 µs out of every 10 ms is 2.2%."
+    }
+  ]
+}

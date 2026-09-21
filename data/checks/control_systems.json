@@ -1,0 +1,149 @@
+{
+  "skill_id": "control_systems",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "control_systems_01",
+      "level": "applied",
+      "q": "G(s) = 10 / (s^2 + 3s + 2). Where are its poles, and is it stable?",
+      "options": [
+        "Poles at -3 and -2, stable",
+        "Poles at -1 and -2, stable",
+        "Poles at -1 and 2, unstable",
+        "Poles at 1 and 2, unstable"
+      ],
+      "answer": 1,
+      "explain": "s^2 + 3s + 2 = (s + 1)(s + 2), and both poles sit in the left half-plane, so the system is stable."
+    },
+    {
+      "id": "control_systems_02",
+      "level": "applied",
+      "q": "Unity feedback, open loop G(s) = K / (s(s + 4)). What K gives a closed-loop damping ratio of 0.5?",
+      "options": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "answer": 3,
+      "explain": "The closed-loop polynomial is s^2 + 4s + K, so 2*zeta*wn = 4 gives wn = 4 and K = wn^2 = 16."
+    },
+    {
+      "id": "control_systems_03",
+      "level": "applied",
+      "q": "Unity feedback with G(s) = 5 / (s + 1). What is the steady-state error for a unit step input?",
+      "options": [
+        "0.167",
+        "0.2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "Position constant Kp = G(0) = 5, so the step error is 1 / (1 + Kp) = 1/6 = 0.167."
+    },
+    {
+      "id": "control_systems_04",
+      "level": "applied",
+      "q": "Unity feedback with G(s) = 8 / (s(s + 2)). What is the steady-state error for a unit ramp input?",
+      "options": [
+        "0",
+        "Infinite",
+        "0.25",
+        "0.125"
+      ],
+      "answer": 2,
+      "explain": "Velocity constant Kv = lim s*G(s) = 8/2 = 4, so the ramp error is 1 / Kv = 0.25."
+    },
+    {
+      "id": "control_systems_05",
+      "level": "basic",
+      "q": "A motor speed loop with only proportional control settles 8% below the set speed. Which change removes this offset?",
+      "options": [
+        "Add a low-pass filter on the feedback",
+        "Reduce proportional gain",
+        "Add integral action",
+        "Increase derivative gain"
+      ],
+      "answer": 2,
+      "explain": "Integral action keeps adding output while any error remains, so the steady-state error goes to zero."
+    },
+    {
+      "id": "control_systems_06",
+      "level": "basic",
+      "q": "On a Bode plot the gain crosses 0 dB at 10 rad/s, where the phase is -135 degrees. What is the phase margin?",
+      "options": [
+        "-135 degrees",
+        "45 degrees",
+        "225 degrees",
+        "135 degrees"
+      ],
+      "answer": 1,
+      "explain": "Phase margin is how far the phase is above -180 degrees at the gain crossover: -135 - (-180) = 45 degrees."
+    },
+    {
+      "id": "control_systems_07",
+      "level": "applied",
+      "q": "On a Bode plot the phase reaches -180 degrees at 20 rad/s, where the gain is -12 dB. By roughly what factor can the loop gain be raised before the loop goes unstable?",
+      "options": [
+        "About 16",
+        "About 2",
+        "About 12",
+        "About 4"
+      ],
+      "answer": 3,
+      "explain": "The gain margin is 12 dB, and 12 dB is a factor of 10^(12/20) = 3.98."
+    },
+    {
+      "id": "control_systems_08",
+      "level": "applied",
+      "q": "Closed-loop characteristic equation: s^3 + 3s^2 + 3s + K = 0. What is the largest K for which the loop is stable?",
+      "options": [
+        "27",
+        "3",
+        "1",
+        "9"
+      ],
+      "answer": 3,
+      "explain": "The Routh s^1 row is (3*3 - K)/3, which must stay positive, so K < 9."
+    },
+    {
+      "id": "control_systems_09",
+      "level": "applied",
+      "q": "Open-loop poles at 0, -2 and -4, no zeros. How many root-locus asymptotes are there and where do they meet the real axis?",
+      "options": [
+        "1 asymptote centred at -2",
+        "3 asymptotes centred at -6",
+        "2 asymptotes centred at -3",
+        "3 asymptotes centred at -2"
+      ],
+      "answer": 3,
+      "explain": "Poles minus zeros = 3 asymptotes, and the centroid is (0 - 2 - 4) / 3 = -2."
+    },
+    {
+      "id": "control_systems_10",
+      "level": "applied",
+      "q": "A sensor signal contains a 100 Hz component. The controller samples it at 150 Hz. What does the controller see?",
+      "options": [
+        "The 100 Hz component correctly",
+        "A false 50 Hz component",
+        "The component is filtered out",
+        "A 200 Hz component"
+      ],
+      "answer": 1,
+      "explain": "Anything above half the sampling rate (75 Hz) folds back: 150 - 100 = 50 Hz, which is why an anti-alias filter goes before the ADC."
+    },
+    {
+      "id": "control_systems_11",
+      "level": "basic",
+      "q": "A heater is modelled as G(s) = 1 / (0.5s + 1). After a unit step, at what time does the output reach about 63% of its final value?",
+      "options": [
+        "0.25 s",
+        "2 s",
+        "0.5 s",
+        "1 s"
+      ],
+      "answer": 2,
+      "explain": "For a first-order system 1 / (tau*s + 1), the output reaches 63% at t = tau, here 0.5 s."
+    }
+  ]
+}

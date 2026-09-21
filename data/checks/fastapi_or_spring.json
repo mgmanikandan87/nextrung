@@ -1,0 +1,94 @@
+{
+  "skill_id": "fastapi_or_spring",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "fastapi_or_spring_01",
+      "level": "applied",
+      "q": "FastAPI:\n\nclass Item(BaseModel):\n    name: str\n    qty: int\n\n@app.post(\"/items\")\ndef create(item: Item):\n    return item\n\nA client posts {\"name\": \"pen\", \"qty\": \"ten\"}. What status code is returned?",
+      "options": ["200", "400", "422", "500"],
+      "answer": 2,
+      "explain": "Pydantic validation fails because \"ten\" is not an int, and FastAPI answers 422 Unprocessable Entity with the field error."
+    },
+    {
+      "id": "fastapi_or_spring_02",
+      "level": "applied",
+      "q": "Spring Boot:\n\n@GetMapping(\"/users/{id}\")\npublic User get(@PathVariable Long id) {\n    return repo.findById(id).orElse(null);\n}\n\nA request for /users/999 finds no user. What does the client receive?",
+      "options": ["404 Not Found", "200 with an empty body", "204 No Content", "500 Internal Server Error"],
+      "answer": 1,
+      "explain": "Returning null from a controller gives 200 with no body; to get 404 you must throw ResponseStatusException or return ResponseEntity.notFound()."
+    },
+    {
+      "id": "fastapi_or_spring_03",
+      "level": "basic",
+      "q": "A client sends a well-formed request to create an order, but the item is out of stock. Which status code family is correct?",
+      "options": ["2xx, because the request was received", "4xx, because the request cannot be fulfilled due to client-side state", "5xx, because the server could not complete it", "3xx, redirect to the stock page"],
+      "answer": 1,
+      "explain": "The server worked correctly; the problem is with what was asked, so a 4xx like 409 Conflict or 400 fits, not a 5xx."
+    },
+    {
+      "id": "fastapi_or_spring_04",
+      "level": "applied",
+      "q": "FastAPI:\n\n@app.get(\"/users/me\")\ndef me(): ...\n\n@app.get(\"/users/{user_id}\")\ndef one(user_id: int): ...\n\nIf the two routes were declared in the opposite order, what happens on GET /users/me?",
+      "options": ["It still reaches me()", "It matches the {user_id} route and returns 422", "It returns 404", "FastAPI refuses to start due to a conflict"],
+      "answer": 1,
+      "explain": "Routes are matched in declaration order, so the dynamic path would capture \"me\" and fail to convert it to int."
+    },
+    {
+      "id": "fastapi_or_spring_05",
+      "level": "basic",
+      "q": "Spring Boot: a JSON body should be mapped into an OrderRequest object in a POST handler. Which annotation goes on the parameter?",
+      "options": ["@RequestParam", "@PathVariable", "@RequestBody", "@ModelAttribute"],
+      "answer": 2,
+      "explain": "@RequestBody tells Spring to deserialize the request body (JSON) into the object; @RequestParam reads query or form fields."
+    },
+    {
+      "id": "fastapi_or_spring_06",
+      "level": "applied",
+      "q": "FastAPI:\n\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n\n@app.get(\"/items\")\ndef items(db: Session = Depends(get_db)): ...\n\nWhen does db.close() run?",
+      "options": ["Before the handler runs", "After the handler finishes, for every request", "Only when the handler raises an exception", "Never, yield does not return"],
+      "answer": 1,
+      "explain": "A yield dependency runs the code before yield at request start and the code after it (the finally) at request end, so each request gets and releases its own session."
+    },
+    {
+      "id": "fastapi_or_spring_07",
+      "level": "applied",
+      "q": "Spring Boot:\n\n@PostMapping(\"/orders\")\npublic Order create(@Valid @RequestBody OrderRequest r) { ... }\n\nOrderRequest has @NotBlank String customer. A client posts {\"customer\": \"\"}. What is returned?",
+      "options": ["200 with an order for an empty customer", "400 Bad Request", "422 Unprocessable Entity", "500 because of a NullPointerException"],
+      "answer": 1,
+      "explain": "With @Valid, a failed bean validation raises MethodArgumentNotValidException, which Spring maps to 400 by default."
+    },
+    {
+      "id": "fastapi_or_spring_08",
+      "level": "basic",
+      "q": "FastAPI: which decorator makes a handler return 201 on a successful POST?",
+      "options": ["@app.post(\"/x\", status_code=201)", "@app.post(\"/x\", response=201)", "@app.post(\"/x\", created=True)", "@app.post(\"/x\") with return 201"],
+      "answer": 0,
+      "explain": "status_code on the route sets the default success status; returning 201 from the body would just send the number as JSON."
+    },
+    {
+      "id": "fastapi_or_spring_09",
+      "level": "applied",
+      "q": "FastAPI test:\n\nclient = TestClient(app)\nr = client.get(\"/health\")\nassert r.status_code == 200\nassert r.json() == {\"ok\": True}\n\nThe handler is: return {\"ok\": \"true\"}. Which assertion fails?",
+      "options": ["The status assertion", "The json assertion, because \"true\" is a string, not a boolean", "Both assertions", "Neither, JSON treats them the same"],
+      "answer": 1,
+      "explain": "The route works (200), but JSON distinguishes the string \"true\" from the boolean true, so the dict comparison fails."
+    },
+    {
+      "id": "fastapi_or_spring_10",
+      "level": "basic",
+      "q": "Spring Boot: a service method updates two tables and the second update fails. You want the first one rolled back too. What is the simplest fix?",
+      "options": ["Annotate the service method with @Transactional", "Catch the exception and call repo.flush()", "Use @Async on the method", "Add @Autowired to the repository"],
+      "answer": 0,
+      "explain": "@Transactional wraps the method in one database transaction that rolls back on a runtime exception."
+    },
+    {
+      "id": "fastapi_or_spring_11",
+      "level": "applied",
+      "q": "FastAPI:\n\n@app.get(\"/search\")\ndef search(q: str, limit: int = 10):\n    return {\"q\": q, \"limit\": limit}\n\nWhat happens on GET /search?limit=5",
+      "options": ["Returns {\"q\": null, \"limit\": 5}", "Returns 422 because q is required", "Returns 404", "Returns {\"q\": \"\", \"limit\": 5}"],
+      "answer": 1,
+      "explain": "A parameter with no default is a required query parameter; missing it is a validation error, not a null value."
+    }
+  ]
+}

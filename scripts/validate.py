@@ -105,7 +105,34 @@ for j in jobs:
             if r['skill_id'] not in SKILL_IDS: E(f"job {j['id']}: requirement maps to unknown skill {r['skill_id']}")
 if total and mapped / total < 0.6: W(f"jobs: only {mapped/total:.0%} of requirements mapped to skills")
 
-print(f"stats {len(stats)} · questions {len(q['questions'])} · skills {len(skills)} · paths {len(paths)} · jobs {len(jobs)} ({mapped}/{total} requirements mapped)")
+# ---- skill checks (calibration item banks) ----
+checks, n_items = 0, 0
+for f in sorted(glob.glob(str(ROOT / 'data/checks/*.json'))):
+    c = load(f)
+    if not c: continue
+    checks += 1
+    sk = c.get('skill_id'); base = pathlib.Path(f).stem
+    if sk != base: E(f"checks {base}: skill_id {sk!r} must equal the file name")
+    if sk not in SKILL_IDS: E(f"checks {base}: unknown skill {sk}")
+    items = c.get('items', [])
+    if len(items) < 6: E(f"checks {base}: only {len(items)} items (need 6+)")
+    if sum(1 for i in items if i.get('level') == 'applied') < 3: E(f"checks {base}: fewer than 3 applied items")
+    ids = [i.get('id') for i in items]
+    if len(ids) != len(set(ids)): E(f"checks {base}: duplicate item ids")
+    qs = [i.get('q', '').strip().lower() for i in items]
+    if len(qs) != len(set(qs)): E(f"checks {base}: duplicate questions")
+    for i in items:
+        n_items += 1
+        if not str(i.get('id', '')).startswith(sk + '_'): E(f"checks {base}: id {i.get('id')} must start with {sk}_")
+        if i.get('level') not in ('basic', 'applied'): E(f"checks {base} {i.get('id')}: level must be basic|applied")
+        opts = i.get('options')
+        if not isinstance(opts, list) or len(opts) != 4 or len(set(map(str, opts))) != 4: E(f"checks {base} {i.get('id')}: need exactly 4 distinct options")
+        if not isinstance(i.get('answer'), int) or not 0 <= i['answer'] <= 3: E(f"checks {base} {i.get('id')}: answer must be 0..3")
+        if not i.get('explain'): E(f"checks {base} {i.get('id')}: missing explain")
+        if len(str(i.get('q', '')).split()) > 90: W(f"checks {base} {i.get('id')}: question is long")
+        if any(re.search(r'\b(all|none) of the above\b', str(o), re.I) for o in (opts or [])): E(f"checks {base} {i.get('id')}: no 'all/none of the above'")
+
+print(f"stats {len(stats)} · questions {len(q['questions'])} · skills {len(skills)} · paths {len(paths)} · jobs {len(jobs)} ({mapped}/{total} requirements mapped) · checks {checks} banks / {n_items} items")
 for w in warnings: print('WARN', w)
 for e in errors: print('ERROR', e)
 print(f"{len(errors)} errors, {len(warnings)} warnings")

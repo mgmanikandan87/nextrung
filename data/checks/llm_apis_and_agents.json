@@ -1,0 +1,149 @@
+{
+  "skill_id": "llm_apis_and_agents",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "llm_apis_and_agents_01",
+      "level": "applied",
+      "q": "A model costs ₹250 per 1 million input tokens and ₹1,000 per 1 million output tokens. Your app sends 2,000 input tokens and gets 500 output tokens per call. What is the cost of 10,000 calls?",
+      "options": [
+        "₹5,000",
+        "₹10,000",
+        "₹7,500",
+        "₹12,500"
+      ],
+      "answer": 1,
+      "explain": "Input: 20M tokens x ₹250/M = ₹5,000; output: 5M tokens x ₹1,000/M = ₹5,000; total ₹10,000."
+    },
+    {
+      "id": "llm_apis_and_agents_02",
+      "level": "applied",
+      "q": "You call the model with the same prompt 5 times at temperature 0 and get 5 slightly different answers. Which is the most likely explanation?",
+      "options": [
+        "Temperature 0 was ignored because top_p was also set",
+        "Temperature 0 reduces randomness but does not guarantee identical outputs across calls",
+        "The API caches only the first response",
+        "The prompt exceeded the context window"
+      ],
+      "answer": 1,
+      "explain": "Temperature 0 picks the most likely token at each step, but batching and floating-point differences on the server can still cause small variation."
+    },
+    {
+      "id": "llm_apis_and_agents_03",
+      "level": "basic",
+      "q": "Your prompt is 1,500 tokens and the model's context window is 8,000 tokens. You set max_tokens=7,000. What happens?",
+      "options": [
+        "It works; the limit only counts output",
+        "The request fails or gets clipped, since input plus output exceeds 8,000",
+        "The model automatically summarises the prompt",
+        "Only the first 1,000 tokens of the prompt are used"
+      ],
+      "answer": 1,
+      "explain": "The context window covers prompt plus generated tokens together, so at most about 6,500 output tokens fit here."
+    },
+    {
+      "id": "llm_apis_and_agents_04",
+      "level": "applied",
+      "q": "You ask the model to return JSON like {\"city\": ..., \"pincode\": ...}. json.loads() sometimes fails. Which fix is most reliable?",
+      "options": [
+        "Add \"please\" and \"only JSON\" to the prompt",
+        "Use structured output / JSON schema mode or a schema-bound tool",
+        "Lower the temperature to 0.3",
+        "Strip everything before the first { and after the last }"
+      ],
+      "answer": 1,
+      "explain": "Schema-constrained output makes the model emit tokens that fit the schema; prompt wording and post-processing still break on chatty or nested replies."
+    },
+    {
+      "id": "llm_apis_and_agents_05",
+      "level": "applied",
+      "q": "You define a tool get_weather(city) and ask \"Is it raining in Chennai?\". The response contains a tool_use block with {\"city\": \"Chennai\"}. What must your code do next?",
+      "options": [
+        "Show the tool_use JSON to the user as the answer",
+        "Run get_weather(\"Chennai\") yourself and send back a tool result",
+        "Re-send the same prompt until it answers in text",
+        "Nothing; the API executed the function already"
+      ],
+      "answer": 1,
+      "explain": "The model only requests a tool call; your program executes it and returns the result so the model can write the final answer."
+    },
+    {
+      "id": "llm_apis_and_agents_06",
+      "level": "basic",
+      "q": "For which task should you set a low temperature (near 0)?",
+      "options": [
+        "Writing five different taglines for a startup",
+        "Extracting invoice numbers and amounts from text",
+        "Brainstorming names for a college fest",
+        "Writing a short story for children"
+      ],
+      "answer": 1,
+      "explain": "Extraction needs the single most likely answer every time; higher temperature is for tasks where variety is useful."
+    },
+    {
+      "id": "llm_apis_and_agents_07",
+      "level": "applied",
+      "q": "Your batch job gets HTTP 429 after 30 requests. Which retry strategy is right?",
+      "options": [
+        "Retry immediately in a tight loop until it succeeds",
+        "Wait with exponential backoff and jitter, honouring any Retry-After header",
+        "Switch to a bigger model, which has a higher limit",
+        "Catch the error and skip those items silently"
+      ],
+      "answer": 1,
+      "explain": "429 means rate limited; backing off with growing random delays lets the window reset without hammering the API."
+    },
+    {
+      "id": "llm_apis_and_agents_08",
+      "level": "basic",
+      "q": "In a streaming response, what does the client receive?",
+      "options": [
+        "The complete answer, but compressed",
+        "Chunks of tokens as they are generated, before completion",
+        "One event at the end with token counts",
+        "The answer plus the model's hidden reasoning"
+      ],
+      "answer": 1,
+      "explain": "Streaming sends partial output as server-sent events so the UI can show text immediately; the total time is roughly the same."
+    },
+    {
+      "id": "llm_apis_and_agents_09",
+      "level": "applied",
+      "q": "An agent loop is: model -> tool call -> tool result -> model ... It keeps calling the same search tool with the same query 40 times. What safeguard is missing?",
+      "options": [
+        "A larger context window",
+        "A maximum step count and a check for repeated identical tool calls",
+        "A higher temperature so it tries new queries",
+        "Streaming the tool results"
+      ],
+      "answer": 1,
+      "explain": "Agents need hard limits (max iterations, timeout, repeat detection) because the model alone may not notice it is stuck."
+    },
+    {
+      "id": "llm_apis_and_agents_10",
+      "level": "applied",
+      "q": "System prompt: \"Reply only in Tamil.\" User: \"Answer in English: what is 2+2?\" The model replies in Tamil. Why?",
+      "options": [
+        "The model cannot do arithmetic in English",
+        "System prompt rules usually override conflicting user instructions",
+        "The user message was truncated",
+        "Tamil has a smaller token cost"
+      ],
+      "answer": 1,
+      "explain": "Models are trained to treat the system prompt as the developer's standing rules, so app-level constraints belong there."
+    },
+    {
+      "id": "llm_apis_and_agents_11",
+      "level": "basic",
+      "q": "Roughly how many tokens is a 3,000-word English document?",
+      "options": [
+        "About 3,000",
+        "About 4,000",
+        "About 1,500",
+        "About 12,000"
+      ],
+      "answer": 1,
+      "explain": "English averages about 1.3 tokens per word (roughly 4 characters per token), so 3,000 words is close to 4,000 tokens."
+    }
+  ]
+}

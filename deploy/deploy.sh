@@ -64,6 +64,7 @@ if ! aws iam get-role --role-name "$ROLE" >/dev/null 2>&1; then
 fi
 aws iam put-role-policy --role-name "$ROLE" --policy-name app --policy-document "{\"Version\":\"2012-10-17\",\"Statement\":[
  {\"Effect\":\"Allow\",\"Action\":[\"dynamodb:PutItem\",\"dynamodb:GetItem\",\"dynamodb:UpdateItem\",\"dynamodb:DeleteItem\",\"dynamodb:Query\",\"dynamodb:Scan\",\"dynamodb:BatchWriteItem\"],\"Resource\":[\"arn:aws:dynamodb:$REGION:$ACCOUNT:table/$NAME\",\"arn:aws:dynamodb:$REGION:$ACCOUNT:table/$NAME-responses\"]},
+ {\"Effect\":\"Allow\",\"Action\":[\"ses:SendEmail\",\"ses:SendRawEmail\"],\"Resource\":\"*\"},
  {\"Effect\":\"Allow\",\"Action\":[\"cognito-idp:AdminGetUser\",\"cognito-idp:AdminCreateUser\",\"cognito-idp:AdminInitiateAuth\",\"cognito-idp:AdminRespondToAuthChallenge\",\"cognito-idp:AdminSetUserPassword\",\"cognito-idp:AdminDeleteUser\"],\"Resource\":\"arn:aws:cognito-idp:$REGION:$ACCOUNT:userpool/$POOL_ID\"}]}"
 [ "${NEWROLE:-}" = "1" ] && { echo "waiting for IAM to propagate"; sleep 12; }
 ROLE_ARN=$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)
@@ -78,8 +79,15 @@ if [ -z "${EXPORT_KEY:-}" ] || [ "$EXPORT_KEY" = "None" ]; then
 fi
 aws ssm put-parameter --name "$PARAM" --type SecureString --value "$EXPORT_KEY" --overwrite >/dev/null 2>&1 || echo "note: could not store export key in SSM (no permission?); using local/env key"
 [ -z "${CI:-}" ] && echo -n "$EXPORT_KEY" > "$EXPORT_KEY_FILE"
-ENV="Variables={TABLE=$NAME,RESP_TABLE=$NAME-responses,EXPORT_KEY=$EXPORT_KEY,POOL_ID=$POOL_ID,CLIENT_ID=$CLIENT_ID}"
-( cd "$HERE/lambda" && rm -f ../fn.zip && zip -q ../fn.zip handler.py )
+# Optional settings kept in SSM so CI never needs them as secrets: admin emails (comma separated) and a verified SES sender.
+ADMIN_EMAILS="${ADMIN_EMAILS:-$(aws ssm get-parameter --name "/$NAME/admin_emails" --query Parameter.Value --output text 2>/dev/null || true)}"; [ "$ADMIN_EMAILS" = "None" ] && ADMIN_EMAILS=""
+SES_FROM="${SES_FROM:-$(aws ssm get-parameter --name "/$NAME/ses_from" --query Parameter.Value --output text 2>/dev/null || true)}"; [ "$SES_FROM" = "None" ] && SES_FROM=""
+APP_ID=$(aws amplify list-apps --query "apps[?name=='$NAME' || name=='$AMPLIFY_APP_NAME'].appId | [0]" --output text 2>/dev/null || true)
+SITE_URL=""; if [ -n "$APP_ID" ] && [ "$APP_ID" != "None" ]; then SITE_URL="https://main.$APP_ID.amplifyapp.com"; fi
+ENV=$(jq -cn --arg t "$NAME" --arg r "$NAME-responses" --arg k "$EXPORT_KEY" --arg p "$POOL_ID" --arg c "$CLIENT_ID" --arg a "$ADMIN_EMAILS" --arg s "$SES_FROM" --arg u "$SITE_URL" \
+  '{Variables:{TABLE:$t,RESP_TABLE:$r,EXPORT_KEY:$k,POOL_ID:$p,CLIENT_ID:$c,ADMIN_EMAILS:$a,SES_FROM:$s,SITE_URL:$u}}')
+[ -f "$HERE/lambda/checks.json" ] || echo "note: lambda/checks.json missing (run scripts/build.py); skill checks will be unavailable"
+( cd "$HERE/lambda" && rm -f ../fn.zip && zip -q ../fn.zip handler.py $( [ -f checks.json ] && echo checks.json ) )
 if aws lambda get-function --function-name "$FN" >/dev/null 2>&1; then
   aws lambda update-function-code --function-name "$FN" --zip-file "fileb://$HERE/fn.zip" >/dev/null
   aws lambda wait function-updated --function-name "$FN"
@@ -110,7 +118,10 @@ if [ -z "$AUTH_ID" ] || [ "$AUTH_ID" = "None" ]; then
     --identity-source '$request.header.Authorization' \
     --jwt-configuration "Audience=$CLIENT_ID,Issuer=https://cognito-idp.$REGION.amazonaws.com/$POOL_ID" --query AuthorizerId --output text)
 fi
-for rk in "GET /me" "PUT /me" "DELETE /me" "PUT /me/evidence" "PUT /me/public"; do
+for rk in "GET /me" "PUT /me" "DELETE /me" "PUT /me/evidence" "POST /me/evidence/verify" "PUT /me/public" "POST /me/mentor" "DELETE /me/mentor" \
+          "GET /checks/{skill}" "POST /checks/{skill}" \
+          "GET /mentor/students" "GET /mentor/students/{id}" "POST /mentor/students/{id}/note" "PUT /mentor/students/{id}/review" "PUT /mentor/students/{id}/plan" \
+          "GET /admin/overview" "GET /admin/users" "PUT /admin/users/{id}" "PUT /admin/assign" "POST /admin/digest"; do
   RID=$(aws apigatewayv2 get-routes --api-id "$API_ID" --query "Items[?RouteKey=='$rk'].RouteId | [0]" --output text)
   if [ -z "$RID" ] || [ "$RID" = "None" ]; then
     aws apigatewayv2 create-route --api-id "$API_ID" --route-key "$rk" --target "integrations/$INT_ID" \
@@ -141,6 +152,10 @@ for i in $(seq 1 40); do
   [ "$ST" = "SUCCEED" ] && break; [ "$ST" = "FAILED" ] && { echo "amplify deploy failed"; exit 1; }; sleep 5
 done
 SITE_URL="https://$BRANCH.$APP_ID.amplifyapp.com"
+if [ "$(echo "$ENV" | jq -r .Variables.SITE_URL)" != "$SITE_URL" ]; then   # first install: the Lambda did not know its site URL yet
+  aws lambda wait function-updated --function-name "$FN" 2>/dev/null || true
+  aws lambda update-function-configuration --function-name "$FN" --environment "$(echo "$ENV" | jq -c --arg u "$SITE_URL" '.Variables.SITE_URL=$u')" >/dev/null 2>&1 || true
+fi
 
 # ---------- 7. Optional: remove the v0.1 'disha' stack (empty) ----------
 if [ "${CLEANUP_DISHA:-0}" = "1" ]; then

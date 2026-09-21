@@ -1,0 +1,149 @@
+{
+  "skill_id": "verilog_systemverilog",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "verilog_systemverilog_01",
+      "level": "applied",
+      "q": "Before the clock edge a = 1 and b = 0. What are a and b after one posedge?\n\nalways @(posedge clk) begin\n  a = b;\n  b = a;\nend",
+      "options": [
+        "a = 1, b = 0",
+        "a = 1, b = 1",
+        "a = 0, b = 1",
+        "a = 0, b = 0"
+      ],
+      "answer": 3,
+      "explain": "Blocking assignments run in order: a becomes 0 first, then b copies the new a, so both end up 0."
+    },
+    {
+      "id": "verilog_systemverilog_02",
+      "level": "applied",
+      "q": "Same start (a = 1, b = 0), but with non-blocking assignments. After one posedge?\n\nalways @(posedge clk) begin\n  a <= b;\n  b <= a;\nend",
+      "options": [
+        "a = 1, b = 1",
+        "a = 0, b = 1",
+        "a = 0, b = 0",
+        "a = 1, b = 0"
+      ],
+      "answer": 1,
+      "explain": "Non-blocking assignments sample all right-hand sides first and update together, so the values swap."
+    },
+    {
+      "id": "verilog_systemverilog_03",
+      "level": "applied",
+      "q": "What does synthesis create for y from this code?\n\nalways @(*) begin\n  if (sel)\n    y = a;\nend",
+      "options": [
+        "A D flip-flop on y",
+        "Nothing, y is treated as a wire",
+        "A 2:1 mux",
+        "A latch on y"
+      ],
+      "answer": 3,
+      "explain": "There is no else branch, so y must hold its old value when sel is 0, and holding a value in combinational code means a latch."
+    },
+    {
+      "id": "verilog_systemverilog_04",
+      "level": "basic",
+      "q": "Which of these is NOT synthesisable into hardware?",
+      "options": [
+        "#10 a = b; inside an always block",
+        "always @(posedge clk)",
+        "assign y = a & b;",
+        "A case statement"
+      ],
+      "answer": 0,
+      "explain": "Delay controls like #10 are only for simulation; synthesis tools ignore or reject them because real delay comes from the gates, not the code."
+    },
+    {
+      "id": "verilog_systemverilog_05",
+      "level": "applied",
+      "q": "What does this module implement?\n\nmodule m(input clk, input rst, output reg [3:0] q);\n  always @(posedge clk or posedge rst)\n    if (rst) q <= 4'd0;\n    else if (q == 4'd9) q <= 4'd0;\n    else q <= q + 4'd1;\nendmodule",
+      "options": [
+        "Mod-9 counter with asynchronous reset",
+        "Mod-10 counter with synchronous reset",
+        "Mod-16 counter with synchronous reset",
+        "Mod-10 counter with asynchronous reset"
+      ],
+      "answer": 3,
+      "explain": "rst is in the sensitivity list so the reset is asynchronous, and the count runs 0 to 9 then wraps, which is 10 states."
+    },
+    {
+      "id": "verilog_systemverilog_06",
+      "level": "applied",
+      "q": "With `timescale 1ns/1ps, what clock frequency does this testbench generate?\n\ninitial begin\n  clk = 0;\n  forever #5 clk = ~clk;\nend",
+      "options": [
+        "200 MHz",
+        "100 MHz",
+        "50 MHz",
+        "5 MHz"
+      ],
+      "answer": 1,
+      "explain": "The clock flips every 5 ns, so one full period is 10 ns, which is 100 MHz."
+    },
+    {
+      "id": "verilog_systemverilog_07",
+      "level": "applied",
+      "q": "What value does s hold?\n\nreg [3:0] x = 4'd12;\nreg [3:0] y = 4'd7;\nwire [3:0] s = x + y;",
+      "options": [
+        "5'd19",
+        "4'd3",
+        "4'd15",
+        "4'd19"
+      ],
+      "answer": 1,
+      "explain": "12 + 7 = 19 but s is only 4 bits wide, so the carry is lost and 19 mod 16 = 3 is stored."
+    },
+    {
+      "id": "verilog_systemverilog_08",
+      "level": "basic",
+      "q": "A synchronous FIFO has 16 entries but its read and write pointers are 5 bits wide instead of 4. Why the extra bit?",
+      "options": [
+        "To count how many reads have happened",
+        "To store a parity bit",
+        "To allow 32 entries later",
+        "To tell full from empty when the lower 4 bits are equal"
+      ],
+      "answer": 3,
+      "explain": "Both full and empty have equal lower pointer bits; the extra MSB differs when the write pointer has wrapped once more than the read pointer, which means full."
+    },
+    {
+      "id": "verilog_systemverilog_09",
+      "level": "applied",
+      "q": "A UART transmitter runs from a 50 MHz clock and must send at 115200 baud. What value should the baud-tick counter divide by?",
+      "options": [
+        "5208",
+        "434",
+        "868",
+        "217"
+      ],
+      "answer": 1,
+      "explain": "50,000,000 / 115,200 = 434.03, so one bit lasts 434 clock cycles."
+    },
+    {
+      "id": "verilog_systemverilog_10",
+      "level": "applied",
+      "q": "This code synthesises fine but simulation gives wrong results. What is the problem?\n\nalways @(a)\n  y = a & b;",
+      "options": [
+        "b is not declared so it is an error",
+        "y becomes a latch",
+        "y does not update in simulation when only b changes",
+        "Synthesis makes y a flip-flop"
+      ],
+      "answer": 2,
+      "explain": "The sensitivity list is missing b, so simulation ignores changes on b; always @(*) avoids this mismatch."
+    },
+    {
+      "id": "verilog_systemverilog_11",
+      "level": "basic",
+      "q": "In SystemVerilog, which always block tells the tool you intend a flip-flop and warns if the code cannot be one?",
+      "options": [
+        "always_latch",
+        "always_ff",
+        "always @(*)",
+        "always_comb"
+      ],
+      "answer": 1,
+      "explain": "always_ff declares sequential intent, so the tool checks for a clock edge and flags accidental combinational or latch behaviour."
+    }
+  ]
+}

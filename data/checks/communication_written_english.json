@@ -1,0 +1,149 @@
+{
+  "skill_id": "communication_written_english",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "communication_written_english_01",
+      "level": "applied",
+      "q": "Which change fixes the error in this sentence?\n\nEach of the modules were tested yesterday.",
+      "options": [
+        "were -> was",
+        "Each -> Every",
+        "yesterday -> on yesterday",
+        "modules -> module"
+      ],
+      "answer": 0,
+      "explain": "The subject is 'each' (singular), not 'modules', so the verb must be 'was'; a plural noun inside a prepositional phrase does not change the verb."
+    },
+    {
+      "id": "communication_written_english_02",
+      "level": "applied",
+      "q": "You are emailing a client in the US asking for comments on a draft. Which line reads as standard written English?",
+      "options": [
+        "Please share your comments by Thursday.",
+        "I am having a doubt regarding the API.",
+        "Kindly revert back at the earliest.",
+        "Please do the needful."
+      ],
+      "answer": 0,
+      "explain": "'Revert back', 'do the needful' and 'having a doubt' are Indian-English usages that confuse many overseas readers; a plain request with a date is clearest."
+    },
+    {
+      "id": "communication_written_english_03",
+      "level": "applied",
+      "q": "You need your lead to review the Payment API design document (version 2) before Friday. Which subject line is best?",
+      "options": [
+        "Hi",
+        "Regarding the document",
+        "URGENT!!! please read",
+        "Review needed by Fri: Payment API design v2"
+      ],
+      "answer": 3,
+      "explain": "A good subject line says what, which version and by when, so it can be found and prioritised without opening the mail."
+    },
+    {
+      "id": "communication_written_english_04",
+      "level": "applied",
+      "q": "Which line says the same thing most clearly?",
+      "options": [
+        "As discussed on the call, the report is attached.",
+        "As per our telephonic conversation, I hereby attach the same for perusal.",
+        "This is to inform you that the report is being attached.",
+        "With reference to the call, please find attached herewith the same."
+      ],
+      "answer": 0,
+      "explain": "Formal filler ('hereby', 'the same', 'kind perusal') adds words without meaning; a short sentence with the key fact reads as more professional, not less."
+    },
+    {
+      "id": "communication_written_english_05",
+      "level": "applied",
+      "q": "You will miss Tuesday's deadline because a load test found a memory leak. Which message to your manager is best?",
+      "options": [
+        "Sorry sir, some issue came, will try to finish.",
+        "Load test found a memory leak; other items done. Thursday OK?",
+        "I'll send it whenever it is done.",
+        "Deadline can't be met. Not my fault, the API team delayed us."
+      ],
+      "answer": 1,
+      "explain": "State the cause, the new date, what is already done and ask for agreement; blame, vagueness and apology without a plan all leave the manager with nothing to act on."
+    },
+    {
+      "id": "communication_written_english_06",
+      "level": "applied",
+      "q": "Which is the best README wording for the setup step?",
+      "options": [
+        "First of all you have to install the needed dependencies, then start.",
+        "Run `npm install`, then `npm start`.",
+        "Installation of dependencies is to be done, followed by starting.",
+        "The user should now be installing packages via npm and starting."
+      ],
+      "answer": 1,
+      "explain": "README instructions use short imperative sentences with the exact command, so a reader can follow them without interpreting."
+    },
+    {
+      "id": "communication_written_english_07",
+      "level": "applied",
+      "q": "Which word should be removed from this sentence?\n\nLet us discuss about the issue in tomorrow's stand-up.",
+      "options": [
+        "the",
+        "about",
+        "issue",
+        "discuss"
+      ],
+      "answer": 1,
+      "explain": "'Discuss' takes a direct object ('discuss the issue'); 'discuss about' is a common slip that stands out in written work."
+    },
+    {
+      "id": "communication_written_english_08",
+      "level": "basic",
+      "q": "Which change fixes this sentence?\n\nI have been working at this company since three years.",
+      "options": [
+        "have been -> am",
+        "working -> work",
+        "three years -> 3 years",
+        "since -> for"
+      ],
+      "answer": 3,
+      "explain": "'Since' takes a starting point (since 2023); 'for' takes a duration (for three years)."
+    },
+    {
+      "id": "communication_written_english_09",
+      "level": "applied",
+      "q": "Your draft says: 'Please revert with the logs.' In standard English 'revert' means to go back to an earlier state. Which word should replace it?",
+      "options": [
+        "reply",
+        "resend",
+        "forward",
+        "return"
+      ],
+      "answer": 0,
+      "explain": "'Revert' meaning 'reply' is Indian office usage; overseas readers may read it as 'undo', so 'reply' or 'get back to me' is safer."
+    },
+    {
+      "id": "communication_written_english_10",
+      "level": "applied",
+      "q": "Which is the tightest rewrite of:\n\nDue to the fact that the server was down, we were not in a position to deploy.",
+      "options": [
+        "The server was down and therefore we could not do deployment.",
+        "Owing to the server being down, deployment was not possible.",
+        "Since the server had gone down, we were unable to be deploying.",
+        "Because the server was down, we could not deploy."
+      ],
+      "answer": 3,
+      "explain": "'Due to the fact that' is 'because' and 'not in a position to' is 'could not'; cutting filler makes status updates easier to scan."
+    },
+    {
+      "id": "communication_written_english_11",
+      "level": "basic",
+      "q": "You are writing to Priya Nair, the hiring manager, whose name is on the job post. Which salutation is best?",
+      "options": [
+        "Respected Madam,",
+        "Hi Nair,",
+        "Dear Ms. Nair,",
+        "Dear Sir/Madam,"
+      ],
+      "answer": 2,
+      "explain": "When the name is known, use it with a title; 'Respected Madam' reads as dated, 'Sir/Madam' ignores the name, and a bare surname is too casual."
+    }
+  ]
+}

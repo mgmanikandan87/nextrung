@@ -1,0 +1,149 @@
+{
+  "skill_id": "docker",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "docker_01",
+      "level": "applied",
+      "q": "Every time you change one line of app code, this build reinstalls all pip packages. Which reorder fixes it?\n\nFROM python:3.12-slim\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD [\"python\", \"app.py\"]",
+      "options": [
+        "Move WORKDIR after RUN",
+        "COPY requirements.txt first, RUN pip install, then COPY . .",
+        "Put RUN pip install before FROM",
+        "Replace CMD with ENTRYPOINT"
+      ],
+      "answer": 1,
+      "explain": "Layers are cached top-down until the first changed layer, so copy only requirements.txt before the install and the app code after it."
+    },
+    {
+      "id": "docker_02",
+      "level": "applied",
+      "q": "The app listens on port 8000 inside the container. You run:\n\ndocker run -d -p 5000:8000 myapp\n\nWhich URL reaches it from the host machine?",
+      "options": [
+        "http://localhost:8000",
+        "http://localhost:5000",
+        "http://localhost:5000:8000",
+        "Neither, EXPOSE 5000 is also needed"
+      ],
+      "answer": 1,
+      "explain": "-p HOST:CONTAINER maps host port 5000 to container port 8000; EXPOSE is documentation only and does not publish anything."
+    },
+    {
+      "id": "docker_03",
+      "level": "basic",
+      "q": "You run docker run postgres three times. How many images and how many containers exist now?",
+      "options": [
+        "3 images, 3 containers",
+        "1 image, 3 containers",
+        "1 image, 1 container",
+        "3 images, 1 container"
+      ],
+      "answer": 1,
+      "explain": "An image is a read-only template pulled once; each run creates a separate container from it."
+    },
+    {
+      "id": "docker_04",
+      "level": "applied",
+      "q": "A Postgres container stores data at /var/lib/postgresql/data. After docker rm and a new docker run, the tables are gone. Which flag would have kept them?",
+      "options": [
+        "-p 5432:5432",
+        "-v pgdata:/var/lib/postgresql/data",
+        "--restart always",
+        "-e PGDATA=/data"
+      ],
+      "answer": 1,
+      "explain": "A container's writable layer is deleted with the container; a named volume mounted at the data path lives outside it."
+    },
+    {
+      "id": "docker_05",
+      "level": "basic",
+      "q": "What is the difference between RUN and CMD in a Dockerfile?",
+      "options": [
+        "RUN runs at build time; CMD is the container's start command",
+        "RUN is for Linux, CMD is for Windows images",
+        "CMD executes at build time; RUN runs when the container starts",
+        "They are the same, CMD is the older spelling"
+      ],
+      "answer": 0,
+      "explain": "RUN creates a new image layer during build (install packages), while CMD is stored and executed only when a container starts."
+    },
+    {
+      "id": "docker_06",
+      "level": "applied",
+      "q": "In this compose file the web service cannot reach the database using localhost:5432. What hostname should DATABASE_URL use?\n\nservices:\n  web:\n    build: .\n    environment:\n      DATABASE_URL: postgres://u:p@localhost:5432/app\n  db:\n    image: postgres:16",
+      "options": [
+        "localhost",
+        "db",
+        "127.0.0.1",
+        "postgres"
+      ],
+      "answer": 1,
+      "explain": "Each service is its own container; compose puts them on a shared network where the service name is the DNS hostname."
+    },
+    {
+      "id": "docker_07",
+      "level": "applied",
+      "q": "A container starts and exits immediately. docker ps shows nothing. Which command shows why?",
+      "options": [
+        "docker images",
+        "docker logs <container_id>",
+        "docker exec -it <container_id> sh",
+        "docker build --no-cache ."
+      ],
+      "answer": 1,
+      "explain": "Logs from a stopped container are still stored (use docker ps -a to find its id); exec cannot attach to a container that is not running."
+    },
+    {
+      "id": "docker_08",
+      "level": "basic",
+      "q": "Which Dockerfile produces a smaller final image for a compiled Go or Java app?",
+      "options": [
+        "One stage that installs the compiler and builds the app",
+        "A multi-stage build copying only the binary into a slim image",
+        "A single stage with apt-get clean at the end",
+        "Any Dockerfile, as long as you use docker image prune"
+      ],
+      "answer": 1,
+      "explain": "Multi-stage builds leave the compiler and source in a throwaway stage and ship only the output in the final image."
+    },
+    {
+      "id": "docker_09",
+      "level": "applied",
+      "q": "You mount your source folder with -v $(pwd):/app for live reload, but a file named node_modules from the host overwrites the container's install. What is the usual fix?",
+      "options": [
+        "Add a second anonymous volume: -v /app/node_modules",
+        "Use -p instead of -v",
+        "Delete node_modules on the host permanently",
+        "Run docker commit after every change"
+      ],
+      "answer": 0,
+      "explain": "A more specific mount at /app/node_modules shadows that sub-path, so the container keeps its own installed dependencies."
+    },
+    {
+      "id": "docker_10",
+      "level": "basic",
+      "q": "What does docker compose down -v do that docker compose down does not?",
+      "options": [
+        "Prints verbose logs",
+        "Also removes the named volumes declared in the compose file",
+        "Also deletes the built images",
+        "Stops containers but keeps their networks"
+      ],
+      "answer": 1,
+      "explain": "-v removes volumes, so database data created by the stack is deleted; plain down keeps volumes for the next up."
+    },
+    {
+      "id": "docker_11",
+      "level": "applied",
+      "q": "Build A: FROM python:3.12, RUN pip install fastapi, COPY app.py . Build B: same but you changed a comment in app.py only. Which layers are rebuilt in B?",
+      "options": [
+        "All three layers",
+        "Only the COPY layer",
+        "The RUN and COPY layers",
+        "None, the cache is reused fully"
+      ],
+      "answer": 1,
+      "explain": "The cache is valid up to the first instruction whose input changed; FROM and RUN are unchanged, so only COPY (and anything after it) reruns."
+    }
+  ]
+}

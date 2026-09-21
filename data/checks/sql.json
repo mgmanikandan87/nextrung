@@ -1,0 +1,149 @@
+{
+  "skill_id": "sql",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "sql_01",
+      "level": "applied",
+      "q": "students(id, name) has 4 rows: 1 Asha, 2 Ravi, 3 Meena, 4 Kiran. fees(student_id, amount) has rows (1, 5000), (1, 2000), (3, 4000).\nHow many rows does this return?\n\nSELECT s.name, f.amount\nFROM students s LEFT JOIN fees f ON f.student_id = s.id;",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explain": "LEFT JOIN keeps every student: Asha appears twice (two fee rows), Meena once, and Ravi and Kiran once each with NULL amount, so 5 rows."
+    },
+    {
+      "id": "sql_02",
+      "level": "applied",
+      "q": "orders(city, amount): (Pune, 300), (Pune, 500), (Nagpur, 200), (Nagpur, 100), (Indore, 900).\nWhat does this return?\n\nSELECT city, SUM(amount) AS total\nFROM orders\nGROUP BY city\nHAVING SUM(amount) > 400\nORDER BY total DESC;",
+      "options": [
+        "Indore 900, Pune 800",
+        "Pune 800, Indore 900",
+        "Indore 900, Pune 800, Nagpur 300",
+        "Pune 500, Indore 900"
+      ],
+      "answer": 0,
+      "explain": "HAVING filters groups after aggregation (Nagpur's 300 is dropped), and ORDER BY total DESC puts the larger sum first."
+    },
+    {
+      "id": "sql_03",
+      "level": "basic",
+      "q": "A query needs only customers who placed at least one order in the last 30 days, using the per-row filter first, then a group condition. Which clause order is valid SQL?",
+      "options": [
+        "SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ...",
+        "SELECT ... FROM ... GROUP BY ... WHERE ... HAVING ...",
+        "SELECT ... FROM ... HAVING ... GROUP BY ... WHERE ...",
+        "SELECT ... WHERE ... FROM ... GROUP BY ... HAVING ..."
+      ],
+      "answer": 0,
+      "explain": "WHERE filters rows before grouping, GROUP BY forms the groups, and HAVING filters the groups; the order is fixed in SQL."
+    },
+    {
+      "id": "sql_04",
+      "level": "applied",
+      "q": "emp(name, salary): (A, 40000), (B, 60000), (C, NULL), (D, 50000).\nWhat does this return?\n\nSELECT COUNT(*), COUNT(salary), AVG(salary) FROM emp;",
+      "options": [
+        "4, 3, 50000",
+        "4, 4, 37500",
+        "3, 3, 50000",
+        "4, 3, 37500"
+      ],
+      "answer": 0,
+      "explain": "COUNT(*) counts all rows, but COUNT(salary) and AVG(salary) ignore NULL, so the average is 150000 / 3."
+    },
+    {
+      "id": "sql_05",
+      "level": "applied",
+      "q": "emp(name, city): (A, 'Pune'), (B, NULL), (C, 'Surat').\nHow many rows does this return?\n\nSELECT name FROM emp\nWHERE city != 'Pune' OR city = NULL;",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "Comparing NULL with != or = gives UNKNOWN, which WHERE treats as false, so only C passes; use IS NULL to test for missing values."
+    },
+    {
+      "id": "sql_06",
+      "level": "applied",
+      "q": "Which query returns the products whose price is above the average price of all products?",
+      "options": [
+        "SELECT name FROM products WHERE price > AVG(price);",
+        "SELECT name FROM products WHERE price > (SELECT AVG(price) FROM products);",
+        "SELECT name FROM products GROUP BY name HAVING price > AVG(price);",
+        "SELECT name, AVG(price) FROM products WHERE price > AVG(price);"
+      ],
+      "answer": 1,
+      "explain": "An aggregate cannot be used directly in WHERE; compute the average once in a scalar subquery and compare each row to it."
+    },
+    {
+      "id": "sql_07",
+      "level": "applied",
+      "q": "scores(student, marks): (Asha, 90), (Ravi, 85), (Meena, 90), (Kiran, 70).\nWhat rank does Ravi get?\n\nSELECT student,\n  RANK() OVER (ORDER BY marks DESC) AS rnk\nFROM scores;",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "RANK leaves gaps after ties: Asha and Meena share rank 1, so the next rank is 3 (DENSE_RANK would give 2)."
+    },
+    {
+      "id": "sql_08",
+      "level": "basic",
+      "q": "You want each employee's salary next to the average salary of their department, without collapsing rows. Which is the right tool?",
+      "options": [
+        "AVG(salary) OVER (PARTITION BY dept)",
+        "AVG(salary) with GROUP BY dept",
+        "AVG(salary) in a HAVING clause",
+        "DISTINCT dept, AVG(salary)"
+      ],
+      "answer": 0,
+      "explain": "A window function computes the aggregate per partition while keeping every row; GROUP BY would return one row per department."
+    },
+    {
+      "id": "sql_09",
+      "level": "applied",
+      "q": "Which query finds customers who have never placed an order? Each option completes:\n\nSELECT c.name FROM customers c ...",
+      "options": [
+        "JOIN orders o ON o.customer_id = c.id WHERE o.id IS NULL",
+        "LEFT JOIN orders o ON o.customer_id = c.id WHERE o.id IS NULL",
+        "WHERE c.id != (SELECT customer_id FROM orders)",
+        "LEFT JOIN orders o ON o.customer_id = c.id WHERE o.id = NULL"
+      ],
+      "answer": 1,
+      "explain": "A LEFT JOIN keeps customers with no matching order (their order columns are NULL), and IS NULL is the only correct NULL test."
+    },
+    {
+      "id": "sql_10",
+      "level": "basic",
+      "q": "sales(region, amount) has 6 rows across 3 regions. What is the row count of this result?\n\nSELECT region, COUNT(*) FROM sales GROUP BY region;",
+      "options": [
+        "6",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "GROUP BY returns exactly one row per distinct group, and there are 3 regions."
+    },
+    {
+      "id": "sql_11",
+      "level": "basic",
+      "q": "This query fails to run. Why?\n\nSELECT dept, name, MAX(salary)\nFROM emp\nGROUP BY dept;",
+      "options": [
+        "MAX needs an alias",
+        "name is neither grouped nor aggregated",
+        "GROUP BY must come before FROM",
+        "MAX cannot be used with GROUP BY"
+      ],
+      "answer": 1,
+      "explain": "Every selected column must be in GROUP BY or inside an aggregate, otherwise the database cannot know which name to show for the group."
+    }
+  ]
+}

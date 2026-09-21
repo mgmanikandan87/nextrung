@@ -1,0 +1,149 @@
+{
+  "skill_id": "digital_design_fundamentals",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "digital_design_fundamentals_01",
+      "level": "basic",
+      "q": "A two-input gate has this truth table. Which gate is it?\n\nA B | F\n0 0 | 0\n0 1 | 1\n1 0 | 1\n1 1 | 0",
+      "options": [
+        "NAND",
+        "OR",
+        "XOR",
+        "XNOR"
+      ],
+      "answer": 2,
+      "explain": "Output is 1 only when the inputs differ, which is the exclusive-OR function."
+    },
+    {
+      "id": "digital_design_fundamentals_02",
+      "level": "applied",
+      "q": "F(A,B,C) = sum of minterms (0, 2, 4, 6). After K-map simplification, F equals?",
+      "options": [
+        "C'",
+        "A' + B'",
+        "B'C'",
+        "A'B'"
+      ],
+      "answer": 0,
+      "explain": "Minterms 0, 2, 4, 6 are 000, 010, 100, 110: every one has C = 0, so the whole group reduces to C'."
+    },
+    {
+      "id": "digital_design_fundamentals_03",
+      "level": "applied",
+      "q": "A D flip-flop has its Q' output wired back to its D input and is clocked at 10 MHz. What is the frequency of the signal at Q?",
+      "options": [
+        "Q stays at a constant level",
+        "5 MHz",
+        "10 MHz",
+        "20 MHz"
+      ],
+      "answer": 1,
+      "explain": "Q toggles on every clock edge, so one full period of Q takes two clock periods: the frequency halves."
+    },
+    {
+      "id": "digital_design_fundamentals_04",
+      "level": "applied",
+      "q": "A 3-bit synchronous up counter is at 101. What does it show after 5 more clock pulses?",
+      "options": [
+        "001",
+        "111",
+        "010",
+        "100"
+      ],
+      "answer": 2,
+      "explain": "101 is 5; 5 + 5 = 10, and a 3-bit counter wraps at 8, so 10 mod 8 = 2 = 010."
+    },
+    {
+      "id": "digital_design_fundamentals_05",
+      "level": "applied",
+      "q": "Two flip-flops are connected through logic with 8 ns delay. Flip-flop clock-to-Q is 3 ns and setup time is 2 ns. What is the maximum clock frequency?",
+      "options": [
+        "About 100 MHz",
+        "About 125 MHz",
+        "About 77 MHz",
+        "About 91 MHz"
+      ],
+      "answer": 2,
+      "explain": "The minimum period is clock-to-Q + logic delay + setup = 3 + 8 + 2 = 13 ns, giving 1/13 ns = 76.9 MHz."
+    },
+    {
+      "id": "digital_design_fundamentals_06",
+      "level": "applied",
+      "q": "Flip-flop clock-to-Q is 1 ns, the shortest path between two flip-flops is 0.5 ns, and hold time is 2 ns. Timing analysis reports a violation. Which fix works?",
+      "options": [
+        "Add buffers to delay the data path",
+        "Reduce the clock frequency",
+        "Increase the clock frequency",
+        "Use a flip-flop with longer setup time"
+      ],
+      "answer": 0,
+      "explain": "Data arrives 1.5 ns after the edge but must hold for 2 ns, so this is a hold violation; hold does not depend on clock period, only adding delay on the data path fixes it."
+    },
+    {
+      "id": "digital_design_fundamentals_07",
+      "level": "basic",
+      "q": "A NOR-gate SR latch is driven with S = 1 and R = 1 at the same time. What do Q and Q' show?",
+      "options": [
+        "Both 1",
+        "The previous state is held",
+        "Both 0",
+        "Q = 1, Q' = 0"
+      ],
+      "answer": 2,
+      "explain": "A NOR gate outputs 0 whenever any input is 1, so both outputs go to 0; this is why S = R = 1 is the forbidden input."
+    },
+    {
+      "id": "digital_design_fundamentals_08",
+      "level": "applied",
+      "q": "A Mealy FSM has states S0, S1, S2 with transitions:\nS0: 1 -> S1, 0 -> S0\nS1: 1 -> S1, 0 -> S2\nS2: 1 -> S1 (output 1), 0 -> S0\nAll other transitions output 0. Starting at S0, input 1,1,0,1 is applied. What are the final state and last output?",
+      "options": [
+        "S1, output 0",
+        "S1, output 1",
+        "S2, output 0",
+        "S0, output 0"
+      ],
+      "answer": 1,
+      "explain": "Trace it: S0 -1-> S1 -1-> S1 -0-> S2 -1-> S1 with output 1, so the machine detects the pattern 101."
+    },
+    {
+      "id": "digital_design_fundamentals_09",
+      "level": "applied",
+      "q": "A 1-bit level signal must go from a 100 MHz clock domain to a 33 MHz clock domain. What is the standard way to move it safely?",
+      "options": [
+        "A single AND gate with the 33 MHz clock",
+        "A small capacitor on the wire",
+        "A 2:1 mux selected by the 100 MHz clock",
+        "Two-flop synchroniser clocked by the 33 MHz clock"
+      ],
+      "answer": 3,
+      "explain": "Two back-to-back flip-flops in the receiving domain give any metastability on the first flop a full clock period to settle before the second flop passes it on."
+    },
+    {
+      "id": "digital_design_fundamentals_10",
+      "level": "applied",
+      "q": "A 4-bit ripple counter is built from four T flip-flops, each with 10 ns clock-to-Q delay. Worst case, how long after the clock edge is the full count value valid?",
+      "options": [
+        "40 ns",
+        "20 ns",
+        "10 ns",
+        "160 ns"
+      ],
+      "answer": 0,
+      "explain": "In a ripple counter each stage is clocked by the previous stage's output, so the delays add: 4 x 10 ns = 40 ns."
+    },
+    {
+      "id": "digital_design_fundamentals_11",
+      "level": "basic",
+      "q": "A 4-to-1 multiplexer has inputs I0 = 1, I1 = 0, I2 = 1, I3 = 0 and select lines S1 S0 = 10. What is the output?",
+      "options": [
+        "0",
+        "High impedance",
+        "Depends on the enable pin",
+        "1"
+      ],
+      "answer": 3,
+      "explain": "Select 10 is decimal 2, so the mux passes I2, which is 1."
+    }
+  ]
+}

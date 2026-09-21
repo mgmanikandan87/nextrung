@@ -1,0 +1,149 @@
+{
+  "skill_id": "site_engineering_and_safety",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "site_engineering_and_safety_01",
+      "level": "applied",
+      "q": "Spec for a pumped M25 slab pour: slump 100 mm +/- 25 mm. The transit mixer arrives and the slump cone test reads 150 mm. What do you do?",
+      "options": [
+        "Wait 30 minutes for it to stiffen, then pour",
+        "Hold the truck and reject the batch; it is outside 75-125 mm",
+        "Accept it; a wetter mix pumps more easily",
+        "Add a bag of cement into the drum and accept"
+      ],
+      "answer": 1,
+      "explain": "Slump outside the specified range means the water-cement ratio is not what was designed, so the batch is rejected rather than adjusted on site."
+    },
+    {
+      "id": "site_engineering_and_safety_02",
+      "level": "applied",
+      "q": "A 150 mm concrete cube fails in the compression testing machine at 630 kN. What compressive strength do you record?",
+      "options": [
+        "28 N/mm2",
+        "280 N/mm2",
+        "2.8 N/mm2",
+        "4.2 N/mm2"
+      ],
+      "answer": 0,
+      "explain": "Strength = load / area = 630,000 N / (150 x 150 mm2) = 28 N/mm2, which passes for M25 concrete."
+    },
+    {
+      "id": "site_engineering_and_safety_03",
+      "level": "applied",
+      "q": "A roof slab was cast with PPC (blended cement) in May at a hot, dry site. The contractor wants to stop water curing after 7 days. Per IS 456, is that acceptable?",
+      "options": [
+        "No, at least 10 days for blended cement or hot dry weather",
+        "No, curing must continue for 28 days",
+        "Yes, if the slab looks dry and hard",
+        "Yes, 7 days is the code minimum in all cases"
+      ],
+      "answer": 0,
+      "explain": "IS 456 asks for a minimum of 7 days for OPC in normal conditions but at least 10 days where mineral admixtures or blended cements are used or in hot dry weather."
+    },
+    {
+      "id": "site_engineering_and_safety_04",
+      "level": "applied",
+      "q": "A 12 mm bar in a BBS is bent 300 + 3000 + 300 mm with two 90 degree bends. What cutting length do you enter?",
+      "options": [
+        "3552 mm",
+        "3648 mm",
+        "3576 mm",
+        "3600 mm"
+      ],
+      "answer": 0,
+      "explain": "Deduct 2d for each 90 degree bend: 3600 - 2 x (2 x 12) = 3552 mm; forgetting the deduction over-orders steel on every bar."
+    },
+    {
+      "id": "site_engineering_and_safety_05",
+      "level": "applied",
+      "q": "Steel arrives in 12 m lengths. Approximately how much does one 16 mm dia bar weigh?",
+      "options": [
+        "15.8 kg",
+        "19 kg",
+        "24 kg",
+        "12.6 kg"
+      ],
+      "answer": 1,
+      "explain": "Unit weight = d^2 / 162 kg/m = 256 / 162 = 1.58 kg/m, so a 12 m bar is about 19 kg; this is how site steel reconciliation is done."
+    },
+    {
+      "id": "site_engineering_and_safety_06",
+      "level": "basic",
+      "q": "The site folder has a tender drawing (R0) and a GFC drawing (R2) for the same slab, with different bar spacing. Which one do you build from?",
+      "options": [
+        "Whichever gives closer spacing, to be safe",
+        "GFC R2, the latest issued-for-construction revision",
+        "Tender R0, since the contract was signed on it",
+        "Neither, wait for the consultant to visit"
+      ],
+      "answer": 1,
+      "explain": "Only Good For Construction drawings at their latest revision are built from; tender drawings are for pricing and are superseded."
+    },
+    {
+      "id": "site_engineering_and_safety_07",
+      "level": "basic",
+      "q": "A worker must enter an underground sump to clean out sludge. What must be in place before entry?",
+      "options": [
+        "Helmet, shoes and a toolbox talk are enough",
+        "Verbal go-ahead from the supervisor",
+        "A rope tied to the worker's waist",
+        "Confined-space permit, gas test, and a standby attendant outside"
+      ],
+      "answer": 3,
+      "explain": "A sump is a confined space: the permit-to-work, gas testing for oxygen and toxic gases, and a standby person are mandatory, not optional PPE extras."
+    },
+    {
+      "id": "site_engineering_and_safety_08",
+      "level": "applied",
+      "q": "A slab is 12 m x 8 m x 150 mm thick. What quantity of concrete do you record in the measurement book?",
+      "options": [
+        "1.44 m3",
+        "144 m3",
+        "96 m3",
+        "14.4 m3"
+      ],
+      "answer": 3,
+      "explain": "12 x 8 x 0.15 = 14.4 m3; convert the thickness to metres before multiplying, and 96 is only the area in m2."
+    },
+    {
+      "id": "site_engineering_and_safety_09",
+      "level": "applied",
+      "q": "A 230 mm thick brick wall is 10 m long and 3 m high, with one door opening 1 m x 2.1 m. What brickwork quantity is billed?",
+      "options": [
+        "6.42 m3",
+        "6.90 m3",
+        "27.9 m3",
+        "5.52 m3"
+      ],
+      "answer": 0,
+      "explain": "Net area = 30 - 2.1 = 27.9 m2, times 0.23 m thickness = 6.42 m3; openings are deducted and the answer is in m3, not m2."
+    },
+    {
+      "id": "site_engineering_and_safety_10",
+      "level": "basic",
+      "q": "Which entry belongs in the site daily log and is actually useful when a delay claim comes up later?",
+      "options": [
+        "A list of tomorrow's targets",
+        "Labour count, weather, materials received, work done and instructions received, with times",
+        "Only the safety officer's signature",
+        "Only the total labour count"
+      ],
+      "answer": 1,
+      "explain": "The daily log is the site's evidence record, so it captures what happened, when, with what resources and under whose instruction."
+    },
+    {
+      "id": "site_engineering_and_safety_11",
+      "level": "applied",
+      "q": "Per IS 456 sampling frequency, how many cube samples must be taken for a single 24 m3 pour?",
+      "options": [
+        "1 sample (3 cubes)",
+        "8 samples (24 cubes)",
+        "2 samples (6 cubes)",
+        "3 samples (9 cubes)"
+      ],
+      "answer": 3,
+      "explain": "IS 456 requires 1 sample for 1-5 m3, 2 for 6-15 m3, 3 for 16-30 m3 and 4 for 31-50 m3, each sample being three cubes."
+    }
+  ]
+}

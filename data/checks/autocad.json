@@ -1,0 +1,149 @@
+{
+  "skill_id": "autocad",
+  "version": "2026-09",
+  "items": [
+    {
+      "id": "autocad_01",
+      "level": "applied",
+      "q": "You run OFFSET with distance 5 on a 40 mm diameter circle and click outside the circle. What do you get?",
+      "options": [
+        "A new circle of 30 mm diameter",
+        "A new circle of 50 mm diameter",
+        "A new circle of 45 mm diameter",
+        "A copy of the 40 mm circle moved 5 mm"
+      ],
+      "answer": 1,
+      "explain": "OFFSET moves every point of the circle 5 mm outward, so the radius grows from 20 to 25 and the diameter becomes 50."
+    },
+    {
+      "id": "autocad_02",
+      "level": "applied",
+      "q": "A polar ARRAY of one 8 mm hole with 6 items filling 360 degrees on a 100 mm pitch circle. What is the angle between adjacent holes?",
+      "options": [
+        "30 degrees",
+        "72 degrees",
+        "60 degrees",
+        "45 degrees"
+      ],
+      "answer": 2,
+      "explain": "Six items spread evenly over a full circle sit 360 / 6 = 60 degrees apart."
+    },
+    {
+      "id": "autocad_03",
+      "level": "applied",
+      "q": "A floor plan is drawn full size in millimetres. You need it printed at 1:100 through a layout viewport. What do you set?",
+      "options": [
+        "SCALE the model objects by 0.01",
+        "Plot scale 100:1",
+        "Redraw the plan in centimetres",
+        "Viewport scale 1:100 (ZOOM 1/100XP)"
+      ],
+      "answer": 3,
+      "explain": "Keep the model at 1:1 and let the viewport do the scaling; 1/100XP means one paper unit shows 100 model units."
+    },
+    {
+      "id": "autocad_04",
+      "level": "basic",
+      "q": "Which statement about turning a layer OFF versus FREEZING it is correct?",
+      "options": [
+        "FROZEN locks editing but keeps the objects visible",
+        "OFF deletes the objects; FROZEN only hides them",
+        "Both hide the objects; FROZEN also skips them in regeneration and plotting",
+        "OFF hides the objects; FROZEN only greys them out"
+      ],
+      "answer": 2,
+      "explain": "Off layers are still processed by the drawing; frozen layers are ignored completely, which is faster and safer for plotting."
+    },
+    {
+      "id": "autocad_05",
+      "level": "applied",
+      "q": "A horizontal line crosses a vertical line. You start TRIM, select the vertical line as the cutting edge, then click the right-hand part of the horizontal line. What happens?",
+      "options": [
+        "Both lines are cut into four pieces",
+        "The vertical line is shortened",
+        "The right-hand part of the horizontal line is removed",
+        "Nothing; TRIM needs a closed boundary"
+      ],
+      "answer": 2,
+      "explain": "TRIM deletes the part of the object you click, up to the cutting edge; the cutting edge itself is untouched."
+    },
+    {
+      "id": "autocad_06",
+      "level": "applied",
+      "q": "You have inserted a block named DOOR 30 times. You edit the block definition and add a handle. What happens to the drawing?",
+      "options": [
+        "All 30 instances update to show the handle",
+        "Existing instances stay; only new insertions get the handle",
+        "Only the instance you had selected updates",
+        "A new block DOOR1 is created"
+      ],
+      "answer": 0,
+      "explain": "Every insertion is a reference to one definition, so changing the definition changes all of them at once."
+    },
+    {
+      "id": "autocad_07",
+      "level": "basic",
+      "q": "The model is in millimetres and the viewport is 1:50. Which setting makes dimension text plot at 3 mm high on paper?",
+      "options": [
+        "Set text height to 0.06",
+        "Set DIMSCALE to 1 and dimension in model space",
+        "Set DIMSCALE to 0.02",
+        "Use annotative dimensions, or set DIMSCALE to 50"
+      ],
+      "answer": 3,
+      "explain": "Text drawn in model space shrinks 50 times through the viewport, so it must be scaled up by 50; annotative styles do this automatically."
+    },
+    {
+      "id": "autocad_08",
+      "level": "applied",
+      "q": "In an electrical single-line diagram of a 415 V distribution panel, a single line runs from the transformer to the incoming MCCB. What does that one line represent?",
+      "options": [
+        "All three phases (and neutral) shown as one line",
+        "Only the R phase",
+        "The earth conductor",
+        "A control cable"
+      ],
+      "answer": 0,
+      "explain": "A single-line diagram shows the power path once per circuit; a small slash with a number, if present, tells how many conductors."
+    },
+    {
+      "id": "autocad_09",
+      "level": "applied",
+      "q": "You start LINE at (0,0) and type @100<30 for the next point. Where does the line end?",
+      "options": [
+        "(30, 100)",
+        "About (86.6, 50)",
+        "About (50, 86.6)",
+        "(100, 30)"
+      ],
+      "answer": 1,
+      "explain": "@100<30 is relative polar entry: 100 units at 30 degrees, so x = 100 cos 30 = 86.6 and y = 100 sin 30 = 50."
+    },
+    {
+      "id": "autocad_10",
+      "level": "applied",
+      "q": "You plot a structural drawing with 'Fit to paper' ticked. Why is this a problem on site?",
+      "options": [
+        "All layers are merged",
+        "Lineweights are lost",
+        "Only model space is plotted",
+        "The printed scale is not a standard scale, so it cannot be read with a scale rule"
+      ],
+      "answer": 3,
+      "explain": "Fit to paper picks whatever scale fills the sheet; site engineers need a stated scale like 1:50 to measure from the print."
+    },
+    {
+      "id": "autocad_11",
+      "level": "applied",
+      "q": "You run FILLET with radius 0 and pick two lines that do not meet. What happens?",
+      "options": [
+        "Error: radius must be greater than zero",
+        "Nothing happens",
+        "A tangent arc of default radius is added",
+        "The lines are extended or trimmed to meet at a sharp corner"
+      ],
+      "answer": 3,
+      "explain": "A zero-radius fillet is the quick way to close a corner: both lines are adjusted until they intersect."
+    }
+  ]
+}
