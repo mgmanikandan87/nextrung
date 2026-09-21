@@ -1,12 +1,12 @@
 <title>NextRung</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
 <style>
 :root{
   --bg:#F6F7F4; --surface:#FFFFFF; --ink:#1B2A4A; --ink-2:#4B5768; --ink-3:#7C8797; --line:#DDE1DA;
   --accent:#0E7C6B; --accent-ink:#FFFFFF; --accent-soft:#E3F1EC;
   --grow:#1E7F4F; --grow-soft:#E1F2E7; --steady:#4F6B8F; --steady-soft:#E6ECF4; --shrink:#B7600A; --shrink-soft:#F8E9D8;
   --neg:#A63D2F; --neg-soft:#F6E3DF;
-  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif; --body:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+  --display:"Bricolage Grotesque","Noto Sans Devanagari","Avenir Next","Segoe UI",sans-serif; --body:"IBM Plex Sans","Noto Sans Devanagari","Segoe UI",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
   --bg:#0F151E; --surface:#161E29; --ink:#E7EAF0; --ink-2:#B4BCC8; --ink-3:#7F8A9A; --line:#2A3441;
@@ -21,508 +21,498 @@
   --neg:#E2867A; --neg-soft:#3A2220;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;margin:0}
 a{color:var(--accent)}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-.top .in{max-width:860px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.top .in{max-width:720px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
-.brand small{font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-left:8px}
-nav{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
-nav a{font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:6px 9px;border-radius:6px;white-space:nowrap}
+nav{display:flex;gap:2px;align-items:center}
+nav a,nav button{font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 9px;border-radius:6px;white-space:nowrap;background:none;border:0;font-family:inherit;cursor:pointer}
 nav a.on{background:var(--accent-soft);color:var(--accent)}
 nav a.me{border:1.5px solid var(--accent);color:var(--accent)}
-main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+nav .lang{font-family:var(--mono);font-size:12px;border:1px solid var(--line);color:var(--ink-3)}
+main{max-width:720px;margin:0 auto;padding:22px 16px 64px}
 h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.015em;line-height:1.15;text-wrap:balance;margin:0}
-h1{font-size:clamp(28px,5.5vw,42px);font-weight:700}
-h2{font-size:23px;font-weight:700;margin-top:34px;margin-bottom:12px}
-h3{font-size:18px;font-weight:700;margin-top:18px;margin-bottom:8px}
-h4{font-size:15px;font-weight:700;margin:12px 0 6px}
-p{margin:0 0 12px;max-width:68ch}
-.lead{font-size:18px;color:var(--ink-2);max-width:62ch}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px;border:0;border-radius:8px;padding:11px 16px;cursor:pointer;text-decoration:none;font-family:var(--body)}
+h1{font-size:clamp(28px,6vw,40px);font-weight:700}
+h2{font-size:22px;font-weight:700;margin:30px 0 10px}
+h3{font-size:18px;font-weight:700;margin:16px 0 8px}
+p{margin:0 0 12px;max-width:62ch}
+.lead{font-size:18px;color:var(--ink-2);max-width:56ch}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:17px;border:0;border-radius:10px;padding:14px 20px;cursor:pointer;text-decoration:none;font-family:var(--body);min-height:48px}
 .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
-.btn.sm{padding:7px 11px;font-size:13px}
+.btn.sm{padding:9px 13px;font-size:14px;min-height:40px;border-radius:8px}
+.btn.wide{width:100%}
 .btn:disabled{opacity:.5;cursor:default}
-.btn:focus-visible,.opt:focus-visible,nav a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn:focus-visible,.opt:focus-visible,nav a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .between{justify-content:space-between}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:22px 0}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
-.stat b{display:block;font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.stat span{font-size:13px;color:var(--ink-2)}
-.bars{display:grid;gap:8px;margin:14px 0 6px}
-.bar{display:grid;grid-template-columns:minmax(120px,1.2fr) 3fr;gap:10px;align-items:center;font-size:13px}
-.bar .lbl{color:var(--ink-2);line-height:1.25}
-.bar .trk{display:flex;align-items:center;gap:8px}
-.bar .fill{height:14px;background:var(--accent);border-radius:3px;min-width:2px}
-.bar.dim .fill{background:var(--steady)}
-.bar .val{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.cap{font-size:12px;color:var(--ink-3)}
-.small{font-size:13px;color:var(--ink-2)}
-.pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:999px;white-space:nowrap}
-.pill.growing,.pill.official,.pill.ok{background:var(--grow-soft);color:var(--grow)}
-.pill.steady,.pill.industry,.pill.req{background:var(--steady-soft);color:var(--steady)}
-.pill.shrinking,.pill.media,.pill.pref{background:var(--shrink-soft);color:var(--shrink)}
-.pill.low,.pill.gap{background:var(--neg-soft);color:var(--neg)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin:12px 0}
+.free{display:inline-flex;gap:6px;align-items:center;font-weight:600;color:var(--grow);background:var(--grow-soft);padding:6px 12px;border-radius:999px;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}
 .card.rank{border-left:5px solid var(--accent)}
 .card h3{margin-top:0}
-.reason{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:14px;margin:6px 0}
-.reason .s{font-family:var(--mono);font-weight:500;text-align:right}
-.reason.pos .s{color:var(--grow)} .reason.neg .s{color:var(--neg)}
-.q{max-width:640px}
-.prog{height:6px;background:var(--line);border-radius:3px;margin:14px 0 22px;overflow:hidden}
+.cap{font-size:12px;color:var(--ink-3)}
+.small{font-size:14px;color:var(--ink-2)}
+.pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.growing,.pill.official,.pill.ok{background:var(--grow-soft);color:var(--grow)}
+.pill.steady,.pill.industry,.pill.must{background:var(--steady-soft);color:var(--steady)}
+.pill.shrinking,.pill.media,.pill.good{background:var(--shrink-soft);color:var(--shrink)}
+.pill.low,.pill.gap{background:var(--neg-soft);color:var(--neg)}
+.steps{display:grid;gap:10px;margin:14px 0}
+.step{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.step b{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--mono)}
+.q{max-width:600px}
+.prog{height:6px;background:var(--line);border-radius:3px;margin:12px 0 18px;overflow:hidden}
 .prog i{display:block;height:100%;background:var(--accent);transition:width .25s}
-.opts{display:grid;gap:8px;margin:14px 0}
-.opt{display:flex;align-items:center;gap:12px;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;font:inherit;color:var(--ink);width:100%}
+.opts{display:grid;gap:8px;margin:12px 0}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;font:inherit;color:var(--ink);width:100%;min-height:52px}
 .opt .k{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink-3);flex:0 0 auto}
 .opt.sel{border-color:var(--accent);background:var(--accent-soft)}
 .opt.sel .k{border-color:var(--accent);background:var(--accent)}
 .opt.multi .k{border-radius:5px}
-table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.tw{overflow-x:auto;margin:10px 0 18px;-webkit-overflow-scrolling:touch}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.kv{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
-.kv .eyebrow{margin-bottom:4px}
-.kv b{font-family:var(--mono);font-weight:500;font-size:22px;font-variant-numeric:tabular-nums}
-.kv p{font-size:13px;color:var(--ink-2);margin:6px 0 0}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:8px 0 16px;overflow-x:auto}
+.tabs a{padding:10px 12px;text-decoration:none;color:var(--ink-2);font-weight:500;white-space:nowrap;border-bottom:3px solid transparent}
+.tabs a.on{color:var(--accent);border-color:var(--accent)}
+.ring{display:inline-grid;place-items:center;width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);position:relative;flex:0 0 auto}
+.ring::before{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--surface)}
+.ring b{position:relative;font-family:var(--mono);font-size:20px;font-weight:500}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:8px 0}
+.sk .h{display:flex;gap:10px;align-items:flex-start}
+.sk .st{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;border:2px solid var(--line);color:var(--ink-3);flex:0 0 auto}
+.sk .st.done{background:var(--grow);border-color:var(--grow);color:#fff}
+.sk .n{font-weight:600;font-size:16px}
+.sk .meta{font-size:13px;color:var(--ink-3)}
+.sk .body{margin-top:8px;font-size:14px;color:var(--ink-2)}
+.sk .body b{color:var(--ink)}
+.evf{display:grid;gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.evf .row{gap:8px}
+.jc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:8px 0}
+.jc .t{font-weight:600}.jc .d{font-size:13px;color:var(--ink-3)}
+.mbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:8px 0 6px}
+.mbar i{display:block;height:100%;background:var(--accent)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:13px;padding:4px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
-.chip.f3{border-color:var(--grow);color:var(--grow);font-weight:600}.chip.f2{border-color:var(--accent);color:var(--accent)}.chip.f0{color:var(--ink-3);text-decoration:line-through}
-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:8px 0}
-summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.chip.done{border-color:var(--grow);color:var(--grow);font-weight:600}
+details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:8px 0}
+summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px;min-height:48px;align-items:center}
 summary::after{content:"+";font-family:var(--mono);color:var(--ink-3)}
 details[open] summary::after{content:"–"}
 details .in{padding:0 14px 14px;font-size:14px}
 details h4{margin:10px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 details ul{margin:0;padding-left:18px}
 ul.clean{padding-left:18px;margin:0 0 12px}
-li{margin:3px 0}
-.src{font-size:13px;color:var(--ink-2)}
-.list{display:grid;gap:10px}
-.pathrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+li{margin:4px 0}
+.list{display:grid;gap:8px}
+.pathrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:var(--ink);min-height:56px}
 .pathrow .t{font-weight:600}.pathrow .d{font-size:13px;color:var(--ink-2)}
-.note{border-left:3px solid var(--shrink);padding:8px 12px;background:var(--shrink-soft);border-radius:0 8px 8px 0;font-size:14px;margin:12px 0}
-.ok-note{border-left:3px solid var(--grow);padding:8px 12px;background:var(--grow-soft);border-radius:0 8px 8px 0;font-size:14px;margin:12px 0}
-input,select,textarea{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);max-width:100%}
+.oknote{border-left:3px solid var(--grow);padding:8px 12px;background:var(--grow-soft);border-radius:0 10px 10px 0;font-size:14px;margin:12px 0}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);max-width:100%;min-height:44px}
 label.f{display:grid;gap:4px;font-size:13px;color:var(--ink-2)}
-.ring{display:inline-grid;place-items:center;width:84px;height:84px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);position:relative;flex:0 0 auto}
-.ring::before{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--surface)}
-.ring b{position:relative;font-family:var(--mono);font-size:18px;font-weight:500}
-.skill{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
-.skill .st{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;border:2px solid var(--line);color:var(--ink-3)}
-.skill .st.done{background:var(--grow);border-color:var(--grow);color:#fff}
-.skill .st.prog{border-color:var(--accent);color:var(--accent)}
-.skill .n{font-weight:600}
-.skill .learn{font-size:13px;color:var(--ink-2);margin-top:4px}
-.skill .learn a{margin-right:8px}
-.evf{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.evf input,.evf select{padding:6px 8px;font-size:13px}
-.match{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-.mbar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;min-width:80px}
-.mbar i{display:block;height:100%;background:var(--accent)}
-.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:9;box-shadow:0 6px 24px rgba(0,0,0,.2)}
-footer{max-width:860px;margin:0 auto;padding:16px;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line)}
-@media (max-width:520px){ nav a{padding:6px 7px;font-size:13px} .brand small{display:none} .bar{grid-template-columns:1fr;gap:3px} .skill{grid-template-columns:auto 1fr} .skill .act{grid-column:2} }
+.bars{display:grid;gap:8px;margin:12px 0 6px}
+.bar{display:grid;gap:3px;font-size:13px}
+.bar .trk{display:flex;align-items:center;gap:8px}
+.bar .fill{height:12px;background:var(--accent);border-radius:3px;min-width:2px}
+.bar.dim .fill{background:var(--steady)}
+.bar .val{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.src{font-size:13px;color:var(--ink-2)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.tw{overflow-x:auto;margin:10px 0 18px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:9;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:90vw}
+footer{max-width:720px;margin:0 auto;padding:16px;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line)}
+footer a{color:var(--ink-2)}
+@media (max-width:520px){ nav a,nav button{padding:7px 7px;font-size:13px} }
 @media (prefers-reduced-motion:reduce){ .prog i{transition:none} }
-@media print{ .top,footer,.btn,.evf,.noprint,nav{display:none !important} body{background:#fff;color:#000} main{max-width:none;padding:0} .card,.kv,.skill{break-inside:avoid} a{color:#000;text-decoration:none} .ring{-webkit-print-color-adjust:exact;print-color-adjust:exact} }
+@media print{ .top,footer,.btn,.evf,.noprint,nav,.tabs{display:none !important} body{background:#fff;color:#000} main{max-width:none;padding:0} .card,.sk,.jc{break-inside:avoid} a{color:#000;text-decoration:none} .ring{-webkit-print-color-adjust:exact;print-color-adjust:exact} }
 </style>
 
 <div class="top"><div class="in">
-  <a class="brand" href="#/">NextRung<small>for engineers</small></a>
-  <nav id="nav"><a href="#/quiz" data-r="quiz">Find my direction</a><a href="#/paths" data-r="paths">Paths</a><a href="#/jobs" data-r="jobs">Openings</a><a href="#/evidence" data-r="evidence">Evidence</a><a href="#/about" data-r="about">About</a><a href="#/me" data-r="me" class="me" id="nav-me">Sign in</a></nav>
+  <a class="brand" href="#/">NextRung</a>
+  <nav id="nav"><a href="#/quiz" data-r="quiz" data-t="nav_start"></a><a href="#/paths" data-r="paths" data-t="nav_paths"></a><a href="#/jobs" data-r="jobs" data-t="nav_jobs"></a><a href="#/me" data-r="me" class="me" id="nav-me"></a><button class="lang" id="lang" title="Language"></button></nav>
 </div></div>
 <main id="app"></main>
-<footer>NextRung: open-source, evidence-first career direction for Indian engineering graduates. Numbers refreshed <span id="asof"></span>. Nothing here is a guarantee of a job; it is the best available evidence, with sources.</footer>
+<footer><span data-t="footer"></span> <a href="#/sources" data-t="nav_sources"></a> · <a href="#/about" data-t="nav_about"></a> · <span class="cap"><span data-t="checked"></span> <span id="asof"></span></span></footer>
 
 <script id="data" type="application/json">/*__DATA__*/</script>
 <script>
 const ENDPOINT = '__ENDPOINT__'; // set by deploy/deploy.sh
 const API = /^https:\/\//.test(ENDPOINT) ? ENDPOINT : null;
-const SITE_VERSION = '0.2.0';
+const SITE_VERSION = '0.3.0';
 const D = JSON.parse(document.getElementById('data').textContent);
 const PATHS = D.paths, QS = D.questions.questions, STATS = D.stats, SKILLS = D.skills.skills, JOBS = D.jobs.postings;
-const SBY = Object.fromEntries(STATS.map(s => [s.id, s]));
-const PBY = Object.fromEntries(PATHS.map(p => [p.id, p]));
-const KBY = Object.fromEntries(SKILLS.map(s => [s.id, s]));
+const SBY = Object.fromEntries(STATS.map(s => [s.id, s])), PBY = Object.fromEntries(PATHS.map(p => [p.id, p])), KBY = Object.fromEntries(SKILLS.map(s => [s.id, s]));
 const LABEL = {}; QS.forEach(q => q.options.forEach(o => LABEL[q.field + ':' + o.value] = o.label));
-document.getElementById('asof').textContent = (STATS[0] && STATS[0].as_of) || '';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const clean = s => String(s ?? '').replace(/\s*\(?\b(supply|demand|paths|gap)\.[a-z0-9_.]+\)?/g, '').replace(/\s+([,.;])/g, '$1').replace(/\bdoors\b/g, 'routes').replace(/\bDoors\b/g, 'Routes').replace(/\bdoor\b/g, 'route').replace(/\bDoor\b/g, 'Route');
 const inr = n => { if (n == null) return '—'; const a = Math.abs(n); if (a >= 1e7) return (n/1e7).toFixed(a >= 1e9 ? 0 : 2).replace(/\.00$/,'') + ' crore'; if (a >= 1e5) return (n/1e5).toFixed(a >= 1e6 ? 1 : 2).replace(/\.?0+$/,'') + ' lakh'; return n.toLocaleString('en-IN'); };
 const fmt = s => { if (s.value == null) return '—'; if (s.unit === 'ratio') return (s.value*100).toFixed(Math.abs(s.value) < 0.1 ? 1 : 0) + '%'; if (s.unit === 'INR') return '₹' + inr(s.value); if (s.unit === 'INR per year' || s.unit === 'INR per month') return '₹' + s.value.toLocaleString('en-IN'); if (['people','seats','students','openings'].includes(s.unit)) return inr(s.value); return s.value.toLocaleString('en-IN'); };
-const statLink = id => { const s = SBY[id]; if (!s) return ''; return `<a href="${esc(s.source_url||'#')}" target="_blank" rel="noopener">${esc(s.source_title||id)}</a> <span class="cap">(${esc(s.period)}) <span class="pill ${s.confidence}">${s.confidence}</span></span>`; };
 const ls = { get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }, del(k) { try { localStorage.removeItem(k); } catch (e) {} } };
 let toastT; function toast(m) { let t = document.getElementById('toast'); if (!t) { t = document.createElement('div'); t.id = 'toast'; t.className = 'toast'; document.body.appendChild(t); } t.textContent = m; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 2600); }
+const lc = s => s ? s.charAt(0).toLowerCase() + s.slice(1) : s;
 
-// ---------- state ----------
+// ---------- language ----------
+const STR = {
+  en: { nav_start: 'Start', nav_paths: 'Paths', nav_jobs: 'Jobs', nav_me: 'Me', nav_signin: 'Sign in', nav_sources: 'Sources', nav_about: 'About', footer: 'Free, open-source guidance for engineering students and graduates in India. Not a course, not a job board, not a guarantee.', checked: 'Job ads and numbers checked',
+    free: 'Free. No course. No fees. Ever.', h1: 'Which engineering jobs actually exist for you in 2026, and what to do this week?', lead: '10 questions, 2 minutes. You get your 3 best job routes, a plan for the next 90 days, and the companies hiring freshers like you right now.', start: 'Start (2 minutes)', mine: 'Open my plan', have: 'I already have a plan',
+    how: 'How it works', s1: 'Answer 10 quick questions. No typing.', s2: 'See 3 job routes that are realistic from your college, and why.', s3: 'Get a 90-day plan with free learning and a small proof to make each month.', s4: 'Add proof links. Watch your match with real job ads go up.',
+    why: 'Why we built this (the numbers)', q_of: 'Question {n} of {t}', q_time: 'About 2 minutes. Just tap.', pick: 'Pick up to {n}.', next: 'Next', back: 'Back', show: 'Show my routes', not_sure: 'Why we ask: ',
+    r_title: 'Your 3 best routes', r_lead: 'Ranked by how many fresher jobs actually exist this year, then how well each fits you.', r_why: 'Why this suits you', r_care: 'Careful', r_how: 'See how we ranked this', r_plan: 'Get my 90-day plan', r_rest: 'Other routes, for comparison', r_change: 'Change my answers',
+    trend_growing: 'Jobs: growing', trend_steady: 'Jobs: steady', trend_shrinking: 'Jobs: fewer each year', shrink_line: 'Fewer jobs each year, but still the biggest and most realistic first job from most colleges. Treat it as a two-year start, not the destination.',
+    p_month: 'Month {n}', p_later: 'After 90 days', p_save: 'Save my plan (free, 1 minute)', p_saved: 'Continue my plan', p_preview: 'This is your plan for', p_preview2: 'Month 1 is below. Save it to tick things off and see your match with real job ads.', hours: 'hours', must: 'Must have', good: 'Good to have', show_what: 'What to show', learn: 'Learn free', more: 'more options', add_proof: 'I did this, add proof', proof_link: 'Link to your proof (GitHub, certificate, live project, score screenshot)', proof_note: 'One line (optional)', save: 'Save', cancel: 'Cancel', done: 'Done', remove: 'remove',
+    me_me: 'Me', me_plan: 'Plan', me_jobs: 'Jobs for me', me_settings: 'Settings', ready: 'ready for', musts: 'must-haves done', next_up: 'Next up', continue_: 'Continue my plan', change_path: 'Change route', j_lead: 'Fresher job ads for your route, checked this quarter. You match on the skills we could map; read the ad for the rest.', j_match: 'You have {a} of {b}', j_missing: 'Missing', j_open: 'Open the ad', j_none: 'No ads loaded for this route yet.',
+    si_title: 'Save your plan', si_lead: 'We email you a one-time code. No password. Your answers, plan and proof links are saved so you can come back every week. Nothing goes to companies.', si_email: 'Email', si_send: 'Email me a code', si_code: 'Code from the email', si_go: 'Sign in', si_again: 'Send a new code', si_sent: 'Code sent to',
+    set_profile: 'About you', set_name: 'Your name', set_college: 'College', set_line: 'One line about you (optional)', set_share: 'Share my page', set_pub: 'Make my page public', set_slug: 'your-name', set_pub_note: 'A public page shows your name, route, progress and proof links. Never your email.', set_copy: 'Copy link', set_li: 'Share on LinkedIn', set_post: 'Copy a LinkedIn post', set_report: 'Download my plan (PDF)', set_out: 'Sign out', set_del: 'Delete my data',
+    paths_h: 'The nine routes, ranked by how many fresher jobs exist this year', paths_lead: 'Open any route for pay, must-have skills, whether it is realistic from your college, and who is hiring.', realistic: 'Is it realistic from your college?', pay: 'Fresher pay', jobs_year: 'Jobs a year', musts_h: 'Skills employers ask for', get_plan: 'Get my plan for this route', more_h: 'More about this route', backup: 'Backup route', hiring_h: 'Companies and programmes hiring freshers', ads_h: 'Fresher job ads this quarter', two_year: 'Two-year plan', project: 'The one project to be able to explain for 30 minutes', ai_h: 'What AI changed in this work', rules_h: 'How we score this route', sources_h: 'Sources',
+    this_week: 'This week', about: 'about', hours_week: 'hours a week', skills_n: 'skills', first_proof: 'Your progress ring appears after your first proof. Start with the one item above.', may_closed: 'may be closed',
+    jobs_h: 'Fresher job ads and notifications, mapped to skills', jobs_lead: 'Checked {d}. Ads close; always open the ad. This is a picture of what employers ask for, refreshed every quarter.', filter: 'Filter by company, city, skill', all_routes: 'All routes', asks: 'Asks for', posted: 'Posted', notif: 'Notification' },
+  hi: { nav_start: 'शुरू करें', nav_paths: 'रास्ते', nav_jobs: 'नौकरियाँ', nav_me: 'मेरा', nav_signin: 'साइन इन', nav_sources: 'स्रोत', nav_about: 'हमारे बारे में', footer: 'भारत के इंजीनियरिंग छात्रों और ग्रेजुएट्स के लिए मुफ्त, ओपन-सोर्स मार्गदर्शन। न कोर्स, न जॉब बोर्ड, न कोई गारंटी।', checked: 'विज्ञापन और आँकड़े जाँचे गए',
+    free: 'मुफ्त। कोई कोर्स नहीं। कोई फीस नहीं। कभी नहीं।', h1: '2026 में आपके लिए कौन सी इंजीनियरिंग नौकरियाँ सच में हैं, और इस हफ्ते क्या करें?', lead: '10 सवाल, 2 मिनट। आपको मिलेंगे आपके 3 सबसे अच्छे रास्ते, अगले 90 दिनों का प्लान, और वे कंपनियाँ जो अभी आप जैसे फ्रेशर्स को ले रही हैं।', start: 'शुरू करें (2 मिनट)', mine: 'मेरा प्लान खोलें', have: 'मेरे पास पहले से प्लान है',
+    how: 'यह कैसे काम करता है', s1: '10 छोटे सवालों के जवाब दें। टाइप नहीं करना।', s2: 'देखें 3 रास्ते जो आपके कॉलेज से सच में संभव हैं, और क्यों।', s3: '90 दिन का प्लान पाएँ, मुफ्त सीखने के लिंक और हर महीने एक छोटा सबूत।', s4: 'सबूत के लिंक जोड़ें। असली नौकरी विज्ञापनों से अपना मेल बढ़ते देखें।',
+    why: 'हमने यह क्यों बनाया (आँकड़े)', q_of: 'सवाल {n} / {t}', q_time: 'करीब 2 मिनट। बस टैप करें।', pick: '{n} तक चुनें।', next: 'आगे', back: 'पीछे', show: 'मेरे रास्ते दिखाएँ', not_sure: 'हम क्यों पूछते हैं: ',
+    r_title: 'आपके 3 सबसे अच्छे रास्ते', r_lead: 'पहले इस साल कितनी फ्रेशर नौकरियाँ सच में हैं, फिर आपसे कितना मेल खाता है।', r_why: 'यह आपके लिए क्यों', r_care: 'ध्यान रखें', r_how: 'हमने रैंक कैसे किया', r_plan: 'मेरा 90 दिन का प्लान', r_rest: 'बाकी रास्ते, तुलना के लिए', r_change: 'जवाब बदलें',
+    trend_growing: 'नौकरियाँ: बढ़ रही हैं', trend_steady: 'नौकरियाँ: स्थिर', trend_shrinking: 'नौकरियाँ: हर साल कम', shrink_line: 'हर साल नौकरियाँ कम हो रही हैं, फिर भी ज़्यादातर कॉलेजों से यह सबसे बड़ा और सबसे संभव पहला काम है। इसे दो साल की शुरुआत मानें, मंज़िल नहीं।',
+    p_month: 'महीना {n}', p_later: '90 दिन के बाद', p_save: 'मेरा प्लान सेव करें (मुफ्त, 1 मिनट)', p_saved: 'मेरा प्लान जारी रखें', p_preview: 'यह आपका प्लान है:', p_preview2: 'महीना 1 नीचे है। सेव करें ताकि आप टिक कर सकें और असली विज्ञापनों से मेल देख सकें।', hours: 'घंटे', must: 'ज़रूरी', good: 'अच्छा हो', show_what: 'क्या दिखाना है', learn: 'मुफ्त सीखें', more: 'और विकल्प', add_proof: 'मैंने कर लिया, सबूत जोड़ें', proof_link: 'सबूत का लिंक (GitHub, सर्टिफिकेट, लाइव प्रोजेक्ट, स्कोर स्क्रीनशॉट)', proof_note: 'एक लाइन (वैकल्पिक)', save: 'सेव', cancel: 'रद्द', done: 'हो गया', remove: 'हटाएँ',
+    me_me: 'मेरा', me_plan: 'प्लान', me_jobs: 'मेरी नौकरियाँ', me_settings: 'सेटिंग', ready: 'तैयार:', musts: 'ज़रूरी स्किल पूरे', next_up: 'अगला', continue_: 'प्लान जारी रखें', change_path: 'रास्ता बदलें', j_lead: 'आपके रास्ते के फ्रेशर विज्ञापन, इस तिमाही जाँचे गए। मेल उन स्किल पर है जो हम पहचान सके; बाकी के लिए विज्ञापन पढ़ें।', j_match: 'आपके पास {a} / {b}', j_missing: 'कमी', j_open: 'विज्ञापन खोलें', j_none: 'इस रास्ते के विज्ञापन अभी नहीं हैं।',
+    si_title: 'अपना प्लान सेव करें', si_lead: 'हम ईमेल पर एक बार का कोड भेजते हैं। पासवर्ड नहीं। आपके जवाब, प्लान और सबूत सेव रहते हैं ताकि आप हर हफ्ते लौट सकें। कंपनियों को कुछ नहीं जाता।', si_email: 'ईमेल', si_send: 'कोड भेजें', si_code: 'ईमेल से कोड', si_go: 'साइन इन', si_again: 'नया कोड भेजें', si_sent: 'कोड भेजा गया:',
+    set_profile: 'आपके बारे में', set_name: 'आपका नाम', set_college: 'कॉलेज', set_line: 'अपने बारे में एक लाइन (वैकल्पिक)', set_share: 'मेरा पेज शेयर करें', set_pub: 'मेरा पेज सार्वजनिक करें', set_slug: 'aapka-naam', set_pub_note: 'सार्वजनिक पेज पर आपका नाम, रास्ता, प्रगति और सबूत लिंक दिखते हैं। ईमेल कभी नहीं।', set_copy: 'लिंक कॉपी', set_li: 'LinkedIn पर शेयर', set_post: 'LinkedIn पोस्ट कॉपी', set_report: 'मेरा प्लान डाउनलोड (PDF)', set_out: 'साइन आउट', set_del: 'मेरा डेटा हटाएँ',
+    paths_h: 'नौ रास्ते, इस साल की फ्रेशर नौकरियों के हिसाब से', paths_lead: 'किसी भी रास्ते को खोलें: सैलरी, ज़रूरी स्किल, आपके कॉलेज से संभव है या नहीं, और कौन ले रहा है।', realistic: 'आपके कॉलेज से संभव है?', pay: 'फ्रेशर सैलरी', jobs_year: 'नौकरियाँ प्रति साल', musts_h: 'कंपनियाँ कौन से स्किल माँगती हैं', get_plan: 'इस रास्ते का मेरा प्लान', more_h: 'इस रास्ते के बारे में और', backup: 'बैकअप रास्ता', hiring_h: 'फ्रेशर लेने वाली कंपनियाँ और प्रोग्राम', ads_h: 'इस तिमाही के फ्रेशर विज्ञापन', two_year: 'दो साल का प्लान', project: 'वह एक प्रोजेक्ट जिसे 30 मिनट समझा सकें', ai_h: 'AI ने इस काम में क्या बदला', rules_h: 'हम इस रास्ते को कैसे स्कोर करते हैं', sources_h: 'स्रोत',
+    this_week: 'इस हफ्ते', about: 'करीब', hours_week: 'घंटे प्रति हफ्ता', skills_n: 'स्किल', first_proof: 'पहला सबूत जोड़ते ही आपकी प्रगति दिखेगी। ऊपर वाले एक काम से शुरू करें।', may_closed: 'शायद बंद',
+    jobs_h: 'फ्रेशर विज्ञापन और नोटिफिकेशन, स्किल से जोड़े हुए', jobs_lead: '{d} को जाँचे गए। विज्ञापन बंद होते हैं; हमेशा विज्ञापन खोलें। यह तस्वीर है कि कंपनियाँ क्या माँगती हैं, हर तिमाही ताज़ा।', filter: 'कंपनी, शहर, स्किल से छानें', all_routes: 'सभी रास्ते', asks: 'माँगता है', posted: 'पोस्ट', notif: 'नोटिफिकेशन' }
+};
+let LANG = ls.get('nr.lang', 'en'); if (!STR[LANG]) LANG = 'en';
+const t = (k, v) => { let s = (STR[LANG] && STR[LANG][k]) ?? STR.en[k] ?? k; if (v) for (const [a, b] of Object.entries(v)) s = s.replace('{' + a + '}', b); return s; };
+const ql = q => (LANG === 'hi' && q.prompt_hi) ? q.prompt_hi : q.prompt;
+const ol = o => (LANG === 'hi' && o.label_hi) ? o.label_hi : o.label;
+function applyChrome() { document.querySelectorAll('[data-t]').forEach(e => { e.textContent = t(e.dataset.t); }); document.getElementById('lang').textContent = LANG === 'hi' ? 'EN' : 'हिं'; document.getElementById('asof').textContent = D.jobs.seen_on; document.documentElement.lang = LANG; setNavMe(); }
+document.getElementById('lang').addEventListener('click', () => { LANG = LANG === 'hi' ? 'en' : 'hi'; ls.set('nr.lang', LANG); applyChrome(); route(); });
+
+// ---------- state, api, events ----------
 let answers = ls.get('nr.answers', {}) || {};
 const saveAnswers = () => ls.set('nr.answers', answers);
-let auth = ls.get('nr.auth', null);
-let me = null;            // {user, evidence}
+let auth = ls.get('nr.auth', null), me = null;
 const signedIn = () => !!(auth && auth.id_token);
-
+let SID = ls.get('nr.sid', null); if (!SID) { SID = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); ls.set('nr.sid', SID); }
+function track(event, props) { if (!API) return; try { fetch(API + 'events', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ sid: SID, event, props: props || {}, lang: LANG, site_version: SITE_VERSION }), keepalive: true }).catch(() => {}); } catch (e) {} }
 async function api(path, opts = {}, retry = true) {
-  if (!API) throw new Error('This copy of the site has no backend configured.');
-  const h = { 'content-type': 'application/json' };
-  if (signedIn()) h['authorization'] = 'Bearer ' + auth.id_token;
+  if (!API) throw new Error('This copy of the site has no backend.');
+  const h = { 'content-type': 'application/json' }; if (signedIn()) h['authorization'] = 'Bearer ' + auth.id_token;
   const r = await fetch(API + path.replace(/^\//, ''), { method: opts.method || 'GET', headers: h, body: opts.body ? JSON.stringify(opts.body) : undefined });
   if (r.status === 401 && signedIn() && retry && auth.refresh_token) {
     const rr = await fetch(API + 'auth/refresh', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ refresh_token: auth.refresh_token }) });
     if (rr.ok) { const j = await rr.json(); auth.id_token = j.id_token; ls.set('nr.auth', auth); return api(path, opts, false); }
     signOut(); throw new Error('Please sign in again.');
   }
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(j.error || ('HTTP ' + r.status));
-  return j;
+  const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.error || ('HTTP ' + r.status)); return j;
 }
 function signOut() { auth = null; me = null; ls.del('nr.auth'); setNavMe(); }
-function setNavMe() { const a = document.getElementById('nav-me'); a.textContent = signedIn() ? 'My standing' : 'Sign in'; }
+function setNavMe() { const a = document.getElementById('nav-me'); if (a) a.textContent = signedIn() ? t('nav_me') : t('nav_signin'); }
 async function loadMe() { if (!signedIn()) return null; me = await api('me'); return me; }
+async function flushPending() { const p = ls.get('nr.pending', null); if (!p || !signedIn()) return; try { await api('me', { method: 'PUT', body: p }); ls.del('nr.pending'); } catch (e) { toast(e.message); } }
 
-// ---------- matcher ----------
-function score(path, a) {
-  const hits = [];
-  for (const r of path.fit_rules) { const v = a[r.field]; if (v == null) continue; const m = Array.isArray(v) ? v.includes(r.value) : String(v) === String(r.value); if (m) hits.push(r); }
-  return { path, total: path.base_score + hits.reduce((s, r) => s + r.score, 0), hits: hits.sort((x, y) => y.score - x.score) };
-}
+// ---------- matcher and plan (unchanged logic) ----------
+function score(path, a) { const hits = []; for (const r of path.fit_rules) { const v = a[r.field]; if (v == null) continue; const m = Array.isArray(v) ? v.includes(r.value) : String(v) === String(r.value); if (m) hits.push(r); } return { path, total: path.base_score + hits.reduce((s, r) => s + r.score, 0), hits: hits.sort((x, y) => y.score - x.score) }; }
 const rank = a => PATHS.map(p => score(p, a)).sort((x, y) => y.total - x.total);
-function profileLine(a) { const parts = []; if (a.branch) parts.push(LABEL['branch:' + a.branch]); if (a.college_tier) parts.push('tier-' + a.college_tier + ' college'); if (a.region) parts.push(LABEL['region:' + a.region].split(' (')[0]); if (a.relocation) parts.push(LABEL['relocation:' + a.relocation].replace(/^Only /, 'only ').replace(/^Anywhere/, 'anywhere')); return parts.join(', '); }
-function explain(r, i) {
-  const pos = r.hits.filter(h => h.score > 0).slice(0, 2).map(h => h.reason.replace(/\.$/, ''));
-  const neg = r.hits.filter(h => h.score < 0)[0];
-  let t = `${r.path.name} ranks ${['first','second','third'][i] || (i+1)+'th'}`;
-  t += pos.length ? ` because ${pos.join('; and ')}.` : ` mainly on the size of its door this year.`;
-  if (neg) t += ` Watch out: ${neg.reason.replace(/\.$/, '')}.`;
-  const fb = PBY[r.path.fallback_path_id]; if (fb) t += ` Fallback that shares most of the preparation: ${fb.name}.`;
-  return t;
-}
-
-// ---------- standing: readiness, gap, plan, job match ----------
-function readiness(path, ev) {
-  const sk = path.skills || []; const tot = sk.reduce((s, x) => s + x.weight, 0) || 1;
-  const have = sk.filter(x => ev[x.id]).reduce((s, x) => s + x.weight, 0);
-  const req = sk.filter(x => x.level === 'required'); const reqHave = req.filter(x => ev[x.id]).length;
-  return { pct: Math.round(have / tot * 100), req: req.length, reqHave, total: sk.length, have: sk.filter(x => ev[x.id]).length };
-}
+function readiness(path, ev) { const sk = path.skills || []; const tot = sk.reduce((s, x) => s + x.weight, 0) || 1; const have = sk.filter(x => ev[x.id]).reduce((s, x) => s + x.weight, 0); const req = sk.filter(x => x.level === 'required'); return { pct: Math.round(have / tot * 100), req: req.length, reqHave: req.filter(x => ev[x.id]).length, total: sk.length, have: sk.filter(x => ev[x.id]).length }; }
 function gapOf(path, ev) { return (path.skills || []).filter(x => !ev[x.id]).sort((a, b) => (a.level === b.level ? b.weight - a.weight : a.level === 'required' ? -1 : 1)); }
-function plan(path, ev) {
-  const gap = gapOf(path, ev); const sprints = [[], [], []]; const later = []; const cap = 90; const used = [0, 0, 0];
-  for (const g of gap) { const s = KBY[g.id]; if (!s) continue; const h = Math.min(...s.learning.map(l => l.hours || 20)); let placed = false;
-    for (let i = 0; i < 3; i++) { if (used[i] + h <= cap || sprints[i].length === 0) { sprints[i].push({ ...g, hours: h }); used[i] += h; placed = true; break; } }
-    if (!placed) later.push({ ...g, hours: h }); }
-  return { sprints, later, used };
-}
-function jobMatch(job, ev) { const m = job.requirements.filter(r => r.skill_id); const met = m.filter(r => ev[r.skill_id]); return { mapped: m.length, met: met.length, missing: m.filter(r => !ev[r.skill_id]), unmapped: job.requirements.length - m.length, pct: m.length ? Math.round(met.length / m.length * 100) : 0 }; }
+function plan(path, ev) { const gap = gapOf(path, ev); const months = [[], [], []], later = [], used = [0, 0, 0]; for (const g of gap) { const s = KBY[g.id]; if (!s) continue; const h = Math.min(...s.learning.map(l => l.hours || 20)); const item = { ...g, hours: h }; let placed = false; if (g.level === 'required') { for (let i = 0; i < 3; i++) { if (months[i].length < 3 && (used[i] + h <= 30 || months[i].length === 0)) { months[i].push(item); used[i] += h; placed = true; break; } } } if (!placed) later.push(item); } return { months, later, used, weekly: Math.ceil((used[0] || 0) / 4) }; }
+function jobMatch(job, ev) { const seen = new Set(); const m = job.requirements.filter(r => r.skill_id && !seen.has(r.skill_id) && seen.add(r.skill_id)); const met = m.filter(r => ev[r.skill_id]); return { mapped: m.length, met: met.length, missing: m.filter(r => !ev[r.skill_id]), other: job.requirements.filter(r => !r.skill_id).length, pct: m.length ? Math.round(met.length / m.length * 100) : 0 }; }
+const trend = p => `<span class="pill ${p.door_state}">${t('trend_' + p.door_state)}</span>`;
+function whyLine(r) { const pos = r.hits.filter(h => h.score > 0).slice(0, 2).map(h => lc(h.reason.replace(/\.$/, ''))); return pos.length ? pos.join('; ' + (LANG === 'hi' ? 'और ' : 'and ')) + '.' : clean(r.path.tagline); }
+function careLine(r) { const neg = r.hits.filter(h => h.score < 0)[0]; if (neg) return neg.reason; if (r.path.door_state === 'shrinking') return t('shrink_line'); const k = answers.college_tier ? 'tier' + answers.college_tier : 'tier3'; return clean((r.path.tiers_realistic[k] || '').split(/(?<=\.)\s/)[0]); }
 
 // ---------- views ----------
 const app = document.getElementById('app');
 function setNav(r) { document.querySelectorAll('#nav a').forEach(x => x.classList.toggle('on', x.dataset.r === r)); setNavMe(); }
 
 function home() {
-  setNav('');
-  const g = SBY['supply.aishe.btech_outturn.2023_24'], fy24 = SBY['supply.teamlease.it_fresher_hiring.fy24'], gccF = SBY['demand.gcc.fresher_share.2025'];
-  const bars = [['B.E./B.Tech graduates a year', 820000, false], ['Employable, India Skills Report 2026 (70%)', 575000, true], ['Employable, Mercer-Mettl 2025 (42.6%)', 350000, true], ['IT services freshers hired, FY24', 160000, false], ['Top-5 IT firms fresher plans, FY27', 70000, false], ['GCC entry-level jobs a year (to 2030)', 20000, false], ['Government / PSU engineer posts a year', 10000, false]];
+  setNav(''); track('start');
+  const bars = [['B.E./B.Tech graduates a year', 820000, false], ['Employable, India Skills Report 2026 (70%)', 575000, true], ['Employable, Mercer-Mettl 2025 (42.6%)', 350000, true], ['IT services freshers hired, FY24', 160000, false], ['Top-5 IT firms fresher plans, FY27', 70000, false], ['MNC India offices (GCC) entry-level jobs a year', 20000, false], ['Government / PSU engineer posts a year', 10000, false]];
   app.innerHTML = `
-  <div class="eyebrow">For final-year students and recent graduates, every branch</div>
-  <h1>The first rung of the ladder is gone. Here is your next one.</h1>
-  <p class="lead" style="margin-top:14px">AI agents now do the routine work freshers were hired for, and IT services, the door most of India's engineers were told to walk through, is closing. NextRung shows you where you stand against what employers are asking for right now, and the shortest evidence-based route to the next rung.</p>
-  <div class="row" style="margin:18px 0 8px"><a class="btn" href="#/quiz">Find my direction</a><a class="btn ghost" href="#/${signedIn() ? 'me' : 'signin'}">${signedIn() ? 'Open my standing' : 'I have an account'}</a></div>
-  <div class="stats">
-    <div class="stat"><b>${inr(g.value)}</b><span>engineering degree holders a year (AISHE 2023-24)</span></div>
-    <div class="stat"><b>${inr(fy24.value)}</b><span>IT services fresher hires in FY24, down from 4 lakh in FY22</span></div>
-    <div class="stat"><b>${(gccF.value*100)|0}%</b><span>fresher share of GCC hiring in 2025, from 28% in 2024</span></div>
-    <div class="stat"><b>${JOBS.length}</b><span>fresher openings mapped to ${SKILLS.length} skills this quarter</span></div>
-  </div>
-  <h2>How it works</h2>
-  <div class="grid3">
-    <div class="kv"><div class="eyebrow">1. Direction</div><p style="font-size:14px;margin:0">Ten questions. Nine paths ranked on realism (how many fresher seats the door has this year) plus fit. Every point explained.</p></div>
-    <div class="kv"><div class="eyebrow">2. Standing</div><p style="font-size:14px;margin:0">Your readiness for a path is what you can prove: repos, deployed projects, certificates, scores. Compared against what fresher postings asked for this quarter.</p></div>
-    <div class="kv"><div class="eyebrow">3. Next rung</div><p style="font-size:14px;margin:0">The gap becomes a 90-day plan with free-first learning and a proof of done for each skill. Tick it off with evidence; your match with each employer updates.</p></div>
-  </div>
-  <h2>Supply versus the doors</h2>
-  <p class="cap">People per year. Each bar is an independent estimate from the source named; they are not a funnel of the same people.</p>
-  <div class="bars">${bars.map(b => `<div class="bar ${b[2]?'dim':''}"><div class="lbl">${esc(b[0])}</div><div class="trk"><div class="fill" style="width:${(b[1]/820000*100).toFixed(1)}%"></div><span class="val">${inr(b[1])}</span></div></div>`).join('')}</div>
-  <p class="cap">Sources on the <a href="#/evidence">evidence page</a>. It is a rules engine, not a chatbot: every ranking can be explained back to you, and the rules are on each path page.</p>`;
+    <div class="free">✓ ${esc(t('free'))}</div>
+    <h1 style="margin-top:14px">${esc(t('h1'))}</h1>
+    <p class="lead" style="margin-top:12px">${esc(t('lead'))}</p>
+    <div class="row" style="margin:16px 0 6px"><a class="btn" href="#/quiz">${esc(t('start'))}</a><a class="btn ghost" href="#/${signedIn() ? 'me' : 'signin'}">${esc(signedIn() ? t('mine') : t('have'))}</a></div>
+    <p class="cap">${JOBS.length} ${esc(LANG === 'hi' ? 'फ्रेशर विज्ञापन जाँचे गए' : 'fresher job ads checked')} · ${esc(D.jobs.seen_on)} · ${SKILLS.length} ${esc(LANG === 'hi' ? 'स्किल, सब मुफ्त सीखने के लिंक के साथ' : 'skills, each with free learning links')}</p>
+    <h2>${esc(t('how'))}</h2>
+    <div class="steps">${['s1','s2','s3','s4'].map((k, i) => `<div class="step"><b>${i + 1}</b><div>${esc(t(k))}</div></div>`).join('')}</div>
+    <details style="margin-top:22px"><summary>${esc(t('why'))}</summary><div class="in">
+      <p>India produces about 8.2 lakh engineering degree holders a year (AISHE 2023-24). The big IT companies that hired 4 lakh freshers in FY22 hired 1.6 lakh in FY24, and the top five plan under 1 lakh for FY27. AI now does the routine work that used to be a fresher's first job. So at least 6 lakh graduates a year need a route that is not "join TCS". This site shows the real numbers and the real doors.</p>
+      <div class="bars">${bars.map(b => `<div class="bar ${b[2] ? 'dim' : ''}"><div>${esc(b[0])}</div><div class="trk"><div class="fill" style="width:${(b[1] / 820000 * 100).toFixed(1)}%"></div><span class="val">${inr(b[1])}</span></div></div>`).join('')}</div>
+      <p class="cap">People per year; each bar is a separate estimate from the source named on the <a href="#/sources">sources page</a>. The two "employable" bars are two different tests; the truth is between them. A rules engine ranks routes, not a chatbot, so every ranking can be explained back to you.</p></div></details>`;
 }
 
 function quiz(step) {
-  setNav('quiz');
-  step = Math.max(0, Math.min(QS.length - 1, step || 0));
-  const q = QS[step]; const cur = answers[q.field];
+  setNav('quiz'); step = Math.max(0, Math.min(QS.length - 1, step || 0));
+  const q = QS[step], cur = answers[q.field];
   const sel = v => q.type === 'multi' ? (Array.isArray(cur) && cur.includes(v)) : String(cur) === String(v);
+  const prompt = ql(q).replace(/ Pick up to two\.| Pick all that apply\./, '');
   app.innerHTML = `<div class="q">
-    <div class="eyebrow">Question ${step + 1} of ${QS.length}</div>
+    <div class="row between"><div class="eyebrow">${esc(t('q_of', { n: step + 1, t: QS.length }))}</div>${step === 0 ? `<span class="cap">${esc(t('q_time'))}</span>` : ''}</div>
     <div class="prog"><i style="width:${(step / QS.length * 100).toFixed(0)}%"></i></div>
-    <h2 style="margin-top:0">${esc(q.prompt)}</h2>
-    ${q.type === 'multi' ? `<p class="cap">Pick up to ${q.max}.</p>` : ''}
-    <div class="opts">${q.options.map(o => `<button class="opt ${q.type} ${sel(o.value) ? 'sel' : ''}" data-v="${esc(o.value)}" id="opt-${q.id}-${esc(o.value)}"><span class="k"></span><span>${esc(o.label)}</span></button>`).join('')}</div>
-    <div class="row" style="margin-top:18px">${step > 0 ? `<a class="btn ghost" href="#/quiz/${step - 1}">Back</a>` : ''}<a class="btn" id="next" href="#/quiz/${step + 1}">${step === QS.length - 1 ? 'Show my directions' : 'Next'}</a></div></div>`;
+    <h2 style="margin-top:0">${esc(prompt)}</h2>
+    <p class="cap">${q.type === 'multi' ? esc(t('pick', { n: q.max })) + ' ' : ''}${esc(t('not_sure'))}${esc((LANG === 'hi' && q.why_hi) ? q.why_hi : (q.why || ''))}</p>
+    <div class="opts">${q.options.map(o => `<button class="opt ${q.type} ${sel(o.value) ? 'sel' : ''}" data-v="${esc(o.value)}" id="opt-${q.id}-${esc(o.value)}"><span class="k"></span><span>${esc(ol(o))}</span></button>`).join('')}</div>
+    <div class="row" style="margin-top:16px">${step > 0 ? `<a class="btn ghost" href="#/quiz/${step - 1}">${esc(t('back'))}</a>` : ''}<a class="btn" id="next" href="#/quiz/${step + 1}">${step === QS.length - 1 ? esc(t('show')) : esc(t('next'))}</a></div></div>`;
   const next = document.getElementById('next'); if (step === QS.length - 1) next.href = '#/results';
   const refresh = () => { const ok = q.type === 'multi' ? (Array.isArray(answers[q.field]) && answers[q.field].length > 0) : answers[q.field] != null; next.style.opacity = ok ? 1 : .45; next.style.pointerEvents = ok ? 'auto' : 'none'; };
   refresh();
   app.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
     const v = b.dataset.v;
-    if (q.type === 'multi') { let arr = Array.isArray(answers[q.field]) ? [...answers[q.field]] : []; if (v === 'none') arr = arr.includes('none') ? [] : ['none']; else { arr = arr.filter(x => x !== 'none'); arr = arr.includes(v) ? arr.filter(x => x !== v) : [...arr, v].slice(-q.max); } answers[q.field] = arr; app.querySelectorAll('.opt').forEach(x => x.classList.toggle('sel', arr.includes(x.dataset.v))); saveAnswers(); refresh(); return; }
-    answers[q.field] = v; app.querySelectorAll('.opt').forEach(x => x.classList.toggle('sel', x.dataset.v === v)); saveAnswers(); refresh(); setTimeout(() => { location.hash = next.getAttribute('href'); }, 180);
+    if (q.type === 'multi') { let arr = Array.isArray(answers[q.field]) ? [...answers[q.field]] : []; const solo = v === 'none' || v === 'any'; if (solo) arr = arr.includes(v) ? [] : [v]; else { arr = arr.filter(x => x !== 'none' && x !== 'any'); arr = arr.includes(v) ? arr.filter(x => x !== v) : [...arr, v].slice(-q.max); } answers[q.field] = arr; app.querySelectorAll('.opt').forEach(x => x.classList.toggle('sel', arr.includes(x.dataset.v))); saveAnswers(); refresh(); return; }
+    answers[q.field] = v; app.querySelectorAll('.opt').forEach(x => x.classList.toggle('sel', x.dataset.v === v)); saveAnswers(); refresh(); setTimeout(() => { location.hash = next.getAttribute('href'); }, 160);
   }));
 }
 
 function results() {
   setNav('quiz');
   const answered = QS.filter(q => answers[q.field] != null && !(Array.isArray(answers[q.field]) && !answers[q.field].length)).length;
-  if (answered < 4) { app.innerHTML = `<h2 style="margin-top:0">Answer the questions first</h2><p>The ranking needs at least your branch, college, and what you like working on.</p><a class="btn" href="#/quiz">Start</a>`; return; }
+  if (answered < 4) { app.innerHTML = `<h2 style="margin-top:0">${esc(LANG === 'hi' ? 'पहले सवालों के जवाब दें' : 'Answer the questions first')}</h2><a class="btn" href="#/quiz">${esc(t('start'))}</a>`; return; }
+  track('quiz_done', { branch: answers.branch, tier: answers.college_tier });
   const ranked = rank(answers); const top = ranked.slice(0, 3);
+  track('results_viewed', { top: top.map(x => x.path.id).join(',') });
   app.innerHTML = `
-    <div class="eyebrow">Your directions</div>
-    <h1 style="font-size:clamp(26px,5vw,36px)">${esc(profileLine(answers) || 'Your profile')}</h1>
-    <p class="lead">Ranked on realism plus fit. Every point is explained. Save this to your account to turn it into a standing, a 90-day plan and live employer matches.</p>
-    <div class="row noprint" style="margin:8px 0 14px"><button class="btn" id="save-me">${signedIn() ? 'Save and build my plan' : 'Save and build my plan (sign in)'}</button><a class="btn ghost" href="#/quiz/0">Change my answers</a></div>
+    <div class="eyebrow">${esc(t('r_title'))}</div>
+    <p class="lead">${esc(t('r_lead'))}</p>
     ${top.map((r, i) => `<div class="card rank">
-      <div class="row between"><h3>${i + 1}. ${esc(r.path.name)}</h3><span class="pill ${r.path.door_state}">${r.path.door_state} door</span></div>
-      <p style="margin-top:6px">${esc(explain(r, i))}</p>
-      <div class="eyebrow" style="margin-top:12px">Why this score (${r.path.base_score} base ${r.total - r.path.base_score >= 0 ? '+' : '−'} ${Math.abs(r.total - r.path.base_score)} fit = ${r.total})</div>
-      ${r.hits.map(h => `<div class="reason ${h.score > 0 ? 'pos' : 'neg'}"><span class="s">${h.score > 0 ? '+' : ''}${h.score}</span><span>${esc(h.reason)}</span></div>`).join('') || '<p class="cap">No profile rule matched; ranked on door size alone.</p>'}
-      <div class="row" style="margin-top:12px"><a class="btn sm ghost" href="#/path/${r.path.id}">Open the ${esc(r.path.name)} plan</a></div>
+      <div class="row between"><h3>${i + 1}. ${esc(r.path.name)}</h3>${trend(r.path)}</div>
+      <p style="margin:8px 0 4px"><b>${esc(t('r_why'))}:</b> ${esc(whyLine(r))}</p>
+      ${careLine(r) ? `<p class="small" style="margin:0 0 8px"><b>${esc(t('r_care'))}:</b> ${esc(careLine(r))}</p>` : ''}
+      <a class="btn wide" href="#/plan/${r.path.id}" style="margin-top:8px">${esc(t('r_plan'))}</a>
+      <details style="margin-top:10px"><summary class="small">${esc(t('r_how'))}</summary><div class="in">${r.hits.map(h => `<div class="small" style="margin:4px 0"><span style="font-family:var(--mono);color:${h.score > 0 ? 'var(--grow)' : 'var(--neg)'}">${h.score > 0 ? '+' : ''}${h.score}</span> ${esc(h.reason)}</div>`).join('')}<p class="cap" style="margin-top:8px">Base ${r.path.base_score} for how many fresher jobs this route has in 2026, plus your answers. Total ${r.total}. <a href="#/path/${r.path.id}">Full route page</a>.</p></div></details>
     </div>`).join('')}
-    <h2>The rest, for comparison</h2>
-    <div class="list">${ranked.slice(3).map(r => `<a class="pathrow" href="#/path/${r.path.id}"><span><span class="t">${esc(r.path.name)}</span><br><span class="d">${esc(r.path.tagline)}</span></span><span class="match">${r.total}</span></a>`).join('')}</div>
-    <p class="cap" style="margin-top:18px"><a href="#" id="reset">Clear and start over</a></p>`;
-  document.getElementById('reset').addEventListener('click', e => { e.preventDefault(); answers = {}; saveAnswers(); location.hash = '#/quiz'; });
-  document.getElementById('save-me').addEventListener('click', async () => {
-    if (!API) { toast('No backend on this copy of the site'); return; }
-    ls.set('nr.pending', { answers, ranking: ranked.map(x => ({ id: x.path.id, score: x.total })), primary_path: ranked[0].path.id });
-    if (!signedIn()) { location.hash = '#/signin'; return; }
-    await flushPending(); location.hash = '#/me';
-  });
+    <h2>${esc(t('r_rest'))}</h2>
+    <div class="list">${ranked.slice(3).map(r => `<a class="pathrow" href="#/path/${r.path.id}"><span><span class="t">${esc(r.path.name)}</span><br><span class="d">${esc(clean(r.path.tagline))}</span></span>${trend(r.path)}</a>`).join('')}</div>
+    <p class="cap" style="margin-top:16px"><a href="#/quiz/0">${esc(t('r_change'))}</a></p>`;
 }
-async function flushPending() {
-  const p = ls.get('nr.pending', null); if (!p) return;
-  try { await api('me', { method: 'PUT', body: p }); ls.del('nr.pending'); toast('Saved to your account'); } catch (e) { toast('Could not save: ' + e.message); }
+
+function skillCard(g, ev, opts = {}) {
+  const s = KBY[g.id]; if (!s) return ''; const e = ev[g.id]; const l0 = s.learning[0];
+  return `<div class="sk" id="sk-${g.id}"><div class="h"><div class="st ${e ? 'done' : ''}">${e ? '✓' : (opts.n != null ? opts.n : '')}</div>
+    <div style="flex:1"><div class="n">${esc(s.name)}</div><div class="meta"><span class="pill ${g.level === 'required' ? 'must' : 'good'}">${g.level === 'required' ? esc(t('must')) : esc(t('good'))}</span> · ${g.hours} ${esc(t('hours'))}</div></div></div>
+    <div class="body">${esc(s.description)}<br><b>${esc(t('show_what'))}:</b> ${esc(l0.proof_of_done)}
+      ${e ? `<br><b>${esc(t('done'))}:</b> <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a> ${e.note ? '· ' + esc(e.note) : ''}` : ''}</div>
+    <div class="row" style="margin-top:10px">
+      ${!e ? `<a class="btn sm ghost" href="${esc(l0.url)}" target="_blank" rel="noopener" data-learn="${g.id}">${esc(t('learn'))}: ${esc(l0.platform)}</a>` : ''}
+      ${!e && s.learning.length > 1 ? `<details style="flex:1 1 100%;border:0;background:none"><summary class="cap" style="min-height:auto;padding:4px 0">${esc(t('more'))}</summary><div class="in" style="padding:0">${s.learning.slice(1).map(l => `<div><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.platform)}: ${esc(l.title)}${l.free ? '' : ' (paid)'}</a> · ${l.hours} h</div>`).join('')}</div></details>` : ''}
+      ${opts.canAdd && !e ? `<button class="btn sm" data-add="${g.id}">${esc(t('add_proof'))}</button>` : ''}
+      ${opts.canAdd && e ? `<a href="#" class="cap" data-rm="${g.id}">${esc(t('remove'))}</a>` : ''}
+    </div>
+    ${opts.canAdd && !e ? `<form class="evf" data-s="${g.id}" hidden><label class="f">${esc(t('proof_link'))}<input name="url" type="url" required placeholder="https://"></label><div class="row"><select name="type"><option value="repo">GitHub</option><option value="deployed_url">Live project</option><option value="cert">Certificate</option><option value="score">Score</option><option value="document">Document</option><option value="other">Other</option></select><input name="note" placeholder="${esc(t('proof_note'))}" style="flex:1;min-width:140px"></div><div class="row"><button class="btn sm" type="submit">${esc(t('save'))}</button><button class="btn sm ghost" type="button" data-cancel="${g.id}">${esc(t('cancel'))}</button></div></form>` : ''}
+  </div>`;
+}
+function wireSkills(root, onSaved) {
+  root.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => { const f = root.querySelector(`form.evf[data-s="${b.dataset.add}"]`); f.hidden = false; f.querySelector('input[name=url]').focus(); b.hidden = true; }));
+  root.querySelectorAll('[data-cancel]').forEach(b => b.addEventListener('click', () => { const f = root.querySelector(`form.evf[data-s="${b.dataset.cancel}"]`); f.hidden = true; root.querySelector(`[data-add="${b.dataset.cancel}"]`).hidden = false; }));
+  root.querySelectorAll('[data-learn]').forEach(a => a.addEventListener('click', () => track('learn_opened', { skill: a.dataset.learn })));
+  root.querySelectorAll('form.evf').forEach(f => f.addEventListener('submit', async e => { e.preventDefault(); const b = f.querySelector('button[type=submit]'); b.disabled = true; try { await api('me/evidence', { method: 'PUT', body: { skill_id: f.dataset.s, evidence: { type: f.type.value, url: f.url.value.trim(), note: f.note.value.trim() } } }); track('proof_added', { skill: f.dataset.s }); toast(t('done')); onSaved(); } catch (er) { toast(er.message); b.disabled = false; } }));
+  root.querySelectorAll('[data-rm]').forEach(a => a.addEventListener('click', async e => { e.preventDefault(); try { await api('me/evidence', { method: 'PUT', body: { skill_id: a.dataset.rm, remove: true } }); onSaved(); } catch (er) { toast(er.message); } }));
+}
+
+function planPreview(id) {
+  setNav('quiz'); const p = PBY[id]; if (!p) { location.hash = '#/results'; return; }
+  const ranked = Object.keys(answers).length >= 4 ? rank(answers) : null;
+  track('path_picked', { path: id }); track('plan_viewed', { path: id, signed_in: signedIn() });
+  const ev = (me && me.evidence) || {}; const pl = plan(p, ev);
+  app.innerHTML = `
+    <div class="eyebrow">${esc(t('p_preview'))}</div>
+    <div class="row between"><h1 style="font-size:clamp(24px,5vw,34px)">${esc(p.name)}</h1>${trend(p)}</div>
+    <p class="lead" style="margin-top:8px">${esc(t('p_preview2'))}</p>
+    <a class="btn wide" id="save-plan" href="#">${esc(signedIn() ? t('p_saved') : t('p_save'))}</a>
+    ${pl.months[0][0] ? `<div class="card rank"><div class="eyebrow">${esc(t('this_week'))}</div><div style="font-weight:600;font-size:18px">${esc(KBY[pl.months[0][0].id].name)} <span class="cap">· ${esc(t('about'))} ${pl.weekly} ${esc(t('hours_week'))}</span></div><p class="small" style="margin:6px 0 0">${esc(t('show_what'))}: ${esc(KBY[pl.months[0][0].id].learning[0].proof_of_done)}</p></div>` : ''}
+    <h2>${esc(t('p_month', { n: 1 }))} · ${pl.months[0].length} ${esc(t('skills_n'))} · ${esc(t('about'))} ${pl.weekly} ${esc(t('hours_week'))}</h2>
+    ${pl.months[0].map((g, i) => skillCard(g, ev, { n: i + 1 })).join('')}
+    ${[1, 2].map(i => pl.months[i].length ? `<details><summary>${esc(t('p_month', { n: i + 1 }))} · ${pl.months[i].length} skills · ${pl.used[i]} ${esc(t('hours'))}</summary><div class="in">${pl.months[i].map(g => skillCard(g, ev)).join('')}</div></details>` : '').join('')}
+    ${pl.later.length ? `<details><summary>${esc(t('p_later'))} · ${pl.later.length}</summary><div class="in">${pl.later.map(g => skillCard(g, ev)).join('')}</div></details>` : ''}
+    <p class="cap" style="margin-top:16px"><a href="#/path/${p.id}">${esc(t('more_h'))}</a> · <a href="#/results">${esc(t('r_rest'))}</a></p>`;
+  document.getElementById('save-plan').addEventListener('click', async e => { e.preventDefault(); if (!API) { toast('No backend on this copy'); return; }
+    ls.set('nr.pending', { answers, ranking: ranked ? ranked.map(x => ({ id: x.path.id, score: x.total })) : undefined, primary_path: p.id });
+    if (!signedIn()) { track('signin_started'); location.hash = '#/signin'; return; }
+    await flushPending(); location.hash = '#/me/plan'; });
 }
 
 function signin() {
-  setNav('me');
-  if (signedIn()) { location.hash = '#/me'; return; }
-  if (!API) { app.innerHTML = '<h2 style="margin-top:0">Accounts are not enabled on this copy</h2><p>Use the hosted site to save your standing.</p>'; return; }
-  app.innerHTML = `<div class="q">
-    <div class="eyebrow">Sign in</div><h1 style="font-size:clamp(26px,5vw,36px)">Your standing, saved</h1>
-    <p class="lead">No password. We email you a one-time code each time. Your answers, evidence and plan stay with your account so you can come back every week.</p>
-    <div class="card"><div id="step1">
-      <label class="f">Email<input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@college.edu" style="width:100%"></label>
-      <div class="row" style="margin-top:12px"><button class="btn" id="send">Email me a code</button><span class="cap" id="msg1"></span></div></div>
-      <div id="step2" hidden>
-      <p class="small">Code sent to <b id="sent-to"></b>. Check spam if it does not arrive in a minute.</p>
-      <label class="f">Code from the email<input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="12345678" style="width:180px;font-family:var(--mono);font-size:20px;letter-spacing:.2em"></label>
-      <div class="row" style="margin-top:12px"><button class="btn" id="verify">Sign in</button><a href="#" id="again" class="cap">Send a new code</a><span class="cap" id="msg2"></span></div></div>
-    </div>
-    <p class="cap">By signing in you agree that your answers and evidence links are stored to compute your standing. Nothing is sold or shared with recruiters unless you make your page public.</p></div>`;
+  setNav('me'); if (signedIn()) { location.hash = '#/me'; return; }
+  if (!API) { app.innerHTML = '<p>Accounts are not enabled on this copy.</p>'; return; }
+  app.innerHTML = `<div class="q"><div class="eyebrow">${esc(t('si_title'))}</div><p class="lead">${esc(t('si_lead'))}</p>
+    <div class="card"><div id="step1"><label class="f">${esc(t('si_email'))}<input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@gmail.com" style="width:100%"></label>
+      <div class="row" style="margin-top:12px"><button class="btn" id="send">${esc(t('si_send'))}</button><span class="cap" id="msg1"></span></div></div>
+      <div id="step2" hidden><p class="small">${esc(t('si_sent'))} <b id="sent-to"></b></p>
+      <label class="f">${esc(t('si_code'))}<input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="12345678" style="width:200px;font-family:var(--mono);font-size:20px;letter-spacing:.15em"></label>
+      <div class="row" style="margin-top:12px"><button class="btn" id="verify">${esc(t('si_go'))}</button><a href="#" id="again" class="cap">${esc(t('si_again'))}</a><span class="cap" id="msg2"></span></div></div></div></div>`;
   let session = null, email = '';
-  const send = async () => { email = document.getElementById('email').value.trim().toLowerCase(); const m = document.getElementById('msg1'); if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { m.textContent = 'Enter a valid email.'; return; }
-    const b = document.getElementById('send'); b.disabled = true; m.textContent = 'Sending…';
-    try { const j = await api('auth/start', { method: 'POST', body: { email } }); session = j.session; document.getElementById('sent-to').textContent = email; document.getElementById('step1').hidden = true; document.getElementById('step2').hidden = false; document.getElementById('code').focus(); }
-    catch (e) { m.textContent = 'Could not send: ' + e.message; b.disabled = false; } };
-  document.getElementById('send').addEventListener('click', send);
-  document.getElementById('email').addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+  const send = async () => { email = document.getElementById('email').value.trim().toLowerCase(); const m = document.getElementById('msg1'); if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { m.textContent = 'Enter a valid email.'; return; } const b = document.getElementById('send'); b.disabled = true; m.textContent = '…';
+    try { const j = await api('auth/start', { method: 'POST', body: { email } }); session = j.session; document.getElementById('sent-to').textContent = email; document.getElementById('step1').hidden = true; document.getElementById('step2').hidden = false; document.getElementById('code').focus(); } catch (e) { m.textContent = e.message; b.disabled = false; } };
+  document.getElementById('send').addEventListener('click', send); document.getElementById('email').addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
   document.getElementById('again').addEventListener('click', e => { e.preventDefault(); document.getElementById('step2').hidden = true; document.getElementById('step1').hidden = false; document.getElementById('send').disabled = false; document.getElementById('msg1').textContent = ''; });
-  const verify = async () => { const code = document.getElementById('code').value.trim(); const m = document.getElementById('msg2'); const b = document.getElementById('verify'); b.disabled = true; m.textContent = 'Checking…';
-    try { const j = await api('auth/verify', { method: 'POST', body: { email, code, session } }); auth = { id_token: j.id_token, refresh_token: j.refresh_token, email }; ls.set('nr.auth', auth); setNavMe(); await flushPending(); toast('Signed in'); location.hash = '#/me'; }
-    catch (e) { m.textContent = e.message; b.disabled = false; } };
-  document.getElementById('verify').addEventListener('click', verify);
-  document.getElementById('code').addEventListener('keydown', e => { if (e.key === 'Enter') verify(); });
+  const verify = async () => { const code = document.getElementById('code').value.trim(); const m = document.getElementById('msg2'); const b = document.getElementById('verify'); b.disabled = true; m.textContent = '…';
+    try { const j = await api('auth/verify', { method: 'POST', body: { email, code, session } }); auth = { id_token: j.id_token, refresh_token: j.refresh_token, email }; ls.set('nr.auth', auth); setNavMe(); track('signed_in'); const hadPending = !!ls.get('nr.pending', null); await flushPending(); location.hash = hadPending ? '#/me/plan' : '#/me'; } catch (e) { m.textContent = e.message; b.disabled = false; } };
+  document.getElementById('verify').addEventListener('click', verify); document.getElementById('code').addEventListener('keydown', e => { if (e.key === 'Enter') verify(); });
 }
 
-async function mePage() {
-  setNav('me');
+async function mePage(tab) {
+  setNav('me'); tab = tab || 'me';
   if (!signedIn()) { location.hash = '#/signin'; return; }
-  app.innerHTML = '<p class="cap">Loading your standing…</p>';
-  try { await loadMe(); } catch (e) { app.innerHTML = `<p>${esc(e.message)}</p><a class="btn" href="#/signin">Sign in</a>`; return; }
-  await flushPending(); if (ls.get('nr.pending', null) === null && me) { try { me = await api('me'); } catch (e) {} }
+  app.innerHTML = '<p class="cap">…</p>';
+  try { await flushPending(); await loadMe(); } catch (e) { app.innerHTML = `<p>${esc(e.message)}</p><a class="btn" href="#/signin">${esc(t('si_go'))}</a>`; return; }
   const u = me.user, ev = me.evidence || {};
-  if (!u.ranking || !u.ranking.length) {
-    if (Object.keys(answers).length >= 4) { const r = rank(answers); try { await api('me', { method: 'PUT', body: { answers, ranking: r.map(x => ({ id: x.path.id, score: x.total })), primary_path: r[0].path.id } }); me = await api('me'); return mePage(); } catch (e) {} }
-    app.innerHTML = `<h2 style="margin-top:0">Welcome</h2><p>Answer the ten questions once and your standing appears here.</p><a class="btn" href="#/quiz">Find my direction</a> <a class="cap" href="#" id="out">Sign out</a>`; document.getElementById('out').addEventListener('click', e => { e.preventDefault(); signOut(); location.hash = '#/'; }); return;
+  if (!u.primary_path && !(u.ranking && u.ranking.length)) {
+    if (Object.keys(answers).length >= 4) { const r = rank(answers); try { await api('me', { method: 'PUT', body: { answers, ranking: r.map(x => ({ id: x.path.id, score: x.total })), primary_path: r[0].path.id } }); return mePage(tab); } catch (e) {} }
+    app.innerHTML = `<h2 style="margin-top:0">${esc(LANG === 'hi' ? 'स्वागत है' : 'Welcome')}</h2><p>${esc(LANG === 'hi' ? '10 सवालों के जवाब दें, आपका प्लान यहाँ दिखेगा।' : 'Answer the ten questions once and your plan appears here.')}</p><a class="btn" href="#/quiz">${esc(t('start'))}</a>`; return;
   }
-  const rankingP = u.ranking.map(r => PBY[r.id]).filter(Boolean);
-  const primary = PBY[u.primary_path] || rankingP[0];
-  const rd = readiness(primary, ev); const pl = plan(primary, ev); const gap = gapOf(primary, ev);
-  const jobs = JOBS.filter(j => j.path_id === primary.id).map(j => ({ j, m: jobMatch(j, ev) })).sort((a, b) => b.m.pct - a.m.pct || b.m.mapped - a.m.mapped);
-  const pubUrl = u.public && u.public.enabled && u.public.slug ? location.origin + location.pathname + '#/p/' + u.public.slug : null;
-  const skillRow = (g, i) => { const s = KBY[g.id]; if (!s) return ''; const e = ev[g.id];
-    return `<div class="skill" id="sk-${g.id}"><div class="st ${e ? 'done' : ''}">${e ? '✓' : (i != null ? i + 1 : '')}</div>
-      <div><div class="n">${esc(s.name)} <span class="pill ${g.level === 'required' ? 'req' : 'pref'}">${g.level}</span> <span class="cap">${g.hours ? g.hours + ' h' : ''}</span></div>
-      <div class="small">${esc(s.description)}</div>
-      ${e ? `<div class="small">Evidence: <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url || e.type)}</a> ${e.note ? '· ' + esc(e.note) : ''} <a href="#" class="cap rm" data-s="${g.id}">remove</a></div>` :
-        `<div class="learn"><b>Learn:</b> ${s.learning.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.platform)}: ${esc(l.title)}${l.free ? '' : ' (paid)'}</a>`).join('')}<br><b>Proof of done:</b> ${esc(s.learning[0].proof_of_done)}</div>
-        <form class="evf noprint" data-s="${g.id}"><select name="type"><option value="repo">Repo</option><option value="deployed_url">Deployed URL</option><option value="cert">Certificate</option><option value="score">Score</option><option value="document">Document</option><option value="other">Other</option></select><input name="url" type="url" placeholder="https://link to the proof" style="flex:1;min-width:180px" required><input name="note" placeholder="note (optional)" style="min-width:120px"><button class="btn sm" type="submit">Add evidence</button></form>`}
-      </div></div>`; };
-  app.innerHTML = `
-    <div class="row between noprint"><div class="eyebrow">My standing</div><div class="row"><button class="btn sm ghost" id="print">Download report (PDF)</button><a class="cap" href="#" id="out">Sign out</a></div></div>
-    <div class="row between" style="align-items:flex-start;gap:16px">
-      <div style="flex:1;min-width:240px"><h1 style="font-size:clamp(26px,5vw,36px)" id="name-h">${esc(u.name || u.email.split('@')[0])}</h1>
-        <p class="lead" style="margin:6px 0 0">${esc(u.headline || (profileLine(u.answers || {}) || ''))}</p>
-        <form class="evf noprint" id="prof"><input name="name" placeholder="Your name" value="${esc(u.name || '')}"><input name="college" placeholder="College" value="${esc(u.college || '')}"><input name="headline" placeholder="One-line headline" value="${esc(u.headline || '')}" style="flex:1;min-width:200px"><button class="btn sm ghost" type="submit">Save</button></form></div>
-      <div class="row" style="gap:16px">${rankingP.slice(0, 3).map(p => { const r = readiness(p, ev); return `<a href="#" class="pick" data-p="${p.id}" style="text-decoration:none;color:inherit;text-align:center;font-size:12px"><div class="ring" style="--p:${r.pct}"><b>${r.pct}%</b></div><div style="margin-top:4px;max-width:110px">${esc(p.name)}${p.id === primary.id ? ' ★' : ''}</div></a>`; }).join('')}</div>
-    </div>
-    <p class="cap noprint">Tap a ring to make that path your primary. Readiness = weighted share of the path's skills you have evidence for.</p>
-    <div class="grid3" style="margin-top:12px">
-      <div class="kv"><div class="eyebrow">Primary path</div><b style="font-family:var(--body);font-size:17px">${esc(primary.name)}</b><p><span class="pill ${primary.door_state}">${primary.door_state} door</span> · <a href="#/path/${primary.id}">path page</a></p></div>
-      <div class="kv"><div class="eyebrow">Required skills evidenced</div><b>${rd.reqHave} / ${rd.req}</b><p>${rd.reqHave === rd.req ? 'All required skills covered. Now widen with preferred ones.' : 'Employers filter on these first.'}</p></div>
-      <div class="kv"><div class="eyebrow">Best employer match right now</div><b>${jobs.length ? jobs[0].m.met + ' / ' + jobs[0].m.mapped : '—'}</b><p>${jobs.length ? esc(jobs[0].j.company) + ', ' + esc(jobs[0].j.title) : 'No postings loaded for this path yet.'}</p></div>
-    </div>
+  const rankingP = (u.ranking || []).map(r => PBY[r.id]).filter(Boolean);
+  const primary = PBY[u.primary_path] || rankingP[0]; const rd = readiness(primary, ev); const pl = plan(primary, ev); const gap = gapOf(primary, ev);
+  const tabs = `<div class="tabs">${[['me', t('me_me')], ['plan', t('me_plan')], ['jobs', t('me_jobs')], ['settings', t('me_settings')]].map(([k, l]) => `<a href="#/me/${k}" class="${tab === k ? 'on' : ''}">${esc(l)}</a>`).join('')}</div>`;
+  const head = `<div><div class="eyebrow">${esc(u.name || u.email.split('@')[0])}</div><h1 style="font-size:clamp(22px,5vw,30px)">${esc(primary.name)}</h1></div>`;
+  let body = '';
+  if (tab === 'me') {
+    const next = gap[0]; const ns = next && KBY[next.id]; const pubUrl = u.public && u.public.enabled && u.public.slug ? location.origin + location.pathname + '#/p/' + u.public.slug : null;
+    body = `${ns ? `<div class="card rank"><div class="eyebrow">${esc(t('this_week'))}</div><div style="font-weight:600;font-size:18px">${esc(ns.name)} <span class="cap">· ${esc(t('about'))} ${pl.weekly} ${esc(t('hours_week'))}</span></div><p class="small" style="margin:6px 0 10px">${esc(t('show_what'))}: ${esc(ns.learning[0].proof_of_done)}</p><a class="btn wide" href="#/me/plan">${esc(t('continue_'))}</a></div>` : ''}
+      ${rd.have > 0 ? `<div class="card"><div class="row" style="gap:16px;align-items:center"><div class="ring" style="--p:${rd.pct}"><b>${rd.pct}%</b></div><div><div class="small">${esc(t('ready'))} <b>${esc(primary.name)}</b></div><div style="font-family:var(--mono);font-size:22px">${rd.reqHave} / ${rd.req}</div><div class="small">${esc(t('musts'))}</div></div></div></div>` : `<p class="small">${esc(t('first_proof'))}</p>`}
+      ${!ns ? `<div class="oknote">${esc(LANG === 'hi' ? 'इस रास्ते के सभी स्किल के सबूत हैं। अब आवेदन करें।' : 'You have proof for every skill on this route. Go apply.')}</div>` : ''}
+      ${rankingP.length > 1 ? `<details><summary>${esc(t('change_path'))}</summary><div class="in"><div class="list">${rankingP.slice(0, 3).map(p => `<a href="#" class="pathrow pick" data-p="${p.id}"><span><span class="t">${esc(p.name)}${p.id === primary.id ? ' ★' : ''}</span><br><span class="d">${readiness(p, ev).pct}% ${esc(LANG === 'hi' ? 'तैयार' : 'ready')}</span></span>${trend(p)}</a>`).join('')}</div></div></details>` : ''}
+      ${pubUrl ? `<p class="cap">${esc(t('set_share'))}: <a href="${esc(pubUrl)}">${esc(pubUrl)}</a></p>` : ''}`;
+  } else if (tab === 'plan') {
+    const done = (primary.skills || []).filter(x => ev[x.id]);
+    body = `<h2 style="margin-top:6px">${esc(t('p_month', { n: 1 }))} · ${esc(t('about'))} ${pl.weekly} ${esc(t('hours_week'))}</h2>${pl.months[0].map((g, i) => skillCard(g, ev, { n: i + 1, canAdd: true })).join('') || `<p class="small">${esc(t('p_later'))}</p>`}
+      ${[1, 2].map(i => pl.months[i].length ? `<details><summary>${esc(t('p_month', { n: i + 1 }))} · ${pl.months[i].length} · ${pl.used[i]} ${esc(t('hours'))}</summary><div class="in">${pl.months[i].map(g => skillCard(g, ev, { canAdd: true })).join('')}</div></details>` : '').join('')}
+      ${pl.later.length ? `<details><summary>${esc(t('p_later'))} · ${pl.later.length}</summary><div class="in">${pl.later.map(g => skillCard(g, ev, { canAdd: true })).join('')}</div></details>` : ''}
+      ${done.length ? `<details><summary>${esc(t('done'))} · ${done.length}</summary><div class="in">${done.map(g => skillCard(g, ev, { canAdd: true })).join('')}</div></details>` : ''}`;
+  } else if (tab === 'jobs') {
+    const near = j => regionOf(j.location) === (u.answers && u.answers.region) ? 1 : 0;
+    const jobs = JOBS.filter(j => j.path_id === primary.id).map(j => ({ j, m: jobMatch(j, ev) })).sort((a, b) => (rd.have ? (b.m.pct - a.m.pct) : 0) || near(b.j) - near(a.j) || String(b.j.posted_on || '').localeCompare(String(a.j.posted_on || '')));
+    body = `<p class="small">${esc(t('j_lead'))}</p>${jobs.map(({ j, m }) => jobCard(j, rd.have ? m : null)).join('') || `<p class="small">${esc(t('j_none'))}</p>`}`;
+  } else {
+    const pubUrl = u.public && u.public.enabled && u.public.slug ? location.origin + location.pathname + '#/p/' + u.public.slug : null;
+    body = `<h3>${esc(t('set_profile'))}</h3><form class="card" id="prof" style="display:grid;gap:8px"><label class="f">${esc(t('set_name'))}<input name="name" value="${esc(u.name || '')}"></label><label class="f">${esc(t('set_college'))}<input name="college" value="${esc(u.college || '')}"></label><label class="f">${esc(t('set_line'))}<input name="headline" value="${esc(u.headline || '')}"></label><div><button class="btn sm" type="submit">${esc(t('save'))}</button></div></form>
+      <h3>${esc(t('set_share'))}</h3><div class="card"><label class="row" style="gap:8px"><input type="checkbox" id="pub" ${u.public && u.public.enabled ? 'checked' : ''}> ${esc(t('set_pub'))}</label><p class="cap">${esc(t('set_pub_note'))}</p><input id="slug" placeholder="${esc(t('set_slug'))}" value="${esc((u.public && u.public.slug) || '')}" style="font-family:var(--mono);width:100%">
+        ${pubUrl ? `<div class="row" style="margin-top:10px"><button class="btn sm ghost" id="copy">${esc(t('set_copy'))}</button><a class="btn sm" target="_blank" rel="noopener" id="li" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pubUrl)}">${esc(t('set_li'))}</a><button class="btn sm ghost" id="draft">${esc(t('set_post'))}</button></div><p class="cap" style="margin-top:8px"><a href="${esc(pubUrl)}">${esc(pubUrl)}</a></p>` : ''}</div>
+      <div class="row" style="margin-top:16px"><button class="btn sm ghost" id="print">${esc(t('set_report'))}</button><button class="btn sm ghost" id="out">${esc(t('set_out'))}</button></div>
+      <p class="cap" style="margin-top:22px"><a href="#" id="del">${esc(t('set_del'))}</a></p>`;
+  }
+  app.innerHTML = head + tabs + body;
+  wireSkills(app, () => mePage(tab));
+  app.querySelectorAll('.pick').forEach(a => a.addEventListener('click', async e => { e.preventDefault(); try { await api('me', { method: 'PUT', body: { primary_path: a.dataset.p } }); track('path_picked', { path: a.dataset.p, from: 'me' }); mePage('me'); } catch (er) { toast(er.message); } }));
+  app.querySelectorAll('[data-job]').forEach(a => a.addEventListener('click', () => track('job_opened', { id: a.dataset.job })));
+  const prof = document.getElementById('prof'); if (prof) prof.addEventListener('submit', async e => { e.preventDefault(); try { await api('me', { method: 'PUT', body: { name: prof.name.value, college: prof.college.value, headline: prof.headline.value } }); toast(t('done')); mePage('settings'); } catch (er) { toast(er.message); } });
+  const pub = document.getElementById('pub'); if (pub) { const savePub = async () => { try { const j = await api('me/public', { method: 'PUT', body: { enabled: pub.checked, slug: document.getElementById('slug').value.trim() } }); if (j.public.enabled) track('public_on'); mePage('settings'); } catch (er) { toast(er.message); } }; pub.addEventListener('change', savePub); document.getElementById('slug').addEventListener('change', () => { if (pub.checked) savePub(); }); }
+  const cp = document.getElementById('copy'); if (cp) cp.addEventListener('click', () => { navigator.clipboard.writeText(location.origin + location.pathname + '#/p/' + u.public.slug).then(() => toast(t('set_copy'))); track('share_clicked', { how: 'copy' }); });
+  const li = document.getElementById('li'); if (li) li.addEventListener('click', () => track('share_clicked', { how: 'linkedin' }));
+  const dr = document.getElementById('draft'); if (dr) dr.addEventListener('click', () => { const done = (primary.skills || []).filter(x => ev[x.id]).map(x => KBY[x.id].name); const next = gap.slice(0, 2).map(x => KBY[x.id].name); const pubUrl = location.origin + location.pathname + '#/p/' + u.public.slug;
+    const text = `Working toward ${primary.name} the evidence-first way. ${rd.pct}% ready.\n\nProof so far: ${done.length ? done.join(', ') : 'starting this week'}.\nNext 30 days: ${next.join(' and ') || 'widening the plan'}.\n\nMy page: ${pubUrl}\n\n#NextRung #EngineeringGraduates`;
+    navigator.clipboard.writeText(text).then(() => toast(t('set_post'))); track('share_clicked', { how: 'post' }); });
+  const pr = document.getElementById('print'); if (pr) pr.addEventListener('click', () => { track('report_printed'); window.print(); });
+  const out = document.getElementById('out'); if (out) out.addEventListener('click', () => { signOut(); location.hash = '#/'; });
+  const del = document.getElementById('del'); if (del) del.addEventListener('click', async e => { e.preventDefault(); if (!confirm('Delete your saved answers, proof links and public page? This cannot be undone.')) return; try { await api('me', { method: 'DELETE' }); signOut(); location.hash = '#/'; } catch (er) { toast(er.message); } });
+}
 
-    <h2>Your 90-day plan</h2>
-    <p class="small">${gap.length ? `${gap.length} skills to evidence for ${esc(primary.name)}, required first. Three 30-day sprints of about 90 hours each; the rest come after. Add a link when you have the proof; the ring and the employer matches update.` : 'You have evidence for every skill on this path. Go apply, and widen into the fallback path.'}</p>
-    ${pl.sprints.map((s, i) => s.length ? `<h3>Sprint ${i + 1} · days ${i * 30 + 1} to ${(i + 1) * 30} · about ${pl.used[i]} h</h3>${s.map((g, k) => skillRow(g, k)).join('')}` : '').join('')}
-    ${pl.later.length ? `<h3>After day 90</h3>${pl.later.map(g => skillRow(g)).join('')}` : ''}
-    ${(primary.skills || []).filter(x => ev[x.id]).length ? `<h3>Evidenced</h3>${(primary.skills || []).filter(x => ev[x.id]).map(g => skillRow(g)).join('')}` : ''}
-
-    <h2>Where you stand with employers</h2>
-    <p class="small">Fresher postings for ${esc(primary.name)} seen this quarter, matched on the requirements we could map to skills. "Unmapped" are requirements in the posting we could not map (domain words, soft skills); read them on the posting.</p>
-    <div class="tw"><table><thead><tr><th>Employer</th><th>Match</th><th>Missing</th><th>Seen</th></tr></thead><tbody>${jobs.map(({ j, m }) => `<tr><td><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.company)}</a><br><span class="cap">${esc(j.title)} · ${esc(j.location || '')}</span></td><td><span class="match">${m.met}/${m.mapped}</span> <span class="cap">${m.unmapped ? '+' + m.unmapped + ' unmapped' : ''}</span><div class="mbar"><i style="width:${m.pct}%"></i></div></td><td class="small">${m.missing.slice(0, 4).map(r => esc(KBY[r.skill_id] ? KBY[r.skill_id].name : r.text)).join(', ')}${m.missing.length > 4 ? ` +${m.missing.length - 4}` : ''}</td><td class="cap">${esc(j.posted_on || j.seen_on || '')}</td></tr>`).join('') || '<tr><td colspan="4" class="cap">No postings for this path yet.</td></tr>'}</tbody></table></div>
-
-    <h2 class="noprint">Share your standing</h2>
-    <div class="card noprint">
-      <div class="row between"><label class="row" style="gap:8px"><input type="checkbox" id="pub" ${u.public && u.public.enabled ? 'checked' : ''}> Make my page public</label><input id="slug" placeholder="your-name" value="${esc((u.public && u.public.slug) || '')}" style="font-family:var(--mono)"></div>
-      <p class="cap">Public page shows your name, headline, primary path, readiness and evidence links. Never your email or answers beyond branch, tier, year and region.</p>
-      ${pubUrl ? `<div class="row"><input readonly value="${esc(pubUrl)}" style="flex:1;min-width:220px;font-family:var(--mono);font-size:13px" id="puburl"><button class="btn sm ghost" id="copy">Copy link</button><a class="btn sm" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pubUrl)}">Share on LinkedIn</a><button class="btn sm ghost" id="draft">Copy a LinkedIn post</button></div>` : '<p class="small">Turn on public to get a link you can share on LinkedIn.</p>'}
-    </div>
-    <p class="cap noprint"><a href="#" id="del">Delete my account data</a></p>`;
-  document.getElementById('out').addEventListener('click', e => { e.preventDefault(); signOut(); location.hash = '#/'; });
-  document.getElementById('print').addEventListener('click', () => window.print());
-  document.getElementById('prof').addEventListener('submit', async e => { e.preventDefault(); const f = e.target; try { await api('me', { method: 'PUT', body: { name: f.name.value, college: f.college.value, headline: f.headline.value } }); toast('Saved'); mePage(); } catch (er) { toast(er.message); } });
-  app.querySelectorAll('.pick').forEach(a => a.addEventListener('click', async e => { e.preventDefault(); try { await api('me', { method: 'PUT', body: { primary_path: a.dataset.p } }); mePage(); } catch (er) { toast(er.message); } }));
-  app.querySelectorAll('form.evf[data-s]').forEach(f => f.addEventListener('submit', async e => { e.preventDefault(); const b = f.querySelector('button'); b.disabled = true; try { await api('me/evidence', { method: 'PUT', body: { skill_id: f.dataset.s, evidence: { type: f.type.value, url: f.url.value.trim(), note: f.note.value.trim() } } }); toast('Evidence added'); mePage(); } catch (er) { toast(er.message); b.disabled = false; } }));
-  app.querySelectorAll('.rm').forEach(a => a.addEventListener('click', async e => { e.preventDefault(); try { await api('me/evidence', { method: 'PUT', body: { skill_id: a.dataset.s, remove: true } }); mePage(); } catch (er) { toast(er.message); } }));
-  const savePub = async () => { try { const j = await api('me/public', { method: 'PUT', body: { enabled: document.getElementById('pub').checked, slug: document.getElementById('slug').value.trim() } }); toast(j.public.enabled ? 'Public page on' : 'Public page off'); mePage(); } catch (er) { toast(er.message); } };
-  document.getElementById('pub').addEventListener('change', savePub);
-  document.getElementById('slug').addEventListener('change', () => { if (document.getElementById('pub').checked) savePub(); });
-  const cp = document.getElementById('copy'); if (cp) cp.addEventListener('click', () => { navigator.clipboard.writeText(document.getElementById('puburl').value).then(() => toast('Link copied')); });
-  const dr = document.getElementById('draft'); if (dr) dr.addEventListener('click', () => { const done = (primary.skills || []).filter(x => ev[x.id]).map(x => KBY[x.id].name); const next = gap.slice(0, 2).map(x => KBY[x.id].name);
-    const text = `Building toward ${primary.name} in the AI era. Readiness so far: ${rd.pct}%.\n\nEvidenced: ${done.length ? done.join(', ') : 'starting this week'}.\nNext 30 days: ${next.join(' and ') || 'widening the plan'}.\n\nEvidence, not claims. My standing page: ${pubUrl}\n\n#NextRung #EngineeringGraduates #${primary.id.replace(/_/g, '')}`;
-    navigator.clipboard.writeText(text).then(() => toast('Post copied. Paste it on LinkedIn.')); });
-  document.getElementById('del').addEventListener('click', async e => { e.preventDefault(); if (!confirm('Delete your saved answers, evidence and public page? This cannot be undone.')) return; try { await api('me', { method: 'DELETE' }); signOut(); toast('Deleted'); location.hash = '#/'; } catch (er) { toast(er.message); } });
+const regionOf = loc => { const s = String(loc || '').toLowerCase(); if (/bengaluru|bangalore|chennai|hyderabad|karnataka|tamil|telangana|andhra|kerala|kochi|coimbatore|madurai|mysuru|hosur|vizag|visakhapatnam|tirupati/.test(s)) return 'south'; if (/mumbai|pune|maharashtra|gujarat|ahmedabad|surat|vadodara|sanand|dholera|goa|nashik|nagpur/.test(s)) return 'west'; if (/delhi|noida|gurgaon|gurugram|ncr|uttar pradesh|lucknow|kanpur|punjab|chandigarh|haryana|rajasthan|jaipur|uttarakhand|dehradun|himachal|jammu/.test(s)) return 'north'; if (/kolkata|west bengal|odisha|bhubaneswar|bihar|patna|jharkhand|ranchi|assam|guwahati|manipur/.test(s)) return 'east_ne'; if (/bhopal|indore|madhya|chhattisgarh|raipur/.test(s)) return 'central'; return null; };
+const oldAd = j => { if (!j.posted_on || j.source === 'notification') return false; const d = (Date.parse(D.jobs.seen_on) - Date.parse(j.posted_on)) / 86400000; return d > 60; };
+const payLine = j => { if (!j.salary_text) return ''; const s = String(j.salary_text); const nums = (s.match(/\d[\d,]*(?:\.\d+)?/g) || []).map(x => Math.round(parseFloat(x.replace(/,/g, '')))); const low = /unpaid|stipend/i.test(s) || (nums.length && /month/i.test(s) && Math.max(...nums) < 15000); const txt = nums.length ? ('₹' + nums.map(n => n.toLocaleString('en-IN')).join(' to ') + (/month/i.test(s) ? '/month' : /year|annum|lpa/i.test(s) ? '/year' : '')) : (/competitive|industry/i.test(s) ? '' : s.slice(0, 40)); return (txt ? ' · ' + txt : '') + (low ? ` · <span class="pill low">${LANG === 'hi' ? 'कम / बिना वेतन' : 'unpaid or low pay'}</span>` : ''); };
+function jobCard(j, m) {
+  const seen = new Set(); const skills = j.requirements.filter(r => r.skill_id && KBY[r.skill_id] && !seen.has(r.skill_id) && seen.add(r.skill_id)).map(r => KBY[r.skill_id].name);
+  return `<div class="jc"><div class="t">${esc(j.company)}</div><div class="d">${esc(j.title)}${j.location ? ' · ' + esc(j.location) : ''}${payLine(j)}${j.posted_on ? ' · ' + esc(t(j.source === 'notification' ? 'notif' : 'posted')) + ' ' + esc(j.posted_on) : ''}${oldAd(j) ? ` · <span class="pill good">${esc(t('may_closed'))}</span>` : ''}</div>
+    ${m ? `<div class="mbar"><i style="width:${m.pct}%"></i></div><div class="small"><b>${esc(t('j_match', { a: m.met, b: m.mapped }))}</b>${m.missing.length ? ` · ${esc(t('j_missing'))}: ${esc(m.missing.slice(0, 4).map(r => KBY[r.skill_id] ? KBY[r.skill_id].name : r.text).join(', '))}${m.missing.length > 4 ? ' +' + (m.missing.length - 4) : ''}` : ''}${m.other ? ` · +${m.other} ${esc(LANG === 'hi' ? 'और बातें विज्ञापन में' : (m.other === 1 ? 'other thing in the ad' : 'other things in the ad'))}` : ''}</div>` : `<div class="small" style="margin-top:6px"><b>${esc(t('asks'))}:</b> ${esc(skills.join(', '))}${j.requirements.some(r => !r.skill_id) ? ` <span class="cap">+${j.requirements.filter(r => !r.skill_id).length}</span>` : ''}</div>`}
+    <a class="btn sm ghost" style="margin-top:10px" href="${esc(j.url)}" target="_blank" rel="noopener" data-job="${esc(j.id)}">${esc(t('j_open'))}</a></div>`;
 }
 
 async function publicPage(slug) {
-  setNav('');
-  app.innerHTML = '<p class="cap">Loading…</p>';
-  let d; try { d = await api('public/' + encodeURIComponent(slug)); } catch (e) { app.innerHTML = `<h2 style="margin-top:0">No such page</h2><p>This standing page is private or does not exist.</p>`; return; }
+  setNav(''); app.innerHTML = '<p class="cap">…</p>';
+  let d; try { d = await api('public/' + encodeURIComponent(slug)); } catch (e) { app.innerHTML = `<h2 style="margin-top:0">Not found</h2><p>This page is private or does not exist.</p>`; return; }
   const u = d.user, ev = d.evidence || {}; const primary = PBY[u.primary_path] || PBY[(u.ranking || [{}])[0].id]; if (!primary) { app.innerHTML = '<p>Nothing to show yet.</p>'; return; }
   const rd = readiness(primary, ev);
-  app.innerHTML = `<div class="eyebrow">Standing page</div>
-    <div class="row between" style="align-items:flex-start"><div><h1 style="font-size:clamp(26px,5vw,36px)">${esc(u.name || 'An engineer')}</h1><p class="lead" style="margin:6px 0">${esc(u.headline || '')}</p><p class="small">${esc(u.college || '')} ${u.answers && u.answers.branch ? '· ' + esc(LABEL['branch:' + u.answers.branch]) : ''} ${u.answers && u.answers.graduation_year ? '· ' + esc(LABEL['graduation_year:' + u.answers.graduation_year]) : ''}</p></div>
-    <div style="text-align:center;font-size:12px"><div class="ring" style="--p:${rd.pct}"><b>${rd.pct}%</b></div><div style="margin-top:4px">${esc(primary.name)}</div></div></div>
-    <p class="small">Readiness for <a href="#/path/${primary.id}">${esc(primary.name)}</a>: ${rd.have} of ${rd.total} skills evidenced (${rd.reqHave} of ${rd.req} required). Every item below links to proof, not a claim.</p>
-    <h2>Evidence</h2>
-    ${(primary.skills || []).filter(x => ev[x.id]).map(x => { const s = KBY[x.id], e = ev[x.id]; return `<div class="skill"><div class="st done">✓</div><div><div class="n">${esc(s.name)} <span class="pill ${x.level === 'required' ? 'req' : 'pref'}">${x.level}</span></div><div class="small"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a> ${e.note ? '· ' + esc(e.note) : ''} <span class="cap">· ${esc(e.type)} · ${esc((e.added || '').slice(0, 10))}</span></div></div></div>`; }).join('') || '<p class="small">No evidence yet.</p>'}
-    <h2>Working on next</h2>
-    <div class="chips">${gapOf(primary, ev).slice(0, 8).map(x => `<span class="chip">${esc(KBY[x.id] ? KBY[x.id].name : x.id)}</span>`).join('')}</div>
-    <p class="cap" style="margin-top:22px">Updated ${esc((u.updated || '').slice(0, 10))}. Built on <a href="#/">NextRung</a>, an open-source, evidence-first guide for Indian engineering graduates. <a href="#/quiz">Make yours</a>.</p>`;
+  app.innerHTML = `<div class="row between" style="align-items:flex-start"><div><h1 style="font-size:clamp(24px,5vw,34px)">${esc(u.name || (LANG === 'hi' ? 'एक इंजीनियर' : 'An engineer (name not set)'))}</h1><p class="lead" style="margin:6px 0">${esc(u.headline || '')}</p><p class="small">${esc(u.college || '')} ${u.answers && u.answers.branch ? '· ' + esc(LABEL['branch:' + u.answers.branch]) : ''} ${u.answers && u.answers.graduation_year ? '· ' + esc(LABEL['graduation_year:' + u.answers.graduation_year]) : ''}</p></div><div style="text-align:center;font-size:12px"><div class="ring" style="--p:${rd.pct}"><b>${rd.pct}%</b></div><div style="margin-top:4px">${esc(primary.name)}</div></div></div>
+    <p class="small">${rd.have} of ${rd.total} skills for <a href="#/path/${primary.id}">${esc(primary.name)}</a> shown with proof (${rd.reqHave} of ${rd.req} must-haves). Every item links to the proof.</p>
+    <h2>Proof</h2>${(primary.skills || []).filter(x => ev[x.id]).map(x => { const s = KBY[x.id], e = ev[x.id]; return `<div class="sk"><div class="h"><div class="st done">✓</div><div><div class="n">${esc(s.name)} <span class="pill ${x.level === 'required' ? 'must' : 'good'}">${x.level === 'required' ? 'must have' : 'good to have'}</span></div><div class="small"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a> ${e.note ? '· ' + esc(e.note) : ''} <span class="cap">· ${esc((e.added || '').slice(0, 10))}</span></div></div></div></div>`; }).join('') || '<p class="small">No proof yet.</p>'}
+    <h2>Working on next</h2><div class="chips">${gapOf(primary, ev).slice(0, 8).map(x => `<span class="chip">${esc(KBY[x.id] ? KBY[x.id].name : x.id)}</span>`).join('')}</div>
+    <p class="cap" style="margin-top:22px">${u.updated ? 'Updated ' + esc(String(u.updated).slice(0, 10)) + '. ' : ''}Made on <a href="#/">NextRung</a>, free and open source. <a href="#/quiz">Make yours</a>.</p>`;
 }
 
 function pathsList() {
-  setNav('paths');
-  const order = [...PATHS].sort((a, b) => b.base_score - a.base_score);
-  app.innerHTML = `<div class="eyebrow">Nine directions</div><h1 style="font-size:clamp(26px,5vw,36px)">Every realistic path, ranked by how many fresher seats it has this year</h1>
-  <p class="lead">Aspiration ranks these very differently from evidence. Open any path for the door size, pay, skills, two-year plan and who is hiring.</p>
-  <div class="list" style="margin-top:16px">${order.map(p => `<a class="pathrow" href="#/path/${p.id}"><span><span class="t">${esc(p.name)}</span><br><span class="d">${esc(p.tagline)}</span></span><span class="pill ${p.door_state}">${p.door_state}</span></a>`).join('')}</div>`;
+  setNav('paths'); const order = [...PATHS].sort((a, b) => b.base_score - a.base_score);
+  app.innerHTML = `<h1 style="font-size:clamp(24px,5vw,32px)">${esc(t('paths_h'))}</h1><p class="lead">${esc(t('paths_lead'))}</p>
+  <div class="list" style="margin-top:14px">${order.map(p => `<a class="pathrow" href="#/path/${p.id}"><span><span class="t">${esc(p.name)}</span><br><span class="d">${esc(clean(p.tagline))}</span></span>${trend(p)}</a>`).join('')}</div>`;
 }
 
 function pathPage(id) {
-  setNav('paths');
-  const p = PBY[id]; if (!p) { app.innerHTML = '<p>No such path.</p>'; return; }
-  const fb = PBY[p.fallback_path_id]; const branchOrder = ['CS','IT','ECE','EE','MECH','CIVIL','CHEM','OTHER']; const bl = {CS:'CS/AI/DS',IT:'IT',ECE:'ECE',EE:'EE',MECH:'Mech',CIVIL:'Civil',CHEM:'Chem/Bio/Met',OTHER:'Other'};
-  const sources = [...new Set(p.stat_ids_used || [])].filter(i => SBY[i]); const jobs = JOBS.filter(j => j.path_id === p.id);
-  const ev = (me && me.evidence) || {};
+  setNav('paths'); const p = PBY[id]; if (!p) { app.innerHTML = '<p>No such route.</p>'; return; }
+  const fb = PBY[p.fallback_path_id]; const ev = (me && me.evidence) || {}; const jobs = JOBS.filter(j => j.path_id === p.id);
+  const tier = answers.college_tier ? 'tier' + answers.college_tier : null; const sources = [...new Set(p.stat_ids_used || [])].filter(i => SBY[i]);
+  const bl = {CS:'CS/AI/DS',IT:'IT',ECE:'ECE',EE:'EE',MECH:'Mech',CIVIL:'Civil',CHEM:'Chem/Bio/Met',OTHER:'Other'};
   app.innerHTML = `
-    <div class="eyebrow">Path</div>
-    <div class="row between" style="align-items:flex-start"><h1 style="font-size:clamp(26px,5vw,38px)">${esc(p.name)}</h1><span class="pill ${p.door_state}">${p.door_state} door</span></div>
-    <p class="lead" style="margin-top:10px">${esc(p.tagline)}</p>
-    <div class="grid2" style="margin:18px 0">
-      <div class="kv"><div class="eyebrow">Door size, people a year</div><b>${p.door_size.people_per_year != null ? inr(p.door_size.people_per_year) : 'no reliable number'}</b><p>${esc(p.door_size.caveat)}</p></div>
-      <div class="kv"><div class="eyebrow">Fresher pay, LPA</div><b>${p.pay_band.low_lpa != null ? `${p.pay_band.low_lpa} to ${p.pay_band.high_lpa}` : 'no reliable band'}</b><p>${esc(p.pay_band.note)}</p></div>
-    </div>
-    <h3>Which branches get in</h3>
-    <div class="chips">${branchOrder.map(b => `<span class="chip f${p.branches[b] ?? 0}">${bl[b]} ${'●'.repeat(p.branches[b] ?? 0)}${'○'.repeat(3 - (p.branches[b] ?? 0))}</span>`).join('')}</div>
-    <h3>Skills employers screen for</h3>
-    <p class="cap">Required = employers filter on it; preferred = raises the offer probability. Each links to free-first learning with a proof of done.</p>
-    <div class="chips">${(p.skills || []).map(x => { const s = KBY[x.id]; return s ? `<span class="chip ${ev[x.id] ? 'f3' : ''}" title="${esc(s.description)}">${esc(s.name)} <span class="cap">${x.level === 'required' ? '· required' : ''}</span></span>` : ''; }).join('')}</div>
-    <h3>Is it realistic from your college?</h3>
-    <div class="grid2">${['tier1','tier2','tier3'].map(t => `<div class="kv"><div class="eyebrow">${t.replace('tier','Tier ')}</div><p style="font-size:14px;margin:0">${esc(p.tiers_realistic[t])}</p></div>`).join('')}</div>
-    <h3>What employers screen for now</h3><ul class="clean">${p.entry_requirements.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-    <h2>Fresher openings seen this quarter</h2>
-    <p class="cap">${jobs.length} postings. Requirements are the posting's own words, mapped to skills where possible. ${signedIn() ? '<a href="#/me">See your match on your standing page.</a>' : '<a href="#/quiz">Answer the questions</a> and sign in to see your match with each.'}</p>
-    <div class="tw"><table><thead><tr><th>Employer</th><th>Requirements</th><th>Seen</th></tr></thead><tbody>${jobs.map(j => `<tr><td><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.company)}</a><br><span class="cap">${esc(j.title)} · ${esc(j.location || '')}</span></td><td class="small">${j.requirements.map(r => r.skill_id && KBY[r.skill_id] ? `<span class="chip" style="font-size:12px;padding:2px 6px">${esc(KBY[r.skill_id].name)}</span>` : `<span class="cap">${esc(r.text)}</span>`).join(' ')}</td><td class="cap">${esc(j.posted_on || j.seen_on || '')}</td></tr>`).join('') || '<tr><td colspan="3" class="cap">None loaded yet.</td></tr>'}</tbody></table></div>
-    <h2>Two-year plan</h2>
-    ${p.two_year_plan.map((b, i) => `<details ${i === 0 ? 'open' : ''}><summary>${esc(b.block)} · ${esc(b.title)}</summary><div class="in"><h4>Learn</h4><ul>${b.learn.map(x => `<li>${esc(x)}</li>`).join('')}</ul><h4>Build</h4><ul>${b.build.map(x => `<li>${esc(x)}</li>`).join('')}</ul><h4>Evidence to produce</h4><ul>${b.evidence.map(x => `<li>${esc(x)}</li>`).join('')}</ul><h4>Target</h4><ul>${b.target.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('')}
-    <h2>The one project to be able to explain for 30 minutes</h2>
-    <div class="card"><h3>${esc(p.evidenced_project_spec.title)}</h3><p><b>Scope.</b> ${esc(p.evidenced_project_spec.scope)}</p><p><b>Domain.</b> ${esc(p.evidenced_project_spec.domain)}</p><p><b>How you use agents to build it.</b> ${esc(p.evidenced_project_spec.agent_use)}</p><p><b>Done looks like.</b> ${esc(p.evidenced_project_spec.done_looks_like)}</p><p style="margin:0"><b>How it is verified.</b> ${esc(p.evidenced_project_spec.verification)}</p></div>
-    <h2>What AI changed in this work</h2>
-    <div class="tw"><table><thead><tr><th>Fresher task in 2019</th><th>What happens now</th><th>What you still own</th></tr></thead><tbody>${p.ai_task_shift.map(r => `<tr><td>${esc(r.task_2019)}</td><td>${esc(r.now)}</td><td>${esc(r.human_owns)}</td></tr>`).join('')}</tbody></table></div>
-    <h2>Employers and programmes hiring freshers</h2>
-    <div class="tw"><table><thead><tr><th>Employer</th><th>Where</th><th>Roles</th><th>Seen</th></tr></thead><tbody>${p.employers.map(e => `<tr><td><a href="${esc(e.source_url)}" target="_blank" rel="noopener">${esc(e.name)}</a><br><span class="cap">${esc(e.type)}</span></td><td>${esc(e.location)}</td><td>${esc(e.roles)}</td><td class="cap">${esc(e.seen_on)}</td></tr>`).join('')}</tbody></table></div>
-    ${fb ? `<h2>Fallback</h2><p>If this door does not open in time, <a href="#/path/${fb.id}">${esc(fb.name)}</a> shares most of the same preparation.</p>` : ''}
-    <h2>How the matcher scores this path</h2>
-    <p class="cap">Base score ${p.base_score} of 10 for door size this year, then these rules against your answers.</p>
-    <div class="tw"><table><thead><tr><th>If you answered</th><th>Score</th><th>Because</th></tr></thead><tbody>${p.fit_rules.map(r => `<tr><td>${esc(LABEL[r.field + ':' + r.value] || r.value)}</td><td class="match" style="color:${r.score > 0 ? 'var(--grow)' : 'var(--neg)'}">${r.score > 0 ? '+' : ''}${r.score}</td><td>${esc(r.reason)}</td></tr>`).join('')}</tbody></table></div>
-    <h2>Sources used on this page</h2><ul class="src">${sources.map(i => `<li>${statLink(i)}</li>`).join('')}</ul>
-    <p class="cap">Last reviewed ${esc(p.last_reviewed)}.</p>`;
+    <div class="row between" style="align-items:flex-start"><h1 style="font-size:clamp(24px,5vw,34px)">${esc(p.name)}</h1>${trend(p)}</div>
+    <p class="lead" style="margin-top:8px">${esc(clean(p.tagline))}</p>
+    <div class="card"><div class="eyebrow">${esc(t('realistic'))}</div>${(tier ? [tier] : ['tier1', 'tier2', 'tier3']).map(k => `<p class="small"><b>${k === 'tier1' ? 'Top colleges (IIT/NIT):' : k === 'tier2' ? 'Colleges companies visit yearly:' : 'Colleges companies rarely visit:'}</b> ${esc(clean(p.tiers_realistic[k]))}</p>`).join('')}</div>
+    <div class="row"><div class="card" style="flex:1;min-width:200px"><div class="eyebrow">${esc(t('pay'))}</div><div style="font-family:var(--mono);font-size:22px">${p.pay_band.low_lpa != null ? `₹${p.pay_band.low_lpa} to ${p.pay_band.high_lpa} lakh/yr` : '—'}</div><p class="cap" style="margin:6px 0 0">${esc(clean(p.pay_band.note))}</p></div>
+      <div class="card" style="flex:1;min-width:200px"><div class="eyebrow">${esc(t('jobs_year'))}</div><div style="font-family:var(--mono);font-size:22px">${p.door_size.people_per_year != null ? inr(p.door_size.people_per_year) : '—'}</div><p class="cap" style="margin:6px 0 0">${esc(clean(p.door_size.caveat))}</p></div></div>
+    <h2>${esc(t('musts_h'))}</h2>
+    <div class="chips">${(p.skills || []).map(x => { const s = KBY[x.id]; return s ? `<span class="chip ${ev[x.id] ? 'done' : ''}">${esc(s.name)}${x.level === 'required' ? ' <span class="cap">· must</span>' : ''}</span>` : ''; }).join('')}</div>
+    <p class="small" style="margin-top:10px">${esc(LANG === 'hi' ? 'कंपनियाँ अभी क्या माँगती हैं:' : 'What employers check right now:')}</p><ul class="clean small">${p.entry_requirements.map(x => `<li>${esc(clean(x))}</li>`).join('')}</ul>
+    <a class="btn wide" href="#/plan/${p.id}">${esc(t('get_plan'))}</a>
+    <p class="small" style="margin-top:14px"><b>${esc(LANG === 'hi' ? 'किन ब्रांच के लिए:' : 'Best for:')}</b> ${esc(Object.keys(bl).filter(b => (p.branches[b] ?? 0) >= 2).map(b => bl[b]).join(', ') || '—')}${Object.keys(bl).some(b => (p.branches[b] ?? 0) === 0) ? ` · <b>${esc(LANG === 'hi' ? 'शायद ही:' : 'Rarely:')}</b> ${esc(Object.keys(bl).filter(b => (p.branches[b] ?? 0) === 0).map(b => bl[b]).join(', '))}` : ''}</p>
+    <h2>${esc(t('ads_h'))} · ${jobs.length}</h2>${jobs.slice(0, 6).map(j => jobCard(j, null)).join('')}${jobs.length > 6 ? `<p class="small"><a href="#/jobs/${p.id}">${esc(LANG === 'hi' ? 'सभी देखें' : 'See all')} ${jobs.length}</a></p>` : ''}
+    ${fb ? `<p class="small" style="margin-top:14px"><b>${esc(t('backup'))}:</b> <a href="#/path/${fb.id}">${esc(fb.name)}</a></p>` : ''}
+    <h2>${esc(t('more_h'))}</h2>
+    <details><summary>${esc(t('hiring_h'))}</summary><div class="in">${p.employers.map(e => `<div class="small" style="margin:8px 0"><a href="${esc(e.source_url)}" target="_blank" rel="noopener"><b>${esc(e.name)}</b></a> · ${esc(e.location)}<br>${esc(e.roles)} <span class="cap">· ${esc(e.seen_on)}</span></div>`).join('')}</div></details>
+    <details><summary>${esc(t('two_year'))}</summary><div class="in">${p.two_year_plan.map(b => `<h4>${esc(b.block)} · ${esc(b.title)}</h4><b>Learn</b><ul>${b.learn.map(x => `<li>${esc(clean(x))}</li>`).join('')}</ul><b>Build</b><ul>${b.build.map(x => `<li>${esc(clean(x))}</li>`).join('')}</ul><b>Show</b><ul>${b.evidence.map(x => `<li>${esc(clean(x))}</li>`).join('')}</ul><b>Target</b><ul>${b.target.map(x => `<li>${esc(clean(x))}</li>`).join('')}</ul>`).join('')}</div></details>
+    <details><summary>${esc(t('project'))}</summary><div class="in"><p><b>${esc(p.evidenced_project_spec.title)}</b></p><p>${esc(clean(p.evidenced_project_spec.scope))}</p><p><b>Domain.</b> ${esc(p.evidenced_project_spec.domain)}</p><p><b>Using AI to build it.</b> ${esc(p.evidenced_project_spec.agent_use)}</p><p><b>Done looks like.</b> ${esc(p.evidenced_project_spec.done_looks_like)}</p><p><b>Checked by.</b> ${esc(p.evidenced_project_spec.verification)}</p></div></details>
+    <details><summary>${esc(t('ai_h'))}</summary><div class="in">${p.ai_task_shift.map(r => `<div style="margin:10px 0"><b>${esc(r.task_2019)}</b><br><span class="small">Now: ${esc(r.now)}</span><br><span class="small">You still own: ${esc(r.human_owns)}</span></div>`).join('')}</div></details>
+    <details><summary>${esc(t('rules_h'))}</summary><div class="in"><p class="cap">Base ${p.base_score} of 10 for how many fresher jobs exist this year, then these rules against your answers.</p>${p.fit_rules.map(r => `<div class="small" style="margin:6px 0"><span style="font-family:var(--mono);color:${r.score > 0 ? 'var(--grow)' : 'var(--neg)'}">${r.score > 0 ? '+' : ''}${r.score}</span> <b>${esc(LABEL[r.field + ':' + r.value] || r.value)}</b>: ${esc(r.reason)}</div>`).join('')}</div></details>
+    <details><summary>${esc(t('sources_h'))}</summary><div class="in"><ul class="src">${sources.map(i => { const s = SBY[i]; return `<li><a href="${esc(s.source_url || '#')}" target="_blank" rel="noopener">${esc(s.source_title || i)}</a> <span class="cap">(${esc(s.period)}) <span class="pill ${s.confidence}">${s.confidence}</span></span></li>`; }).join('')}</ul><p class="cap">Last reviewed ${esc(p.last_reviewed)}.</p></div></details>`;
+  app.querySelectorAll('[data-job]').forEach(a => a.addEventListener('click', () => track('job_opened', { id: a.dataset.job })));
 }
 
-function jobsPage(filter) {
-  setNav('jobs');
-  const f = (filter || '').toLowerCase();
-  app.innerHTML = `<div class="eyebrow">Openings</div><h1 style="font-size:clamp(26px,5vw,36px)">${JOBS.length} fresher openings and notifications, mapped to skills</h1>
-    <p class="lead">Seen ${esc(D.jobs.seen_on)}. Refreshed by an agent run each quarter; postings close, so treat the list as a picture of what employers ask for, and always check the link.</p>
-    <p><input id="jf" placeholder="Filter by company, title, city, skill" value="${esc(filter || '')}" style="width:100%;max-width:420px"></p>
-    ${PATHS.map(p => { const js = JOBS.filter(j => j.path_id === p.id && (!f || (j.company + ' ' + j.title + ' ' + (j.location||'') + ' ' + j.requirements.map(r => (r.skill_id && KBY[r.skill_id] ? KBY[r.skill_id].name : r.text)).join(' ')).toLowerCase().includes(f))); return js.length ? `<h2><a href="#/path/${p.id}" style="text-decoration:none;color:inherit">${esc(p.name)}</a> <span class="cap">${js.length}</span></h2><div class="tw"><table><thead><tr><th>Employer</th><th>Asks for</th><th>Seen</th></tr></thead><tbody>${js.map(j => `<tr><td><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.company)}</a><br><span class="cap">${esc(j.title)} · ${esc(j.location || '')}</span></td><td class="small">${j.requirements.filter(r => r.skill_id && KBY[r.skill_id]).map(r => esc(KBY[r.skill_id].name)).join(', ')}${j.requirements.some(r => !r.skill_id) ? ' <span class="cap">+' + j.requirements.filter(r => !r.skill_id).length + ' more</span>' : ''}</td><td class="cap">${esc(j.posted_on || j.seen_on || '')}</td></tr>`).join('')}</tbody></table></div>` : ''; }).join('')}`;
-  const inp = document.getElementById('jf'); inp.addEventListener('input', () => { const pos = inp.selectionStart; jobsPage(inp.value); const n = document.getElementById('jf'); n.focus(); n.setSelectionRange(pos, pos); });
+function jobsPage(pathId, filter) {
+  setNav('jobs'); const f = (filter || '').toLowerCase();
+  const ev = (me && me.evidence) || {}; const sel = pathId && PBY[pathId] ? pathId : '';
+  const list = JOBS.filter(j => (!sel || j.path_id === sel) && (!f || (j.company + ' ' + j.title + ' ' + (j.location || '') + ' ' + j.requirements.map(r => (r.skill_id && KBY[r.skill_id] ? KBY[r.skill_id].name : r.text)).join(' ')).toLowerCase().includes(f)));
+  app.innerHTML = `<h1 style="font-size:clamp(24px,5vw,32px)">${esc(t('jobs_h'))}</h1><p class="lead">${esc(t('jobs_lead', { d: D.jobs.seen_on }))}</p>
+    <div class="row"><select id="jp" style="flex:1;min-width:160px"><option value="">${esc(t('all_routes'))}</option>${PATHS.map(p => `<option value="${p.id}" ${p.id === sel ? 'selected' : ''}>${esc(p.name)}</option>`).join('')}</select><input id="jf" placeholder="${esc(t('filter'))}" value="${esc(filter || '')}" style="flex:2;min-width:180px"></div>
+    <p class="cap" style="margin-top:8px">${list.length}</p>
+    ${list.map(j => jobCard(j, signedIn() && me ? jobMatch(j, ev) : null)).join('')}`;
+  document.getElementById('jp').addEventListener('change', e => { location.hash = '#/jobs/' + e.target.value; });
+  const inp = document.getElementById('jf'); inp.addEventListener('input', () => { const pos = inp.selectionStart; jobsPage(sel, inp.value); const n = document.getElementById('jf'); n.focus(); n.setSelectionRange(pos, pos); });
+  app.querySelectorAll('[data-job]').forEach(a => a.addEventListener('click', () => track('job_opened', { id: a.dataset.job })));
 }
 
-function evidence(filter) {
-  setNav('evidence');
-  const groups = [['supply','Supply: how many engineers India produces'],['demand','Demand: entry-level tech hiring'],['paths','Paths: the other doors'],['gap','Gaps: numbers we could not source']];
-  const f = (filter || '').toLowerCase();
+function sources(filter) {
+  setNav(''); const groups = [['supply', 'Supply: how many engineers India produces'], ['demand', 'Demand: entry-level tech hiring'], ['paths', 'Paths: the other doors'], ['gap', 'Gaps: numbers we could not source']]; const f = (filter || '').toLowerCase();
   const rows = g => STATS.filter(s => s.id.startsWith(g + '.') && (!f || (s.metric + ' ' + s.source_title + ' ' + s.period).toLowerCase().includes(f)));
-  app.innerHTML = `<div class="eyebrow">Evidence</div><h1 style="font-size:clamp(26px,5vw,36px)">Every number on this site, with where it came from</h1>
-    <p class="lead">${STATS.length} records. Confidence: <span class="pill official">official</span> government or company filings; <span class="pill industry">industry</span> NASSCOM, staffing firms, research labs; <span class="pill media">media</span> press reporting an official figure; <span class="pill low">low</span> aggregator or unverified.</p>
+  app.innerHTML = `<h1 style="font-size:clamp(24px,5vw,32px)">Every number on this site, with where it came from</h1>
+    <p class="lead">${STATS.length} records. <span class="pill official">official</span> government or company filings; <span class="pill industry">industry</span> NASSCOM, staffing firms, research labs; <span class="pill media">media</span> press reporting an official figure; <span class="pill low">low</span> aggregator or unverified.</p>
     <p><input id="ev-filter" placeholder="Filter, e.g. GCC, PLFS, fresher" value="${esc(filter || '')}" style="width:100%;max-width:420px"></p>
-    ${groups.map(([g, t]) => { const r = rows(g); return r.length ? `<h2>${t}</h2><div class="tw"><table><thead><tr><th>Metric</th><th>Value</th><th>Period</th><th>Source</th></tr></thead><tbody>${r.map(s => `<tr><td>${esc(s.metric)}${s.contradiction ? `<br><span class="cap">Contradiction: ${esc(s.contradiction)}</span>` : ''}</td><td class="match">${fmt(s)}</td><td class="cap">${esc(s.period)}</td><td>${s.source_url ? `<a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_title)}</a>` : '—'} <span class="pill ${s.confidence}">${s.confidence}</span></td></tr>`).join('')}</tbody></table></div>` : ''; }).join('')}`;
-  const inp = document.getElementById('ev-filter'); inp.addEventListener('input', () => { const pos = inp.selectionStart; evidence(inp.value); const n = document.getElementById('ev-filter'); n.focus(); n.setSelectionRange(pos, pos); });
+    ${groups.map(([g, ttl]) => { const r = rows(g); return r.length ? `<h2>${ttl}</h2><div class="tw"><table><thead><tr><th>Metric</th><th>Value</th><th>Period</th><th>Source</th></tr></thead><tbody>${r.map(s => `<tr><td>${esc(s.metric)}${s.contradiction ? `<br><span class="cap">Contradiction: ${esc(s.contradiction)}</span>` : ''}</td><td style="font-family:var(--mono);white-space:nowrap">${fmt(s)}</td><td class="cap">${esc(s.period)}</td><td>${s.source_url ? `<a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_title)}</a>` : '—'} <span class="pill ${s.confidence}">${s.confidence}</span></td></tr>`).join('')}</tbody></table></div>` : ''; }).join('')}`;
+  const inp = document.getElementById('ev-filter'); inp.addEventListener('input', () => { const pos = inp.selectionStart; sources(inp.value); const n = document.getElementById('ev-filter'); n.focus(); n.setSelectionRange(pos, pos); });
 }
 
 function about() {
-  setNav('about');
-  app.innerHTML = `<div class="eyebrow">About</div><h1 style="font-size:clamp(26px,5vw,36px)">Why NextRung exists, and how it is kept honest</h1>
-  <p class="lead">India produces about 8 lakh engineering degree holders a year. The IT services door that absorbed 4 lakh of them in FY22 took 1.6 lakh in FY24 and is still shrinking, and AI agents now do the routine work that was the first rung. At least 6 lakh graduates a year need a direction that is not "join an IT services company", and a way to prove they are ready for it.</p>
-  <h2>How it works</h2>
-  <p>Ten questions build a profile. A rules engine, not a language model, scores nine paths: a base score for how many fresher seats the door has this year, plus fit rules written by people and shown on every path page. Each path names the skills employers screen for. Your standing is the share of those skills you have evidence for, compared against the requirements in fresher postings seen this quarter. The gap becomes a 90-day plan with free-first learning and a proof of done per skill.</p>
-  <p>Four agent skills maintain the content: one refreshes the statistics from primary sources and refuses to emit a number without a URL; one maintains the path records; one maintains the skills taxonomy and learning options (every link opened before it is listed); one ingests fresher postings and maps their requirements to skills. Changes arrive as pull requests that maintainers review.</p>
+  setNav('');
+  app.innerHTML = `<h1 style="font-size:clamp(24px,5vw,32px)">${esc(LANG === 'hi' ? 'NextRung क्यों है' : 'Why NextRung exists')}</h1>
+  <p class="lead">India produces about 8 lakh engineering degree holders a year. The big IT companies that hired 4 lakh freshers in FY22 hired 1.6 lakh in FY24, and AI now does the routine work that was a fresher's first job. Most graduates are told to walk through a door that is closing. NextRung shows the doors that are open, what each asks for, and the shortest free route to prove you are ready.</p>
+  <h2>Who made this</h2>
+  <p>Started by Manikandan M G, an engineering leader in Bengaluru who has hired and built teams of hundreds of engineers and watched AI change what a fresher must show to get hired. It is open source; contributors are welcome, especially placement officers, hiring managers and recent graduates.</p>
+  <h2>Honesty rules</h2>
+  <p>Free, no course, no fees, ever. Not a job board and not a guarantee. Every number has a source and a date. Projections are called projections. Where two good sources disagree, both are shown. Where no number exists, we say so. The ranking is a set of written rules you can read on each route page, not a chatbot.</p>
   <h2>Your data</h2>
-  <p>Answers stay in your browser until you sign in. With an account, your answers, ranking, evidence links and plan are stored so you can come back. Sign-in is a one-time code by email; there is no password. Your page is private unless you switch it to public, and a public page never shows your email. You can delete everything from your standing page.</p>
-  <h2>What it is not</h2>
-  <p>Not a job board, a course, or a guarantee. Projections are labelled projections. Where two credible sources disagree, both are shown. Where no number exists, the site says so instead of inventing one.</p>
-  <h2>Contribute</h2>
-  <p>The data, matcher, skills taxonomy, job mappings and this site are open source. Fix a number with a source, add an employer with a recent page, challenge a fit rule, add a learning option that is free and good, or translate a path into Hindi, Tamil, Telugu or Kannada. Placement officers, hiring managers and recent graduates are the reviewers this needs most.</p>
-  <p class="cap">Version ${SITE_VERSION}, September 2026. Built to be argued with.</p>`;
+  <p>Answers stay in your browser until you sign in. With an account, your answers, plan and proof links are saved so you can come back. Sign-in is a one-time code by email; there is no password. Your page is private unless you switch it on, and it never shows your email. You can delete everything from Settings.</p>
+  <h2>How it is kept up to date</h2>
+  <p>Four agent skills refresh the content: statistics from primary sources (no number without a URL), the route records, the skills and free learning links (every link opened before it is listed), and fresher job ads mapped to skills. Changes are reviewed by people before they go live.</p>
+  <p class="cap">Version ${SITE_VERSION}, September 2026.</p>`;
 }
 
 function route() {
-  const h = location.hash.replace(/^#\/?/, ''); const [r, a] = h.split('/'); window.scrollTo({ top: 0 }); setNavMe();
+  const h = location.hash.replace(/^#\/?/, ''); const [r, a] = h.split('/'); window.scrollTo({ top: 0 }); applyChrome();
   if (!r) return home();
   if (r === 'quiz') return quiz(parseInt(a || '0', 10) || 0);
   if (r === 'results') return results();
+  if (r === 'plan') return planPreview(a);
   if (r === 'signin') return signin();
-  if (r === 'me') return mePage();
+  if (r === 'me') return mePage(a);
   if (r === 'p') return publicPage(decodeURIComponent(a || ''));
   if (r === 'paths') return pathsList();
   if (r === 'path') return pathPage(a);
-  if (r === 'jobs') return jobsPage('');
-  if (r === 'evidence') return evidence('');
+  if (r === 'jobs') return jobsPage(a, '');
+  if (r === 'sources' || r === 'evidence') return sources('');
   if (r === 'about') return about();
   home();
 }

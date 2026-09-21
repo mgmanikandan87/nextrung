@@ -3,6 +3,7 @@
 Public routes
   GET  /health                       {"ok":true,"users":n,"responses":n}
   POST /responses                    anonymous opt-in quiz responses (legacy, kept)
+  POST /events   {sid,event,props?}  anonymous funnel events (start, quiz_done, path_picked, plan_viewed, signed_in, proof_added)
   GET  /export?key=K[&format=csv]    export anonymous responses
   POST /auth/start   {email}         creates the Cognito user if needed, sends an email OTP  -> {session}
   POST /auth/verify  {email,code,session} -> {id_token, refresh_token, expires_in, user}
@@ -297,10 +298,29 @@ def responses_post(event):
     return resp(200, {"ok": True, "id": item["id"]})
 
 
+EVENTS = {"start", "quiz_done", "results_viewed", "path_picked", "plan_viewed", "signin_started", "signed_in", "proof_added", "public_on", "share_clicked", "report_printed", "job_opened", "learn_opened"}
+
+
+def events_post(event):
+    if not RT:
+        return resp(404, {"error": "disabled"})
+    b = body_of(event)
+    ev = str(b.get("event", ""))[:40]
+    if ev not in EVENTS:
+        return resp(400, {"error": "unknown event"})
+    sid = re.sub(r"[^a-zA-Z0-9_-]", "", str(b.get("sid", "")))[:40] or "anon"
+    props = b.get("props") if isinstance(b.get("props"), dict) else {}
+    props = {str(k)[:40]: str(v)[:120] for k, v in list(props.items())[:10]}
+    RT.put_item(Item={"id": str(uuid.uuid4()), "ts": now(), "kind": "event", "sid": sid, "event": ev, "props": props,
+                      "lang": str(b.get("lang", ""))[:8], "site_version": str(b.get("site_version", ""))[:32]})
+    return resp(200, {"ok": True})
+
+
 def export_get(event):
     qs = event.get("queryStringParameters") or {}
     if not EXPORT_KEY or qs.get("key") != EXPORT_KEY or not RT:
         return resp(403, {"error": "export key required"})
+    kind = qs.get("kind", "responses")
     items, start = [], None
     while True:
         kw = {"ExclusiveStartKey": start} if start else {}
@@ -309,7 +329,15 @@ def export_get(event):
         start = page.get("LastEvaluatedKey")
         if not start:
             break
+    items = [i for i in items if (i.get("kind") == "event") == (kind == "events")]
     items.sort(key=lambda x: x.get("ts", ""))
+    if kind == "events":
+        if qs.get("format") == "csv":
+            out = io.StringIO(); w = csv.writer(out); w.writerow(["ts", "sid", "event", "lang", "site_version", "props"])
+            for it in items:
+                w.writerow([it.get("ts"), it.get("sid"), it.get("event"), it.get("lang"), it.get("site_version"), json.dumps(it.get("props", {}), default=str)])
+            return resp(200, out.getvalue(), "text/csv")
+        return resp(200, {"count": len(items), "items": items})
     if qs.get("format") == "csv":
         out = io.StringIO()
         cols = ["id", "ts", "site_version"] + sorted(ANSWER_FIELDS) + ["rank1", "rank2", "rank3", "name", "college", "email"]
@@ -331,7 +359,7 @@ def export_get(event):
 def health():
     users = T.scan(Select="COUNT", FilterExpression=Key("sk").eq("PROFILE"))["Count"]
     n = RT.scan(Select="COUNT")["Count"] if RT else 0
-    return resp(200, {"ok": True, "users": users, "responses": n, "version": "0.2.0"})
+    return resp(200, {"ok": True, "users": users, "responses_and_events": n, "version": "0.3.0"})
 
 
 # ---------------- router ----------------
@@ -343,6 +371,7 @@ def handler(event, context):
     try:
         if path == "/health" and method == "GET": return health()
         if path == "/responses" and method == "POST": return responses_post(event)
+        if path == "/events" and method == "POST": return events_post(event)
         if path == "/export" and method == "GET": return export_get(event)
         if path == "/auth/start" and method == "POST": return auth_start(event)
         if path == "/auth/verify" and method == "POST": return auth_verify(event)
