@@ -68,7 +68,7 @@ for f in sorted(glob.glob(str(ROOT / 'data/paths/*.json'))):
     for x in p.get('skills', []):
         if x['id'] not in SKILL_IDS: E(f"path {p['id']}: skill {x['id']} not in taxonomy")
         if x.get('level') not in ('required', 'preferred'): E(f"path {p['id']}: skill {x['id']} bad level")
-    if not 8 <= len(p.get('skills', [])) <= 14: W(f"path {p['id']}: {len(p.get('skills', []))} skills (expected 8 to 14)")
+    if not 8 <= len(p.get('skills', [])) <= 18: W(f"path {p['id']}: {len(p.get('skills', []))} skills (expected 8 to 18)")
     for e in p.get('employers', []):
         if not str(e.get('source_url', '')).startswith('http'): E(f"path {p['id']}: employer {e.get('name')} without URL")
     def walk(o):

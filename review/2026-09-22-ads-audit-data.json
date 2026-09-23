@@ -1,0 +1,625 @@
+{
+ "jobs": 105,
+ "skills": 83,
+ "paths": 9,
+ "companies": 96,
+ "top": [
+  {
+   "id": "communication_written_english",
+   "name": "Written and spoken English (workplace)",
+   "cat": "professional",
+   "ads": 57,
+   "paths": 8
+  },
+  {
+   "id": "python",
+   "name": "Python",
+   "cat": "foundation",
+   "ads": 22,
+   "paths": 3
+  },
+  {
+   "id": "sql",
+   "name": "SQL",
+   "cat": "foundation",
+   "ads": 20,
+   "paths": 2
+  },
+  {
+   "id": "testing_and_automation",
+   "name": "Testing and CI/CD",
+   "cat": "software",
+   "ads": 19,
+   "paths": 2
+  },
+  {
+   "id": "excel_and_business_analysis",
+   "name": "Excel and business analysis",
+   "cat": "professional",
+   "ads": 19,
+   "paths": 3
+  },
+  {
+   "id": "quality_and_manufacturing_basics",
+   "name": "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+   "cat": "core_eng",
+   "ads": 16,
+   "paths": 4
+  },
+  {
+   "id": "site_engineering_and_safety",
+   "name": "Site engineering and safety",
+   "cat": "domain",
+   "ads": 15,
+   "paths": 2
+  },
+  {
+   "id": "dsa",
+   "name": "Data Structures and Algorithms",
+   "cat": "foundation",
+   "ads": 13,
+   "paths": 2
+  },
+  {
+   "id": "rest_apis",
+   "name": "REST APIs",
+   "cat": "software",
+   "ads": 12,
+   "paths": 2
+  },
+  {
+   "id": "operations_and_process_basics",
+   "name": "Operations and process basics",
+   "cat": "professional",
+   "ads": 12,
+   "paths": 2
+  },
+  {
+   "id": "gate_preparation_electrical",
+   "name": "GATE (Electrical)",
+   "cat": "exam",
+   "ads": 12,
+   "paths": 2
+  },
+  {
+   "id": "gate_preparation_ece_ee_me",
+   "name": "GATE (ECE / EE / ME)",
+   "cat": "exam",
+   "ads": 10,
+   "paths": 2
+  },
+  {
+   "id": "autocad",
+   "name": "AutoCAD",
+   "cat": "core_eng",
+   "ads": 10,
+   "paths": 2
+  },
+  {
+   "id": "gate_preparation_civil",
+   "name": "GATE (Civil)",
+   "cat": "exam",
+   "ads": 10,
+   "paths": 2
+  },
+  {
+   "id": "git_github",
+   "name": "Git and GitHub",
+   "cat": "foundation",
+   "ads": 9,
+   "paths": 2
+  }
+ ],
+ "cov": [
+  {
+   "id": "ai_native_software",
+   "name": "AI-native software",
+   "ads": 13,
+   "m1": 29,
+   "req": 50,
+   "all": 50,
+   "m1_skills": [
+    "Python",
+    "SQL",
+    "Data Structures and Algorithms"
+   ],
+   "top3": 29,
+   "top3_skills": [
+    "Python",
+    "SQL",
+    "Written and spoken English (workplace)"
+   ]
+  },
+  {
+   "id": "defence_aerospace_space",
+   "name": "Defence & aerospace",
+   "ads": 10,
+   "m1": 0,
+   "req": 12,
+   "all": 71,
+   "m1_skills": [
+    "GATE (ECE / EE / ME)",
+    "MATLAB / Simulink",
+    "Control Systems"
+   ],
+   "top3": 40,
+   "top3_skills": [
+    "Written and spoken English (workplace)",
+    "Avionics and Propulsion",
+    "Quality and Manufacturing (SPC, Six Sigma, GD&T)"
+   ]
+  },
+  {
+   "id": "ev_automotive",
+   "name": "EV & automotive",
+   "ads": 10,
+   "m1": 12,
+   "req": 12,
+   "all": 33,
+   "m1_skills": [
+    "CAD (SolidWorks / CATIA / Onshape)",
+    "Embedded C",
+    "CAN / LIN"
+   ],
+   "top3": 45,
+   "top3_skills": [
+    "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+    "CAD (SolidWorks / CATIA / Onshape)",
+    "Written and spoken English (workplace)"
+   ]
+  },
+  {
+   "id": "government_psu",
+   "name": "Government / PSU",
+   "ads": 11,
+   "m1": 50,
+   "req": 67,
+   "all": 80,
+   "m1_skills": [
+    "GATE (Civil)",
+    "GATE (Electrical)",
+    "GATE engineering mathematics and general aptitude"
+   ],
+   "top3": 67,
+   "top3_skills": [
+    "GATE (Electrical)",
+    "GATE (Civil)",
+    "PSU technical interview"
+   ]
+  },
+  {
+   "id": "higher_studies",
+   "name": "Higher studies",
+   "ads": 8,
+   "m1": 17,
+   "req": 58,
+   "all": 100,
+   "m1_skills": [
+    "GATE (Civil)",
+    "GATE (Electrical)",
+    "Research methods and paper reading"
+   ],
+   "top3": 45,
+   "top3_skills": [
+    "German university applications (DAAD, uni-assist, APS)",
+    "GATE (Civil)",
+    "GATE (Electrical)"
+   ]
+  },
+  {
+   "id": "infrastructure_energy",
+   "name": "Infrastructure & energy",
+   "ads": 14,
+   "m1": 17,
+   "req": 37,
+   "all": 67,
+   "m1_skills": [
+    "AutoCAD",
+    "STAAD.Pro",
+    "ETAP / power systems analysis"
+   ],
+   "top3": 29,
+   "top3_skills": [
+    "Site engineering and safety",
+    "AutoCAD",
+    "Excel and business analysis"
+   ]
+  },
+  {
+   "id": "it_services",
+   "name": "IT services",
+   "ads": 15,
+   "m1": 25,
+   "req": 43,
+   "all": 75,
+   "m1_skills": [
+    "Aptitude tests and interviews",
+    "SQL",
+    "Written and spoken English (workplace)"
+   ],
+   "top3": 33,
+   "top3_skills": [
+    "Testing and CI/CD",
+    "Written and spoken English (workplace)",
+    "Python"
+   ]
+  },
+  {
+   "id": "semiconductor_electronics",
+   "name": "Semiconductor & electronics",
+   "ads": 12,
+   "m1": 0,
+   "req": 0,
+   "all": 31,
+   "m1_skills": [
+    "Digital Design",
+    "Verilog / SystemVerilog",
+    "RTL Design"
+   ],
+   "top3": 25,
+   "top3_skills": [
+    "Written and spoken English (workplace)",
+    "Analog Circuits",
+    "LabVIEW and DAQ"
+   ]
+  },
+  {
+   "id": "startups_and_non_engineering",
+   "name": "Startups & non-eng roles",
+   "ads": 12,
+   "m1": 67,
+   "req": 100,
+   "all": 100,
+   "m1_skills": [
+    "Excel and business analysis",
+    "Written and spoken English (workplace)",
+    "Sales and customer conversation"
+   ],
+   "top3": 67,
+   "top3_skills": [
+    "Written and spoken English (workplace)",
+    "Excel and business analysis",
+    "Sales and customer conversation"
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "id": "ai_native_software",
+   "name": "AI-native software",
+   "missing": [
+    [
+     "Written and spoken English (workplace)",
+     62
+    ],
+    [
+     "REST APIs",
+     46
+    ],
+    [
+     "React (front-end)",
+     38
+    ],
+    [
+     "JavaScript and TypeScript",
+     38
+    ],
+    [
+     "Machine learning basics",
+     31
+    ]
+   ],
+   "unasked": [
+    [
+     "RAG and vector search",
+     8
+    ],
+    [
+     "PostgreSQL",
+     8
+    ],
+    [
+     "LLM evals and observability",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "defence_aerospace_space",
+   "name": "Defence & aerospace",
+   "missing": [
+    [
+     "Written and spoken English (workplace)",
+     60
+    ]
+   ],
+   "unasked": [
+    [
+     "GATE (ECE / EE / ME)",
+     10
+    ],
+    [
+     "Control Systems",
+     10
+    ],
+    [
+     "Aptitude tests and interviews",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "ev_automotive",
+   "name": "EV & automotive",
+   "missing": [
+    [
+     "Written and spoken English (workplace)",
+     50
+    ],
+    [
+     "Excel and business analysis",
+     40
+    ],
+    [
+     "AutoCAD",
+     30
+    ],
+    [
+     "Site engineering and safety",
+     30
+    ]
+   ],
+   "unasked": [
+    [
+     "Embedded C",
+     0
+    ],
+    [
+     "CAN / LIN",
+     0
+    ],
+    [
+     "MATLAB / Simulink",
+     0
+    ],
+    [
+     "Aptitude tests and interviews",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "government_psu",
+   "name": "Government / PSU",
+   "missing": [
+    [
+     "GATE (ECE / EE / ME)",
+     55
+    ]
+   ],
+   "unasked": []
+  },
+  {
+   "id": "higher_studies",
+   "name": "Higher studies",
+   "missing": [
+    [
+     "GATE (ECE / EE / ME)",
+     38
+    ]
+   ],
+   "unasked": [
+    [
+     "Research methods and paper reading",
+     12
+    ],
+    [
+     "GATE engineering mathematics and general aptitude",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "infrastructure_energy",
+   "name": "Infrastructure & energy",
+   "missing": [
+    [
+     "Project management basics",
+     36
+    ],
+    [
+     "Written and spoken English (workplace)",
+     36
+    ],
+    [
+     "Operations and process basics",
+     29
+    ],
+    [
+     "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+     29
+    ]
+   ],
+   "unasked": [
+    [
+     "STAAD.Pro",
+     14
+    ],
+    [
+     "Primavera P6 / MS Project",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "it_services",
+   "name": "IT services",
+   "missing": [
+    [
+     "Testing and CI/CD",
+     73
+    ]
+   ],
+   "unasked": [
+    [
+     "Aptitude tests and interviews",
+     13
+    ]
+   ]
+  },
+  {
+   "id": "semiconductor_electronics",
+   "name": "Semiconductor & electronics",
+   "missing": [
+    [
+     "Written and spoken English (workplace)",
+     58
+    ],
+    [
+     "LabVIEW and DAQ",
+     33
+    ],
+    [
+     "Microcontrollers and RTOS (FreeRTOS)",
+     25
+    ],
+    [
+     "Quality and Manufacturing (SPC, Six Sigma, GD&T)",
+     25
+    ],
+    [
+     "PCB Design (KiCad / Altium)",
+     25
+    ]
+   ],
+   "unasked": [
+    [
+     "RTL Design",
+     8
+    ],
+    [
+     "Python",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "startups_and_non_engineering",
+   "name": "Startups & non-eng roles",
+   "missing": [
+    [
+     "Project management basics",
+     25
+    ]
+   ],
+   "unasked": [
+    [
+     "Aptitude tests and interviews",
+     0
+    ]
+   ]
+  }
+ ],
+ "regions": [
+  {
+   "name": "South",
+   "ads": 58
+  },
+  {
+   "name": "West",
+   "ads": 16
+  },
+  {
+   "name": "North",
+   "ads": 11
+  },
+  {
+   "name": "East / NE",
+   "ads": 0
+  },
+  {
+   "name": "Central",
+   "ads": 0
+  },
+  {
+   "name": "All India",
+   "ads": 12
+  },
+  {
+   "name": "Not stated",
+   "ads": 8
+  }
+ ],
+ "source": {
+  "career_page": 42,
+  "indeed": 30,
+  "notification": 19,
+  "internshala": 14
+ },
+ "fresh": {
+  "dated": 81,
+  "undated": 24,
+  "over60": 20,
+  "median": 19
+ },
+ "reqs": {
+  "total": 798,
+  "mapped": 561,
+  "soft": 118,
+  "degree": 102
+ },
+ "cat": [
+  [
+   "professional",
+   128
+  ],
+  [
+   "foundation",
+   69
+  ],
+  [
+   "software",
+   67
+  ],
+  [
+   "core_eng",
+   63
+  ],
+  [
+   "exam",
+   56
+  ],
+  [
+   "domain",
+   37
+  ],
+  [
+   "hardware",
+   35
+  ],
+  [
+   "ai_data",
+   26
+  ]
+ ],
+ "never": [
+  "Revit / BIM",
+  "Geotechnical and surveying basics",
+  "DFT (Scan, ATPG, BIST)",
+  "CAN / LIN",
+  "EV Powertrain and Motor Control",
+  "LLM evals and observability"
+ ],
+ "salary_text": 46,
+ "per_path": {
+  "AI-native software": 13,
+  "Defence & aerospace": 10,
+  "EV & automotive": 10,
+  "Government / PSU": 11,
+  "Higher studies": 8,
+  "Infrastructure & energy": 14,
+  "IT services": 15,
+  "Semiconductor & electronics": 12,
+  "Startups & non-eng roles": 12
+ }
+}

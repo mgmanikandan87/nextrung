@@ -388,9 +388,11 @@
   "paths.ev.fresher_ctc_bands.2026",
   "paths.skilling.nats_graduate_stipend.2026"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)",
+  "skills: removed can_lin_automotive_protocols, ev_powertrain_and_motor_control (asked in no fresher ad this quarter; still in the two-year plan text)"
  ],
  "skills": [
   {
@@ -400,17 +402,12 @@
   },
   {
    "id": "embedded_c",
-   "level": "required",
-   "weight": 2
-  },
-  {
-   "id": "can_lin_automotive_protocols",
-   "level": "required",
+   "level": "preferred",
    "weight": 2
   },
   {
    "id": "matlab_simulink",
-   "level": "required",
+   "level": "preferred",
    "weight": 2
   },
   {
@@ -419,19 +416,14 @@
    "weight": 3
   },
   {
-   "id": "ev_powertrain_and_motor_control",
-   "level": "preferred",
-   "weight": 2
-  },
-  {
    "id": "microcontrollers_and_rtos",
    "level": "preferred",
    "weight": 2
   },
   {
    "id": "quality_and_manufacturing_basics",
-   "level": "preferred",
-   "weight": 2
+   "level": "required",
+   "weight": 3
   },
   {
    "id": "thermal_and_fea_simulation",
@@ -457,6 +449,26 @@
    "id": "interview_aptitude_and_hr",
    "level": "required",
    "weight": 2
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "excel_and_business_analysis",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "autocad",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "site_engineering_and_safety",
+   "level": "preferred",
+   "weight": 1
   }
  ]
 }

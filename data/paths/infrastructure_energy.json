@@ -388,9 +388,11 @@
   "paths.infra.fresher_ctc_bands.2026",
   "paths.skilling.nats_graduate_stipend.2026"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)",
+  "skills: removed revit_bim, geotechnical_and_surveying_basics (asked in no fresher ad this quarter; still in the two-year plan text)"
  ],
  "skills": [
   {
@@ -400,8 +402,8 @@
   },
   {
    "id": "staad_pro_structural_analysis",
-   "level": "required",
-   "weight": 3
+   "level": "preferred",
+   "weight": 2
   },
   {
    "id": "etap_or_power_systems_analysis",
@@ -410,8 +412,8 @@
   },
   {
    "id": "primavera_or_ms_project",
-   "level": "required",
-   "weight": 2
+   "level": "preferred",
+   "weight": 1
   },
   {
    "id": "site_engineering_and_safety",
@@ -429,11 +431,6 @@
    "weight": 2
   },
   {
-   "id": "revit_bim",
-   "level": "preferred",
-   "weight": 2
-  },
-  {
    "id": "gate_preparation_civil",
    "level": "preferred",
    "weight": 2
@@ -442,11 +439,6 @@
    "id": "gate_preparation_electrical",
    "level": "preferred",
    "weight": 2
-  },
-  {
-   "id": "geotechnical_and_surveying_basics",
-   "level": "preferred",
-   "weight": 1
   },
   {
    "id": "renewable_energy_fundamentals",
@@ -460,6 +452,26 @@
   },
   {
    "id": "excel_and_business_analysis",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "project_management_basics",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "quality_and_manufacturing_basics",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "operations_and_process_basics",
    "level": "preferred",
    "weight": 1
   }

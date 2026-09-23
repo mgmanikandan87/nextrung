@@ -44,7 +44,7 @@ const fail = (m) => { console.error('SMOKE FAIL:', m); process.exit(1); };
   const plan2 = await go('#/me/plan'); if (!/add proof/i.test(plan2)) fail('me/plan missing add proof');
   const add = await p.$('[data-add]'); const sid = await add.getAttribute('data-add'); await add.click(); await p.waitForTimeout(150); await p.fill(`form.evf[data-s="${sid}"] input[name=url]`, 'https://github.com/x/y'); await p.click(`form.evf[data-s="${sid}"] button[type=submit]`); await p.waitForTimeout(700);
   const me = await go('#/me'); if (!/%/.test(me)) fail('ring not shown after first proof');
-  const plan3 = await go('#/me/plan'); if (!/verified|seen|link broken|checking|not checked/.test(plan3)) fail('proof card missing verification label');
+  await go('#/me/plan'); const plan3 = await p.evaluate(() => { document.querySelectorAll('details').forEach(d => d.open = true); return document.querySelector('#app').innerText; }); if (!/verified|seen|link broken|checking|not checked/.test(plan3)) fail('proof card missing verification label');
   const chk = await p.$('[data-check]'); if (!chk) fail('no "check where I stand" button on the plan'); const cs = await chk.getAttribute('data-check'); await chk.click(); await p.waitForTimeout(500);
   let ct = await p.evaluate(() => document.querySelector('#app').innerText); if (!/how many of the 6/i.test(ct)) fail('check intro/predict missing');
   await p.click('#pred button[data-n="5"]'); await shot('check_predict'); await p.click('#go'); await p.waitForTimeout(300); await shot('check_items');

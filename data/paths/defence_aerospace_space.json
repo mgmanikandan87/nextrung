@@ -388,15 +388,16 @@
   "paths.govt.gate_appeared.2025",
   "paths.govt.gate_qualified.2025"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)"
  ],
  "skills": [
   {
    "id": "gate_preparation_ece_ee_me",
    "level": "required",
-   "weight": 3
+   "weight": 2
   },
   {
    "id": "matlab_simulink",
@@ -415,7 +416,7 @@
   },
   {
    "id": "avionics_and_propulsion_basics",
-   "level": "preferred",
+   "level": "required",
    "weight": 2
   },
   {
@@ -446,7 +447,7 @@
   {
    "id": "quality_and_manufacturing_basics",
    "level": "preferred",
-   "weight": 1
+   "weight": 2
   },
   {
    "id": "pcb_design",
@@ -462,6 +463,11 @@
    "id": "interview_aptitude_and_hr",
    "level": "required",
    "weight": 1
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 2
   }
  ]
 }

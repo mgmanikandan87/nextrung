@@ -411,9 +411,10 @@
   "paths.infra.fresher_ctc_bands.2026",
   "paths.skilling.nats_graduate_stipend.2026"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)"
  ],
  "skills": [
   {
@@ -463,6 +464,11 @@
   },
   {
    "id": "project_management_basics",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "communication_written_english",
    "level": "preferred",
    "weight": 1
   }

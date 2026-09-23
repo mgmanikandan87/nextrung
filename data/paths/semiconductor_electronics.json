@@ -377,9 +377,11 @@
   "paths.semiconductor.fresher_ctc_bands.2026",
   "supply.aicte.branch_enrolment.ece.2024_25"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)",
+  "skills: removed dft_basics (asked in no fresher ad this quarter; still in the two-year plan text)"
  ],
  "skills": [
   {
@@ -394,7 +396,7 @@
   },
   {
    "id": "rtl_design",
-   "level": "required",
+   "level": "preferred",
    "weight": 2
   },
   {
@@ -404,11 +406,6 @@
   },
   {
    "id": "static_timing_analysis",
-   "level": "preferred",
-   "weight": 2
-  },
-  {
-   "id": "dft_basics",
    "level": "preferred",
    "weight": 2
   },
@@ -424,8 +421,8 @@
   },
   {
    "id": "analog_circuit_basics",
-   "level": "preferred",
-   "weight": 1
+   "level": "required",
+   "weight": 2
   },
   {
    "id": "fpga_prototyping",
@@ -439,7 +436,7 @@
   },
   {
    "id": "python",
-   "level": "required",
+   "level": "preferred",
    "weight": 1
   },
   {
@@ -449,6 +446,31 @@
   },
   {
    "id": "git_github",
+   "level": "preferred",
+   "weight": 1
+  },
+  {
+   "id": "communication_written_english",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "labview_and_daq_basics",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "pcb_design",
+   "level": "required",
+   "weight": 2
+  },
+  {
+   "id": "microcontrollers_and_rtos",
+   "level": "preferred",
+   "weight": 2
+  },
+  {
+   "id": "quality_and_manufacturing_basics",
    "level": "preferred",
    "weight": 1
   }

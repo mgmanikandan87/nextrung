@@ -29,3 +29,8 @@ Rules:
 - `requirements` come from the posting's own text (the details page), 4 to 12 items, each mapped to the closest skill id in `data/skills.json` or `null`. Never invent a requirement the posting did not state.
 - One posting per (company, title); prefer the most recent.
 - Every `url` must be the posting's own apply/view link as returned by the source.
+
+## Added 2026-09-23 (ads audit)
+- `requirements[].kind`: `skill` | `degree` | `behavioural`. Optional for old records; the ingest agent sets it on every new record. Only `skill` lines count toward a student's match.
+- `salary_lpa`: `{"low": 3.0, "high": 4.5}` in lakh per year when parseable; `salary_text` stays as written.
+- Constraints: `posted_on` required for new records; at most 2 postings per company per path; regional minimums (3 North, 3 East/NE/Central per path) or an explicit gap note in the run brief.

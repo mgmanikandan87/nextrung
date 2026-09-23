@@ -52,7 +52,7 @@ CLIENT_ID = os.environ.get("CLIENT_ID", "")
 ADMIN_EMAILS = {e.strip().lower() for e in os.environ.get("ADMIN_EMAILS", "").split(",") if e.strip()}
 SES_FROM = os.environ.get("SES_FROM", "")         # verified SES sender; emails are skipped when empty
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
-VERSION = "0.4.0"
+VERSION = "0.4.1"
 
 ddb = boto3.resource("dynamodb", region_name=REGION)
 T = ddb.Table(TABLE)

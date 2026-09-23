@@ -399,10 +399,11 @@
   "demand.wipro.freshers_plan.fy27",
   "demand.hcltech.freshers.q1fy27"
  ],
- "last_reviewed": "2026-09-21",
+ "last_reviewed": "2026-09-23",
  "changed_fields": [
   "fit_rules",
-  "all"
+  "all",
+  "skills: 2026-09-23 ads audit: reweighted against 105 fresher ads (see review/2026-09-22-ads-audit.md)"
  ],
  "skills": [
   {
@@ -469,6 +470,11 @@
    "id": "domain_bfsi_basics",
    "level": "preferred",
    "weight": 1
+  },
+  {
+   "id": "testing_and_automation",
+   "level": "required",
+   "weight": 2
   }
  ]
 }

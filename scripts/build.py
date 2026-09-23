@@ -17,6 +17,13 @@ json.dump({'version': '0.2.0', 'skills': skills}, open(ROOT / 'data/skills.json'
 jobs = []
 for f in sorted(glob.glob(str(ROOT / 'data/jobs/*.json'))):
     jobs += json.load(open(f))
+# Demand: for each path skill, the share of that path's fresher ads that ask for it (distinct per ad). Drives Month-1 ordering.
+for p in paths:
+    ads = [j for j in jobs if j.get('path_id') == p['id']]
+    for x in p.get('skills', []):
+        n = sum(1 for j in ads if any(r.get('skill_id') == x['id'] for r in j.get('requirements', [])))
+        x['demand'] = round(n / len(ads), 2) if ads else 0
+json.dump(paths, open(ROOT / 'data/paths.json', 'w'), indent=1, ensure_ascii=False)
 json.dump({'version': '0.2.0', 'seen_on': '2026-09-21', 'postings': jobs}, open(ROOT / 'data/jobs.json', 'w'), indent=1, ensure_ascii=False)
 # Skill checks: full banks (with answers) go only into the Lambda bundle; the site learns which skills have a check.
 banks = {}

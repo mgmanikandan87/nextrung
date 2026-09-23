@@ -22,7 +22,11 @@ You produce `data/jobs/<path_id>.json` for each of the nine paths: fresher / ent
 - `posted_on` as ISO date when the source gives one; otherwise null (never guess). `seen_on` = today.
 - Keep `url` intact. Record `salary_text` and `experience_text` as written.
 - 8 to 15 postings per path; for government_psu and higher_studies, 6 to 12 notifications.
-- Flag in the brief: unpaid or sub-₹15,000/month "fresher" ads, and any path where fewer than 8 postings were found.
+- A posting without a date is dropped, not stored with `posted_on: null`; a career page that shows no date is still usable if the page shows "posted N days ago" or a requisition date.
+- At most 2 postings per company per path (the 2026-09 set had four Airbus ads in one route), and at least 3 postings per path located in the North and 3 in the East / North-East / Central regions, or state in the brief that none were found after searching. Southern cities are over-represented otherwise and eastern students see an empty "near you" list.
+- Tag every requirement line with `kind`: `skill` (maps or could map to a skill id), `degree` (eligibility such as "B.E./B.Tech in ECE"), or `behavioural` ("team player", "willingness to learn"). Only `skill` lines count toward the match; the site hides the rest behind "+N".
+- Parse pay into `salary_lpa: {low, high}` (lakh per year; monthly figures ×12) whenever the text carries a number; keep `salary_text` as written.
+- Flag in the brief: unpaid or sub-₹15,000/month "fresher" ads, any path where fewer than 8 postings were found, and any required plan skill that appears in fewer than 15% of the path's ads (compare with `data/paths/<id>.json` skills; the 2026-09-22 audit in review/ shows the method).
 
 ## After writing
 Run `python3 scripts/validate.py`; every non-null skill_id must exist. Then the brief (under 250 words): counts per path, share of requirements mapped, sources used, rate limits hit, gaps.
