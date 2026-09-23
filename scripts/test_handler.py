@@ -157,6 +157,11 @@ c, b = call("GET", "/mentor/students/s1", sub="m2", email="m2@x.in"); check(c ==
 
 # --- mentor actions: note, review, confirm, focus
 c, b = call("POST", "/mentor/students/s1/note", sub="m1", email="mentor@x.in", body={"text": "Nice repo. Add tests."}); check(c == 200, "note")
+c, b = call("PUT", "/mentor/students/s1/referral", sub="m2", email="m2@x.in", body={"status": "ready"}); check(c == 403, "unlinked mentor cannot set referral")
+c, b = call("PUT", "/mentor/students/s1/referral", sub="m1", email="mentor@x.in", body={"status": "bogus"}); check(c == 400, "bad referral status rejected")
+c, b = call("PUT", "/mentor/students/s1/referral", sub="m1", email="mentor@x.in", body={"status": "referred", "company": "PhonePe"}); check(c == 200 and b["referral"]["status"] == "referred" and b["referral"]["company"] == "PhonePe" and b["student"]["referral"]["status"] == "referred", "referral set: " + str(b.get("referral")))
+c, b = call("GET", "/mentor/students/s1", sub="m1", email="mentor@x.in"); check(b["student"]["referral"]["status"] == "referred" and len(b["student"]["referral"]["history"]) == 1, "referral persisted with history")
+c, b = call("GET", "/me", sub="s1"); check(b["user"].get("mentor") is not None, "student still linked")
 c, b = call("PUT", "/mentor/students/s1/review", sub="m1", email="mentor@x.in", body={"skill_id": "sql", "verdict": "redo", "comment": "This is a fork."}); check(c == 200 and b["review"]["verdict"] == "redo", "review redo")
 c, b = call("PUT", "/mentor/students/s1/plan", sub="m1", email="mentor@x.in", body={"confirm_skill": "communication_written_english", "focus_skill": "sql", "comment": "Walked through the README on a call."}); check(c == 200 and b["student"]["focus_skill"] == "sql" and b["student"]["evidence"]["communication_written_english"]["type"] == "mentor_confirmed", "confirm + focus: " + str(b)[:200])
 c, b = call("GET", "/me", sub="s1"); check(b["user"]["mentor"]["name"] == "Ravi" and b["notes"][0]["text"].startswith("Nice") and b["evidence"]["sql"]["review"]["verdict"] == "redo" and b["user"]["focus_skill"] == "sql", "student sees note, review, focus")
@@ -173,8 +178,8 @@ c, b = call("GET", "/mentor/students/s2", sub="m1", email="mentor@x.in"); check(
 c, b = call("DELETE", "/me/mentor", sub="s2", email="s2@x.in"); check(c == 200, "unlink")
 c, b = call("GET", "/mentor/students", sub="m1", email="mentor@x.in"); check(len(b["students"]) == 1, "unlinked student gone from mentor list")
 call("POST", "/events", body={"sid": "x", "event": "quiz_done"}); call("POST", "/events", body={"sid": "y", "event": "check_done"})
-c, b = call("GET", "/admin/overview", sub="a1", email="admin@x.in"); check(c == 200 and b["users"] == 4 and b["roles"].get("mentor") == 1 and b["funnel"]["7d"]["quiz_done"] == 1 and b["sessions"]["7d"] == 2 and b["checks_taken"] == 1, "overview: " + str(b))
-c, b = call("GET", "/admin/users", sub="a1", email="admin@x.in", qs={"q": "asha"}); check(c == 200 and b["total"] == 1 and b["users"][0]["role"] == "student", "users search")
+c, b = call("GET", "/admin/overview", sub="a1", email="admin@x.in"); check(c == 200 and b["users"] == 4 and b["roles"].get("mentor") == 1 and b["funnel"]["7d"]["quiz_done"] == 1 and b["sessions"]["7d"] == 2 and b["checks_taken"] == 1 and b["referrals"].get("referred") == 1, "overview: " + str(b))
+c, b = call("GET", "/admin/users", sub="a1", email="admin@x.in", qs={"q": "asha"}); check(c == 200 and b["total"] == 1 and b["users"][0]["role"] == "student" and b["users"][0]["referral"] == "referred", "users search + referral col: " + str(b["users"][0].get("referral")))
 c, b = call("GET", "/admin/digest", qs={"key": "K"}); check(c == 200 and b["email_enabled"] is False and b["mentors"][0]["students_flagged"] == 1, "digest with export key: " + str(b))
 c, b = call("GET", "/admin/digest", qs={"key": "WRONG"}); check(c == 403, "digest with wrong key")
 c, b = call("DELETE", "/me", sub="s1"); check(c == 200, "delete account")

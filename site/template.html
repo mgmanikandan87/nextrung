@@ -127,6 +127,8 @@ footer a{color:var(--ink-2)}
 .note{border-left:3px solid var(--steady);background:var(--steady-soft);padding:8px 12px;border-radius:0 10px 10px 0;font-size:14px;margin:8px 0}
 .note.redo{border-color:var(--neg);background:var(--neg-soft)}
 .flag{display:inline-block;font-size:12px;padding:3px 8px;border-radius:6px;background:var(--neg-soft);color:var(--neg);margin:2px 4px 2px 0}
+.rf{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.rf.none{background:var(--surface);border:1px solid var(--line);color:var(--ink-3)}.rf.ready{background:var(--accent-soft);color:var(--accent)}.rf.referred,.rf.interviewing{background:var(--steady-soft);color:var(--steady)}.rf.offer{background:var(--shrink-soft);color:var(--shrink)}.rf.placed{background:var(--grow-soft);color:var(--grow)}.rf.not_placed{background:var(--neg-soft);color:var(--neg)}
 .stat{display:grid;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;min-width:120px;flex:1}
 .stat b{font-family:var(--mono);font-size:22px;font-weight:500}.stat span{font-size:12px;color:var(--ink-3)}
 .copt{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font:inherit;color:var(--ink);width:100%;text-align:left;font-size:15px}
@@ -151,7 +153,7 @@ footer a{color:var(--ink-2)}
 <script>
 const ENDPOINT = '__ENDPOINT__'; // set by deploy/deploy.sh
 const API = /^https:\/\//.test(ENDPOINT) ? ENDPOINT : null;
-const SITE_VERSION = '0.4.1';
+const SITE_VERSION = '0.4.2';
 const D = JSON.parse(document.getElementById('data').textContent);
 const PATHS = D.paths, QS = D.questions.questions, STATS = D.stats, SKILLS = D.skills.skills, JOBS = D.jobs.postings;
 const CHECKS_AVAIL = D.checks || {};
@@ -577,6 +579,9 @@ async function checkPage(skill) {
 // ---------- mentor console ----------
 const fmtDate = x => esc(String(x || '').slice(0, 10));
 const agoDays = x => { const d = x ? Math.floor((Date.now() - Date.parse(x)) / 86400000) : null; return d == null || isNaN(d) ? '—' : d === 0 ? 'today' : d + 'd ago'; };
+const REFS = ['none', 'ready', 'referred', 'interviewing', 'offer', 'placed', 'not_placed'];
+const refLabel = { none: 'not started', ready: 'ready to refer', referred: 'referred', interviewing: 'interviewing', offer: 'offer', placed: 'placed', not_placed: 'not placed' };
+const refPill = st => st && st !== 'none' ? `<span class="rf ${st}">${esc(refLabel[st] || st)}</span>` : '';
 async function mentorPage(sid) {
   setNav('mentor'); if (!signedIn()) { location.hash = '#/signin'; return; }
   app.innerHTML = '<p class="cap">…</p>';
@@ -586,7 +591,7 @@ async function mentorPage(sid) {
   let d; try { d = await api('mentor/students'); } catch (e) { app.innerHTML = `<p>${esc(e.message)}</p>`; return; }
   const card = st => { const p = PBY[st.primary_path]; const evc = okEv(st.evidence); const rd = p ? readiness(p, evc) : null; const chk = Object.values(st.checks || {});
     return `<a class="card" href="#/mentor/${st.id}" style="display:block;text-decoration:none;color:inherit${st.link_status === 'pending' ? ';opacity:.6' : ''}"><div class="row between"><div><b>${esc(st.name || st.email)}</b> <span class="cap">${esc(st.college || '')}</span></div><span class="cap">${agoDays(st.last_active)}</span></div>
-      <div class="small">${p ? esc(p.name) : '<i>no route yet</i>'}${rd ? ` · ${rd.pct}% ready · ${rd.reqHave}/${rd.req} must-haves` : ''}${chk.length ? ` · ${chk.length} check${chk.length > 1 ? 's' : ''}` : ''}${st.link_status === 'pending' ? ' · <span class="pill good">waiting for the student to allow</span>' : ''}</div>
+      <div class="small">${p ? esc(p.name) : '<i>no route yet</i>'}${rd ? ` · ${rd.pct}% ready · ${rd.reqHave}/${rd.req} must-haves` : ''}${chk.length ? ` · ${chk.length} check${chk.length > 1 ? 's' : ''}` : ''}${st.link_status === 'pending' ? ' · <span class="pill good">waiting for the student to allow</span>' : ''} ${st.referral && st.referral.status ? refPill(st.referral.status) : ''}</div>
       ${st.flags.length ? `<div style="margin-top:6px">${st.flags.map(f => `<span class="flag">${esc(f.text)}</span>`).join('')}</div>` : `<div class="cap" style="margin-top:6px">no flags</div>`}</a>`; };
   app.innerHTML = `<div class="row between"><h1 style="font-size:clamp(22px,5vw,30px)">Your students · ${d.students.length}</h1></div>
     <p class="small">Sorted by who needs a look. Your mentor code: <span style="font-family:var(--mono);font-size:18px;letter-spacing:.1em">${esc(d.mentor_code || '')}</span> <span class="cap">(students enter it under Settings → Mentor)</span></p>
@@ -612,6 +617,10 @@ async function mentorStudent(sid) {
   app.innerHTML = `<p class="cap"><a href="#/mentor">← Your students</a>${me && me.user.role === 'admin' ? ' · <a href="#/admin">People list</a>' : ''}</p>
     <div class="row between" style="align-items:flex-start"><div><h1 style="font-size:clamp(22px,5vw,30px)">${esc(st.name || st.email)}</h1><p class="small" style="margin:4px 0">${esc(st.email)} · ${esc(st.college || '')} ${a.branch ? '· ' + esc(LABEL['branch:' + a.branch] || a.branch) : ''} ${a.college_tier ? '· tier ' + esc(a.college_tier) : ''} ${a.graduation_year ? '· ' + esc(LABEL['graduation_year:' + a.graduation_year] || a.graduation_year) : ''}<br><span class="cap">joined ${fmtDate(st.created)} · last active ${agoDays(st.last_active)} · GitHub ${esc(st.handles.github || '—')} · LeetCode ${esc(st.handles.leetcode || '—')}${st.public && st.public.enabled ? ` · <a href="#/p/${esc(st.public.slug)}">public page</a>` : ''}</span></p></div>${rd ? `<div style="text-align:center;font-size:12px"><div class="ring" style="--p:${rd.pct}"><b>${rd.pct}%</b></div><div style="margin-top:4px">${esc(p.name)}</div></div>` : ''}</div>
     ${st.flags.length ? `<div>${st.flags.map(f => `<span class="flag">${esc(f.text)}</span>`).join('')}</div>` : ''}
+    <div class="card"><div class="row between"><div><b>Referral status</b> ${refPill((st.referral || {}).status || 'none')}</div></div>
+      ${st.referral && st.referral.company ? `<p class="small" style="margin:6px 0 0">${esc(st.referral.company)}${st.referral.note ? ' · ' + esc(st.referral.note) : ''} <span class="cap">· ${esc(st.referral.by || '')} ${fmtDate(st.referral.at)}</span></p>` : ''}
+      <div class="row" style="margin-top:8px;gap:6px">${REFS.map(r => `<button class="btn sm ${((st.referral || {}).status || 'none') === r ? '' : 'ghost'}" data-ref="${r}">${esc(refLabel[r])}</button>`).join('')}</div>
+      <p class="cap" style="margin:8px 0 0">The one metric that decides the refer-to-hire model. Mark "ready to refer" only when they clear the referral-ready bar; then move it as it progresses.</p></div>
     <h2>Standing${p ? ' · ' + esc(p.name) : ''}</h2>
     ${p ? (p.skills || []).map(row).join('') : '<p class="small">This student has not picked a route yet.</p>'}
     <h2>Notes</h2><form class="card" id="note" style="display:grid;gap:8px"><textarea name="text" rows="3" placeholder="What should they do this week? One or two lines; the student gets it by email if email is on."></textarea><div><button class="btn sm" type="submit">Send note</button></div></form>
@@ -623,6 +632,7 @@ async function mentorStudent(sid) {
   app.querySelectorAll('[data-confirm]').forEach(b => b.addEventListener('click', async () => { const c = prompt('Confirm ' + (KBY[b.dataset.confirm] || {}).name + ' in person: what did you see or discuss? (one line, shown to the student)'); if (c == null) return; try { await api(`mentor/students/${sid}/plan`, { method: 'PUT', body: { confirm_skill: b.dataset.confirm, comment: c } }); again(); } catch (er) { toast(er.message); } }));
   app.querySelectorAll('[data-unconfirm]').forEach(b => b.addEventListener('click', async () => { try { await api(`mentor/students/${sid}/plan`, { method: 'PUT', body: { unconfirm_skill: b.dataset.unconfirm } }); again(); } catch (er) { toast(er.message); } }));
   app.querySelectorAll('[data-focus]').forEach(b => b.addEventListener('click', async () => { try { await api(`mentor/students/${sid}/plan`, { method: 'PUT', body: { focus_skill: b.dataset.focus || null } }); again(); } catch (er) { toast(er.message); } }));
+  app.querySelectorAll('[data-ref]').forEach(b => b.addEventListener('click', async () => { const st = b.dataset.ref; let company, note; if (st === 'referred') { company = prompt('Referred into which company? (optional)') || ''; if (company === null) return; } try { await api(`mentor/students/${sid}/referral`, { method: 'PUT', body: { status: st, company } }); track('referral_set', { status: st }); toast('Saved'); again(); } catch (er) { toast(er.message); } }));
   document.getElementById('note').addEventListener('submit', async e => { e.preventDefault(); const f = e.target; if (!f.text.value.trim()) return; try { await api(`mentor/students/${sid}/note`, { method: 'POST', body: { text: f.text.value.trim() } }); track('mentor_note'); toast('Sent'); again(); } catch (er) { toast(er.message); } });
 }
 
@@ -639,10 +649,11 @@ async function adminPage(q) {
   app.innerHTML = `<h1 style="font-size:clamp(22px,5vw,30px)">Admin</h1>
     <div class="row" style="margin:12px 0">${stat(o.users, 'accounts')}${stat(o.active_7d, 'active last 7 days')}${stat(o.roles.mentor || 0, 'mentors')}${stat(o.mentor_links, 'mentor links')}${stat(o.proofs, 'proofs')}${stat(o.checks_taken, 'checks taken')}</div>
     <p class="small">Proof status: ${Object.entries(o.proof_status).map(([k, v]) => `<span class="pill ${k === 'none' ? 'good' : k}">${esc(k)} ${v}</span>`).join(' ') || '—'} · Routes: ${Object.entries(o.paths).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${esc(PBY[k] ? PBY[k].name : k)} ${v}`).join(', ') || '—'}</p>
+    <p class="small">Referrals: ${REFS.filter(r => r !== 'none').map(r => (o.referrals && o.referrals[r]) ? refPill(r) + ' ' + o.referrals[r] : '').filter(Boolean).join(' · ') || '<span class="cap">none yet — the number that decides the model</span>'}</p>
     <h2>Funnel</h2><div class="tw"><table><thead><tr><th>event</th><th>7 days</th><th>30 days</th><th>all</th></tr></thead><tbody><tr><td>sessions</td><td>${o.sessions['7d']}</td><td>${o.sessions['30d']}</td><td>${o.sessions.all}</td></tr>${F.map(k => `<tr><td>${esc(k)}</td><td>${o.funnel['7d'][k] || 0}</td><td>${o.funnel['30d'][k] || 0}</td><td>${o.funnel.all[k] || 0}</td></tr>`).join('')}</tbody></table></div>
     <h2>Assign a mentor</h2><form class="card row" id="assign"><input name="student" type="email" placeholder="student email" style="flex:1;min-width:180px"><input name="mentor" type="email" placeholder="mentor email" style="flex:1;min-width:180px"><button class="btn sm" type="submit">Send request</button></form><p class="cap">The student gets a request to allow it. Nothing is shared until they do.</p>
     <h2>People · ${u.total}</h2><p><input id="uq" placeholder="Search email, name, college" value="${esc(q || '')}" style="width:100%;max-width:420px"></p>
-    <div class="tw"><table><thead><tr><th>email</th><th>name</th><th>role</th><th>route</th><th>mentor</th><th>active</th></tr></thead><tbody>${u.users.map(x => `<tr><td><a href="#/mentor/${esc(x.id)}"><b>${esc(x.email)}</b></a><br><span class="cap">open their view</span></td><td>${esc(x.name || '')}<br><span class="cap">${esc(x.college || '')}</span></td><td><select data-role="${x.id}"><option ${x.role === 'student' ? 'selected' : ''}>student</option><option ${x.role === 'mentor' ? 'selected' : ''}>mentor</option><option ${x.role === 'admin' ? 'selected' : ''}>admin</option></select>${x.mentor_code ? `<br><span class="cap" style="font-family:var(--mono)">${esc(x.mentor_code)}</span>` : ''}</td><td>${esc(x.primary_path ? (PBY[x.primary_path] || {}).name || x.primary_path : '—')}</td><td>${x.mentor ? esc(x.mentor.name) + (x.mentor.status === 'pending' ? ' <span class="cap">(pending)</span>' : '') : '—'}</td><td class="cap">${agoDays(x.last_active)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="tw"><table><thead><tr><th>email</th><th>name</th><th>role</th><th>route</th><th>mentor</th><th>referral</th><th>active</th></tr></thead><tbody>${u.users.map(x => `<tr><td><a href="#/mentor/${esc(x.id)}"><b>${esc(x.email)}</b></a><br><span class="cap">open their view</span></td><td>${esc(x.name || '')}<br><span class="cap">${esc(x.college || '')}</span></td><td><select data-role="${x.id}"><option ${x.role === 'student' ? 'selected' : ''}>student</option><option ${x.role === 'mentor' ? 'selected' : ''}>mentor</option><option ${x.role === 'admin' ? 'selected' : ''}>admin</option></select>${x.mentor_code ? `<br><span class="cap" style="font-family:var(--mono)">${esc(x.mentor_code)}</span>` : ''}</td><td>${esc(x.primary_path ? (PBY[x.primary_path] || {}).name || x.primary_path : '—')}</td><td>${x.mentor ? esc(x.mentor.name) + (x.mentor.status === 'pending' ? ' <span class="cap">(pending)</span>' : '') : '—'}</td><td>${refPill(x.referral) || '<span class="cap">—</span>'}</td><td class="cap">${agoDays(x.last_active)}</td></tr>`).join('')}</tbody></table></div>
     <div class="row" style="margin-top:16px"><button class="btn sm ghost" id="digest">Send the weekly digest now</button><span class="cap" id="dmsg"></span></div>
     <p class="cap" style="margin-top:12px">Exports (events and quiz responses as CSV) use the export key from SSM; the Monday ops agent already reads them. Version ${esc(o.version)}.</p>`;
   app.querySelectorAll('[data-role]').forEach(sel => sel.addEventListener('change', async () => { try { await api('admin/users/' + sel.dataset.role, { method: 'PUT', body: { role: sel.value } }); toast('Saved'); adminPage(q); } catch (er) { toast(er.message); } }));

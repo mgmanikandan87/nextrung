@@ -29,6 +29,7 @@ JWT-protected (API Gateway JWT authorizer; claims in requestContext.authorizer.j
     POST /mentor/students/{id}/note   {text}
     PUT  /mentor/students/{id}/review {skill_id, verdict:"ok"|"redo", comment}
     PUT  /mentor/students/{id}/plan   {focus_skill?} | {confirm_skill} | {unconfirm_skill}
+    PUT  /mentor/students/{id}/referral {status: none|ready|referred|interviewing|offer|placed|not_placed, company?, note?}
   Admin (email in ADMIN_EMAILS or role admin)
     GET  /admin/overview              counts + funnel
     GET  /admin/users[?q=]            users list
@@ -52,7 +53,7 @@ CLIENT_ID = os.environ.get("CLIENT_ID", "")
 ADMIN_EMAILS = {e.strip().lower() for e in os.environ.get("ADMIN_EMAILS", "").split(",") if e.strip()}
 SES_FROM = os.environ.get("SES_FROM", "")         # verified SES sender; emails are skipped when empty
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
-VERSION = "0.4.1"
+VERSION = "0.4.2"
 
 ddb = boto3.resource("dynamodb", region_name=REGION)
 T = ddb.Table(TABLE)
@@ -635,8 +636,38 @@ def student_view(sub, full=False):
          "last_active": prof.get("last_active") or prof.get("updated"), "handles": prof.get("handles") or {},
          "answers": {k: (prof.get("answers") or {}).get(k) for k in ("branch", "college_tier", "graduation_year", "region", "runway_months")},
          "focus_skill": prof.get("focus_skill"), "mentor": prof.get("mentor"), "public": prof.get("public"),
+         "referral": prof.get("referral"),
          "evidence": ev, "checks": ch, "flags": flags_of(prof, ev, ch), "notes": get_notes(sub, 20 if full else 3)}
     return v
+
+
+REFERRAL_STATES = ("none", "ready", "referred", "interviewing", "offer", "placed", "not_placed")
+
+
+def mentor_referral(event, sid):
+    """Mentor or admin logs where a student is in the refer-to-hire loop. The one metric that decides the model."""
+    mp, err = mentor_guard(event)
+    if err:
+        return err
+    if not mentor_can_see(mp, sid):
+        return resp(403, {"error": "not your student"})
+    b = body_of(event)
+    status = b.get("status")
+    if status not in REFERRAL_STATES:
+        return resp(400, {"error": "status must be one of " + ", ".join(REFERRAL_STATES)})
+    sp = get_profile(sid)
+    if not sp:
+        return resp(404, {"error": "not found"})
+    by = mp.get("name") or mp.get("email", "").split("@")[0]
+    if status == "none":
+        sp.pop("referral", None)
+    else:
+        prev = (sp.get("referral") or {}).get("history", [])
+        sp["referral"] = {"status": status, "company": clip(b.get("company"), 80), "note": clip(b.get("note"), 300),
+                          "by": by, "at": now(), "history": (list(prev)[-9:] + [{"status": status, "at": now(), "by": by}])}
+    sp["updated"] = now()
+    T.put_item(Item=sp)
+    return resp(200, {"ok": True, "referral": sp.get("referral"), "student": student_view(sid)})
 
 
 def mentor_guard(event):
@@ -783,6 +814,11 @@ def admin_overview(event):
     for e in evs:
         s = (e.get("verify") or {}).get("status") or "none"
         vstat[s] = vstat.get(s, 0) + 1
+    referrals = {}
+    for p in profs:
+        st = (p.get("referral") or {}).get("status")
+        if st:
+            referrals[st] = referrals.get(st, 0) + 1
     funnel = {"7d": {}, "30d": {}, "all": {}}
     sessions = {"7d": set(), "30d": set(), "all": set()}
     if RT:
@@ -797,7 +833,7 @@ def admin_overview(event):
     return resp(200, {"users": len(profs), "roles": roles, "active_7d": act7, "paths": paths, "proofs": len(evs), "proof_status": vstat,
                       "checks_taken": sum(1 for c in chks if c.get("result")), "mentor_links": len([l for l in links if l.get("status") == "active"]),
                       "pending_links": len([l for l in links if l.get("status") == "pending"]),
-                      "funnel": funnel, "sessions": {k: len(v) for k, v in sessions.items()}, "version": VERSION})
+                      "referrals": referrals, "funnel": funnel, "sessions": {k: len(v) for k, v in sessions.items()}, "version": VERSION})
 
 
 def admin_users(event):
@@ -813,7 +849,8 @@ def admin_users(event):
             continue
         out.append({"id": p["pk"][5:], "email": p.get("email"), "name": p.get("name"), "college": p.get("college"), "role": role_of(p),
                     "primary_path": p.get("primary_path"), "created": p.get("created"), "last_active": p.get("last_active") or p.get("updated"),
-                    "mentor": p.get("mentor"), "mentor_code": p.get("mentor_code"), "handles": p.get("handles") or {}})
+                    "mentor": p.get("mentor"), "mentor_code": p.get("mentor_code"), "handles": p.get("handles") or {},
+                    "referral": (p.get("referral") or {}).get("status")})
     out.sort(key=lambda x: x.get("last_active") or "", reverse=True)
     return resp(200, {"users": out[:500], "total": len(out)})
 
@@ -992,7 +1029,7 @@ def responses_post(event):
 
 EVENTS = {"start", "quiz_done", "results_viewed", "path_picked", "plan_viewed", "signin_started", "signed_in", "proof_added", "public_on",
           "share_clicked", "report_printed", "job_opened", "learn_opened", "check_started", "check_done", "mentor_linked", "handle_set",
-          "mentor_note", "mentor_review", "admin_viewed"}
+          "mentor_note", "mentor_review", "referral_set", "admin_viewed"}
 
 
 def events_post(event):
@@ -1089,6 +1126,7 @@ def handler(event, context):
             if len(seg) == 4 and seg[3] == "note" and method == "POST": return mentor_note(event, seg[2])
             if len(seg) == 4 and seg[3] == "review" and method == "PUT": return mentor_review(event, seg[2])
             if len(seg) == 4 and seg[3] == "plan" and method == "PUT": return mentor_plan(event, seg[2])
+            if len(seg) == 4 and seg[3] == "referral" and method == "PUT": return mentor_referral(event, seg[2])
         if seg[0] == "admin":
             if path == "/admin/overview" and method == "GET": return admin_overview(event)
             if path == "/admin/users" and method == "GET": return admin_users(event)
